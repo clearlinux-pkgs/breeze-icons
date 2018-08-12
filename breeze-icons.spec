@@ -5,11 +5,11 @@
 # Source0 file verified with key 0x58D0EE648A48B3BB (faure@kde.org)
 #
 Name     : breeze-icons
-Version  : 5.48.0
-Release  : 1
-URL      : https://download.kde.org/stable/frameworks/5.48/breeze-icons-5.48.0.tar.xz
-Source0  : https://download.kde.org/stable/frameworks/5.48/breeze-icons-5.48.0.tar.xz
-Source99 : https://download.kde.org/stable/frameworks/5.48/breeze-icons-5.48.0.tar.xz.sig
+Version  : 5.49.0
+Release  : 2
+URL      : https://download.kde.org/stable/frameworks/5.49/breeze-icons-5.49.0.tar.xz
+Source0  : https://download.kde.org/stable/frameworks/5.49/breeze-icons-5.49.0.tar.xz
+Source99 : https://download.kde.org/stable/frameworks/5.49/breeze-icons-5.49.0.tar.xz.sig
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : LGPL-2.1 LGPL-3.0
@@ -17,6 +17,7 @@ Requires: breeze-icons-license
 Requires: breeze-icons-data
 BuildRequires : buildreq-cmake
 BuildRequires : buildreq-kde
+BuildRequires : qtbase-dev qtbase-extras mesa-dev
 
 %description
 # Breeze Icons
@@ -40,14 +41,14 @@ license components for the breeze-icons package.
 
 
 %prep
-%setup -q -n breeze-icons-5.48.0
+%setup -q -n breeze-icons-5.49.0
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1532316908
+export SOURCE_DATE_EPOCH=1534092596
 mkdir clr-build
 pushd clr-build
 %cmake ..
@@ -55,12 +56,13 @@ make  %{?_smp_mflags}
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1532316908
+export SOURCE_DATE_EPOCH=1534092596
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/doc/breeze-icons
+cp COPYING-ICONS %{buildroot}/usr/share/doc/breeze-icons/COPYING-ICONS
 cp COPYING.LIB %{buildroot}/usr/share/doc/breeze-icons/COPYING.LIB
-cp icons/LICENSE %{buildroot}/usr/share/doc/breeze-icons/icons_LICENSE
 cp icons-dark/LICENSE %{buildroot}/usr/share/doc/breeze-icons/icons-dark_LICENSE
+cp icons/LICENSE %{buildroot}/usr/share/doc/breeze-icons/icons_LICENSE
 pushd clr-build
 %make_install
 popd
@@ -5316,6 +5318,7 @@ popd
 /usr/share/icons/breeze-dark/devices/16/cups.svg
 /usr/share/icons/breeze-dark/devices/16/cupsprinter.svg
 /usr/share/icons/breeze-dark/devices/16/drive-harddisk.svg
+/usr/share/icons/breeze-dark/devices/16/drive-optical.svg
 /usr/share/icons/breeze-dark/devices/16/drive-removable-media-usb-pendrive.svg
 /usr/share/icons/breeze-dark/devices/16/drive-removable-media-usb.svg
 /usr/share/icons/breeze-dark/devices/16/drive-removable-media.svg
@@ -5357,6 +5360,7 @@ popd
 /usr/share/icons/breeze-dark/devices/22/cups.svg
 /usr/share/icons/breeze-dark/devices/22/cupsprinter.svg
 /usr/share/icons/breeze-dark/devices/22/drive-harddisk.svg
+/usr/share/icons/breeze-dark/devices/22/drive-optical.svg
 /usr/share/icons/breeze-dark/devices/22/drive-removable-media-usb-pendrive.svg
 /usr/share/icons/breeze-dark/devices/22/drive-removable-media-usb.svg
 /usr/share/icons/breeze-dark/devices/22/drive-removable-media.svg
@@ -5402,6 +5406,7 @@ popd
 /usr/share/icons/breeze-dark/devices/64/cups.svg
 /usr/share/icons/breeze-dark/devices/64/cupsprinter.svg
 /usr/share/icons/breeze-dark/devices/64/drive-harddisk.svg
+/usr/share/icons/breeze-dark/devices/64/drive-optical.svg
 /usr/share/icons/breeze-dark/devices/64/drive-removable-media-usb-pendrive.svg
 /usr/share/icons/breeze-dark/devices/64/drive-removable-media-usb.svg
 /usr/share/icons/breeze-dark/devices/64/drive-removable-media.svg
@@ -13190,6 +13195,7 @@ popd
 /usr/share/icons/breeze/devices/16/cups.svg
 /usr/share/icons/breeze/devices/16/cupsprinter.svg
 /usr/share/icons/breeze/devices/16/drive-harddisk.svg
+/usr/share/icons/breeze/devices/16/drive-optical.svg
 /usr/share/icons/breeze/devices/16/drive-removable-media-usb-pendrive.svg
 /usr/share/icons/breeze/devices/16/drive-removable-media-usb.svg
 /usr/share/icons/breeze/devices/16/drive-removable-media.svg
@@ -13231,6 +13237,7 @@ popd
 /usr/share/icons/breeze/devices/22/cups.svg
 /usr/share/icons/breeze/devices/22/cupsprinter.svg
 /usr/share/icons/breeze/devices/22/drive-harddisk.svg
+/usr/share/icons/breeze/devices/22/drive-optical.svg
 /usr/share/icons/breeze/devices/22/drive-removable-media-usb-pendrive.svg
 /usr/share/icons/breeze/devices/22/drive-removable-media-usb.svg
 /usr/share/icons/breeze/devices/22/drive-removable-media.svg
@@ -13276,6 +13283,7 @@ popd
 /usr/share/icons/breeze/devices/64/cups.svg
 /usr/share/icons/breeze/devices/64/cupsprinter.svg
 /usr/share/icons/breeze/devices/64/drive-harddisk.svg
+/usr/share/icons/breeze/devices/64/drive-optical.svg
 /usr/share/icons/breeze/devices/64/drive-removable-media-usb-pendrive.svg
 /usr/share/icons/breeze/devices/64/drive-removable-media-usb.svg
 /usr/share/icons/breeze/devices/64/drive-removable-media.svg
@@ -15818,6 +15826,7 @@ popd
 
 %files license
 %defattr(-,root,root,-)
+/usr/share/doc/breeze-icons/COPYING-ICONS
 /usr/share/doc/breeze-icons/COPYING.LIB
 /usr/share/doc/breeze-icons/icons-dark_LICENSE
 /usr/share/doc/breeze-icons/icons_LICENSE
