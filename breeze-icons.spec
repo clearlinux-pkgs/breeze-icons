@@ -5,11 +5,11 @@
 # Source0 file verified with key 0x58D0EE648A48B3BB (faure@kde.org)
 #
 Name     : breeze-icons
-Version  : 5.49.0
-Release  : 2
-URL      : https://download.kde.org/stable/frameworks/5.49/breeze-icons-5.49.0.tar.xz
-Source0  : https://download.kde.org/stable/frameworks/5.49/breeze-icons-5.49.0.tar.xz
-Source99 : https://download.kde.org/stable/frameworks/5.49/breeze-icons-5.49.0.tar.xz.sig
+Version  : 5.50.0
+Release  : 3
+URL      : https://download.kde.org/stable/frameworks/5.50/breeze-icons-5.50.0.tar.xz
+Source0  : https://download.kde.org/stable/frameworks/5.50/breeze-icons-5.50.0.tar.xz
+Source99 : https://download.kde.org/stable/frameworks/5.50/breeze-icons-5.50.0.tar.xz.sig
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : LGPL-2.1 LGPL-3.0
@@ -41,14 +41,14 @@ license components for the breeze-icons package.
 
 
 %prep
-%setup -q -n breeze-icons-5.49.0
+%setup -q -n breeze-icons-5.50.0
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1534092596
+export SOURCE_DATE_EPOCH=1536419008
 mkdir clr-build
 pushd clr-build
 %cmake ..
@@ -56,7 +56,7 @@ make  %{?_smp_mflags}
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1534092596
+export SOURCE_DATE_EPOCH=1536419008
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/doc/breeze-icons
 cp COPYING-ICONS %{buildroot}/usr/share/doc/breeze-icons/COPYING-ICONS
@@ -5207,6 +5207,7 @@ popd
 /usr/share/icons/breeze-dark/apps/48/plank.svg
 /usr/share/icons/breeze-dark/apps/48/planner.svg
 /usr/share/icons/breeze-dark/apps/48/planwork.svg
+/usr/share/icons/breeze-dark/apps/48/plasma-browser-integration.svg
 /usr/share/icons/breeze-dark/apps/48/plasma-media-center.svg
 /usr/share/icons/breeze-dark/apps/48/plasma-mobile-phone.svg
 /usr/share/icons/breeze-dark/apps/48/plasmadiscover.svg
@@ -5290,6 +5291,7 @@ popd
 /usr/share/icons/breeze-dark/apps/64/hotspot.svg
 /usr/share/icons/breeze-dark/apps/64/kate.svg
 /usr/share/icons/breeze-dark/apps/64/kwrite.svg
+/usr/share/icons/breeze-dark/apps/64/plasma-browser-integration.svg
 /usr/share/icons/breeze-dark/apps/64/plasmavault.svg
 /usr/share/icons/breeze-dark/apps/64/sharedlib.svg
 /usr/share/icons/breeze-dark/apps/64/system-file-manager.svg
@@ -13084,6 +13086,7 @@ popd
 /usr/share/icons/breeze/apps/48/plank.svg
 /usr/share/icons/breeze/apps/48/planner.svg
 /usr/share/icons/breeze/apps/48/planwork.svg
+/usr/share/icons/breeze/apps/48/plasma-browser-integration.svg
 /usr/share/icons/breeze/apps/48/plasma-media-center.svg
 /usr/share/icons/breeze/apps/48/plasma-mobile-phone.svg
 /usr/share/icons/breeze/apps/48/plasmadiscover.svg
@@ -13167,6 +13170,7 @@ popd
 /usr/share/icons/breeze/apps/64/hotspot.svg
 /usr/share/icons/breeze/apps/64/kate.svg
 /usr/share/icons/breeze/apps/64/kwrite.svg
+/usr/share/icons/breeze/apps/64/plasma-browser-integration.svg
 /usr/share/icons/breeze/apps/64/plasmavault.svg
 /usr/share/icons/breeze/apps/64/sharedlib.svg
 /usr/share/icons/breeze/apps/64/system-file-manager.svg
@@ -14953,6 +14957,7 @@ popd
 /usr/share/icons/breeze/mimetypes/64/application-x-krita.svg
 /usr/share/icons/breeze/mimetypes/64/application-x-kvtml.svg
 /usr/share/icons/breeze/mimetypes/64/application-x-kword.svg
+/usr/share/icons/breeze/mimetypes/64/application-x-labplot2.svg
 /usr/share/icons/breeze/mimetypes/64/application-x-lha.svg
 /usr/share/icons/breeze/mimetypes/64/application-x-lyx.svg
 /usr/share/icons/breeze/mimetypes/64/application-x-lzma-compressed-tar.svg
