@@ -5,12 +5,12 @@
 # Source0 file verified with key 0x58D0EE648A48B3BB (faure@kde.org)
 #
 Name     : breeze-icons
-Version  : 5.53.0
-Release  : 9
-URL      : https://download.kde.org/stable/frameworks/5.53/breeze-icons-5.53.0.tar.xz
-Source0  : https://download.kde.org/stable/frameworks/5.53/breeze-icons-5.53.0.tar.xz
-Source99 : https://download.kde.org/stable/frameworks/5.53/breeze-icons-5.53.0.tar.xz.sig
-Summary  : No detailed summary available
+Version  : 5.54.0
+Release  : 10
+URL      : https://download.kde.org/stable/frameworks/5.54/breeze-icons-5.54.0.tar.xz
+Source0  : https://download.kde.org/stable/frameworks/5.54/breeze-icons-5.54.0.tar.xz
+Source99 : https://download.kde.org/stable/frameworks/5.54/breeze-icons-5.54.0.tar.xz.sig
+Summary  : Breeze icon themes
 Group    : Development/Tools
 License  : LGPL-2.1 LGPL-3.0
 Requires: breeze-icons-data = %{version}-%{release}
@@ -41,14 +41,14 @@ license components for the breeze-icons package.
 
 
 %prep
-%setup -q -n breeze-icons-5.53.0
+%setup -q -n breeze-icons-5.54.0
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1544475382
+export SOURCE_DATE_EPOCH=1547311495
 mkdir -p clr-build
 pushd clr-build
 %cmake ..
@@ -56,7 +56,7 @@ make  %{?_smp_mflags}
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1544475382
+export SOURCE_DATE_EPOCH=1547311495
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/breeze-icons
 cp COPYING-ICONS %{buildroot}/usr/share/package-licenses/breeze-icons/COPYING-ICONS
@@ -528,6 +528,8 @@ popd
 /usr/share/icons/breeze-dark/actions/16/flag-yellow.svg
 /usr/share/icons/breeze-dark/actions/16/flag.svg
 /usr/share/icons/breeze-dark/actions/16/flash.svg
+/usr/share/icons/breeze-dark/actions/16/flashlight-off.svg
+/usr/share/icons/breeze-dark/actions/16/flashlight-on.svg
 /usr/share/icons/breeze-dark/actions/16/folder-new.svg
 /usr/share/icons/breeze-dark/actions/16/folder-stash.svg
 /usr/share/icons/breeze-dark/actions/16/folder-sync.svg
@@ -1546,6 +1548,7 @@ popd
 /usr/share/icons/breeze-dark/actions/16/view-pim-tasks.svg
 /usr/share/icons/breeze-dark/actions/16/view-presentation.svg
 /usr/share/icons/breeze-dark/actions/16/view-preview.svg
+/usr/share/icons/breeze-dark/actions/16/view-private.svg
 /usr/share/icons/breeze-dark/actions/16/view-process-all-tree.svg
 /usr/share/icons/breeze-dark/actions/16/view-process-all.svg
 /usr/share/icons/breeze-dark/actions/16/view-process-own.svg
@@ -2107,6 +2110,8 @@ popd
 /usr/share/icons/breeze-dark/actions/22/flag-yellow.svg
 /usr/share/icons/breeze-dark/actions/22/flag.svg
 /usr/share/icons/breeze-dark/actions/22/flash.svg
+/usr/share/icons/breeze-dark/actions/22/flashlight-off.svg
+/usr/share/icons/breeze-dark/actions/22/flashlight-on.svg
 /usr/share/icons/breeze-dark/actions/22/flower-shape.svg
 /usr/share/icons/breeze-dark/actions/22/folder-new.svg
 /usr/share/icons/breeze-dark/actions/22/folder-stash.svg
@@ -3618,6 +3623,8 @@ popd
 /usr/share/icons/breeze-dark/actions/24/flag-red.svg
 /usr/share/icons/breeze-dark/actions/24/flag-yellow.svg
 /usr/share/icons/breeze-dark/actions/24/flag.svg
+/usr/share/icons/breeze-dark/actions/24/flashlight-off.svg
+/usr/share/icons/breeze-dark/actions/24/flashlight-on.svg
 /usr/share/icons/breeze-dark/actions/24/folder-new.svg
 /usr/share/icons/breeze-dark/actions/24/folder-sync.svg
 /usr/share/icons/breeze-dark/actions/24/fork.svg
@@ -4439,6 +4446,8 @@ popd
 /usr/share/icons/breeze-dark/actions/32/file-zoom-in.svg
 /usr/share/icons/breeze-dark/actions/32/file-zoom-out.svg
 /usr/share/icons/breeze-dark/actions/32/flash.svg
+/usr/share/icons/breeze-dark/actions/32/flashlight-off.svg
+/usr/share/icons/breeze-dark/actions/32/flashlight-on.svg
 /usr/share/icons/breeze-dark/actions/32/folder-new.svg
 /usr/share/icons/breeze-dark/actions/32/folder-sync.svg
 /usr/share/icons/breeze-dark/actions/32/format-stroke-color.svg
@@ -4768,6 +4777,7 @@ popd
 /usr/share/icons/breeze-dark/actions/symbolic/view-more-horizontal-symbolic.svg
 /usr/share/icons/breeze-dark/actions/symbolic/view-more-symbolic.svg
 /usr/share/icons/breeze-dark/actions/symbolic/view-presentation-symbolic.svg
+/usr/share/icons/breeze-dark/actions/symbolic/view-private-symbolic.svg
 /usr/share/icons/breeze-dark/actions/symbolic/view-refresh-symbolic.svg
 /usr/share/icons/breeze-dark/actions/symbolic/view-restore-symbolic.svg
 /usr/share/icons/breeze-dark/actions/symbolic/view-sort-ascending-symbolic.svg
@@ -4972,13 +4982,19 @@ popd
 /usr/share/icons/breeze-dark/apps/22@2x
 /usr/share/icons/breeze-dark/apps/32/accessories-text-editor.svg
 /usr/share/icons/breeze-dark/apps/32/hotspot.svg
+/usr/share/icons/breeze-dark/apps/32/hwinfo.svg
 /usr/share/icons/breeze-dark/apps/32/kate.svg
 /usr/share/icons/breeze-dark/apps/32/kwrite.svg
 /usr/share/icons/breeze-dark/apps/32/plasmavault.svg
 /usr/share/icons/breeze-dark/apps/32/system-file-manager.svg
+/usr/share/icons/breeze-dark/apps/32/system-help.svg
+/usr/share/icons/breeze-dark/apps/32/systemsettings.svg
 /usr/share/icons/breeze-dark/apps/32/umbrello.svg
+/usr/share/icons/breeze-dark/apps/32/utilities-log-viewer.svg
 /usr/share/icons/breeze-dark/apps/32/utilities-terminal.svg
 /usr/share/icons/breeze-dark/apps/32/vlc.svg
+/usr/share/icons/breeze-dark/apps/32/yast-sw_single.svg
+/usr/share/icons/breeze-dark/apps/32/yast.svg
 /usr/share/icons/breeze-dark/apps/48/CMakeSetup.svg
 /usr/share/icons/breeze-dark/apps/48/QOwnNotes.svg
 /usr/share/icons/breeze-dark/apps/48/QtProject-designer.svg
@@ -5299,6 +5315,9 @@ popd
 /usr/share/icons/breeze-dark/apps/48/xterm.svg
 /usr/share/icons/breeze-dark/apps/48/yakuake.svg
 /usr/share/icons/breeze-dark/apps/48/yandex-browser.svg
+/usr/share/icons/breeze-dark/apps/48/yast-installation.svg
+/usr/share/icons/breeze-dark/apps/48/yast-sw_single.svg
+/usr/share/icons/breeze-dark/apps/48/yast.svg
 /usr/share/icons/breeze-dark/apps/64/accessories-text-editor.svg
 /usr/share/icons/breeze-dark/apps/64/diaspora.svg
 /usr/share/icons/breeze-dark/apps/64/hotspot.svg
@@ -5332,9 +5351,13 @@ popd
 /usr/share/icons/breeze-dark/devices/16/computer.svg
 /usr/share/icons/breeze-dark/devices/16/cups.svg
 /usr/share/icons/breeze-dark/devices/16/cupsprinter.svg
+/usr/share/icons/breeze-dark/devices/16/drive-harddisk-encrypted.svg
 /usr/share/icons/breeze-dark/devices/16/drive-harddisk-root.svg
 /usr/share/icons/breeze-dark/devices/16/drive-harddisk.svg
+/usr/share/icons/breeze-dark/devices/16/drive-multidisk.svg
+/usr/share/icons/breeze-dark/devices/16/drive-multipartition.svg
 /usr/share/icons/breeze-dark/devices/16/drive-optical.svg
+/usr/share/icons/breeze-dark/devices/16/drive-partition.svg
 /usr/share/icons/breeze-dark/devices/16/drive-removable-media-usb-pendrive.svg
 /usr/share/icons/breeze-dark/devices/16/drive-removable-media-usb.svg
 /usr/share/icons/breeze-dark/devices/16/drive-removable-media.svg
@@ -5350,6 +5373,8 @@ popd
 /usr/share/icons/breeze-dark/devices/16/multimedia-player.svg
 /usr/share/icons/breeze-dark/devices/16/network-bluetooth.svg
 /usr/share/icons/breeze-dark/devices/16/network-modem.svg
+/usr/share/icons/breeze-dark/devices/16/network-rj11-female.svg
+/usr/share/icons/breeze-dark/devices/16/network-rj45-female.svg
 /usr/share/icons/breeze-dark/devices/16/network-vpn.svg
 /usr/share/icons/breeze-dark/devices/16/network-wired-activated.svg
 /usr/share/icons/breeze-dark/devices/16/network-wired-unavailable.svg
@@ -5376,9 +5401,13 @@ popd
 /usr/share/icons/breeze-dark/devices/22/computer.svg
 /usr/share/icons/breeze-dark/devices/22/cups.svg
 /usr/share/icons/breeze-dark/devices/22/cupsprinter.svg
+/usr/share/icons/breeze-dark/devices/22/drive-harddisk-encrypted.svg
 /usr/share/icons/breeze-dark/devices/22/drive-harddisk-root.svg
 /usr/share/icons/breeze-dark/devices/22/drive-harddisk.svg
+/usr/share/icons/breeze-dark/devices/22/drive-multidisk.svg
+/usr/share/icons/breeze-dark/devices/22/drive-multipartition.svg
 /usr/share/icons/breeze-dark/devices/22/drive-optical.svg
+/usr/share/icons/breeze-dark/devices/22/drive-partition.svg
 /usr/share/icons/breeze-dark/devices/22/drive-removable-media-usb-pendrive.svg
 /usr/share/icons/breeze-dark/devices/22/drive-removable-media-usb.svg
 /usr/share/icons/breeze-dark/devices/22/drive-removable-media.svg
@@ -5397,6 +5426,8 @@ popd
 /usr/share/icons/breeze-dark/devices/22/multimedia-player-ipod-mini-blue.svg
 /usr/share/icons/breeze-dark/devices/22/network-bluetooth.svg
 /usr/share/icons/breeze-dark/devices/22/network-modem.svg
+/usr/share/icons/breeze-dark/devices/22/network-rj11-female.svg
+/usr/share/icons/breeze-dark/devices/22/network-rj45-female.svg
 /usr/share/icons/breeze-dark/devices/22/network-vpn.svg
 /usr/share/icons/breeze-dark/devices/22/network-wired-activated.svg
 /usr/share/icons/breeze-dark/devices/22/network-wired-unavailable.svg
@@ -5424,9 +5455,13 @@ popd
 /usr/share/icons/breeze-dark/devices/64/cpu.svg
 /usr/share/icons/breeze-dark/devices/64/cups.svg
 /usr/share/icons/breeze-dark/devices/64/cupsprinter.svg
+/usr/share/icons/breeze-dark/devices/64/drive-harddisk-encrypted.svg
 /usr/share/icons/breeze-dark/devices/64/drive-harddisk-root.svg
 /usr/share/icons/breeze-dark/devices/64/drive-harddisk.svg
+/usr/share/icons/breeze-dark/devices/64/drive-multidisk.svg
+/usr/share/icons/breeze-dark/devices/64/drive-multipartition.svg
 /usr/share/icons/breeze-dark/devices/64/drive-optical.svg
+/usr/share/icons/breeze-dark/devices/64/drive-partition.svg
 /usr/share/icons/breeze-dark/devices/64/drive-removable-media-usb-pendrive.svg
 /usr/share/icons/breeze-dark/devices/64/drive-removable-media-usb.svg
 /usr/share/icons/breeze-dark/devices/64/drive-removable-media.svg
@@ -5448,6 +5483,8 @@ popd
 /usr/share/icons/breeze-dark/devices/64/media-optical.svg
 /usr/share/icons/breeze-dark/devices/64/multimedia-player.svg
 /usr/share/icons/breeze-dark/devices/64/network-card.svg
+/usr/share/icons/breeze-dark/devices/64/network-rj11-female.svg
+/usr/share/icons/breeze-dark/devices/64/network-rj45-female.svg
 /usr/share/icons/breeze-dark/devices/64/phone.svg
 /usr/share/icons/breeze-dark/devices/64/printer.svg
 /usr/share/icons/breeze-dark/devices/64/scanner.svg
@@ -5459,11 +5496,15 @@ popd
 /usr/share/icons/breeze-dark/devices/symbolic/camera-photo-symbolic.svg
 /usr/share/icons/breeze-dark/devices/symbolic/camera-web-symbolic.svg
 /usr/share/icons/breeze-dark/devices/symbolic/computer-symbolic.svg
+/usr/share/icons/breeze-dark/devices/symbolic/drive-harddisk-encrypted-symbolic.svg
 /usr/share/icons/breeze-dark/devices/symbolic/drive-harddisk-ieee1394-symbolic.svg
 /usr/share/icons/breeze-dark/devices/symbolic/drive-harddisk-root-symbolic.svg
 /usr/share/icons/breeze-dark/devices/symbolic/drive-harddisk-symbolic.svg
 /usr/share/icons/breeze-dark/devices/symbolic/drive-harddisk-system-symbolic.svg
 /usr/share/icons/breeze-dark/devices/symbolic/drive-harddisk-usb-symbolic.svg
+/usr/share/icons/breeze-dark/devices/symbolic/drive-multidisk-symbolic.svg
+/usr/share/icons/breeze-dark/devices/symbolic/drive-multipartition-symbolic.svg
+/usr/share/icons/breeze-dark/devices/symbolic/drive-partition-symbolic.svg
 /usr/share/icons/breeze-dark/devices/symbolic/drive-removable-media-symbolic.svg
 /usr/share/icons/breeze-dark/devices/symbolic/input-tablet-symbolic.svg
 /usr/share/icons/breeze-dark/devices/symbolic/media-flash-symbolic.svg
@@ -5717,6 +5758,7 @@ popd
 /usr/share/icons/breeze-dark/mimetypes/16/application-vnd.rar.svg
 /usr/share/icons/breeze-dark/mimetypes/16/application-vnd.rn-realmedia.svg
 /usr/share/icons/breeze-dark/mimetypes/16/application-vnd.scribus.svg
+/usr/share/icons/breeze-dark/mimetypes/16/application-vnd.sqlite3.svg
 /usr/share/icons/breeze-dark/mimetypes/16/application-vnd.stardivision.calc.svg
 /usr/share/icons/breeze-dark/mimetypes/16/application-vnd.stardivision.draw.svg
 /usr/share/icons/breeze-dark/mimetypes/16/application-vnd.stardivision.mail.svg
@@ -6037,6 +6079,7 @@ popd
 /usr/share/icons/breeze-dark/mimetypes/16/text-x-plain.svg
 /usr/share/icons/breeze-dark/mimetypes/16/text-x-po.svg
 /usr/share/icons/breeze-dark/mimetypes/16/text-x-python.svg
+/usr/share/icons/breeze-dark/mimetypes/16/text-x-python3.svg
 /usr/share/icons/breeze-dark/mimetypes/16/text-x-qml.svg
 /usr/share/icons/breeze-dark/mimetypes/16/text-x-r.svg
 /usr/share/icons/breeze-dark/mimetypes/16/text-x-readme.svg
@@ -6177,6 +6220,7 @@ popd
 /usr/share/icons/breeze-dark/mimetypes/22/application-vnd.rar.svg
 /usr/share/icons/breeze-dark/mimetypes/22/application-vnd.rn-realmedia.svg
 /usr/share/icons/breeze-dark/mimetypes/22/application-vnd.scribus.svg
+/usr/share/icons/breeze-dark/mimetypes/22/application-vnd.sqlite3.svg
 /usr/share/icons/breeze-dark/mimetypes/22/application-vnd.stardivision.calc.svg
 /usr/share/icons/breeze-dark/mimetypes/22/application-vnd.stardivision.draw.svg
 /usr/share/icons/breeze-dark/mimetypes/22/application-vnd.stardivision.mail.svg
@@ -6496,6 +6540,7 @@ popd
 /usr/share/icons/breeze-dark/mimetypes/22/text-x-plain.svg
 /usr/share/icons/breeze-dark/mimetypes/22/text-x-po.svg
 /usr/share/icons/breeze-dark/mimetypes/22/text-x-python.svg
+/usr/share/icons/breeze-dark/mimetypes/22/text-x-python3.svg
 /usr/share/icons/breeze-dark/mimetypes/22/text-x-qml.svg
 /usr/share/icons/breeze-dark/mimetypes/22/text-x-r.svg
 /usr/share/icons/breeze-dark/mimetypes/22/text-x-readme.svg
@@ -6636,6 +6681,7 @@ popd
 /usr/share/icons/breeze-dark/mimetypes/32/application-vnd.rar.svg
 /usr/share/icons/breeze-dark/mimetypes/32/application-vnd.rn-realmedia.svg
 /usr/share/icons/breeze-dark/mimetypes/32/application-vnd.scribus.svg
+/usr/share/icons/breeze-dark/mimetypes/32/application-vnd.sqlite3.svg
 /usr/share/icons/breeze-dark/mimetypes/32/application-vnd.stardivision.calc.svg
 /usr/share/icons/breeze-dark/mimetypes/32/application-vnd.stardivision.draw.svg
 /usr/share/icons/breeze-dark/mimetypes/32/application-vnd.stardivision.mail.svg
@@ -6955,6 +7001,7 @@ popd
 /usr/share/icons/breeze-dark/mimetypes/32/text-x-plain.svg
 /usr/share/icons/breeze-dark/mimetypes/32/text-x-po.svg
 /usr/share/icons/breeze-dark/mimetypes/32/text-x-python.svg
+/usr/share/icons/breeze-dark/mimetypes/32/text-x-python3.svg
 /usr/share/icons/breeze-dark/mimetypes/32/text-x-qml.svg
 /usr/share/icons/breeze-dark/mimetypes/32/text-x-r.svg
 /usr/share/icons/breeze-dark/mimetypes/32/text-x-readme.svg
@@ -7094,6 +7141,7 @@ popd
 /usr/share/icons/breeze-dark/mimetypes/64/application-vnd.rar.svg
 /usr/share/icons/breeze-dark/mimetypes/64/application-vnd.rn-realmedia.svg
 /usr/share/icons/breeze-dark/mimetypes/64/application-vnd.scribus.svg
+/usr/share/icons/breeze-dark/mimetypes/64/application-vnd.sqlite3.svg
 /usr/share/icons/breeze-dark/mimetypes/64/application-vnd.stardivision.calc.svg
 /usr/share/icons/breeze-dark/mimetypes/64/application-vnd.stardivision.draw.svg
 /usr/share/icons/breeze-dark/mimetypes/64/application-vnd.stardivision.mail.svg
@@ -7413,6 +7461,7 @@ popd
 /usr/share/icons/breeze-dark/mimetypes/64/text-x-plain.svg
 /usr/share/icons/breeze-dark/mimetypes/64/text-x-po.svg
 /usr/share/icons/breeze-dark/mimetypes/64/text-x-python.svg
+/usr/share/icons/breeze-dark/mimetypes/64/text-x-python3.svg
 /usr/share/icons/breeze-dark/mimetypes/64/text-x-qml.svg
 /usr/share/icons/breeze-dark/mimetypes/64/text-x-r.svg
 /usr/share/icons/breeze-dark/mimetypes/64/text-x-readme.svg
@@ -7831,20 +7880,67 @@ popd
 /usr/share/icons/breeze-dark/preferences/32/preferences-desktop-user.svg
 /usr/share/icons/breeze-dark/preferences/32/preferences-desktop-wallpaper.svg
 /usr/share/icons/breeze-dark/preferences/32/preferences-desktop.svg
+/usr/share/icons/breeze-dark/preferences/32/preferences-devices-cpu.svg
+/usr/share/icons/breeze-dark/preferences/32/preferences-devices-drive-optical-check.svg
+/usr/share/icons/breeze-dark/preferences/32/preferences-devices-printer.svg
+/usr/share/icons/breeze-dark/preferences/32/preferences-devices-scanner.svg
+/usr/share/icons/breeze-dark/preferences/32/preferences-devices-tree.svg
 /usr/share/icons/breeze-dark/preferences/32/preferences-gtk-config.svg
 /usr/share/icons/breeze-dark/preferences/32/preferences-kde-connect.svg
+/usr/share/icons/breeze-dark/preferences/32/preferences-log.svg
 /usr/share/icons/breeze-dark/preferences/32/preferences-other.svg
 /usr/share/icons/breeze-dark/preferences/32/preferences-plugin.svg
+/usr/share/icons/breeze-dark/preferences/32/preferences-releasenotes.svg
+/usr/share/icons/breeze-dark/preferences/32/preferences-security-apparmor.svg
+/usr/share/icons/breeze-dark/preferences/32/preferences-security-firewall.svg
+/usr/share/icons/breeze-dark/preferences/32/preferences-security-kerberos.svg
+/usr/share/icons/breeze-dark/preferences/32/preferences-security.svg
+/usr/share/icons/breeze-dark/preferences/32/preferences-system-backup.svg
 /usr/share/icons/breeze-dark/preferences/32/preferences-system-bluetooth.svg
+/usr/share/icons/breeze-dark/preferences/32/preferences-system-linux.svg
 /usr/share/icons/breeze-dark/preferences/32/preferences-system-login.svg
+/usr/share/icons/breeze-dark/preferences/32/preferences-system-network-dsl.svg
+/usr/share/icons/breeze-dark/preferences/32/preferences-system-network-ethernet.svg
+/usr/share/icons/breeze-dark/preferences/32/preferences-system-network-iscsi.svg
+/usr/share/icons/breeze-dark/preferences/32/preferences-system-network-ldap.svg
+/usr/share/icons/breeze-dark/preferences/32/preferences-system-network-nis.svg
+/usr/share/icons/breeze-dark/preferences/32/preferences-system-network-ntp.svg
+/usr/share/icons/breeze-dark/preferences/32/preferences-system-network-proxy.svg
+/usr/share/icons/breeze-dark/preferences/32/preferences-system-network-remote.svg
+/usr/share/icons/breeze-dark/preferences/32/preferences-system-network-samba.svg
+/usr/share/icons/breeze-dark/preferences/32/preferences-system-network-server-boot.svg
+/usr/share/icons/breeze-dark/preferences/32/preferences-system-network-server-dhcp.svg
+/usr/share/icons/breeze-dark/preferences/32/preferences-system-network-server-dns.svg
+/usr/share/icons/breeze-dark/preferences/32/preferences-system-network-server-ftp.svg
+/usr/share/icons/breeze-dark/preferences/32/preferences-system-network-server-installation.svg
+/usr/share/icons/breeze-dark/preferences/32/preferences-system-network-server-iscsi.svg
+/usr/share/icons/breeze-dark/preferences/32/preferences-system-network-server-kerberos.svg
+/usr/share/icons/breeze-dark/preferences/32/preferences-system-network-server-ldap.svg
+/usr/share/icons/breeze-dark/preferences/32/preferences-system-network-server-mail.svg
+/usr/share/icons/breeze-dark/preferences/32/preferences-system-network-server-nfs.svg
+/usr/share/icons/breeze-dark/preferences/32/preferences-system-network-server-nis.svg
+/usr/share/icons/breeze-dark/preferences/32/preferences-system-network-server-samba.svg
+/usr/share/icons/breeze-dark/preferences/32/preferences-system-network-server-slp.svg
+/usr/share/icons/breeze-dark/preferences/32/preferences-system-network-server-web.svg
+/usr/share/icons/breeze-dark/preferences/32/preferences-system-network-server.svg
 /usr/share/icons/breeze-dark/preferences/32/preferences-system-network-sharing.svg
+/usr/share/icons/breeze-dark/preferences/32/preferences-system-network-vpn.svg
+/usr/share/icons/breeze-dark/preferences/32/preferences-system-network-wakeonlan.svg
 /usr/share/icons/breeze-dark/preferences/32/preferences-system-network.svg
 /usr/share/icons/breeze-dark/preferences/32/preferences-system-power-management.svg
+/usr/share/icons/breeze-dark/preferences/32/preferences-system-services.svg
 /usr/share/icons/breeze-dark/preferences/32/preferences-system-session-services.svg
+/usr/share/icons/breeze-dark/preferences/32/preferences-system-startup.svg
 /usr/share/icons/breeze-dark/preferences/32/preferences-system-time.svg
+/usr/share/icons/breeze-dark/preferences/32/preferences-system-user-sudo.svg
 /usr/share/icons/breeze-dark/preferences/32/preferences-system-windows-actions.svg
 /usr/share/icons/breeze-dark/preferences/32/preferences-system-windows-move.svg
 /usr/share/icons/breeze-dark/preferences/32/preferences-system-windows.svg
+/usr/share/icons/breeze-dark/preferences/32/preferences-virtualization-container.svg
+/usr/share/icons/breeze-dark/preferences/32/preferences-virtualization-vm-install.svg
+/usr/share/icons/breeze-dark/preferences/32/preferences-virtualization-vm-migrate.svg
+/usr/share/icons/breeze-dark/preferences/32/preferences-virtualization-vm-new.svg
+/usr/share/icons/breeze-dark/preferences/32/preferences-virtualization-vm.svg
 /usr/share/icons/breeze-dark/preferences/32/preferences-web-browser-adblock.svg
 /usr/share/icons/breeze-dark/preferences/32/preferences-web-browser-cache.svg
 /usr/share/icons/breeze-dark/preferences/32/preferences-web-browser-cookies.svg
@@ -7852,9 +7948,79 @@ popd
 /usr/share/icons/breeze-dark/preferences/32/preferences-web-browser-shortcuts.svg
 /usr/share/icons/breeze-dark/preferences/32/preferences-web-browser-ssl.svg
 /usr/share/icons/breeze-dark/preferences/32/preferences-web-browser-stylesheets.svg
+/usr/share/icons/breeze-dark/preferences/32/preferences.svg
 /usr/share/icons/breeze-dark/preferences/32/system-lock-screen.svg
 /usr/share/icons/breeze-dark/preferences/32/system-users.svg
 /usr/share/icons/breeze-dark/preferences/32/window-duplicate.svg
+/usr/share/icons/breeze-dark/preferences/32/yast-addon.svg
+/usr/share/icons/breeze-dark/preferences/32/yast-alternatives.svg
+/usr/share/icons/breeze-dark/preferences/32/yast-apparmor.svg
+/usr/share/icons/breeze-dark/preferences/32/yast-auth-client.svg
+/usr/share/icons/breeze-dark/preferences/32/yast-autoyast.svg
+/usr/share/icons/breeze-dark/preferences/32/yast-bootloader.svg
+/usr/share/icons/breeze-dark/preferences/32/yast-checkmedia.svg
+/usr/share/icons/breeze-dark/preferences/32/yast-create-new-vm.svg
+/usr/share/icons/breeze-dark/preferences/32/yast-device-tree.svg
+/usr/share/icons/breeze-dark/preferences/32/yast-dhcp-server.svg
+/usr/share/icons/breeze-dark/preferences/32/yast-disk.svg
+/usr/share/icons/breeze-dark/preferences/32/yast-dns-server.svg
+/usr/share/icons/breeze-dark/preferences/32/yast-docker.svg
+/usr/share/icons/breeze-dark/preferences/32/yast-dsl.svg
+/usr/share/icons/breeze-dark/preferences/32/yast-fcoe.svg
+/usr/share/icons/breeze-dark/preferences/32/yast-firewall.svg
+/usr/share/icons/breeze-dark/preferences/32/yast-fonts.svg
+/usr/share/icons/breeze-dark/preferences/32/yast-ftp-server.svg
+/usr/share/icons/breeze-dark/preferences/32/yast-hardware.svg
+/usr/share/icons/breeze-dark/preferences/32/yast-host.svg
+/usr/share/icons/breeze-dark/preferences/32/yast-http-server.svg
+/usr/share/icons/breeze-dark/preferences/32/yast-hwinfo.svg
+/usr/share/icons/breeze-dark/preferences/32/yast-instserver.svg
+/usr/share/icons/breeze-dark/preferences/32/yast-iscsi-client.svg
+/usr/share/icons/breeze-dark/preferences/32/yast-iscsi-server.svg
+/usr/share/icons/breeze-dark/preferences/32/yast-journal.svg
+/usr/share/icons/breeze-dark/preferences/32/yast-kerberos-server.svg
+/usr/share/icons/breeze-dark/preferences/32/yast-kernel.svg
+/usr/share/icons/breeze-dark/preferences/32/yast-keyboard.svg
+/usr/share/icons/breeze-dark/preferences/32/yast-lan.svg
+/usr/share/icons/breeze-dark/preferences/32/yast-language.svg
+/usr/share/icons/breeze-dark/preferences/32/yast-ldap-server.svg
+/usr/share/icons/breeze-dark/preferences/32/yast-ldap.svg
+/usr/share/icons/breeze-dark/preferences/32/yast-mail.svg
+/usr/share/icons/breeze-dark/preferences/32/yast-messages.svg
+/usr/share/icons/breeze-dark/preferences/32/yast-misc.svg
+/usr/share/icons/breeze-dark/preferences/32/yast-network.svg
+/usr/share/icons/breeze-dark/preferences/32/yast-nfs-server.svg
+/usr/share/icons/breeze-dark/preferences/32/yast-nfs.svg
+/usr/share/icons/breeze-dark/preferences/32/yast-nis-server.svg
+/usr/share/icons/breeze-dark/preferences/32/yast-nis.svg
+/usr/share/icons/breeze-dark/preferences/32/yast-ntp-client.svg
+/usr/share/icons/breeze-dark/preferences/32/yast-printer.svg
+/usr/share/icons/breeze-dark/preferences/32/yast-proxy.svg
+/usr/share/icons/breeze-dark/preferences/32/yast-release-notes.svg
+/usr/share/icons/breeze-dark/preferences/32/yast-remote.svg
+/usr/share/icons/breeze-dark/preferences/32/yast-samba-client.svg
+/usr/share/icons/breeze-dark/preferences/32/yast-samba-server.svg
+/usr/share/icons/breeze-dark/preferences/32/yast-scanner.svg
+/usr/share/icons/breeze-dark/preferences/32/yast-security.svg
+/usr/share/icons/breeze-dark/preferences/32/yast-services-manager.svg
+/usr/share/icons/breeze-dark/preferences/32/yast-slp-server.svg
+/usr/share/icons/breeze-dark/preferences/32/yast-snapper.svg
+/usr/share/icons/breeze-dark/preferences/32/yast-software.svg
+/usr/share/icons/breeze-dark/preferences/32/yast-sound.svg
+/usr/share/icons/breeze-dark/preferences/32/yast-sudo.svg
+/usr/share/icons/breeze-dark/preferences/32/yast-support.svg
+/usr/share/icons/breeze-dark/preferences/32/yast-sw_source.svg
+/usr/share/icons/breeze-dark/preferences/32/yast-sysconfig.svg
+/usr/share/icons/breeze-dark/preferences/32/yast-system.svg
+/usr/share/icons/breeze-dark/preferences/32/yast-tftp-server.svg
+/usr/share/icons/breeze-dark/preferences/32/yast-timezone.svg
+/usr/share/icons/breeze-dark/preferences/32/yast-update.svg
+/usr/share/icons/breeze-dark/preferences/32/yast-users.svg
+/usr/share/icons/breeze-dark/preferences/32/yast-vm-install.svg
+/usr/share/icons/breeze-dark/preferences/32/yast-vm-migrate.svg
+/usr/share/icons/breeze-dark/preferences/32/yast-vm.svg
+/usr/share/icons/breeze-dark/preferences/32/yast-vpn.svg
+/usr/share/icons/breeze-dark/preferences/32/yast-wol.svg
 /usr/share/icons/breeze-dark/status/16/audio-off.svg
 /usr/share/icons/breeze-dark/status/16/audio-on.svg
 /usr/share/icons/breeze-dark/status/16/audio-ready.svg
@@ -7913,6 +8079,9 @@ popd
 /usr/share/icons/breeze-dark/status/16/user-offline.svg
 /usr/share/icons/breeze-dark/status/16/user-online.svg
 /usr/share/icons/breeze-dark/status/16@2x
+/usr/share/icons/breeze-dark/status/22/audio-off.svg
+/usr/share/icons/breeze-dark/status/22/audio-on.svg
+/usr/share/icons/breeze-dark/status/22/audio-ready.svg
 /usr/share/icons/breeze-dark/status/22/audio-volume-high.svg
 /usr/share/icons/breeze-dark/status/22/audio-volume-low.svg
 /usr/share/icons/breeze-dark/status/22/audio-volume-medium.svg
@@ -8539,6 +8708,8 @@ popd
 /usr/share/icons/breeze/actions/16/flag-yellow.svg
 /usr/share/icons/breeze/actions/16/flag.svg
 /usr/share/icons/breeze/actions/16/flash.svg
+/usr/share/icons/breeze/actions/16/flashlight-off.svg
+/usr/share/icons/breeze/actions/16/flashlight-on.svg
 /usr/share/icons/breeze/actions/16/folder-new.svg
 /usr/share/icons/breeze/actions/16/folder-stash.svg
 /usr/share/icons/breeze/actions/16/folder-sync.svg
@@ -9557,6 +9728,7 @@ popd
 /usr/share/icons/breeze/actions/16/view-pim-tasks.svg
 /usr/share/icons/breeze/actions/16/view-presentation.svg
 /usr/share/icons/breeze/actions/16/view-preview.svg
+/usr/share/icons/breeze/actions/16/view-private.svg
 /usr/share/icons/breeze/actions/16/view-process-all-tree.svg
 /usr/share/icons/breeze/actions/16/view-process-all.svg
 /usr/share/icons/breeze/actions/16/view-process-own.svg
@@ -10118,6 +10290,8 @@ popd
 /usr/share/icons/breeze/actions/22/flag-yellow.svg
 /usr/share/icons/breeze/actions/22/flag.svg
 /usr/share/icons/breeze/actions/22/flash.svg
+/usr/share/icons/breeze/actions/22/flashlight-off.svg
+/usr/share/icons/breeze/actions/22/flashlight-on.svg
 /usr/share/icons/breeze/actions/22/flower-shape.svg
 /usr/share/icons/breeze/actions/22/folder-new.svg
 /usr/share/icons/breeze/actions/22/folder-stash.svg
@@ -11629,6 +11803,8 @@ popd
 /usr/share/icons/breeze/actions/24/flag-red.svg
 /usr/share/icons/breeze/actions/24/flag-yellow.svg
 /usr/share/icons/breeze/actions/24/flag.svg
+/usr/share/icons/breeze/actions/24/flashlight-off.svg
+/usr/share/icons/breeze/actions/24/flashlight-on.svg
 /usr/share/icons/breeze/actions/24/folder-new.svg
 /usr/share/icons/breeze/actions/24/folder-sync.svg
 /usr/share/icons/breeze/actions/24/fork.svg
@@ -12450,6 +12626,8 @@ popd
 /usr/share/icons/breeze/actions/32/file-zoom-in.svg
 /usr/share/icons/breeze/actions/32/file-zoom-out.svg
 /usr/share/icons/breeze/actions/32/flash.svg
+/usr/share/icons/breeze/actions/32/flashlight-off.svg
+/usr/share/icons/breeze/actions/32/flashlight-on.svg
 /usr/share/icons/breeze/actions/32/folder-new.svg
 /usr/share/icons/breeze/actions/32/folder-sync.svg
 /usr/share/icons/breeze/actions/32/format-stroke-color.svg
@@ -12779,6 +12957,7 @@ popd
 /usr/share/icons/breeze/actions/symbolic/view-more-horizontal-symbolic.svg
 /usr/share/icons/breeze/actions/symbolic/view-more-symbolic.svg
 /usr/share/icons/breeze/actions/symbolic/view-presentation-symbolic.svg
+/usr/share/icons/breeze/actions/symbolic/view-private-symbolic.svg
 /usr/share/icons/breeze/actions/symbolic/view-refresh-symbolic.svg
 /usr/share/icons/breeze/actions/symbolic/view-restore-symbolic.svg
 /usr/share/icons/breeze/actions/symbolic/view-sort-ascending-symbolic.svg
@@ -12985,13 +13164,19 @@ popd
 /usr/share/icons/breeze/apps/22@2x
 /usr/share/icons/breeze/apps/32/accessories-text-editor.svg
 /usr/share/icons/breeze/apps/32/hotspot.svg
+/usr/share/icons/breeze/apps/32/hwinfo.svg
 /usr/share/icons/breeze/apps/32/kate.svg
 /usr/share/icons/breeze/apps/32/kwrite.svg
 /usr/share/icons/breeze/apps/32/plasmavault.svg
 /usr/share/icons/breeze/apps/32/system-file-manager.svg
+/usr/share/icons/breeze/apps/32/system-help.svg
+/usr/share/icons/breeze/apps/32/systemsettings.svg
 /usr/share/icons/breeze/apps/32/umbrello.svg
+/usr/share/icons/breeze/apps/32/utilities-log-viewer.svg
 /usr/share/icons/breeze/apps/32/utilities-terminal.svg
 /usr/share/icons/breeze/apps/32/vlc.svg
+/usr/share/icons/breeze/apps/32/yast-sw_single.svg
+/usr/share/icons/breeze/apps/32/yast.svg
 /usr/share/icons/breeze/apps/48/CMakeSetup.svg
 /usr/share/icons/breeze/apps/48/QOwnNotes.svg
 /usr/share/icons/breeze/apps/48/QtProject-designer.svg
@@ -13312,6 +13497,9 @@ popd
 /usr/share/icons/breeze/apps/48/xterm.svg
 /usr/share/icons/breeze/apps/48/yakuake.svg
 /usr/share/icons/breeze/apps/48/yandex-browser.svg
+/usr/share/icons/breeze/apps/48/yast-installation.svg
+/usr/share/icons/breeze/apps/48/yast-sw_single.svg
+/usr/share/icons/breeze/apps/48/yast.svg
 /usr/share/icons/breeze/apps/64/accessories-text-editor.svg
 /usr/share/icons/breeze/apps/64/diaspora.svg
 /usr/share/icons/breeze/apps/64/hotspot.svg
@@ -13345,9 +13533,13 @@ popd
 /usr/share/icons/breeze/devices/16/computer.svg
 /usr/share/icons/breeze/devices/16/cups.svg
 /usr/share/icons/breeze/devices/16/cupsprinter.svg
+/usr/share/icons/breeze/devices/16/drive-harddisk-encrypted.svg
 /usr/share/icons/breeze/devices/16/drive-harddisk-root.svg
 /usr/share/icons/breeze/devices/16/drive-harddisk.svg
+/usr/share/icons/breeze/devices/16/drive-multidisk.svg
+/usr/share/icons/breeze/devices/16/drive-multipartition.svg
 /usr/share/icons/breeze/devices/16/drive-optical.svg
+/usr/share/icons/breeze/devices/16/drive-partition.svg
 /usr/share/icons/breeze/devices/16/drive-removable-media-usb-pendrive.svg
 /usr/share/icons/breeze/devices/16/drive-removable-media-usb.svg
 /usr/share/icons/breeze/devices/16/drive-removable-media.svg
@@ -13363,6 +13555,8 @@ popd
 /usr/share/icons/breeze/devices/16/multimedia-player.svg
 /usr/share/icons/breeze/devices/16/network-bluetooth.svg
 /usr/share/icons/breeze/devices/16/network-modem.svg
+/usr/share/icons/breeze/devices/16/network-rj11-female.svg
+/usr/share/icons/breeze/devices/16/network-rj45-female.svg
 /usr/share/icons/breeze/devices/16/network-vpn.svg
 /usr/share/icons/breeze/devices/16/network-wired-activated.svg
 /usr/share/icons/breeze/devices/16/network-wired-unavailable.svg
@@ -13389,9 +13583,13 @@ popd
 /usr/share/icons/breeze/devices/22/computer.svg
 /usr/share/icons/breeze/devices/22/cups.svg
 /usr/share/icons/breeze/devices/22/cupsprinter.svg
+/usr/share/icons/breeze/devices/22/drive-harddisk-encrypted.svg
 /usr/share/icons/breeze/devices/22/drive-harddisk-root.svg
 /usr/share/icons/breeze/devices/22/drive-harddisk.svg
+/usr/share/icons/breeze/devices/22/drive-multidisk.svg
+/usr/share/icons/breeze/devices/22/drive-multipartition.svg
 /usr/share/icons/breeze/devices/22/drive-optical.svg
+/usr/share/icons/breeze/devices/22/drive-partition.svg
 /usr/share/icons/breeze/devices/22/drive-removable-media-usb-pendrive.svg
 /usr/share/icons/breeze/devices/22/drive-removable-media-usb.svg
 /usr/share/icons/breeze/devices/22/drive-removable-media.svg
@@ -13410,6 +13608,8 @@ popd
 /usr/share/icons/breeze/devices/22/multimedia-player-ipod-mini-blue.svg
 /usr/share/icons/breeze/devices/22/network-bluetooth.svg
 /usr/share/icons/breeze/devices/22/network-modem.svg
+/usr/share/icons/breeze/devices/22/network-rj11-female.svg
+/usr/share/icons/breeze/devices/22/network-rj45-female.svg
 /usr/share/icons/breeze/devices/22/network-vpn.svg
 /usr/share/icons/breeze/devices/22/network-wired-activated.svg
 /usr/share/icons/breeze/devices/22/network-wired-unavailable.svg
@@ -13437,9 +13637,13 @@ popd
 /usr/share/icons/breeze/devices/64/cpu.svg
 /usr/share/icons/breeze/devices/64/cups.svg
 /usr/share/icons/breeze/devices/64/cupsprinter.svg
+/usr/share/icons/breeze/devices/64/drive-harddisk-encrypted.svg
 /usr/share/icons/breeze/devices/64/drive-harddisk-root.svg
 /usr/share/icons/breeze/devices/64/drive-harddisk.svg
+/usr/share/icons/breeze/devices/64/drive-multidisk.svg
+/usr/share/icons/breeze/devices/64/drive-multipartition.svg
 /usr/share/icons/breeze/devices/64/drive-optical.svg
+/usr/share/icons/breeze/devices/64/drive-partition.svg
 /usr/share/icons/breeze/devices/64/drive-removable-media-usb-pendrive.svg
 /usr/share/icons/breeze/devices/64/drive-removable-media-usb.svg
 /usr/share/icons/breeze/devices/64/drive-removable-media.svg
@@ -13461,6 +13665,8 @@ popd
 /usr/share/icons/breeze/devices/64/media-optical.svg
 /usr/share/icons/breeze/devices/64/multimedia-player.svg
 /usr/share/icons/breeze/devices/64/network-card.svg
+/usr/share/icons/breeze/devices/64/network-rj11-female.svg
+/usr/share/icons/breeze/devices/64/network-rj45-female.svg
 /usr/share/icons/breeze/devices/64/phone.svg
 /usr/share/icons/breeze/devices/64/printer.svg
 /usr/share/icons/breeze/devices/64/scanner.svg
@@ -13472,11 +13678,15 @@ popd
 /usr/share/icons/breeze/devices/symbolic/camera-photo-symbolic.svg
 /usr/share/icons/breeze/devices/symbolic/camera-web-symbolic.svg
 /usr/share/icons/breeze/devices/symbolic/computer-symbolic.svg
+/usr/share/icons/breeze/devices/symbolic/drive-harddisk-encrypted-symbolic.svg
 /usr/share/icons/breeze/devices/symbolic/drive-harddisk-ieee1394-symbolic.svg
 /usr/share/icons/breeze/devices/symbolic/drive-harddisk-root-symbolic.svg
 /usr/share/icons/breeze/devices/symbolic/drive-harddisk-symbolic.svg
 /usr/share/icons/breeze/devices/symbolic/drive-harddisk-system-symbolic.svg
 /usr/share/icons/breeze/devices/symbolic/drive-harddisk-usb-symbolic.svg
+/usr/share/icons/breeze/devices/symbolic/drive-multidisk-symbolic.svg
+/usr/share/icons/breeze/devices/symbolic/drive-multipartition-symbolic.svg
+/usr/share/icons/breeze/devices/symbolic/drive-partition-symbolic.svg
 /usr/share/icons/breeze/devices/symbolic/drive-removable-media-symbolic.svg
 /usr/share/icons/breeze/devices/symbolic/input-tablet-symbolic.svg
 /usr/share/icons/breeze/devices/symbolic/media-flash-symbolic.svg
@@ -13731,6 +13941,7 @@ popd
 /usr/share/icons/breeze/mimetypes/16/application-vnd.rar.svg
 /usr/share/icons/breeze/mimetypes/16/application-vnd.rn-realmedia.svg
 /usr/share/icons/breeze/mimetypes/16/application-vnd.scribus.svg
+/usr/share/icons/breeze/mimetypes/16/application-vnd.sqlite3.svg
 /usr/share/icons/breeze/mimetypes/16/application-vnd.stardivision.calc.svg
 /usr/share/icons/breeze/mimetypes/16/application-vnd.stardivision.draw.svg
 /usr/share/icons/breeze/mimetypes/16/application-vnd.stardivision.mail.svg
@@ -14052,6 +14263,7 @@ popd
 /usr/share/icons/breeze/mimetypes/16/text-x-plain.svg
 /usr/share/icons/breeze/mimetypes/16/text-x-po.svg
 /usr/share/icons/breeze/mimetypes/16/text-x-python.svg
+/usr/share/icons/breeze/mimetypes/16/text-x-python3.svg
 /usr/share/icons/breeze/mimetypes/16/text-x-qml.svg
 /usr/share/icons/breeze/mimetypes/16/text-x-r.svg
 /usr/share/icons/breeze/mimetypes/16/text-x-readme.svg
@@ -14193,6 +14405,7 @@ popd
 /usr/share/icons/breeze/mimetypes/22/application-vnd.rar.svg
 /usr/share/icons/breeze/mimetypes/22/application-vnd.rn-realmedia.svg
 /usr/share/icons/breeze/mimetypes/22/application-vnd.scribus.svg
+/usr/share/icons/breeze/mimetypes/22/application-vnd.sqlite3.svg
 /usr/share/icons/breeze/mimetypes/22/application-vnd.stardivision.calc.svg
 /usr/share/icons/breeze/mimetypes/22/application-vnd.stardivision.draw.svg
 /usr/share/icons/breeze/mimetypes/22/application-vnd.stardivision.mail.svg
@@ -14513,6 +14726,7 @@ popd
 /usr/share/icons/breeze/mimetypes/22/text-x-plain.svg
 /usr/share/icons/breeze/mimetypes/22/text-x-po.svg
 /usr/share/icons/breeze/mimetypes/22/text-x-python.svg
+/usr/share/icons/breeze/mimetypes/22/text-x-python3.svg
 /usr/share/icons/breeze/mimetypes/22/text-x-qml.svg
 /usr/share/icons/breeze/mimetypes/22/text-x-r.svg
 /usr/share/icons/breeze/mimetypes/22/text-x-readme.svg
@@ -14654,6 +14868,7 @@ popd
 /usr/share/icons/breeze/mimetypes/32/application-vnd.rar.svg
 /usr/share/icons/breeze/mimetypes/32/application-vnd.rn-realmedia.svg
 /usr/share/icons/breeze/mimetypes/32/application-vnd.scribus.svg
+/usr/share/icons/breeze/mimetypes/32/application-vnd.sqlite3.svg
 /usr/share/icons/breeze/mimetypes/32/application-vnd.stardivision.calc.svg
 /usr/share/icons/breeze/mimetypes/32/application-vnd.stardivision.draw.svg
 /usr/share/icons/breeze/mimetypes/32/application-vnd.stardivision.mail.svg
@@ -14974,6 +15189,7 @@ popd
 /usr/share/icons/breeze/mimetypes/32/text-x-plain.svg
 /usr/share/icons/breeze/mimetypes/32/text-x-po.svg
 /usr/share/icons/breeze/mimetypes/32/text-x-python.svg
+/usr/share/icons/breeze/mimetypes/32/text-x-python3.svg
 /usr/share/icons/breeze/mimetypes/32/text-x-qml.svg
 /usr/share/icons/breeze/mimetypes/32/text-x-r.svg
 /usr/share/icons/breeze/mimetypes/32/text-x-readme.svg
@@ -15114,6 +15330,7 @@ popd
 /usr/share/icons/breeze/mimetypes/64/application-vnd.rar.svg
 /usr/share/icons/breeze/mimetypes/64/application-vnd.rn-realmedia.svg
 /usr/share/icons/breeze/mimetypes/64/application-vnd.scribus.svg
+/usr/share/icons/breeze/mimetypes/64/application-vnd.sqlite3.svg
 /usr/share/icons/breeze/mimetypes/64/application-vnd.stardivision.calc.svg
 /usr/share/icons/breeze/mimetypes/64/application-vnd.stardivision.draw.svg
 /usr/share/icons/breeze/mimetypes/64/application-vnd.stardivision.mail.svg
@@ -15435,6 +15652,7 @@ popd
 /usr/share/icons/breeze/mimetypes/64/text-x-plain.svg
 /usr/share/icons/breeze/mimetypes/64/text-x-po.svg
 /usr/share/icons/breeze/mimetypes/64/text-x-python.svg
+/usr/share/icons/breeze/mimetypes/64/text-x-python3.svg
 /usr/share/icons/breeze/mimetypes/64/text-x-qml.svg
 /usr/share/icons/breeze/mimetypes/64/text-x-r.svg
 /usr/share/icons/breeze/mimetypes/64/text-x-readme.svg
@@ -15853,20 +16071,67 @@ popd
 /usr/share/icons/breeze/preferences/32/preferences-desktop-user.svg
 /usr/share/icons/breeze/preferences/32/preferences-desktop-wallpaper.svg
 /usr/share/icons/breeze/preferences/32/preferences-desktop.svg
+/usr/share/icons/breeze/preferences/32/preferences-devices-cpu.svg
+/usr/share/icons/breeze/preferences/32/preferences-devices-drive-optical-check.svg
+/usr/share/icons/breeze/preferences/32/preferences-devices-printer.svg
+/usr/share/icons/breeze/preferences/32/preferences-devices-scanner.svg
+/usr/share/icons/breeze/preferences/32/preferences-devices-tree.svg
 /usr/share/icons/breeze/preferences/32/preferences-gtk-config.svg
 /usr/share/icons/breeze/preferences/32/preferences-kde-connect.svg
+/usr/share/icons/breeze/preferences/32/preferences-log.svg
 /usr/share/icons/breeze/preferences/32/preferences-other.svg
 /usr/share/icons/breeze/preferences/32/preferences-plugin.svg
+/usr/share/icons/breeze/preferences/32/preferences-releasenotes.svg
+/usr/share/icons/breeze/preferences/32/preferences-security-apparmor.svg
+/usr/share/icons/breeze/preferences/32/preferences-security-firewall.svg
+/usr/share/icons/breeze/preferences/32/preferences-security-kerberos.svg
+/usr/share/icons/breeze/preferences/32/preferences-security.svg
+/usr/share/icons/breeze/preferences/32/preferences-system-backup.svg
 /usr/share/icons/breeze/preferences/32/preferences-system-bluetooth.svg
+/usr/share/icons/breeze/preferences/32/preferences-system-linux.svg
 /usr/share/icons/breeze/preferences/32/preferences-system-login.svg
+/usr/share/icons/breeze/preferences/32/preferences-system-network-dsl.svg
+/usr/share/icons/breeze/preferences/32/preferences-system-network-ethernet.svg
+/usr/share/icons/breeze/preferences/32/preferences-system-network-iscsi.svg
+/usr/share/icons/breeze/preferences/32/preferences-system-network-ldap.svg
+/usr/share/icons/breeze/preferences/32/preferences-system-network-nis.svg
+/usr/share/icons/breeze/preferences/32/preferences-system-network-ntp.svg
+/usr/share/icons/breeze/preferences/32/preferences-system-network-proxy.svg
+/usr/share/icons/breeze/preferences/32/preferences-system-network-remote.svg
+/usr/share/icons/breeze/preferences/32/preferences-system-network-samba.svg
+/usr/share/icons/breeze/preferences/32/preferences-system-network-server-boot.svg
+/usr/share/icons/breeze/preferences/32/preferences-system-network-server-dhcp.svg
+/usr/share/icons/breeze/preferences/32/preferences-system-network-server-dns.svg
+/usr/share/icons/breeze/preferences/32/preferences-system-network-server-ftp.svg
+/usr/share/icons/breeze/preferences/32/preferences-system-network-server-installation.svg
+/usr/share/icons/breeze/preferences/32/preferences-system-network-server-iscsi.svg
+/usr/share/icons/breeze/preferences/32/preferences-system-network-server-kerberos.svg
+/usr/share/icons/breeze/preferences/32/preferences-system-network-server-ldap.svg
+/usr/share/icons/breeze/preferences/32/preferences-system-network-server-mail.svg
+/usr/share/icons/breeze/preferences/32/preferences-system-network-server-nfs.svg
+/usr/share/icons/breeze/preferences/32/preferences-system-network-server-nis.svg
+/usr/share/icons/breeze/preferences/32/preferences-system-network-server-samba.svg
+/usr/share/icons/breeze/preferences/32/preferences-system-network-server-slp.svg
+/usr/share/icons/breeze/preferences/32/preferences-system-network-server-web.svg
+/usr/share/icons/breeze/preferences/32/preferences-system-network-server.svg
 /usr/share/icons/breeze/preferences/32/preferences-system-network-sharing.svg
+/usr/share/icons/breeze/preferences/32/preferences-system-network-vpn.svg
+/usr/share/icons/breeze/preferences/32/preferences-system-network-wakeonlan.svg
 /usr/share/icons/breeze/preferences/32/preferences-system-network.svg
 /usr/share/icons/breeze/preferences/32/preferences-system-power-management.svg
+/usr/share/icons/breeze/preferences/32/preferences-system-services.svg
 /usr/share/icons/breeze/preferences/32/preferences-system-session-services.svg
+/usr/share/icons/breeze/preferences/32/preferences-system-startup.svg
 /usr/share/icons/breeze/preferences/32/preferences-system-time.svg
+/usr/share/icons/breeze/preferences/32/preferences-system-user-sudo.svg
 /usr/share/icons/breeze/preferences/32/preferences-system-windows-actions.svg
 /usr/share/icons/breeze/preferences/32/preferences-system-windows-move.svg
 /usr/share/icons/breeze/preferences/32/preferences-system-windows.svg
+/usr/share/icons/breeze/preferences/32/preferences-virtualization-container.svg
+/usr/share/icons/breeze/preferences/32/preferences-virtualization-vm-install.svg
+/usr/share/icons/breeze/preferences/32/preferences-virtualization-vm-migrate.svg
+/usr/share/icons/breeze/preferences/32/preferences-virtualization-vm-new.svg
+/usr/share/icons/breeze/preferences/32/preferences-virtualization-vm.svg
 /usr/share/icons/breeze/preferences/32/preferences-web-browser-adblock.svg
 /usr/share/icons/breeze/preferences/32/preferences-web-browser-cache.svg
 /usr/share/icons/breeze/preferences/32/preferences-web-browser-cookies.svg
@@ -15874,9 +16139,79 @@ popd
 /usr/share/icons/breeze/preferences/32/preferences-web-browser-shortcuts.svg
 /usr/share/icons/breeze/preferences/32/preferences-web-browser-ssl.svg
 /usr/share/icons/breeze/preferences/32/preferences-web-browser-stylesheets.svg
+/usr/share/icons/breeze/preferences/32/preferences.svg
 /usr/share/icons/breeze/preferences/32/system-lock-screen.svg
 /usr/share/icons/breeze/preferences/32/system-users.svg
 /usr/share/icons/breeze/preferences/32/window-duplicate.svg
+/usr/share/icons/breeze/preferences/32/yast-addon.svg
+/usr/share/icons/breeze/preferences/32/yast-alternatives.svg
+/usr/share/icons/breeze/preferences/32/yast-apparmor.svg
+/usr/share/icons/breeze/preferences/32/yast-auth-client.svg
+/usr/share/icons/breeze/preferences/32/yast-autoyast.svg
+/usr/share/icons/breeze/preferences/32/yast-bootloader.svg
+/usr/share/icons/breeze/preferences/32/yast-checkmedia.svg
+/usr/share/icons/breeze/preferences/32/yast-create-new-vm.svg
+/usr/share/icons/breeze/preferences/32/yast-device-tree.svg
+/usr/share/icons/breeze/preferences/32/yast-dhcp-server.svg
+/usr/share/icons/breeze/preferences/32/yast-disk.svg
+/usr/share/icons/breeze/preferences/32/yast-dns-server.svg
+/usr/share/icons/breeze/preferences/32/yast-docker.svg
+/usr/share/icons/breeze/preferences/32/yast-dsl.svg
+/usr/share/icons/breeze/preferences/32/yast-fcoe.svg
+/usr/share/icons/breeze/preferences/32/yast-firewall.svg
+/usr/share/icons/breeze/preferences/32/yast-fonts.svg
+/usr/share/icons/breeze/preferences/32/yast-ftp-server.svg
+/usr/share/icons/breeze/preferences/32/yast-hardware.svg
+/usr/share/icons/breeze/preferences/32/yast-host.svg
+/usr/share/icons/breeze/preferences/32/yast-http-server.svg
+/usr/share/icons/breeze/preferences/32/yast-hwinfo.svg
+/usr/share/icons/breeze/preferences/32/yast-instserver.svg
+/usr/share/icons/breeze/preferences/32/yast-iscsi-client.svg
+/usr/share/icons/breeze/preferences/32/yast-iscsi-server.svg
+/usr/share/icons/breeze/preferences/32/yast-journal.svg
+/usr/share/icons/breeze/preferences/32/yast-kerberos-server.svg
+/usr/share/icons/breeze/preferences/32/yast-kernel.svg
+/usr/share/icons/breeze/preferences/32/yast-keyboard.svg
+/usr/share/icons/breeze/preferences/32/yast-lan.svg
+/usr/share/icons/breeze/preferences/32/yast-language.svg
+/usr/share/icons/breeze/preferences/32/yast-ldap-server.svg
+/usr/share/icons/breeze/preferences/32/yast-ldap.svg
+/usr/share/icons/breeze/preferences/32/yast-mail.svg
+/usr/share/icons/breeze/preferences/32/yast-messages.svg
+/usr/share/icons/breeze/preferences/32/yast-misc.svg
+/usr/share/icons/breeze/preferences/32/yast-network.svg
+/usr/share/icons/breeze/preferences/32/yast-nfs-server.svg
+/usr/share/icons/breeze/preferences/32/yast-nfs.svg
+/usr/share/icons/breeze/preferences/32/yast-nis-server.svg
+/usr/share/icons/breeze/preferences/32/yast-nis.svg
+/usr/share/icons/breeze/preferences/32/yast-ntp-client.svg
+/usr/share/icons/breeze/preferences/32/yast-printer.svg
+/usr/share/icons/breeze/preferences/32/yast-proxy.svg
+/usr/share/icons/breeze/preferences/32/yast-release-notes.svg
+/usr/share/icons/breeze/preferences/32/yast-remote.svg
+/usr/share/icons/breeze/preferences/32/yast-samba-client.svg
+/usr/share/icons/breeze/preferences/32/yast-samba-server.svg
+/usr/share/icons/breeze/preferences/32/yast-scanner.svg
+/usr/share/icons/breeze/preferences/32/yast-security.svg
+/usr/share/icons/breeze/preferences/32/yast-services-manager.svg
+/usr/share/icons/breeze/preferences/32/yast-slp-server.svg
+/usr/share/icons/breeze/preferences/32/yast-snapper.svg
+/usr/share/icons/breeze/preferences/32/yast-software.svg
+/usr/share/icons/breeze/preferences/32/yast-sound.svg
+/usr/share/icons/breeze/preferences/32/yast-sudo.svg
+/usr/share/icons/breeze/preferences/32/yast-support.svg
+/usr/share/icons/breeze/preferences/32/yast-sw_source.svg
+/usr/share/icons/breeze/preferences/32/yast-sysconfig.svg
+/usr/share/icons/breeze/preferences/32/yast-system.svg
+/usr/share/icons/breeze/preferences/32/yast-tftp-server.svg
+/usr/share/icons/breeze/preferences/32/yast-timezone.svg
+/usr/share/icons/breeze/preferences/32/yast-update.svg
+/usr/share/icons/breeze/preferences/32/yast-users.svg
+/usr/share/icons/breeze/preferences/32/yast-vm-install.svg
+/usr/share/icons/breeze/preferences/32/yast-vm-migrate.svg
+/usr/share/icons/breeze/preferences/32/yast-vm.svg
+/usr/share/icons/breeze/preferences/32/yast-vpn.svg
+/usr/share/icons/breeze/preferences/32/yast-wol.svg
 /usr/share/icons/breeze/status/16/audio-off.svg
 /usr/share/icons/breeze/status/16/audio-on.svg
 /usr/share/icons/breeze/status/16/audio-ready.svg
@@ -15935,6 +16270,9 @@ popd
 /usr/share/icons/breeze/status/16/user-offline.svg
 /usr/share/icons/breeze/status/16/user-online.svg
 /usr/share/icons/breeze/status/16@2x
+/usr/share/icons/breeze/status/22/audio-off.svg
+/usr/share/icons/breeze/status/22/audio-on.svg
+/usr/share/icons/breeze/status/22/audio-ready.svg
 /usr/share/icons/breeze/status/22/audio-volume-high.svg
 /usr/share/icons/breeze/status/22/audio-volume-low.svg
 /usr/share/icons/breeze/status/22/audio-volume-medium.svg
