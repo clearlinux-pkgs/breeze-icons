@@ -5,11 +5,11 @@
 # Source0 file verified with key 0x58D0EE648A48B3BB (faure@kde.org)
 #
 Name     : breeze-icons
-Version  : 5.55.0
-Release  : 11
-URL      : https://download.kde.org/stable/frameworks/5.55/breeze-icons-5.55.0.tar.xz
-Source0  : https://download.kde.org/stable/frameworks/5.55/breeze-icons-5.55.0.tar.xz
-Source99 : https://download.kde.org/stable/frameworks/5.55/breeze-icons-5.55.0.tar.xz.sig
+Version  : 5.56.0
+Release  : 12
+URL      : https://download.kde.org/stable/frameworks/5.56/breeze-icons-5.56.0.tar.xz
+Source0  : https://download.kde.org/stable/frameworks/5.56/breeze-icons-5.56.0.tar.xz
+Source99 : https://download.kde.org/stable/frameworks/5.56/breeze-icons-5.56.0.tar.xz.sig
 Summary  : Breeze icon themes
 Group    : Development/Tools
 License  : LGPL-2.1 LGPL-3.0
@@ -41,22 +41,23 @@ license components for the breeze-icons package.
 
 
 %prep
-%setup -q -n breeze-icons-5.55.0
+%setup -q -n breeze-icons-5.56.0
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1549726643
+export SOURCE_DATE_EPOCH=1552147415
 mkdir -p clr-build
 pushd clr-build
+export LDFLAGS="${LDFLAGS} -fno-lto"
 %cmake ..
 make  %{?_smp_mflags}
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1549726643
+export SOURCE_DATE_EPOCH=1552147415
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/breeze-icons
 cp COPYING-ICONS %{buildroot}/usr/share/package-licenses/breeze-icons/COPYING-ICONS
@@ -439,6 +440,7 @@ popd
 /usr/share/icons/breeze-dark/actions/16/edit-link.svg
 /usr/share/icons/breeze-dark/actions/16/edit-map.svg
 /usr/share/icons/breeze-dark/actions/16/edit-node.svg
+/usr/share/icons/breeze-dark/actions/16/edit-none.svg
 /usr/share/icons/breeze-dark/actions/16/edit-paste-in-place.svg
 /usr/share/icons/breeze-dark/actions/16/edit-paste-style.svg
 /usr/share/icons/breeze-dark/actions/16/edit-paste.svg
@@ -537,6 +539,7 @@ popd
 /usr/share/icons/breeze-dark/actions/16/font-face.svg
 /usr/share/icons/breeze-dark/actions/16/font-size-down.svg
 /usr/share/icons/breeze-dark/actions/16/font-size-up.svg
+/usr/share/icons/breeze-dark/actions/16/font.svg
 /usr/share/icons/breeze-dark/actions/16/foreign_green.svg
 /usr/share/icons/breeze-dark/actions/16/foreign_red.svg
 /usr/share/icons/breeze-dark/actions/16/foreignkey_constraint.svg
@@ -635,6 +638,7 @@ popd
 /usr/share/icons/breeze-dark/actions/16/gnumeric-comment-edit.svg
 /usr/share/icons/breeze-dark/actions/16/gnumeric-component-insert-shaped.svg
 /usr/share/icons/breeze-dark/actions/16/gnumeric-data-slicer.svg
+/usr/share/icons/breeze-dark/actions/16/gnumeric-font.svg
 /usr/share/icons/breeze-dark/actions/16/gnumeric-format-border-bottom.svg
 /usr/share/icons/breeze-dark/actions/16/gnumeric-format-border-diag.svg
 /usr/share/icons/breeze-dark/actions/16/gnumeric-format-border-left.svg
@@ -1525,6 +1529,7 @@ popd
 /usr/share/icons/breeze-dark/actions/16/view-fullscreen.svg
 /usr/share/icons/breeze-dark/actions/16/view-grid.svg
 /usr/share/icons/breeze-dark/actions/16/view-group.svg
+/usr/share/icons/breeze-dark/actions/16/view-hidden.svg
 /usr/share/icons/breeze-dark/actions/16/view-history.svg
 /usr/share/icons/breeze-dark/actions/16/view-left-close.svg
 /usr/share/icons/breeze-dark/actions/16/view-list-details.svg
@@ -1589,6 +1594,7 @@ popd
 /usr/share/icons/breeze-dark/actions/16/view-time-schedule-edit.svg
 /usr/share/icons/breeze-dark/actions/16/view-time-schedule-insert.svg
 /usr/share/icons/breeze-dark/actions/16/view-time-schedule.svg
+/usr/share/icons/breeze-dark/actions/16/view-visible.svg
 /usr/share/icons/breeze-dark/actions/16/view-web-browser-dom-tree.svg
 /usr/share/icons/breeze-dark/actions/16/view_fit_to_page.svg
 /usr/share/icons/breeze-dark/actions/16/viewbib.svg
@@ -3226,6 +3232,7 @@ popd
 /usr/share/icons/breeze-dark/actions/22/view-fullscreen.svg
 /usr/share/icons/breeze-dark/actions/22/view-grid.svg
 /usr/share/icons/breeze-dark/actions/22/view-group.svg
+/usr/share/icons/breeze-dark/actions/22/view-hidden.svg
 /usr/share/icons/breeze-dark/actions/22/view-history.svg
 /usr/share/icons/breeze-dark/actions/22/view-left-close.svg
 /usr/share/icons/breeze-dark/actions/22/view-list-details.svg
@@ -3298,6 +3305,7 @@ popd
 /usr/share/icons/breeze-dark/actions/22/view-time-schedule-insert.svg
 /usr/share/icons/breeze-dark/actions/22/view-time-schedule.svg
 /usr/share/icons/breeze-dark/actions/22/view-unsplit-effect.svg
+/usr/share/icons/breeze-dark/actions/22/view-visible.svg
 /usr/share/icons/breeze-dark/actions/22/view-web-browser-dom-tree.svg
 /usr/share/icons/breeze-dark/actions/22/view_fit_to_page.svg
 /usr/share/icons/breeze-dark/actions/22/viewbib.svg
@@ -3633,6 +3641,7 @@ popd
 /usr/share/icons/breeze-dark/actions/24/flashlight-on.svg
 /usr/share/icons/breeze-dark/actions/24/folder-new.svg
 /usr/share/icons/breeze-dark/actions/24/folder-sync.svg
+/usr/share/icons/breeze-dark/actions/24/font.svg
 /usr/share/icons/breeze-dark/actions/24/fork.svg
 /usr/share/icons/breeze-dark/actions/24/format-add-node.svg
 /usr/share/icons/breeze-dark/actions/24/format-align-vertical-bottom.svg
@@ -4269,6 +4278,7 @@ popd
 /usr/share/icons/breeze-dark/actions/24/view-fullscreen.svg
 /usr/share/icons/breeze-dark/actions/24/view-grid.svg
 /usr/share/icons/breeze-dark/actions/24/view-group.svg
+/usr/share/icons/breeze-dark/actions/24/view-hidden.svg
 /usr/share/icons/breeze-dark/actions/24/view-history.svg
 /usr/share/icons/breeze-dark/actions/24/view-left-close.svg
 /usr/share/icons/breeze-dark/actions/24/view-list-details.svg
@@ -4321,6 +4331,7 @@ popd
 /usr/share/icons/breeze-dark/actions/24/view-time-schedule-child-insert.svg
 /usr/share/icons/breeze-dark/actions/24/view-time-schedule-edit.svg
 /usr/share/icons/breeze-dark/actions/24/view-time-schedule-insert.svg
+/usr/share/icons/breeze-dark/actions/24/view-visible.svg
 /usr/share/icons/breeze-dark/actions/24/view-web-browser-dom-tree.svg
 /usr/share/icons/breeze-dark/actions/24/viewimage.svg
 /usr/share/icons/breeze-dark/actions/24/visibility.svg
@@ -4983,7 +4994,6 @@ popd
 /usr/share/icons/breeze-dark/apps/22/plasma-browser-integration.svg
 /usr/share/icons/breeze-dark/apps/22/plasma.svg
 /usr/share/icons/breeze-dark/apps/22/plasmavault.svg
-/usr/share/icons/breeze-dark/apps/22/preferences-desktop-font.svg
 /usr/share/icons/breeze-dark/apps/22/preferences-other.svg
 /usr/share/icons/breeze-dark/apps/22/preferences-plugin.svg
 /usr/share/icons/breeze-dark/apps/22/system-file-manager.svg
@@ -5066,6 +5076,8 @@ popd
 /usr/share/icons/breeze-dark/apps/48/claws-mail.svg
 /usr/share/icons/breeze-dark/apps/48/clementine.svg
 /usr/share/icons/breeze-dark/apps/48/cmake.svg
+/usr/share/icons/breeze-dark/apps/48/code-oss.svg
+/usr/share/icons/breeze-dark/apps/48/code.svg
 /usr/share/icons/breeze-dark/apps/48/codeblocks.svg
 /usr/share/icons/breeze-dark/apps/48/converseen.svg
 /usr/share/icons/breeze-dark/apps/48/cuttlefish.svg
@@ -5362,6 +5374,7 @@ popd
 /usr/share/icons/breeze-dark/categories/32/applications-utilities.svg
 /usr/share/icons/breeze-dark/devices/16/audio-input-microphone.svg
 /usr/share/icons/breeze-dark/devices/16/camera-photo.svg
+/usr/share/icons/breeze-dark/devices/16/camera-video.svg
 /usr/share/icons/breeze-dark/devices/16/computer-laptop.svg
 /usr/share/icons/breeze-dark/devices/16/computer.svg
 /usr/share/icons/breeze-dark/devices/16/cups.svg
@@ -5376,7 +5389,10 @@ popd
 /usr/share/icons/breeze-dark/devices/16/drive-removable-media-usb-pendrive.svg
 /usr/share/icons/breeze-dark/devices/16/drive-removable-media-usb.svg
 /usr/share/icons/breeze-dark/devices/16/drive-removable-media.svg
+/usr/share/icons/breeze-dark/devices/16/input-gamepad.svg
 /usr/share/icons/breeze-dark/devices/16/input-tablet.svg
+/usr/share/icons/breeze-dark/devices/16/media-flash-memory-stick.svg
+/usr/share/icons/breeze-dark/devices/16/media-flash-sd-mmc.svg
 /usr/share/icons/breeze-dark/devices/16/media-floppy.svg
 /usr/share/icons/breeze-dark/devices/16/media-optical-audio.svg
 /usr/share/icons/breeze-dark/devices/16/media-optical-data.svg
@@ -5405,12 +5421,15 @@ popd
 /usr/share/icons/breeze-dark/devices/16/printer.svg
 /usr/share/icons/breeze-dark/devices/16/smartphone.svg
 /usr/share/icons/breeze-dark/devices/16/tablet.svg
+/usr/share/icons/breeze-dark/devices/16/uav-quadcopter.svg
+/usr/share/icons/breeze-dark/devices/16/uav.svg
 /usr/share/icons/breeze-dark/devices/16@2x
 /usr/share/icons/breeze-dark/devices/22/audio-card.svg
 /usr/share/icons/breeze-dark/devices/22/audio-headphones.svg
 /usr/share/icons/breeze-dark/devices/22/audio-headset.svg
 /usr/share/icons/breeze-dark/devices/22/audio-input-microphone.svg
 /usr/share/icons/breeze-dark/devices/22/camera-photo.svg
+/usr/share/icons/breeze-dark/devices/22/camera-video.svg
 /usr/share/icons/breeze-dark/devices/22/camera-web.svg
 /usr/share/icons/breeze-dark/devices/22/computer-laptop.svg
 /usr/share/icons/breeze-dark/devices/22/computer.svg
@@ -5426,11 +5445,14 @@ popd
 /usr/share/icons/breeze-dark/devices/22/drive-removable-media-usb-pendrive.svg
 /usr/share/icons/breeze-dark/devices/22/drive-removable-media-usb.svg
 /usr/share/icons/breeze-dark/devices/22/drive-removable-media.svg
+/usr/share/icons/breeze-dark/devices/22/input-gamepad.svg
 /usr/share/icons/breeze-dark/devices/22/input-keyboard-virtual.svg
 /usr/share/icons/breeze-dark/devices/22/input-keyboard.svg
 /usr/share/icons/breeze-dark/devices/22/input-mouse.svg
 /usr/share/icons/breeze-dark/devices/22/input-tablet.svg
 /usr/share/icons/breeze-dark/devices/22/input-touchpad.svg
+/usr/share/icons/breeze-dark/devices/22/media-flash-memory-stick.svg
+/usr/share/icons/breeze-dark/devices/22/media-flash-sd-mmc.svg
 /usr/share/icons/breeze-dark/devices/22/media-floppy.svg
 /usr/share/icons/breeze-dark/devices/22/media-optical-audio.svg
 /usr/share/icons/breeze-dark/devices/22/media-optical-data.svg
@@ -5458,12 +5480,15 @@ popd
 /usr/share/icons/breeze-dark/devices/22/printer.svg
 /usr/share/icons/breeze-dark/devices/22/smartphone.svg
 /usr/share/icons/breeze-dark/devices/22/tablet.svg
+/usr/share/icons/breeze-dark/devices/22/uav-quadcopter.svg
+/usr/share/icons/breeze-dark/devices/22/uav.svg
 /usr/share/icons/breeze-dark/devices/22/video-television.svg
 /usr/share/icons/breeze-dark/devices/22@2x
 /usr/share/icons/breeze-dark/devices/64/audio-card.svg
 /usr/share/icons/breeze-dark/devices/64/audio-headphones.svg
 /usr/share/icons/breeze-dark/devices/64/battery.svg
 /usr/share/icons/breeze-dark/devices/64/camera-photo.svg
+/usr/share/icons/breeze-dark/devices/64/camera-video.svg
 /usr/share/icons/breeze-dark/devices/64/camera-web.svg
 /usr/share/icons/breeze-dark/devices/64/computer-laptop.svg
 /usr/share/icons/breeze-dark/devices/64/computer.svg
@@ -5480,6 +5505,7 @@ popd
 /usr/share/icons/breeze-dark/devices/64/drive-removable-media-usb-pendrive.svg
 /usr/share/icons/breeze-dark/devices/64/drive-removable-media-usb.svg
 /usr/share/icons/breeze-dark/devices/64/drive-removable-media.svg
+/usr/share/icons/breeze-dark/devices/64/input-gamepad.svg
 /usr/share/icons/breeze-dark/devices/64/input-gaming.svg
 /usr/share/icons/breeze-dark/devices/64/input-keyboard.svg
 /usr/share/icons/breeze-dark/devices/64/input-mouse.svg
@@ -5509,6 +5535,7 @@ popd
 /usr/share/icons/breeze-dark/devices/symbolic/audio-input-microphone-symbolic.svg
 /usr/share/icons/breeze-dark/devices/symbolic/audio-speakers-symbolic.svg
 /usr/share/icons/breeze-dark/devices/symbolic/camera-photo-symbolic.svg
+/usr/share/icons/breeze-dark/devices/symbolic/camera-video-symbolic.svg
 /usr/share/icons/breeze-dark/devices/symbolic/camera-web-symbolic.svg
 /usr/share/icons/breeze-dark/devices/symbolic/computer-symbolic.svg
 /usr/share/icons/breeze-dark/devices/symbolic/drive-harddisk-encrypted-symbolic.svg
@@ -5521,6 +5548,7 @@ popd
 /usr/share/icons/breeze-dark/devices/symbolic/drive-multipartition-symbolic.svg
 /usr/share/icons/breeze-dark/devices/symbolic/drive-partition-symbolic.svg
 /usr/share/icons/breeze-dark/devices/symbolic/drive-removable-media-symbolic.svg
+/usr/share/icons/breeze-dark/devices/symbolic/input-gamepad-symbolic.svg
 /usr/share/icons/breeze-dark/devices/symbolic/input-tablet-symbolic.svg
 /usr/share/icons/breeze-dark/devices/symbolic/media-flash-symbolic.svg
 /usr/share/icons/breeze-dark/devices/symbolic/media-floppy-symbolic.svg
@@ -7967,6 +7995,7 @@ popd
 /usr/share/icons/breeze-dark/preferences/32/preferences-system-startup.svg
 /usr/share/icons/breeze-dark/preferences/32/preferences-system-time.svg
 /usr/share/icons/breeze-dark/preferences/32/preferences-system-user-sudo.svg
+/usr/share/icons/breeze-dark/preferences/32/preferences-system-users.svg
 /usr/share/icons/breeze-dark/preferences/32/preferences-system-windows-actions.svg
 /usr/share/icons/breeze-dark/preferences/32/preferences-system-windows-move.svg
 /usr/share/icons/breeze-dark/preferences/32/preferences-system-windows.svg
@@ -8067,6 +8096,39 @@ popd
 /usr/share/icons/breeze-dark/status/16/audio-volume-low.svg
 /usr/share/icons/breeze-dark/status/16/audio-volume-medium.svg
 /usr/share/icons/breeze-dark/status/16/audio-volume-muted.svg
+/usr/share/icons/breeze-dark/status/16/battery-000-charging.svg
+/usr/share/icons/breeze-dark/status/16/battery-000.svg
+/usr/share/icons/breeze-dark/status/16/battery-010-charging.svg
+/usr/share/icons/breeze-dark/status/16/battery-010.svg
+/usr/share/icons/breeze-dark/status/16/battery-020-charging.svg
+/usr/share/icons/breeze-dark/status/16/battery-020.svg
+/usr/share/icons/breeze-dark/status/16/battery-030-charging.svg
+/usr/share/icons/breeze-dark/status/16/battery-030.svg
+/usr/share/icons/breeze-dark/status/16/battery-040-charging.svg
+/usr/share/icons/breeze-dark/status/16/battery-040.svg
+/usr/share/icons/breeze-dark/status/16/battery-050-charging.svg
+/usr/share/icons/breeze-dark/status/16/battery-050.svg
+/usr/share/icons/breeze-dark/status/16/battery-060-charging.svg
+/usr/share/icons/breeze-dark/status/16/battery-060.svg
+/usr/share/icons/breeze-dark/status/16/battery-070-charging.svg
+/usr/share/icons/breeze-dark/status/16/battery-070.svg
+/usr/share/icons/breeze-dark/status/16/battery-080-charging.svg
+/usr/share/icons/breeze-dark/status/16/battery-080.svg
+/usr/share/icons/breeze-dark/status/16/battery-090-charging.svg
+/usr/share/icons/breeze-dark/status/16/battery-090.svg
+/usr/share/icons/breeze-dark/status/16/battery-100-charging.svg
+/usr/share/icons/breeze-dark/status/16/battery-100.svg
+/usr/share/icons/breeze-dark/status/16/battery-caution-charging.svg
+/usr/share/icons/breeze-dark/status/16/battery-caution.svg
+/usr/share/icons/breeze-dark/status/16/battery-empty-charging.svg
+/usr/share/icons/breeze-dark/status/16/battery-empty.svg
+/usr/share/icons/breeze-dark/status/16/battery-full-charging.svg
+/usr/share/icons/breeze-dark/status/16/battery-full.svg
+/usr/share/icons/breeze-dark/status/16/battery-good-charging.svg
+/usr/share/icons/breeze-dark/status/16/battery-good.svg
+/usr/share/icons/breeze-dark/status/16/battery-low-charging.svg
+/usr/share/icons/breeze-dark/status/16/battery-low.svg
+/usr/share/icons/breeze-dark/status/16/battery-missing.svg
 /usr/share/icons/breeze-dark/status/16/camera-off.svg
 /usr/share/icons/breeze-dark/status/16/camera-on.svg
 /usr/share/icons/breeze-dark/status/16/camera-ready.svg
@@ -8125,6 +8187,39 @@ popd
 /usr/share/icons/breeze-dark/status/22/audio-volume-low.svg
 /usr/share/icons/breeze-dark/status/22/audio-volume-medium.svg
 /usr/share/icons/breeze-dark/status/22/audio-volume-muted.svg
+/usr/share/icons/breeze-dark/status/22/battery-000-charging.svg
+/usr/share/icons/breeze-dark/status/22/battery-000.svg
+/usr/share/icons/breeze-dark/status/22/battery-010-charging.svg
+/usr/share/icons/breeze-dark/status/22/battery-010.svg
+/usr/share/icons/breeze-dark/status/22/battery-020-charging.svg
+/usr/share/icons/breeze-dark/status/22/battery-020.svg
+/usr/share/icons/breeze-dark/status/22/battery-030-charging.svg
+/usr/share/icons/breeze-dark/status/22/battery-030.svg
+/usr/share/icons/breeze-dark/status/22/battery-040-charging.svg
+/usr/share/icons/breeze-dark/status/22/battery-040.svg
+/usr/share/icons/breeze-dark/status/22/battery-050-charging.svg
+/usr/share/icons/breeze-dark/status/22/battery-050.svg
+/usr/share/icons/breeze-dark/status/22/battery-060-charging.svg
+/usr/share/icons/breeze-dark/status/22/battery-060.svg
+/usr/share/icons/breeze-dark/status/22/battery-070-charging.svg
+/usr/share/icons/breeze-dark/status/22/battery-070.svg
+/usr/share/icons/breeze-dark/status/22/battery-080-charging.svg
+/usr/share/icons/breeze-dark/status/22/battery-080.svg
+/usr/share/icons/breeze-dark/status/22/battery-090-charging.svg
+/usr/share/icons/breeze-dark/status/22/battery-090.svg
+/usr/share/icons/breeze-dark/status/22/battery-100-charging.svg
+/usr/share/icons/breeze-dark/status/22/battery-100.svg
+/usr/share/icons/breeze-dark/status/22/battery-caution-charging.svg
+/usr/share/icons/breeze-dark/status/22/battery-caution.svg
+/usr/share/icons/breeze-dark/status/22/battery-empty-charging.svg
+/usr/share/icons/breeze-dark/status/22/battery-empty.svg
+/usr/share/icons/breeze-dark/status/22/battery-full-charging.svg
+/usr/share/icons/breeze-dark/status/22/battery-full.svg
+/usr/share/icons/breeze-dark/status/22/battery-good-charging.svg
+/usr/share/icons/breeze-dark/status/22/battery-good.svg
+/usr/share/icons/breeze-dark/status/22/battery-low-charging.svg
+/usr/share/icons/breeze-dark/status/22/battery-low.svg
+/usr/share/icons/breeze-dark/status/22/battery-missing.svg
 /usr/share/icons/breeze-dark/status/22/camera-off.svg
 /usr/share/icons/breeze-dark/status/22/camera-on.svg
 /usr/share/icons/breeze-dark/status/22/camera-ready.svg
@@ -8223,6 +8318,39 @@ popd
 /usr/share/icons/breeze-dark/status/24/media-playback-paused.svg
 /usr/share/icons/breeze-dark/status/24/media-playback-playing.svg
 /usr/share/icons/breeze-dark/status/24/media-playback-stopped.svg
+/usr/share/icons/breeze-dark/status/32/battery-000-charging.svg
+/usr/share/icons/breeze-dark/status/32/battery-000.svg
+/usr/share/icons/breeze-dark/status/32/battery-010-charging.svg
+/usr/share/icons/breeze-dark/status/32/battery-010.svg
+/usr/share/icons/breeze-dark/status/32/battery-020-charging.svg
+/usr/share/icons/breeze-dark/status/32/battery-020.svg
+/usr/share/icons/breeze-dark/status/32/battery-030-charging.svg
+/usr/share/icons/breeze-dark/status/32/battery-030.svg
+/usr/share/icons/breeze-dark/status/32/battery-040-charging.svg
+/usr/share/icons/breeze-dark/status/32/battery-040.svg
+/usr/share/icons/breeze-dark/status/32/battery-050-charging.svg
+/usr/share/icons/breeze-dark/status/32/battery-050.svg
+/usr/share/icons/breeze-dark/status/32/battery-060-charging.svg
+/usr/share/icons/breeze-dark/status/32/battery-060.svg
+/usr/share/icons/breeze-dark/status/32/battery-070-charging.svg
+/usr/share/icons/breeze-dark/status/32/battery-070.svg
+/usr/share/icons/breeze-dark/status/32/battery-080-charging.svg
+/usr/share/icons/breeze-dark/status/32/battery-080.svg
+/usr/share/icons/breeze-dark/status/32/battery-090-charging.svg
+/usr/share/icons/breeze-dark/status/32/battery-090.svg
+/usr/share/icons/breeze-dark/status/32/battery-100-charging.svg
+/usr/share/icons/breeze-dark/status/32/battery-100.svg
+/usr/share/icons/breeze-dark/status/32/battery-caution-charging.svg
+/usr/share/icons/breeze-dark/status/32/battery-caution.svg
+/usr/share/icons/breeze-dark/status/32/battery-empty-charging.svg
+/usr/share/icons/breeze-dark/status/32/battery-empty.svg
+/usr/share/icons/breeze-dark/status/32/battery-full-charging.svg
+/usr/share/icons/breeze-dark/status/32/battery-full.svg
+/usr/share/icons/breeze-dark/status/32/battery-good-charging.svg
+/usr/share/icons/breeze-dark/status/32/battery-good.svg
+/usr/share/icons/breeze-dark/status/32/battery-low-charging.svg
+/usr/share/icons/breeze-dark/status/32/battery-low.svg
+/usr/share/icons/breeze-dark/status/32/battery-missing.svg
 /usr/share/icons/breeze-dark/status/64/dialog-error.svg
 /usr/share/icons/breeze-dark/status/64/dialog-information.svg
 /usr/share/icons/breeze-dark/status/64/dialog-password.svg
@@ -8658,6 +8786,7 @@ popd
 /usr/share/icons/breeze/actions/16/edit-link.svg
 /usr/share/icons/breeze/actions/16/edit-map.svg
 /usr/share/icons/breeze/actions/16/edit-node.svg
+/usr/share/icons/breeze/actions/16/edit-none.svg
 /usr/share/icons/breeze/actions/16/edit-paste-in-place.svg
 /usr/share/icons/breeze/actions/16/edit-paste-style.svg
 /usr/share/icons/breeze/actions/16/edit-paste.svg
@@ -8756,6 +8885,7 @@ popd
 /usr/share/icons/breeze/actions/16/font-face.svg
 /usr/share/icons/breeze/actions/16/font-size-down.svg
 /usr/share/icons/breeze/actions/16/font-size-up.svg
+/usr/share/icons/breeze/actions/16/font.svg
 /usr/share/icons/breeze/actions/16/foreign_green.svg
 /usr/share/icons/breeze/actions/16/foreign_red.svg
 /usr/share/icons/breeze/actions/16/foreignkey_constraint.svg
@@ -8854,6 +8984,7 @@ popd
 /usr/share/icons/breeze/actions/16/gnumeric-comment-edit.svg
 /usr/share/icons/breeze/actions/16/gnumeric-component-insert-shaped.svg
 /usr/share/icons/breeze/actions/16/gnumeric-data-slicer.svg
+/usr/share/icons/breeze/actions/16/gnumeric-font.svg
 /usr/share/icons/breeze/actions/16/gnumeric-format-border-bottom.svg
 /usr/share/icons/breeze/actions/16/gnumeric-format-border-diag.svg
 /usr/share/icons/breeze/actions/16/gnumeric-format-border-left.svg
@@ -9744,6 +9875,7 @@ popd
 /usr/share/icons/breeze/actions/16/view-fullscreen.svg
 /usr/share/icons/breeze/actions/16/view-grid.svg
 /usr/share/icons/breeze/actions/16/view-group.svg
+/usr/share/icons/breeze/actions/16/view-hidden.svg
 /usr/share/icons/breeze/actions/16/view-history.svg
 /usr/share/icons/breeze/actions/16/view-left-close.svg
 /usr/share/icons/breeze/actions/16/view-list-details.svg
@@ -9808,6 +9940,7 @@ popd
 /usr/share/icons/breeze/actions/16/view-time-schedule-edit.svg
 /usr/share/icons/breeze/actions/16/view-time-schedule-insert.svg
 /usr/share/icons/breeze/actions/16/view-time-schedule.svg
+/usr/share/icons/breeze/actions/16/view-visible.svg
 /usr/share/icons/breeze/actions/16/view-web-browser-dom-tree.svg
 /usr/share/icons/breeze/actions/16/view_fit_to_page.svg
 /usr/share/icons/breeze/actions/16/viewbib.svg
@@ -11445,6 +11578,7 @@ popd
 /usr/share/icons/breeze/actions/22/view-fullscreen.svg
 /usr/share/icons/breeze/actions/22/view-grid.svg
 /usr/share/icons/breeze/actions/22/view-group.svg
+/usr/share/icons/breeze/actions/22/view-hidden.svg
 /usr/share/icons/breeze/actions/22/view-history.svg
 /usr/share/icons/breeze/actions/22/view-left-close.svg
 /usr/share/icons/breeze/actions/22/view-list-details.svg
@@ -11517,6 +11651,7 @@ popd
 /usr/share/icons/breeze/actions/22/view-time-schedule-insert.svg
 /usr/share/icons/breeze/actions/22/view-time-schedule.svg
 /usr/share/icons/breeze/actions/22/view-unsplit-effect.svg
+/usr/share/icons/breeze/actions/22/view-visible.svg
 /usr/share/icons/breeze/actions/22/view-web-browser-dom-tree.svg
 /usr/share/icons/breeze/actions/22/view_fit_to_page.svg
 /usr/share/icons/breeze/actions/22/viewbib.svg
@@ -11852,6 +11987,7 @@ popd
 /usr/share/icons/breeze/actions/24/flashlight-on.svg
 /usr/share/icons/breeze/actions/24/folder-new.svg
 /usr/share/icons/breeze/actions/24/folder-sync.svg
+/usr/share/icons/breeze/actions/24/font.svg
 /usr/share/icons/breeze/actions/24/fork.svg
 /usr/share/icons/breeze/actions/24/format-add-node.svg
 /usr/share/icons/breeze/actions/24/format-align-vertical-bottom.svg
@@ -12488,6 +12624,7 @@ popd
 /usr/share/icons/breeze/actions/24/view-fullscreen.svg
 /usr/share/icons/breeze/actions/24/view-grid.svg
 /usr/share/icons/breeze/actions/24/view-group.svg
+/usr/share/icons/breeze/actions/24/view-hidden.svg
 /usr/share/icons/breeze/actions/24/view-history.svg
 /usr/share/icons/breeze/actions/24/view-left-close.svg
 /usr/share/icons/breeze/actions/24/view-list-details.svg
@@ -12540,6 +12677,7 @@ popd
 /usr/share/icons/breeze/actions/24/view-time-schedule-child-insert.svg
 /usr/share/icons/breeze/actions/24/view-time-schedule-edit.svg
 /usr/share/icons/breeze/actions/24/view-time-schedule-insert.svg
+/usr/share/icons/breeze/actions/24/view-visible.svg
 /usr/share/icons/breeze/actions/24/view-web-browser-dom-tree.svg
 /usr/share/icons/breeze/actions/24/viewimage.svg
 /usr/share/icons/breeze/actions/24/visibility.svg
@@ -13204,7 +13342,6 @@ popd
 /usr/share/icons/breeze/apps/22/plasma-browser-integration.svg
 /usr/share/icons/breeze/apps/22/plasma.svg
 /usr/share/icons/breeze/apps/22/plasmavault.svg
-/usr/share/icons/breeze/apps/22/preferences-desktop-font.svg
 /usr/share/icons/breeze/apps/22/preferences-other.svg
 /usr/share/icons/breeze/apps/22/preferences-plugin.svg
 /usr/share/icons/breeze/apps/22/system-file-manager.svg
@@ -13287,6 +13424,8 @@ popd
 /usr/share/icons/breeze/apps/48/claws-mail.svg
 /usr/share/icons/breeze/apps/48/clementine.svg
 /usr/share/icons/breeze/apps/48/cmake.svg
+/usr/share/icons/breeze/apps/48/code-oss.svg
+/usr/share/icons/breeze/apps/48/code.svg
 /usr/share/icons/breeze/apps/48/codeblocks.svg
 /usr/share/icons/breeze/apps/48/converseen.svg
 /usr/share/icons/breeze/apps/48/cuttlefish.svg
@@ -13583,6 +13722,7 @@ popd
 /usr/share/icons/breeze/categories/32/applications-utilities.svg
 /usr/share/icons/breeze/devices/16/audio-input-microphone.svg
 /usr/share/icons/breeze/devices/16/camera-photo.svg
+/usr/share/icons/breeze/devices/16/camera-video.svg
 /usr/share/icons/breeze/devices/16/computer-laptop.svg
 /usr/share/icons/breeze/devices/16/computer.svg
 /usr/share/icons/breeze/devices/16/cups.svg
@@ -13597,7 +13737,10 @@ popd
 /usr/share/icons/breeze/devices/16/drive-removable-media-usb-pendrive.svg
 /usr/share/icons/breeze/devices/16/drive-removable-media-usb.svg
 /usr/share/icons/breeze/devices/16/drive-removable-media.svg
+/usr/share/icons/breeze/devices/16/input-gamepad.svg
 /usr/share/icons/breeze/devices/16/input-tablet.svg
+/usr/share/icons/breeze/devices/16/media-flash-memory-stick.svg
+/usr/share/icons/breeze/devices/16/media-flash-sd-mmc.svg
 /usr/share/icons/breeze/devices/16/media-floppy.svg
 /usr/share/icons/breeze/devices/16/media-optical-audio.svg
 /usr/share/icons/breeze/devices/16/media-optical-data.svg
@@ -13626,12 +13769,15 @@ popd
 /usr/share/icons/breeze/devices/16/printer.svg
 /usr/share/icons/breeze/devices/16/smartphone.svg
 /usr/share/icons/breeze/devices/16/tablet.svg
+/usr/share/icons/breeze/devices/16/uav-quadcopter.svg
+/usr/share/icons/breeze/devices/16/uav.svg
 /usr/share/icons/breeze/devices/16@2x
 /usr/share/icons/breeze/devices/22/audio-card.svg
 /usr/share/icons/breeze/devices/22/audio-headphones.svg
 /usr/share/icons/breeze/devices/22/audio-headset.svg
 /usr/share/icons/breeze/devices/22/audio-input-microphone.svg
 /usr/share/icons/breeze/devices/22/camera-photo.svg
+/usr/share/icons/breeze/devices/22/camera-video.svg
 /usr/share/icons/breeze/devices/22/camera-web.svg
 /usr/share/icons/breeze/devices/22/computer-laptop.svg
 /usr/share/icons/breeze/devices/22/computer.svg
@@ -13647,11 +13793,14 @@ popd
 /usr/share/icons/breeze/devices/22/drive-removable-media-usb-pendrive.svg
 /usr/share/icons/breeze/devices/22/drive-removable-media-usb.svg
 /usr/share/icons/breeze/devices/22/drive-removable-media.svg
+/usr/share/icons/breeze/devices/22/input-gamepad.svg
 /usr/share/icons/breeze/devices/22/input-keyboard-virtual.svg
 /usr/share/icons/breeze/devices/22/input-keyboard.svg
 /usr/share/icons/breeze/devices/22/input-mouse.svg
 /usr/share/icons/breeze/devices/22/input-tablet.svg
 /usr/share/icons/breeze/devices/22/input-touchpad.svg
+/usr/share/icons/breeze/devices/22/media-flash-memory-stick.svg
+/usr/share/icons/breeze/devices/22/media-flash-sd-mmc.svg
 /usr/share/icons/breeze/devices/22/media-floppy.svg
 /usr/share/icons/breeze/devices/22/media-optical-audio.svg
 /usr/share/icons/breeze/devices/22/media-optical-data.svg
@@ -13679,12 +13828,15 @@ popd
 /usr/share/icons/breeze/devices/22/printer.svg
 /usr/share/icons/breeze/devices/22/smartphone.svg
 /usr/share/icons/breeze/devices/22/tablet.svg
+/usr/share/icons/breeze/devices/22/uav-quadcopter.svg
+/usr/share/icons/breeze/devices/22/uav.svg
 /usr/share/icons/breeze/devices/22/video-television.svg
 /usr/share/icons/breeze/devices/22@2x
 /usr/share/icons/breeze/devices/64/audio-card.svg
 /usr/share/icons/breeze/devices/64/audio-headphones.svg
 /usr/share/icons/breeze/devices/64/battery.svg
 /usr/share/icons/breeze/devices/64/camera-photo.svg
+/usr/share/icons/breeze/devices/64/camera-video.svg
 /usr/share/icons/breeze/devices/64/camera-web.svg
 /usr/share/icons/breeze/devices/64/computer-laptop.svg
 /usr/share/icons/breeze/devices/64/computer.svg
@@ -13701,6 +13853,7 @@ popd
 /usr/share/icons/breeze/devices/64/drive-removable-media-usb-pendrive.svg
 /usr/share/icons/breeze/devices/64/drive-removable-media-usb.svg
 /usr/share/icons/breeze/devices/64/drive-removable-media.svg
+/usr/share/icons/breeze/devices/64/input-gamepad.svg
 /usr/share/icons/breeze/devices/64/input-gaming.svg
 /usr/share/icons/breeze/devices/64/input-keyboard.svg
 /usr/share/icons/breeze/devices/64/input-mouse.svg
@@ -13730,6 +13883,7 @@ popd
 /usr/share/icons/breeze/devices/symbolic/audio-input-microphone-symbolic.svg
 /usr/share/icons/breeze/devices/symbolic/audio-speakers-symbolic.svg
 /usr/share/icons/breeze/devices/symbolic/camera-photo-symbolic.svg
+/usr/share/icons/breeze/devices/symbolic/camera-video-symbolic.svg
 /usr/share/icons/breeze/devices/symbolic/camera-web-symbolic.svg
 /usr/share/icons/breeze/devices/symbolic/computer-symbolic.svg
 /usr/share/icons/breeze/devices/symbolic/drive-harddisk-encrypted-symbolic.svg
@@ -13742,6 +13896,7 @@ popd
 /usr/share/icons/breeze/devices/symbolic/drive-multipartition-symbolic.svg
 /usr/share/icons/breeze/devices/symbolic/drive-partition-symbolic.svg
 /usr/share/icons/breeze/devices/symbolic/drive-removable-media-symbolic.svg
+/usr/share/icons/breeze/devices/symbolic/input-gamepad-symbolic.svg
 /usr/share/icons/breeze/devices/symbolic/input-tablet-symbolic.svg
 /usr/share/icons/breeze/devices/symbolic/media-flash-symbolic.svg
 /usr/share/icons/breeze/devices/symbolic/media-floppy-symbolic.svg
@@ -16197,6 +16352,7 @@ popd
 /usr/share/icons/breeze/preferences/32/preferences-system-startup.svg
 /usr/share/icons/breeze/preferences/32/preferences-system-time.svg
 /usr/share/icons/breeze/preferences/32/preferences-system-user-sudo.svg
+/usr/share/icons/breeze/preferences/32/preferences-system-users.svg
 /usr/share/icons/breeze/preferences/32/preferences-system-windows-actions.svg
 /usr/share/icons/breeze/preferences/32/preferences-system-windows-move.svg
 /usr/share/icons/breeze/preferences/32/preferences-system-windows.svg
@@ -16297,6 +16453,39 @@ popd
 /usr/share/icons/breeze/status/16/audio-volume-low.svg
 /usr/share/icons/breeze/status/16/audio-volume-medium.svg
 /usr/share/icons/breeze/status/16/audio-volume-muted.svg
+/usr/share/icons/breeze/status/16/battery-000-charging.svg
+/usr/share/icons/breeze/status/16/battery-000.svg
+/usr/share/icons/breeze/status/16/battery-010-charging.svg
+/usr/share/icons/breeze/status/16/battery-010.svg
+/usr/share/icons/breeze/status/16/battery-020-charging.svg
+/usr/share/icons/breeze/status/16/battery-020.svg
+/usr/share/icons/breeze/status/16/battery-030-charging.svg
+/usr/share/icons/breeze/status/16/battery-030.svg
+/usr/share/icons/breeze/status/16/battery-040-charging.svg
+/usr/share/icons/breeze/status/16/battery-040.svg
+/usr/share/icons/breeze/status/16/battery-050-charging.svg
+/usr/share/icons/breeze/status/16/battery-050.svg
+/usr/share/icons/breeze/status/16/battery-060-charging.svg
+/usr/share/icons/breeze/status/16/battery-060.svg
+/usr/share/icons/breeze/status/16/battery-070-charging.svg
+/usr/share/icons/breeze/status/16/battery-070.svg
+/usr/share/icons/breeze/status/16/battery-080-charging.svg
+/usr/share/icons/breeze/status/16/battery-080.svg
+/usr/share/icons/breeze/status/16/battery-090-charging.svg
+/usr/share/icons/breeze/status/16/battery-090.svg
+/usr/share/icons/breeze/status/16/battery-100-charging.svg
+/usr/share/icons/breeze/status/16/battery-100.svg
+/usr/share/icons/breeze/status/16/battery-caution-charging.svg
+/usr/share/icons/breeze/status/16/battery-caution.svg
+/usr/share/icons/breeze/status/16/battery-empty-charging.svg
+/usr/share/icons/breeze/status/16/battery-empty.svg
+/usr/share/icons/breeze/status/16/battery-full-charging.svg
+/usr/share/icons/breeze/status/16/battery-full.svg
+/usr/share/icons/breeze/status/16/battery-good-charging.svg
+/usr/share/icons/breeze/status/16/battery-good.svg
+/usr/share/icons/breeze/status/16/battery-low-charging.svg
+/usr/share/icons/breeze/status/16/battery-low.svg
+/usr/share/icons/breeze/status/16/battery-missing.svg
 /usr/share/icons/breeze/status/16/camera-off.svg
 /usr/share/icons/breeze/status/16/camera-on.svg
 /usr/share/icons/breeze/status/16/camera-ready.svg
@@ -16355,6 +16544,39 @@ popd
 /usr/share/icons/breeze/status/22/audio-volume-low.svg
 /usr/share/icons/breeze/status/22/audio-volume-medium.svg
 /usr/share/icons/breeze/status/22/audio-volume-muted.svg
+/usr/share/icons/breeze/status/22/battery-000-charging.svg
+/usr/share/icons/breeze/status/22/battery-000.svg
+/usr/share/icons/breeze/status/22/battery-010-charging.svg
+/usr/share/icons/breeze/status/22/battery-010.svg
+/usr/share/icons/breeze/status/22/battery-020-charging.svg
+/usr/share/icons/breeze/status/22/battery-020.svg
+/usr/share/icons/breeze/status/22/battery-030-charging.svg
+/usr/share/icons/breeze/status/22/battery-030.svg
+/usr/share/icons/breeze/status/22/battery-040-charging.svg
+/usr/share/icons/breeze/status/22/battery-040.svg
+/usr/share/icons/breeze/status/22/battery-050-charging.svg
+/usr/share/icons/breeze/status/22/battery-050.svg
+/usr/share/icons/breeze/status/22/battery-060-charging.svg
+/usr/share/icons/breeze/status/22/battery-060.svg
+/usr/share/icons/breeze/status/22/battery-070-charging.svg
+/usr/share/icons/breeze/status/22/battery-070.svg
+/usr/share/icons/breeze/status/22/battery-080-charging.svg
+/usr/share/icons/breeze/status/22/battery-080.svg
+/usr/share/icons/breeze/status/22/battery-090-charging.svg
+/usr/share/icons/breeze/status/22/battery-090.svg
+/usr/share/icons/breeze/status/22/battery-100-charging.svg
+/usr/share/icons/breeze/status/22/battery-100.svg
+/usr/share/icons/breeze/status/22/battery-caution-charging.svg
+/usr/share/icons/breeze/status/22/battery-caution.svg
+/usr/share/icons/breeze/status/22/battery-empty-charging.svg
+/usr/share/icons/breeze/status/22/battery-empty.svg
+/usr/share/icons/breeze/status/22/battery-full-charging.svg
+/usr/share/icons/breeze/status/22/battery-full.svg
+/usr/share/icons/breeze/status/22/battery-good-charging.svg
+/usr/share/icons/breeze/status/22/battery-good.svg
+/usr/share/icons/breeze/status/22/battery-low-charging.svg
+/usr/share/icons/breeze/status/22/battery-low.svg
+/usr/share/icons/breeze/status/22/battery-missing.svg
 /usr/share/icons/breeze/status/22/camera-off.svg
 /usr/share/icons/breeze/status/22/camera-on.svg
 /usr/share/icons/breeze/status/22/camera-ready.svg
@@ -16452,6 +16674,39 @@ popd
 /usr/share/icons/breeze/status/24/media-playback-paused.svg
 /usr/share/icons/breeze/status/24/media-playback-playing.svg
 /usr/share/icons/breeze/status/24/media-playback-stopped.svg
+/usr/share/icons/breeze/status/32/battery-000-charging.svg
+/usr/share/icons/breeze/status/32/battery-000.svg
+/usr/share/icons/breeze/status/32/battery-010-charging.svg
+/usr/share/icons/breeze/status/32/battery-010.svg
+/usr/share/icons/breeze/status/32/battery-020-charging.svg
+/usr/share/icons/breeze/status/32/battery-020.svg
+/usr/share/icons/breeze/status/32/battery-030-charging.svg
+/usr/share/icons/breeze/status/32/battery-030.svg
+/usr/share/icons/breeze/status/32/battery-040-charging.svg
+/usr/share/icons/breeze/status/32/battery-040.svg
+/usr/share/icons/breeze/status/32/battery-050-charging.svg
+/usr/share/icons/breeze/status/32/battery-050.svg
+/usr/share/icons/breeze/status/32/battery-060-charging.svg
+/usr/share/icons/breeze/status/32/battery-060.svg
+/usr/share/icons/breeze/status/32/battery-070-charging.svg
+/usr/share/icons/breeze/status/32/battery-070.svg
+/usr/share/icons/breeze/status/32/battery-080-charging.svg
+/usr/share/icons/breeze/status/32/battery-080.svg
+/usr/share/icons/breeze/status/32/battery-090-charging.svg
+/usr/share/icons/breeze/status/32/battery-090.svg
+/usr/share/icons/breeze/status/32/battery-100-charging.svg
+/usr/share/icons/breeze/status/32/battery-100.svg
+/usr/share/icons/breeze/status/32/battery-caution-charging.svg
+/usr/share/icons/breeze/status/32/battery-caution.svg
+/usr/share/icons/breeze/status/32/battery-empty-charging.svg
+/usr/share/icons/breeze/status/32/battery-empty.svg
+/usr/share/icons/breeze/status/32/battery-full-charging.svg
+/usr/share/icons/breeze/status/32/battery-full.svg
+/usr/share/icons/breeze/status/32/battery-good-charging.svg
+/usr/share/icons/breeze/status/32/battery-good.svg
+/usr/share/icons/breeze/status/32/battery-low-charging.svg
+/usr/share/icons/breeze/status/32/battery-low.svg
+/usr/share/icons/breeze/status/32/battery-missing.svg
 /usr/share/icons/breeze/status/64/dialog-error.svg
 /usr/share/icons/breeze/status/64/dialog-information.svg
 /usr/share/icons/breeze/status/64/dialog-password.svg
@@ -16469,6 +16724,18 @@ popd
 /usr/share/icons/breeze/status/symbolic/audio-volume-medium-symbolic.svg
 /usr/share/icons/breeze/status/symbolic/audio-volume-muted-symbolic.svg
 /usr/share/icons/breeze/status/symbolic/avatar-default-symbolic.svg
+/usr/share/icons/breeze/status/symbolic/battery-caution-charging-symbolic.svg
+/usr/share/icons/breeze/status/symbolic/battery-caution-symbolic.svg
+/usr/share/icons/breeze/status/symbolic/battery-empty-charging-symbolic.svg
+/usr/share/icons/breeze/status/symbolic/battery-empty-symbolic.svg
+/usr/share/icons/breeze/status/symbolic/battery-full-charged-symbolic.svg
+/usr/share/icons/breeze/status/symbolic/battery-full-charging-symbolic.svg
+/usr/share/icons/breeze/status/symbolic/battery-full-symbolic.svg
+/usr/share/icons/breeze/status/symbolic/battery-good-charging-symbolic.svg
+/usr/share/icons/breeze/status/symbolic/battery-good-symbolic.svg
+/usr/share/icons/breeze/status/symbolic/battery-low-charging-symbolic.svg
+/usr/share/icons/breeze/status/symbolic/battery-low-symbolic.svg
+/usr/share/icons/breeze/status/symbolic/battery-missing-symbolic.svg
 /usr/share/icons/breeze/status/symbolic/changes-allow-symbolic.svg
 /usr/share/icons/breeze/status/symbolic/changes-prevent-symbolic.svg
 /usr/share/icons/breeze/status/symbolic/channel-insecure-symbolic.svg
