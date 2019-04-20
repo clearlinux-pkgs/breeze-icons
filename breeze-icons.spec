@@ -6,7 +6,7 @@
 #
 Name     : breeze-icons
 Version  : 5.57.0
-Release  : 14
+Release  : 15
 URL      : https://download.kde.org/stable/frameworks/5.57/breeze-icons-5.57.0.tar.xz
 Source0  : https://download.kde.org/stable/frameworks/5.57/breeze-icons-5.57.0.tar.xz
 Source99 : https://download.kde.org/stable/frameworks/5.57/breeze-icons-5.57.0.tar.xz.sig
