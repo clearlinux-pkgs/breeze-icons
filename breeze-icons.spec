@@ -5,11 +5,11 @@
 # Source0 file verified with key 0x58D0EE648A48B3BB (faure@kde.org)
 #
 Name     : breeze-icons
-Version  : 5.58.0
-Release  : 18
-URL      : https://download.kde.org/stable/frameworks/5.58/breeze-icons-5.58.0.tar.xz
-Source0  : https://download.kde.org/stable/frameworks/5.58/breeze-icons-5.58.0.tar.xz
-Source99 : https://download.kde.org/stable/frameworks/5.58/breeze-icons-5.58.0.tar.xz.sig
+Version  : 5.59.0
+Release  : 19
+URL      : https://download.kde.org/stable/frameworks/5.59/breeze-icons-5.59.0.tar.xz
+Source0  : https://download.kde.org/stable/frameworks/5.59/breeze-icons-5.59.0.tar.xz
+Source99 : https://download.kde.org/stable/frameworks/5.59/breeze-icons-5.59.0.tar.xz.sig
 Summary  : Breeze icon themes
 Group    : Development/Tools
 License  : LGPL-2.1 LGPL-3.0
@@ -41,14 +41,14 @@ license components for the breeze-icons package.
 
 
 %prep
-%setup -q -n breeze-icons-5.58.0
+%setup -q -n breeze-icons-5.59.0
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1557764458
+export SOURCE_DATE_EPOCH=1560012250
 mkdir -p clr-build
 pushd clr-build
 export AR=gcc-ar
@@ -63,7 +63,7 @@ make  %{?_smp_mflags}
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1557764458
+export SOURCE_DATE_EPOCH=1560012250
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/breeze-icons
 cp COPYING-ICONS %{buildroot}/usr/share/package-licenses/breeze-icons/COPYING-ICONS
@@ -3846,6 +3846,7 @@ popd
 /usr/share/icons/breeze-dark/actions/24/gnumeric-visible.svg
 /usr/share/icons/breeze-dark/actions/24/go-bottom.svg
 /usr/share/icons/breeze-dark/actions/24/go-down-search.svg
+/usr/share/icons/breeze-dark/actions/24/go-down-skip.svg
 /usr/share/icons/breeze-dark/actions/24/go-down.svg
 /usr/share/icons/breeze-dark/actions/24/go-first-view-page.svg
 /usr/share/icons/breeze-dark/actions/24/go-first-view.svg
@@ -3860,18 +3861,21 @@ popd
 /usr/share/icons/breeze-dark/actions/24/go-last-view.svg
 /usr/share/icons/breeze-dark/actions/24/go-last.svg
 /usr/share/icons/breeze-dark/actions/24/go-next-context.svg
+/usr/share/icons/breeze-dark/actions/24/go-next-skip.svg
 /usr/share/icons/breeze-dark/actions/24/go-next-use.svg
 /usr/share/icons/breeze-dark/actions/24/go-next-view-page.svg
 /usr/share/icons/breeze-dark/actions/24/go-next-view.svg
 /usr/share/icons/breeze-dark/actions/24/go-next.svg
 /usr/share/icons/breeze-dark/actions/24/go-parent-folder.svg
 /usr/share/icons/breeze-dark/actions/24/go-previous-context.svg
+/usr/share/icons/breeze-dark/actions/24/go-previous-skip.svg
 /usr/share/icons/breeze-dark/actions/24/go-previous-use.svg
 /usr/share/icons/breeze-dark/actions/24/go-previous-view-page.svg
 /usr/share/icons/breeze-dark/actions/24/go-previous-view.svg
 /usr/share/icons/breeze-dark/actions/24/go-previous.svg
 /usr/share/icons/breeze-dark/actions/24/go-top.svg
 /usr/share/icons/breeze-dark/actions/24/go-up-search.svg
+/usr/share/icons/breeze-dark/actions/24/go-up-skip.svg
 /usr/share/icons/breeze-dark/actions/24/go-up.svg
 /usr/share/icons/breeze-dark/actions/24/grid-rectangular.svg
 /usr/share/icons/breeze-dark/actions/24/group-delete.svg
@@ -5150,6 +5154,7 @@ popd
 /usr/share/icons/breeze-dark/apps/48/dragonplayer.svg
 /usr/share/icons/breeze-dark/apps/48/elisa.svg
 /usr/share/icons/breeze-dark/apps/48/emacs.svg
+/usr/share/icons/breeze-dark/apps/48/falkon.svg
 /usr/share/icons/breeze-dark/apps/48/ffmulticonverter.svg
 /usr/share/icons/breeze-dark/apps/48/filelight.svg
 /usr/share/icons/breeze-dark/apps/48/filezilla.svg
@@ -5240,6 +5245,7 @@ popd
 /usr/share/icons/breeze-dark/apps/48/kmousetool.svg
 /usr/share/icons/breeze-dark/apps/48/kmouth.svg
 /usr/share/icons/breeze-dark/apps/48/knetattach.svg
+/usr/share/icons/breeze-dark/apps/48/knights.svg
 /usr/share/icons/breeze-dark/apps/48/knotes.svg
 /usr/share/icons/breeze-dark/apps/48/kolf.svg
 /usr/share/icons/breeze-dark/apps/48/kolourpaint.svg
@@ -5453,7 +5459,11 @@ popd
 /usr/share/icons/breeze-dark/devices/16/drive-removable-media-usb.svg
 /usr/share/icons/breeze-dark/devices/16/drive-removable-media.svg
 /usr/share/icons/breeze-dark/devices/16/input-gamepad.svg
+/usr/share/icons/breeze-dark/devices/16/input-keyboard-virtual.svg
+/usr/share/icons/breeze-dark/devices/16/input-keyboard.svg
+/usr/share/icons/breeze-dark/devices/16/input-mouse.svg
 /usr/share/icons/breeze-dark/devices/16/input-tablet.svg
+/usr/share/icons/breeze-dark/devices/16/input-touchpad.svg
 /usr/share/icons/breeze-dark/devices/16/media-flash-memory-stick.svg
 /usr/share/icons/breeze-dark/devices/16/media-flash-sd-mmc.svg
 /usr/share/icons/breeze-dark/devices/16/media-floppy.svg
@@ -12255,6 +12265,7 @@ popd
 /usr/share/icons/breeze/actions/24/gnumeric-visible.svg
 /usr/share/icons/breeze/actions/24/go-bottom.svg
 /usr/share/icons/breeze/actions/24/go-down-search.svg
+/usr/share/icons/breeze/actions/24/go-down-skip.svg
 /usr/share/icons/breeze/actions/24/go-down.svg
 /usr/share/icons/breeze/actions/24/go-first-view-page.svg
 /usr/share/icons/breeze/actions/24/go-first-view.svg
@@ -12269,18 +12280,21 @@ popd
 /usr/share/icons/breeze/actions/24/go-last-view.svg
 /usr/share/icons/breeze/actions/24/go-last.svg
 /usr/share/icons/breeze/actions/24/go-next-context.svg
+/usr/share/icons/breeze/actions/24/go-next-skip.svg
 /usr/share/icons/breeze/actions/24/go-next-use.svg
 /usr/share/icons/breeze/actions/24/go-next-view-page.svg
 /usr/share/icons/breeze/actions/24/go-next-view.svg
 /usr/share/icons/breeze/actions/24/go-next.svg
 /usr/share/icons/breeze/actions/24/go-parent-folder.svg
 /usr/share/icons/breeze/actions/24/go-previous-context.svg
+/usr/share/icons/breeze/actions/24/go-previous-skip.svg
 /usr/share/icons/breeze/actions/24/go-previous-use.svg
 /usr/share/icons/breeze/actions/24/go-previous-view-page.svg
 /usr/share/icons/breeze/actions/24/go-previous-view.svg
 /usr/share/icons/breeze/actions/24/go-previous.svg
 /usr/share/icons/breeze/actions/24/go-top.svg
 /usr/share/icons/breeze/actions/24/go-up-search.svg
+/usr/share/icons/breeze/actions/24/go-up-skip.svg
 /usr/share/icons/breeze/actions/24/go-up.svg
 /usr/share/icons/breeze/actions/24/grid-rectangular.svg
 /usr/share/icons/breeze/actions/24/group-delete.svg
@@ -13538,6 +13552,7 @@ popd
 /usr/share/icons/breeze/apps/48/calligraflow.svg
 /usr/share/icons/breeze/apps/48/calligrakarbon.svg
 /usr/share/icons/breeze/apps/48/calligrakexi.svg
+/usr/share/icons/breeze/apps/48/calligrakrita.svg
 /usr/share/icons/breeze/apps/48/calligraplan.svg
 /usr/share/icons/breeze/apps/48/calligraplanwork.svg
 /usr/share/icons/breeze/apps/48/calligrasheets.svg
@@ -13545,6 +13560,7 @@ popd
 /usr/share/icons/breeze/apps/48/calligrawords.svg
 /usr/share/icons/breeze/apps/48/cantata.svg
 /usr/share/icons/breeze/apps/48/cantor.svg
+/usr/share/icons/breeze/apps/48/cervisia.svg
 /usr/share/icons/breeze/apps/48/choqok.svg
 /usr/share/icons/breeze/apps/48/claws-mail.svg
 /usr/share/icons/breeze/apps/48/clementine.svg
@@ -13561,6 +13577,7 @@ popd
 /usr/share/icons/breeze/apps/48/dragonplayer.svg
 /usr/share/icons/breeze/apps/48/elisa.svg
 /usr/share/icons/breeze/apps/48/emacs.svg
+/usr/share/icons/breeze/apps/48/falkon.svg
 /usr/share/icons/breeze/apps/48/ffmulticonverter.svg
 /usr/share/icons/breeze/apps/48/filelight.svg
 /usr/share/icons/breeze/apps/48/filezilla.svg
@@ -13571,6 +13588,7 @@ popd
 /usr/share/icons/breeze/apps/48/fontforge.svg
 /usr/share/icons/breeze/apps/48/freemind.svg
 /usr/share/icons/breeze/apps/48/frostwire.svg
+/usr/share/icons/breeze/apps/48/gcompris-qt.svg
 /usr/share/icons/breeze/apps/48/gimp.svg
 /usr/share/icons/breeze/apps/48/git-cola.svg
 /usr/share/icons/breeze/apps/48/git-gui.svg
@@ -13583,6 +13601,7 @@ popd
 /usr/share/icons/breeze/apps/48/gwenview.svg
 /usr/share/icons/breeze/apps/48/haguichi.svg
 /usr/share/icons/breeze/apps/48/handbrake.svg
+/usr/share/icons/breeze/apps/48/heaptrack.svg
 /usr/share/icons/breeze/apps/48/help-browser.svg
 /usr/share/icons/breeze/apps/48/homebank.svg
 /usr/share/icons/breeze/apps/48/homerun.svg
@@ -13601,19 +13620,27 @@ popd
 /usr/share/icons/breeze/apps/48/k3b.svg
 /usr/share/icons/breeze/apps/48/kaddressbook.svg
 /usr/share/icons/breeze/apps/48/kaffeine.svg
+/usr/share/icons/breeze/apps/48/kajongg.svg
 /usr/share/icons/breeze/apps/48/kalarm.svg
 /usr/share/icons/breeze/apps/48/kalgebra.svg
 /usr/share/icons/breeze/apps/48/kalgebrabackend.svg
+/usr/share/icons/breeze/apps/48/kalzium.svg
 /usr/share/icons/breeze/apps/48/kamoso.svg
 /usr/share/icons/breeze/apps/48/kanagram.svg
 /usr/share/icons/breeze/apps/48/kapman.svg
+/usr/share/icons/breeze/apps/48/kapptemplate.svg
 /usr/share/icons/breeze/apps/48/karbon.svg
 /usr/share/icons/breeze/apps/48/kate.svg
 /usr/share/icons/breeze/apps/48/katomic.svg
+/usr/share/icons/breeze/apps/48/kbackup.svg
+/usr/share/icons/breeze/apps/48/kbibtex.svg
 /usr/share/icons/breeze/apps/48/kblackbox.svg
 /usr/share/icons/breeze/apps/48/kblocks.svg
 /usr/share/icons/breeze/apps/48/kblogger.svg
+/usr/share/icons/breeze/apps/48/kbounce.svg
 /usr/share/icons/breeze/apps/48/kbreakout.svg
+/usr/share/icons/breeze/apps/48/kbruch.svg
+/usr/share/icons/breeze/apps/48/kcachegrind.svg
 /usr/share/icons/breeze/apps/48/kcalc.svg
 /usr/share/icons/breeze/apps/48/kchart.svg
 /usr/share/icons/breeze/apps/48/kcolorchooser.svg
@@ -13622,7 +13649,9 @@ popd
 /usr/share/icons/breeze/apps/48/kde.svg
 /usr/share/icons/breeze/apps/48/kdeapp.svg
 /usr/share/icons/breeze/apps/48/kdenlive.svg
+/usr/share/icons/breeze/apps/48/kdesvn.svg
 /usr/share/icons/breeze/apps/48/kdevelop.svg
+/usr/share/icons/breeze/apps/48/kdf.svg
 /usr/share/icons/breeze/apps/48/kdiamond.svg
 /usr/share/icons/breeze/apps/48/kdiff3.svg
 /usr/share/icons/breeze/apps/48/kdots.svg
@@ -13630,32 +13659,56 @@ popd
 /usr/share/icons/breeze/apps/48/keepass2.svg
 /usr/share/icons/breeze/apps/48/keepassx.svg
 /usr/share/icons/breeze/apps/48/keepassx2.svg
+/usr/share/icons/breeze/apps/48/keurocalc.svg
 /usr/share/icons/breeze/apps/48/kexi.svg
 /usr/share/icons/breeze/apps/48/kfind.svg
 /usr/share/icons/breeze/apps/48/kfloppy.svg
 /usr/share/icons/breeze/apps/48/kfontview.svg
+/usr/share/icons/breeze/apps/48/kfourinline.svg
+/usr/share/icons/breeze/apps/48/kgeography.svg
 /usr/share/icons/breeze/apps/48/kget.svg
+/usr/share/icons/breeze/apps/48/kgoldrunner.svg
+/usr/share/icons/breeze/apps/48/kgpg.svg
+/usr/share/icons/breeze/apps/48/kgraphviewer.svg
+/usr/share/icons/breeze/apps/48/khangman.svg
+/usr/share/icons/breeze/apps/48/kig.svg
+/usr/share/icons/breeze/apps/48/kigo.svg
 /usr/share/icons/breeze/apps/48/kile.svg
+/usr/share/icons/breeze/apps/48/killbots.svg
+/usr/share/icons/breeze/apps/48/kimagemapeditor.svg
 /usr/share/icons/breeze/apps/48/kipi-dngconverter.svg
 /usr/share/icons/breeze/apps/48/kipi-expoblending.svg
 /usr/share/icons/breeze/apps/48/kipi-panorama.svg
 /usr/share/icons/breeze/apps/48/kiriki.svg
+/usr/share/icons/breeze/apps/48/kiten.svg
 /usr/share/icons/breeze/apps/48/kjumpingcube.svg
 /usr/share/icons/breeze/apps/48/kleopatra.svg
+/usr/share/icons/breeze/apps/48/klettres.svg
+/usr/share/icons/breeze/apps/48/klickety.svg
 /usr/share/icons/breeze/apps/48/klines.svg
 /usr/share/icons/breeze/apps/48/klipper.svg
 /usr/share/icons/breeze/apps/48/kmag.svg
+/usr/share/icons/breeze/apps/48/kmahjongg.svg
 /usr/share/icons/breeze/apps/48/kmail.svg
 /usr/share/icons/breeze/apps/48/kmenuedit.svg
+/usr/share/icons/breeze/apps/48/kmines.svg
 /usr/share/icons/breeze/apps/48/kmix.svg
 /usr/share/icons/breeze/apps/48/kmousetool.svg
 /usr/share/icons/breeze/apps/48/kmouth.svg
+/usr/share/icons/breeze/apps/48/kmplayer.svg
+/usr/share/icons/breeze/apps/48/kmplot.svg
+/usr/share/icons/breeze/apps/48/kmymoney.svg
+/usr/share/icons/breeze/apps/48/knavalbattle.svg
 /usr/share/icons/breeze/apps/48/knetattach.svg
+/usr/share/icons/breeze/apps/48/knetwalk.svg
+/usr/share/icons/breeze/apps/48/knights.svg
 /usr/share/icons/breeze/apps/48/knotes.svg
 /usr/share/icons/breeze/apps/48/kolf.svg
+/usr/share/icons/breeze/apps/48/kollision.svg
 /usr/share/icons/breeze/apps/48/kolourpaint.svg
 /usr/share/icons/breeze/apps/48/kompare.svg
 /usr/share/icons/breeze/apps/48/konqueror.svg
+/usr/share/icons/breeze/apps/48/konquest.svg
 /usr/share/icons/breeze/apps/48/kontact.svg
 /usr/share/icons/breeze/apps/48/konversation.svg
 /usr/share/icons/breeze/apps/48/kopete.svg
@@ -13663,31 +13716,47 @@ popd
 /usr/share/icons/breeze/apps/48/korgac.svg
 /usr/share/icons/breeze/apps/48/korganizer.svg
 /usr/share/icons/breeze/apps/48/kpat.svg
+/usr/share/icons/breeze/apps/48/kphotoalbum.svg
 /usr/share/icons/breeze/apps/48/kplato.svg
 /usr/share/icons/breeze/apps/48/kpresenter.svg
 /usr/share/icons/breeze/apps/48/krdc.svg
 /usr/share/icons/breeze/apps/48/krename.svg
+/usr/share/icons/breeze/apps/48/kreversi.svg
 /usr/share/icons/breeze/apps/48/krfb.svg
 /usr/share/icons/breeze/apps/48/kronometer.svg
 /usr/share/icons/breeze/apps/48/kruler.svg
 /usr/share/icons/breeze/apps/48/krusader_root.svg
 /usr/share/icons/breeze/apps/48/krusader_user.svg
 /usr/share/icons/breeze/apps/48/kshisen.svg
+/usr/share/icons/breeze/apps/48/ksirk.svg
+/usr/share/icons/breeze/apps/48/ksnakeduel.svg
 /usr/share/icons/breeze/apps/48/ksnapshot.svg
+/usr/share/icons/breeze/apps/48/kspaceduel.svg
 /usr/share/icons/breeze/apps/48/kspread.svg
+/usr/share/icons/breeze/apps/48/ksquares.svg
+/usr/share/icons/breeze/apps/48/kstars.svg
+/usr/share/icons/breeze/apps/48/ksudoku.svg
 /usr/share/icons/breeze/apps/48/ksysguardd.svg
+/usr/share/icons/breeze/apps/48/kteatime.svg
 /usr/share/icons/breeze/apps/48/ktimer.svg
 /usr/share/icons/breeze/apps/48/ktip.svg
 /usr/share/icons/breeze/apps/48/ktnef.svg
 /usr/share/icons/breeze/apps/48/ktorrent.svg
+/usr/share/icons/breeze/apps/48/ktouch.svg
+/usr/share/icons/breeze/apps/48/ktuberling.svg
+/usr/share/icons/breeze/apps/48/kturtle.svg
 /usr/share/icons/breeze/apps/48/kube-mail.svg
+/usr/share/icons/breeze/apps/48/kubrick.svg
 /usr/share/icons/breeze/apps/48/kuser.svg
 /usr/share/icons/breeze/apps/48/kwalletmanager.svg
 /usr/share/icons/breeze/apps/48/kwalletmanager2.svg
+/usr/share/icons/breeze/apps/48/kwave.svg
 /usr/share/icons/breeze/apps/48/kwikdisk.svg
 /usr/share/icons/breeze/apps/48/kwin.svg
 /usr/share/icons/breeze/apps/48/kword.svg
+/usr/share/icons/breeze/apps/48/kwordquiz.svg
 /usr/share/icons/breeze/apps/48/kwrite.svg
+/usr/share/icons/breeze/apps/48/kxstitch.svg
 /usr/share/icons/breeze/apps/48/labplot.svg
 /usr/share/icons/breeze/apps/48/labplot2.svg
 /usr/share/icons/breeze/apps/48/lastpass.svg
@@ -13703,12 +13772,16 @@ popd
 /usr/share/icons/breeze/apps/48/linguist.svg
 /usr/share/icons/breeze/apps/48/logisim.svg
 /usr/share/icons/breeze/apps/48/lokalize.svg
+/usr/share/icons/breeze/apps/48/lskat.svg
 /usr/share/icons/breeze/apps/48/mail-client.svg
+/usr/share/icons/breeze/apps/48/marble.svg
+/usr/share/icons/breeze/apps/48/massif-visualizer.svg
 /usr/share/icons/breeze/apps/48/masterpdfeditor.svg
 /usr/share/icons/breeze/apps/48/mathematica.svg
 /usr/share/icons/breeze/apps/48/matlab.svg
 /usr/share/icons/breeze/apps/48/mendeleydesktop.svg
 /usr/share/icons/breeze/apps/48/minitube.svg
+/usr/share/icons/breeze/apps/48/minuet.svg
 /usr/share/icons/breeze/apps/48/mixxx.svg
 /usr/share/icons/breeze/apps/48/mpv.svg
 /usr/share/icons/breeze/apps/48/multimedia-volume-control.svg
@@ -13725,6 +13798,8 @@ popd
 /usr/share/icons/breeze/apps/48/okteta.svg
 /usr/share/icons/breeze/apps/48/okular.svg
 /usr/share/icons/breeze/apps/48/openbravo-erp.svg
+/usr/share/icons/breeze/apps/48/palapeli.svg
+/usr/share/icons/breeze/apps/48/parley.svg
 /usr/share/icons/breeze/apps/48/partitionmanager.svg
 /usr/share/icons/breeze/apps/48/phonon-gstreamer.svg
 /usr/share/icons/breeze/apps/48/photolayoutseditor.svg
@@ -13754,7 +13829,9 @@ popd
 /usr/share/icons/breeze/apps/48/rekonq.svg
 /usr/share/icons/breeze/apps/48/ring-kde.svg
 /usr/share/icons/breeze/apps/48/ring.svg
+/usr/share/icons/breeze/apps/48/rocs.svg
 /usr/share/icons/breeze/apps/48/rosegarden.svg
+/usr/share/icons/breeze/apps/48/rsibreak.svg
 /usr/share/icons/breeze/apps/48/sage-notebook.svg
 /usr/share/icons/breeze/apps/48/scanner.svg
 /usr/share/icons/breeze/apps/48/scribus.svg
@@ -13765,6 +13842,7 @@ popd
 /usr/share/icons/breeze/apps/48/skrooge-initial.svg
 /usr/share/icons/breeze/apps/48/skrooge.svg
 /usr/share/icons/breeze/apps/48/smartgit.svg
+/usr/share/icons/breeze/apps/48/smb4k.svg
 /usr/share/icons/breeze/apps/48/smplayer.svg
 /usr/share/icons/breeze/apps/48/smtube.svg
 /usr/share/icons/breeze/apps/48/spectacle.svg
@@ -13775,6 +13853,7 @@ popd
 /usr/share/icons/breeze/apps/48/sublime-text.svg
 /usr/share/icons/breeze/apps/48/subtitlecomposer.svg
 /usr/share/icons/breeze/apps/48/sweeper.svg
+/usr/share/icons/breeze/apps/48/symboleditor.svg
 /usr/share/icons/breeze/apps/48/synaptic.svg
 /usr/share/icons/breeze/apps/48/synfig_icon.svg
 /usr/share/icons/breeze/apps/48/system-file-manager.svg
@@ -13786,6 +13865,7 @@ popd
 /usr/share/icons/breeze/apps/48/teamviewer.svg
 /usr/share/icons/breeze/apps/48/telegram.svg
 /usr/share/icons/breeze/apps/48/telepathy-kde.svg
+/usr/share/icons/breeze/apps/48/tellico.svg
 /usr/share/icons/breeze/apps/48/tor-browser.svg
 /usr/share/icons/breeze/apps/48/truecrypt.svg
 /usr/share/icons/breeze/apps/48/ubiquity-kde.svg
@@ -13819,6 +13899,7 @@ popd
 /usr/share/icons/breeze/apps/48/yast-sw_single.svg
 /usr/share/icons/breeze/apps/48/yast-upgrade.svg
 /usr/share/icons/breeze/apps/48/yast.svg
+/usr/share/icons/breeze/apps/48/zanshin.svg
 /usr/share/icons/breeze/apps/64/accessories-text-editor.svg
 /usr/share/icons/breeze/apps/64/diaspora.svg
 /usr/share/icons/breeze/apps/64/hotspot.svg
@@ -13864,7 +13945,11 @@ popd
 /usr/share/icons/breeze/devices/16/drive-removable-media-usb.svg
 /usr/share/icons/breeze/devices/16/drive-removable-media.svg
 /usr/share/icons/breeze/devices/16/input-gamepad.svg
+/usr/share/icons/breeze/devices/16/input-keyboard-virtual.svg
+/usr/share/icons/breeze/devices/16/input-keyboard.svg
+/usr/share/icons/breeze/devices/16/input-mouse.svg
 /usr/share/icons/breeze/devices/16/input-tablet.svg
+/usr/share/icons/breeze/devices/16/input-touchpad.svg
 /usr/share/icons/breeze/devices/16/media-flash-memory-stick.svg
 /usr/share/icons/breeze/devices/16/media-flash-sd-mmc.svg
 /usr/share/icons/breeze/devices/16/media-floppy.svg
