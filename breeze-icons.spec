@@ -5,11 +5,11 @@
 # Source0 file verified with key 0x58D0EE648A48B3BB (faure@kde.org)
 #
 Name     : breeze-icons
-Version  : 5.60.0
-Release  : 20
-URL      : https://download.kde.org/stable/frameworks/5.60/breeze-icons-5.60.0.tar.xz
-Source0  : https://download.kde.org/stable/frameworks/5.60/breeze-icons-5.60.0.tar.xz
-Source99 : https://download.kde.org/stable/frameworks/5.60/breeze-icons-5.60.0.tar.xz.sig
+Version  : 5.61.0
+Release  : 21
+URL      : https://download.kde.org/stable/frameworks/5.61/breeze-icons-5.61.0.tar.xz
+Source0  : https://download.kde.org/stable/frameworks/5.61/breeze-icons-5.61.0.tar.xz
+Source1 : https://download.kde.org/stable/frameworks/5.61/breeze-icons-5.61.0.tar.xz.sig
 Summary  : Breeze icon themes
 Group    : Development/Tools
 License  : LGPL-2.1 LGPL-3.0
@@ -41,16 +41,17 @@ license components for the breeze-icons package.
 
 
 %prep
-%setup -q -n breeze-icons-5.60.0
+%setup -q -n breeze-icons-5.61.0
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1563034103
+export SOURCE_DATE_EPOCH=1565578182
 mkdir -p clr-build
 pushd clr-build
+# -Werror is for werrorists
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -64,7 +65,7 @@ make  %{?_smp_mflags} VERBOSE=1
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1563034103
+export SOURCE_DATE_EPOCH=1565578182
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/breeze-icons
 cp COPYING-ICONS %{buildroot}/usr/share/package-licenses/breeze-icons/COPYING-ICONS
@@ -1527,6 +1528,7 @@ popd
 /usr/share/icons/breeze-dark/actions/16/user-group-new.svg
 /usr/share/icons/breeze-dark/actions/16/user-group-properties.svg
 /usr/share/icons/breeze-dark/actions/16/user-identity.svg
+/usr/share/icons/breeze-dark/actions/16/user-others.svg
 /usr/share/icons/breeze-dark/actions/16/user-properties.svg
 /usr/share/icons/breeze-dark/actions/16/user.svg
 /usr/share/icons/breeze-dark/actions/16/usermenu-delete.svg
@@ -1582,6 +1584,11 @@ popd
 /usr/share/icons/breeze-dark/actions/16/view-multiple-objects.svg
 /usr/share/icons/breeze-dark/actions/16/view-object-histogram-linear.svg
 /usr/share/icons/breeze-dark/actions/16/view-object-histogram-logarithmic.svg
+/usr/share/icons/breeze-dark/actions/16/view-pages-continuous.svg
+/usr/share/icons/breeze-dark/actions/16/view-pages-facing-first-centered.svg
+/usr/share/icons/breeze-dark/actions/16/view-pages-facing.svg
+/usr/share/icons/breeze-dark/actions/16/view-pages-overview.svg
+/usr/share/icons/breeze-dark/actions/16/view-pages-single.svg
 /usr/share/icons/breeze-dark/actions/16/view-pim-calendar.svg
 /usr/share/icons/breeze-dark/actions/16/view-pim-contacts.svg
 /usr/share/icons/breeze-dark/actions/16/view-pim-journal.svg
@@ -3238,6 +3245,7 @@ popd
 /usr/share/icons/breeze-dark/actions/22/user-group-new.svg
 /usr/share/icons/breeze-dark/actions/22/user-group-properties.svg
 /usr/share/icons/breeze-dark/actions/22/user-identity.svg
+/usr/share/icons/breeze-dark/actions/22/user-others.svg
 /usr/share/icons/breeze-dark/actions/22/user-properties.svg
 /usr/share/icons/breeze-dark/actions/22/user.svg
 /usr/share/icons/breeze-dark/actions/22/username-copy.svg
@@ -3315,6 +3323,11 @@ popd
 /usr/share/icons/breeze-dark/actions/22/view-multiple-objects.svg
 /usr/share/icons/breeze-dark/actions/22/view-object-histogram-linear.svg
 /usr/share/icons/breeze-dark/actions/22/view-object-histogram-logarithmic.svg
+/usr/share/icons/breeze-dark/actions/22/view-pages-continuous.svg
+/usr/share/icons/breeze-dark/actions/22/view-pages-facing-first-centered.svg
+/usr/share/icons/breeze-dark/actions/22/view-pages-facing.svg
+/usr/share/icons/breeze-dark/actions/22/view-pages-overview.svg
+/usr/share/icons/breeze-dark/actions/22/view-pages-single.svg
 /usr/share/icons/breeze-dark/actions/22/view-pim-calendar.svg
 /usr/share/icons/breeze-dark/actions/22/view-pim-contacts.svg
 /usr/share/icons/breeze-dark/actions/22/view-pim-journal.svg
@@ -3661,6 +3674,7 @@ popd
 /usr/share/icons/breeze-dark/actions/24/edit-image-face-recognize.svg
 /usr/share/icons/breeze-dark/actions/24/edit-image-face-show.svg
 /usr/share/icons/breeze-dark/actions/24/edit-node.svg
+/usr/share/icons/breeze-dark/actions/24/edit-none.svg
 /usr/share/icons/breeze-dark/actions/24/edit-paste-in-place.svg
 /usr/share/icons/breeze-dark/actions/24/edit-paste.svg
 /usr/share/icons/breeze-dark/actions/24/edit-redo.svg
@@ -4304,6 +4318,7 @@ popd
 /usr/share/icons/breeze-dark/actions/24/user-group-new.svg
 /usr/share/icons/breeze-dark/actions/24/user-group-properties.svg
 /usr/share/icons/breeze-dark/actions/24/user-identity.svg
+/usr/share/icons/breeze-dark/actions/24/user-others.svg
 /usr/share/icons/breeze-dark/actions/24/user-properties.svg
 /usr/share/icons/breeze-dark/actions/24/view-bank-account-checking.svg
 /usr/share/icons/breeze-dark/actions/24/view-bank-account-savings.svg
@@ -5052,7 +5067,6 @@ popd
 /usr/share/icons/breeze-dark/applets/64/preferences-system-windows-effect-wobblywindows.svg
 /usr/share/icons/breeze-dark/applets/64/preferences-system-windows-effect-zoom.svg
 /usr/share/icons/breeze-dark/apps/16/accessories-text-editor.svg
-/usr/share/icons/breeze-dark/apps/16/applications-internet.svg
 /usr/share/icons/breeze-dark/apps/16/help-browser.svg
 /usr/share/icons/breeze-dark/apps/16/hotspot.svg
 /usr/share/icons/breeze-dark/apps/16/kate.svg
@@ -5069,7 +5083,6 @@ popd
 /usr/share/icons/breeze-dark/apps/16@2x
 /usr/share/icons/breeze-dark/apps/22/accessories-text-editor.svg
 /usr/share/icons/breeze-dark/apps/22/akregator.svg
-/usr/share/icons/breeze-dark/apps/22/applications-internet.svg
 /usr/share/icons/breeze-dark/apps/22/elisa.svg
 /usr/share/icons/breeze-dark/apps/22/help-browser.svg
 /usr/share/icons/breeze-dark/apps/22/homerun.svg
@@ -7982,7 +7995,6 @@ popd
 /usr/share/icons/breeze-dark/places/symbolic/user-home-symbolic.svg
 /usr/share/icons/breeze-dark/places/symbolic/user-trash-symbolic.svg
 /usr/share/icons/breeze-dark/preferences/32/amarok_change_language.svg
-/usr/share/icons/breeze-dark/preferences/32/applications-internet.svg
 /usr/share/icons/breeze-dark/preferences/32/baloo.svg
 /usr/share/icons/breeze-dark/preferences/32/device-notifier.svg
 /usr/share/icons/breeze-dark/preferences/32/drive-removable-media.svg
@@ -9972,6 +9984,7 @@ popd
 /usr/share/icons/breeze/actions/16/user-group-new.svg
 /usr/share/icons/breeze/actions/16/user-group-properties.svg
 /usr/share/icons/breeze/actions/16/user-identity.svg
+/usr/share/icons/breeze/actions/16/user-others.svg
 /usr/share/icons/breeze/actions/16/user-properties.svg
 /usr/share/icons/breeze/actions/16/user.svg
 /usr/share/icons/breeze/actions/16/usermenu-delete.svg
@@ -10027,6 +10040,11 @@ popd
 /usr/share/icons/breeze/actions/16/view-multiple-objects.svg
 /usr/share/icons/breeze/actions/16/view-object-histogram-linear.svg
 /usr/share/icons/breeze/actions/16/view-object-histogram-logarithmic.svg
+/usr/share/icons/breeze/actions/16/view-pages-continuous.svg
+/usr/share/icons/breeze/actions/16/view-pages-facing-first-centered.svg
+/usr/share/icons/breeze/actions/16/view-pages-facing.svg
+/usr/share/icons/breeze/actions/16/view-pages-overview.svg
+/usr/share/icons/breeze/actions/16/view-pages-single.svg
 /usr/share/icons/breeze/actions/16/view-pim-calendar.svg
 /usr/share/icons/breeze/actions/16/view-pim-contacts.svg
 /usr/share/icons/breeze/actions/16/view-pim-journal.svg
@@ -11683,6 +11701,7 @@ popd
 /usr/share/icons/breeze/actions/22/user-group-new.svg
 /usr/share/icons/breeze/actions/22/user-group-properties.svg
 /usr/share/icons/breeze/actions/22/user-identity.svg
+/usr/share/icons/breeze/actions/22/user-others.svg
 /usr/share/icons/breeze/actions/22/user-properties.svg
 /usr/share/icons/breeze/actions/22/user.svg
 /usr/share/icons/breeze/actions/22/username-copy.svg
@@ -11760,6 +11779,11 @@ popd
 /usr/share/icons/breeze/actions/22/view-multiple-objects.svg
 /usr/share/icons/breeze/actions/22/view-object-histogram-linear.svg
 /usr/share/icons/breeze/actions/22/view-object-histogram-logarithmic.svg
+/usr/share/icons/breeze/actions/22/view-pages-continuous.svg
+/usr/share/icons/breeze/actions/22/view-pages-facing-first-centered.svg
+/usr/share/icons/breeze/actions/22/view-pages-facing.svg
+/usr/share/icons/breeze/actions/22/view-pages-overview.svg
+/usr/share/icons/breeze/actions/22/view-pages-single.svg
 /usr/share/icons/breeze/actions/22/view-pim-calendar.svg
 /usr/share/icons/breeze/actions/22/view-pim-contacts.svg
 /usr/share/icons/breeze/actions/22/view-pim-journal.svg
@@ -12106,6 +12130,7 @@ popd
 /usr/share/icons/breeze/actions/24/edit-image-face-recognize.svg
 /usr/share/icons/breeze/actions/24/edit-image-face-show.svg
 /usr/share/icons/breeze/actions/24/edit-node.svg
+/usr/share/icons/breeze/actions/24/edit-none.svg
 /usr/share/icons/breeze/actions/24/edit-paste-in-place.svg
 /usr/share/icons/breeze/actions/24/edit-paste.svg
 /usr/share/icons/breeze/actions/24/edit-redo.svg
@@ -12749,6 +12774,7 @@ popd
 /usr/share/icons/breeze/actions/24/user-group-new.svg
 /usr/share/icons/breeze/actions/24/user-group-properties.svg
 /usr/share/icons/breeze/actions/24/user-identity.svg
+/usr/share/icons/breeze/actions/24/user-others.svg
 /usr/share/icons/breeze/actions/24/user-properties.svg
 /usr/share/icons/breeze/actions/24/view-bank-account-checking.svg
 /usr/share/icons/breeze/actions/24/view-bank-account-savings.svg
@@ -13499,7 +13525,6 @@ popd
 /usr/share/icons/breeze/applets/64/preferences-system-windows-effect-wobblywindows.svg
 /usr/share/icons/breeze/applets/64/preferences-system-windows-effect-zoom.svg
 /usr/share/icons/breeze/apps/16/accessories-text-editor.svg
-/usr/share/icons/breeze/apps/16/applications-internet.svg
 /usr/share/icons/breeze/apps/16/help-browser.svg
 /usr/share/icons/breeze/apps/16/hotspot.svg
 /usr/share/icons/breeze/apps/16/kate.svg
@@ -13516,7 +13541,6 @@ popd
 /usr/share/icons/breeze/apps/16@2x
 /usr/share/icons/breeze/apps/22/accessories-text-editor.svg
 /usr/share/icons/breeze/apps/22/akregator.svg
-/usr/share/icons/breeze/apps/22/applications-internet.svg
 /usr/share/icons/breeze/apps/22/elisa.svg
 /usr/share/icons/breeze/apps/22/help-browser.svg
 /usr/share/icons/breeze/apps/22/homerun.svg
@@ -16502,7 +16526,6 @@ popd
 /usr/share/icons/breeze/places/symbolic/user-home-symbolic.svg
 /usr/share/icons/breeze/places/symbolic/user-trash-symbolic.svg
 /usr/share/icons/breeze/preferences/32/amarok_change_language.svg
-/usr/share/icons/breeze/preferences/32/applications-internet.svg
 /usr/share/icons/breeze/preferences/32/baloo.svg
 /usr/share/icons/breeze/preferences/32/device-notifier.svg
 /usr/share/icons/breeze/preferences/32/drive-removable-media.svg
