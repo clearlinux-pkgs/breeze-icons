@@ -5,11 +5,11 @@
 # Source0 file verified with key 0x58D0EE648A48B3BB (faure@kde.org)
 #
 Name     : breeze-icons
-Version  : 5.62.0
-Release  : 22
-URL      : https://download.kde.org/stable/frameworks/5.62/breeze-icons-5.62.0.tar.xz
-Source0  : https://download.kde.org/stable/frameworks/5.62/breeze-icons-5.62.0.tar.xz
-Source1 : https://download.kde.org/stable/frameworks/5.62/breeze-icons-5.62.0.tar.xz.sig
+Version  : 5.63.0
+Release  : 23
+URL      : https://download.kde.org/stable/frameworks/5.63/breeze-icons-5.63.0.tar.xz
+Source0  : https://download.kde.org/stable/frameworks/5.63/breeze-icons-5.63.0.tar.xz
+Source1 : https://download.kde.org/stable/frameworks/5.63/breeze-icons-5.63.0.tar.xz.sig
 Summary  : Breeze icon themes
 Group    : Development/Tools
 License  : LGPL-2.1 LGPL-3.0
@@ -20,9 +20,9 @@ BuildRequires : buildreq-kde
 BuildRequires : qtbase-dev mesa-dev
 
 %description
-# Breeze Icons
-## Introduction
-Breeze-icons is a freedesktop.org compatible icon theme. It's developed by the KDE Community as part of KDE Frameworks 5 and it's used by default in KDE Plasma 5 and KDE Applications.
+To create a webfront from all breeze action icons run
+> yarn install
+> ./node_modules/grunt-cli/bin/grunt
 
 %package data
 Summary: data components for the breeze-icons package.
@@ -41,14 +41,14 @@ license components for the breeze-icons package.
 
 
 %prep
-%setup -q -n breeze-icons-5.62.0
+%setup -q -n breeze-icons-5.63.0
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1568857705
+export SOURCE_DATE_EPOCH=1570927649
 mkdir -p clr-build
 pushd clr-build
 # -Werror is for werrorists
@@ -65,7 +65,7 @@ make  %{?_smp_mflags}  VERBOSE=1
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1568857705
+export SOURCE_DATE_EPOCH=1570927649
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/breeze-icons
 cp COPYING-ICONS %{buildroot}/usr/share/package-licenses/breeze-icons/COPYING-ICONS
@@ -551,6 +551,8 @@ popd
 /usr/share/icons/breeze-dark/actions/16/folder-stash.svg
 /usr/share/icons/breeze-dark/actions/16/folder-sync.svg
 /usr/share/icons/breeze-dark/actions/16/followmouse.svg
+/usr/share/icons/breeze-dark/actions/16/font-disable.svg
+/usr/share/icons/breeze-dark/actions/16/font-enable.svg
 /usr/share/icons/breeze-dark/actions/16/font-face.svg
 /usr/share/icons/breeze-dark/actions/16/font-size-down.svg
 /usr/share/icons/breeze-dark/actions/16/font-size-up.svg
@@ -614,6 +616,7 @@ popd
 /usr/share/icons/breeze-dark/actions/16/format-text-subscript.svg
 /usr/share/icons/breeze-dark/actions/16/format-text-superscript.svg
 /usr/share/icons/breeze-dark/actions/16/format-text-symbol.svg
+/usr/share/icons/breeze-dark/actions/16/format-text-underline-squiggle.svg
 /usr/share/icons/breeze-dark/actions/16/format-text-underline.svg
 /usr/share/icons/breeze-dark/actions/16/format-text-uppercase.svg
 /usr/share/icons/breeze-dark/actions/16/formula.svg
@@ -2190,6 +2193,8 @@ popd
 /usr/share/icons/breeze-dark/actions/22/folder-stash.svg
 /usr/share/icons/breeze-dark/actions/22/folder-sync.svg
 /usr/share/icons/breeze-dark/actions/22/followmouse.svg
+/usr/share/icons/breeze-dark/actions/22/font-disable.svg
+/usr/share/icons/breeze-dark/actions/22/font-enable.svg
 /usr/share/icons/breeze-dark/actions/22/foreignkey_constraint.svg
 /usr/share/icons/breeze-dark/actions/22/fork.svg
 /usr/share/icons/breeze-dark/actions/22/format-add-node.svg
@@ -2257,6 +2262,7 @@ popd
 /usr/share/icons/breeze-dark/actions/22/format-text-subscript.svg
 /usr/share/icons/breeze-dark/actions/22/format-text-superscript.svg
 /usr/share/icons/breeze-dark/actions/22/format-text-symbol.svg
+/usr/share/icons/breeze-dark/actions/22/format-text-underline-squiggle.svg
 /usr/share/icons/breeze-dark/actions/22/format-text-underline.svg
 /usr/share/icons/breeze-dark/actions/22/format-text-uppercase.svg
 /usr/share/icons/breeze-dark/actions/22/formula.svg
@@ -4540,7 +4546,6 @@ popd
 /usr/share/icons/breeze-dark/actions/32/document-import.svg
 /usr/share/icons/breeze-dark/actions/32/document-new-from-template.svg
 /usr/share/icons/breeze-dark/actions/32/document-new.svg
-/usr/share/icons/breeze-dark/actions/32/document-open-recent.svg
 /usr/share/icons/breeze-dark/actions/32/document-open-remote.svg
 /usr/share/icons/breeze-dark/actions/32/document-open.svg
 /usr/share/icons/breeze-dark/actions/32/document-preview-archive.svg
@@ -5281,6 +5286,7 @@ popd
 /usr/share/icons/breeze-dark/apps/48/kipi-expoblending.svg
 /usr/share/icons/breeze-dark/apps/48/kipi-panorama.svg
 /usr/share/icons/breeze-dark/apps/48/kiriki.svg
+/usr/share/icons/breeze-dark/apps/48/kirogi.svg
 /usr/share/icons/breeze-dark/apps/48/kjumpingcube.svg
 /usr/share/icons/breeze-dark/apps/48/kleopatra.svg
 /usr/share/icons/breeze-dark/apps/48/klines.svg
@@ -8058,6 +8064,7 @@ popd
 /usr/share/icons/breeze-dark/preferences/32/preferences-desktop-effects.svg
 /usr/share/icons/breeze-dark/preferences/32/preferences-desktop-emoticons.svg
 /usr/share/icons/breeze-dark/preferences/32/preferences-desktop-filetype-association.svg
+/usr/share/icons/breeze-dark/preferences/32/preferences-desktop-filter.svg
 /usr/share/icons/breeze-dark/preferences/32/preferences-desktop-font.svg
 /usr/share/icons/breeze-dark/preferences/32/preferences-desktop-gaming.svg
 /usr/share/icons/breeze-dark/preferences/32/preferences-desktop-gestures-screenedges.svg
@@ -9040,6 +9047,8 @@ popd
 /usr/share/icons/breeze/actions/16/folder-stash.svg
 /usr/share/icons/breeze/actions/16/folder-sync.svg
 /usr/share/icons/breeze/actions/16/followmouse.svg
+/usr/share/icons/breeze/actions/16/font-disable.svg
+/usr/share/icons/breeze/actions/16/font-enable.svg
 /usr/share/icons/breeze/actions/16/font-face.svg
 /usr/share/icons/breeze/actions/16/font-size-down.svg
 /usr/share/icons/breeze/actions/16/font-size-up.svg
@@ -9103,6 +9112,7 @@ popd
 /usr/share/icons/breeze/actions/16/format-text-subscript.svg
 /usr/share/icons/breeze/actions/16/format-text-superscript.svg
 /usr/share/icons/breeze/actions/16/format-text-symbol.svg
+/usr/share/icons/breeze/actions/16/format-text-underline-squiggle.svg
 /usr/share/icons/breeze/actions/16/format-text-underline.svg
 /usr/share/icons/breeze/actions/16/format-text-uppercase.svg
 /usr/share/icons/breeze/actions/16/formula.svg
@@ -10679,6 +10689,8 @@ popd
 /usr/share/icons/breeze/actions/22/folder-stash.svg
 /usr/share/icons/breeze/actions/22/folder-sync.svg
 /usr/share/icons/breeze/actions/22/followmouse.svg
+/usr/share/icons/breeze/actions/22/font-disable.svg
+/usr/share/icons/breeze/actions/22/font-enable.svg
 /usr/share/icons/breeze/actions/22/foreignkey_constraint.svg
 /usr/share/icons/breeze/actions/22/fork.svg
 /usr/share/icons/breeze/actions/22/format-add-node.svg
@@ -10746,6 +10758,7 @@ popd
 /usr/share/icons/breeze/actions/22/format-text-subscript.svg
 /usr/share/icons/breeze/actions/22/format-text-superscript.svg
 /usr/share/icons/breeze/actions/22/format-text-symbol.svg
+/usr/share/icons/breeze/actions/22/format-text-underline-squiggle.svg
 /usr/share/icons/breeze/actions/22/format-text-underline.svg
 /usr/share/icons/breeze/actions/22/format-text-uppercase.svg
 /usr/share/icons/breeze/actions/22/formula.svg
@@ -13029,7 +13042,6 @@ popd
 /usr/share/icons/breeze/actions/32/document-import.svg
 /usr/share/icons/breeze/actions/32/document-new-from-template.svg
 /usr/share/icons/breeze/actions/32/document-new.svg
-/usr/share/icons/breeze/actions/32/document-open-recent.svg
 /usr/share/icons/breeze/actions/32/document-open-remote.svg
 /usr/share/icons/breeze/actions/32/document-open.svg
 /usr/share/icons/breeze/actions/32/document-preview-archive.svg
@@ -13798,6 +13810,7 @@ popd
 /usr/share/icons/breeze/apps/48/kipi-expoblending.svg
 /usr/share/icons/breeze/apps/48/kipi-panorama.svg
 /usr/share/icons/breeze/apps/48/kiriki.svg
+/usr/share/icons/breeze/apps/48/kirogi.svg
 /usr/share/icons/breeze/apps/48/kiten.svg
 /usr/share/icons/breeze/apps/48/kjumpingcube.svg
 /usr/share/icons/breeze/apps/48/kleopatra.svg
@@ -16627,6 +16640,7 @@ popd
 /usr/share/icons/breeze/preferences/32/preferences-desktop-effects.svg
 /usr/share/icons/breeze/preferences/32/preferences-desktop-emoticons.svg
 /usr/share/icons/breeze/preferences/32/preferences-desktop-filetype-association.svg
+/usr/share/icons/breeze/preferences/32/preferences-desktop-filter.svg
 /usr/share/icons/breeze/preferences/32/preferences-desktop-font.svg
 /usr/share/icons/breeze/preferences/32/preferences-desktop-gaming.svg
 /usr/share/icons/breeze/preferences/32/preferences-desktop-gestures-screenedges.svg
