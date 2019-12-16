@@ -5,11 +5,11 @@
 # Source0 file verified with key 0x58D0EE648A48B3BB (faure@kde.org)
 #
 Name     : breeze-icons
-Version  : 5.64.0
-Release  : 24
-URL      : https://download.kde.org/stable/frameworks/5.64/breeze-icons-5.64.0.tar.xz
-Source0  : https://download.kde.org/stable/frameworks/5.64/breeze-icons-5.64.0.tar.xz
-Source1 : https://download.kde.org/stable/frameworks/5.64/breeze-icons-5.64.0.tar.xz.sig
+Version  : 5.65.0
+Release  : 25
+URL      : https://download.kde.org/stable/frameworks/5.65/breeze-icons-5.65.0.tar.xz
+Source0  : https://download.kde.org/stable/frameworks/5.65/breeze-icons-5.65.0.tar.xz
+Source1  : https://download.kde.org/stable/frameworks/5.65/breeze-icons-5.65.0.tar.xz.sig
 Summary  : Breeze icon themes
 Group    : Development/Tools
 License  : LGPL-2.1 LGPL-3.0
@@ -41,14 +41,15 @@ license components for the breeze-icons package.
 
 
 %prep
-%setup -q -n breeze-icons-5.64.0
+%setup -q -n breeze-icons-5.65.0
+cd %{_builddir}/breeze-icons-5.65.0
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1573399006
+export SOURCE_DATE_EPOCH=1576509571
 mkdir -p clr-build
 pushd clr-build
 # -Werror is for werrorists
@@ -65,13 +66,13 @@ make  %{?_smp_mflags}  VERBOSE=1
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1573399006
+export SOURCE_DATE_EPOCH=1576509571
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/breeze-icons
-cp %{_builddir}/breeze-icons-5.64.0/COPYING-ICONS %{buildroot}/usr/share/package-licenses/breeze-icons/64474638fded94568edef3950d35b464488065b5
-cp %{_builddir}/breeze-icons-5.64.0/COPYING.LIB %{buildroot}/usr/share/package-licenses/breeze-icons/9a1929f4700d2407c70b507b3b2aaf6226a9543c
-cp %{_builddir}/breeze-icons-5.64.0/icons-dark/LICENSE %{buildroot}/usr/share/package-licenses/breeze-icons/f45ee1c765646813b442ca58de72e20a64a7ddba
-cp %{_builddir}/breeze-icons-5.64.0/icons/LICENSE %{buildroot}/usr/share/package-licenses/breeze-icons/f45ee1c765646813b442ca58de72e20a64a7ddba
+cp %{_builddir}/breeze-icons-5.65.0/COPYING-ICONS %{buildroot}/usr/share/package-licenses/breeze-icons/64474638fded94568edef3950d35b464488065b5
+cp %{_builddir}/breeze-icons-5.65.0/COPYING.LIB %{buildroot}/usr/share/package-licenses/breeze-icons/9a1929f4700d2407c70b507b3b2aaf6226a9543c
+cp %{_builddir}/breeze-icons-5.65.0/icons-dark/LICENSE %{buildroot}/usr/share/package-licenses/breeze-icons/f45ee1c765646813b442ca58de72e20a64a7ddba
+cp %{_builddir}/breeze-icons-5.65.0/icons/LICENSE %{buildroot}/usr/share/package-licenses/breeze-icons/f45ee1c765646813b442ca58de72e20a64a7ddba
 pushd clr-build
 %make_install
 popd
@@ -5178,6 +5179,7 @@ popd
 /usr/share/icons/breeze-dark/apps/48/audacity.svg
 /usr/share/icons/breeze-dark/apps/48/author.svg
 /usr/share/icons/breeze-dark/apps/48/babe.svg
+/usr/share/icons/breeze-dark/apps/48/baloo.svg
 /usr/share/icons/breeze-dark/apps/48/bitcoin128.svg
 /usr/share/icons/breeze-dark/apps/48/bittorrent-sync.svg
 /usr/share/icons/breeze-dark/apps/48/bleachbit.svg
@@ -5497,6 +5499,7 @@ popd
 /usr/share/icons/breeze-dark/apps/64/umbrello.svg
 /usr/share/icons/breeze-dark/apps/64/utilities-terminal.svg
 /usr/share/icons/breeze-dark/breeze-icons-dark.rcc
+/usr/share/icons/breeze-dark/categories/32/applications-all.svg
 /usr/share/icons/breeze-dark/categories/32/applications-development.svg
 /usr/share/icons/breeze-dark/categories/32/applications-education-language.svg
 /usr/share/icons/breeze-dark/categories/32/applications-education-mathematics.svg
@@ -8054,7 +8057,6 @@ popd
 /usr/share/icons/breeze-dark/places/symbolic/user-home-symbolic.svg
 /usr/share/icons/breeze-dark/places/symbolic/user-trash-symbolic.svg
 /usr/share/icons/breeze-dark/preferences/32/amarok_change_language.svg
-/usr/share/icons/breeze-dark/preferences/32/baloo.svg
 /usr/share/icons/breeze-dark/preferences/32/device-notifier.svg
 /usr/share/icons/breeze-dark/preferences/32/drive-removable-media.svg
 /usr/share/icons/breeze-dark/preferences/32/face-smile.svg
@@ -8101,6 +8103,7 @@ popd
 /usr/share/icons/breeze-dark/preferences/32/preferences-desktop-plasma-theme.svg
 /usr/share/icons/breeze-dark/preferences/32/preferences-desktop-plasma.svg
 /usr/share/icons/breeze-dark/preferences/32/preferences-desktop-screensaver.svg
+/usr/share/icons/breeze-dark/preferences/32/preferences-desktop-search.svg
 /usr/share/icons/breeze-dark/preferences/32/preferences-desktop-sound.svg
 /usr/share/icons/breeze-dark/preferences/32/preferences-desktop-text-to-speech.svg
 /usr/share/icons/breeze-dark/preferences/32/preferences-desktop-theme-applications.svg
@@ -13695,6 +13698,7 @@ popd
 /usr/share/icons/breeze/apps/48/audacity.svg
 /usr/share/icons/breeze/apps/48/author.svg
 /usr/share/icons/breeze/apps/48/babe.svg
+/usr/share/icons/breeze/apps/48/baloo.svg
 /usr/share/icons/breeze/apps/48/bitcoin128.svg
 /usr/share/icons/breeze/apps/48/bittorrent-sync.svg
 /usr/share/icons/breeze/apps/48/bleachbit.svg
@@ -14083,6 +14087,7 @@ popd
 /usr/share/icons/breeze/apps/64/umbrello.svg
 /usr/share/icons/breeze/apps/64/utilities-terminal.svg
 /usr/share/icons/breeze/breeze-icons.rcc
+/usr/share/icons/breeze/categories/32/applications-all.svg
 /usr/share/icons/breeze/categories/32/applications-development.svg
 /usr/share/icons/breeze/categories/32/applications-education-language.svg
 /usr/share/icons/breeze/categories/32/applications-education-mathematics.svg
@@ -16649,7 +16654,6 @@ popd
 /usr/share/icons/breeze/places/symbolic/user-home-symbolic.svg
 /usr/share/icons/breeze/places/symbolic/user-trash-symbolic.svg
 /usr/share/icons/breeze/preferences/32/amarok_change_language.svg
-/usr/share/icons/breeze/preferences/32/baloo.svg
 /usr/share/icons/breeze/preferences/32/device-notifier.svg
 /usr/share/icons/breeze/preferences/32/drive-removable-media.svg
 /usr/share/icons/breeze/preferences/32/face-smile.svg
@@ -16696,6 +16700,7 @@ popd
 /usr/share/icons/breeze/preferences/32/preferences-desktop-plasma-theme.svg
 /usr/share/icons/breeze/preferences/32/preferences-desktop-plasma.svg
 /usr/share/icons/breeze/preferences/32/preferences-desktop-screensaver.svg
+/usr/share/icons/breeze/preferences/32/preferences-desktop-search.svg
 /usr/share/icons/breeze/preferences/32/preferences-desktop-sound.svg
 /usr/share/icons/breeze/preferences/32/preferences-desktop-text-to-speech.svg
 /usr/share/icons/breeze/preferences/32/preferences-desktop-theme-applications.svg
