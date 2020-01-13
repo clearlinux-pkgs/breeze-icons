@@ -5,11 +5,11 @@
 # Source0 file verified with key 0x58D0EE648A48B3BB (faure@kde.org)
 #
 Name     : breeze-icons
-Version  : 5.65.0
-Release  : 25
-URL      : https://download.kde.org/stable/frameworks/5.65/breeze-icons-5.65.0.tar.xz
-Source0  : https://download.kde.org/stable/frameworks/5.65/breeze-icons-5.65.0.tar.xz
-Source1  : https://download.kde.org/stable/frameworks/5.65/breeze-icons-5.65.0.tar.xz.sig
+Version  : 5.66.0
+Release  : 26
+URL      : https://download.kde.org/stable/frameworks/5.66/breeze-icons-5.66.0.tar.xz
+Source0  : https://download.kde.org/stable/frameworks/5.66/breeze-icons-5.66.0.tar.xz
+Source1  : https://download.kde.org/stable/frameworks/5.66/breeze-icons-5.66.0.tar.xz.sig
 Summary  : Breeze icon themes
 Group    : Development/Tools
 License  : LGPL-2.1 LGPL-3.0
@@ -41,15 +41,15 @@ license components for the breeze-icons package.
 
 
 %prep
-%setup -q -n breeze-icons-5.65.0
-cd %{_builddir}/breeze-icons-5.65.0
+%setup -q -n breeze-icons-5.66.0
+cd %{_builddir}/breeze-icons-5.66.0
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1576509571
+export SOURCE_DATE_EPOCH=1578942544
 mkdir -p clr-build
 pushd clr-build
 # -Werror is for werrorists
@@ -66,13 +66,13 @@ make  %{?_smp_mflags}  VERBOSE=1
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1576509571
+export SOURCE_DATE_EPOCH=1578942544
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/breeze-icons
-cp %{_builddir}/breeze-icons-5.65.0/COPYING-ICONS %{buildroot}/usr/share/package-licenses/breeze-icons/64474638fded94568edef3950d35b464488065b5
-cp %{_builddir}/breeze-icons-5.65.0/COPYING.LIB %{buildroot}/usr/share/package-licenses/breeze-icons/9a1929f4700d2407c70b507b3b2aaf6226a9543c
-cp %{_builddir}/breeze-icons-5.65.0/icons-dark/LICENSE %{buildroot}/usr/share/package-licenses/breeze-icons/f45ee1c765646813b442ca58de72e20a64a7ddba
-cp %{_builddir}/breeze-icons-5.65.0/icons/LICENSE %{buildroot}/usr/share/package-licenses/breeze-icons/f45ee1c765646813b442ca58de72e20a64a7ddba
+cp %{_builddir}/breeze-icons-5.66.0/COPYING-ICONS %{buildroot}/usr/share/package-licenses/breeze-icons/64474638fded94568edef3950d35b464488065b5
+cp %{_builddir}/breeze-icons-5.66.0/COPYING.LIB %{buildroot}/usr/share/package-licenses/breeze-icons/9a1929f4700d2407c70b507b3b2aaf6226a9543c
+cp %{_builddir}/breeze-icons-5.66.0/icons-dark/LICENSE %{buildroot}/usr/share/package-licenses/breeze-icons/f45ee1c765646813b442ca58de72e20a64a7ddba
+cp %{_builddir}/breeze-icons-5.66.0/icons/LICENSE %{buildroot}/usr/share/package-licenses/breeze-icons/f45ee1c765646813b442ca58de72e20a64a7ddba
 pushd clr-build
 %make_install
 popd
@@ -5145,6 +5145,7 @@ popd
 /usr/share/icons/breeze-dark/apps/32/kate.svg
 /usr/share/icons/breeze-dark/apps/32/kwrite.svg
 /usr/share/icons/breeze-dark/apps/32/plasmavault.svg
+/usr/share/icons/breeze-dark/apps/32/preferences-system.svg
 /usr/share/icons/breeze-dark/apps/32/system-file-manager.svg
 /usr/share/icons/breeze-dark/apps/32/system-help.svg
 /usr/share/icons/breeze-dark/apps/32/systemsettings.svg
@@ -5917,6 +5918,7 @@ popd
 /usr/share/icons/breeze-dark/mimetypes/16/application-sxw.svg
 /usr/share/icons/breeze-dark/mimetypes/16/application-vnd-google-earth-kml.svg
 /usr/share/icons/breeze-dark/mimetypes/16/application-vnd.android.package-archive.svg
+/usr/share/icons/breeze-dark/mimetypes/16/application-vnd.apple.pkpass.svg
 /usr/share/icons/breeze-dark/mimetypes/16/application-vnd.debian.binary-package.svg
 /usr/share/icons/breeze-dark/mimetypes/16/application-vnd.iccprofile.svg
 /usr/share/icons/breeze-dark/mimetypes/16/application-vnd.ms-access.svg
@@ -5998,6 +6000,7 @@ popd
 /usr/share/icons/breeze-dark/mimetypes/16/application-x-arc.svg
 /usr/share/icons/breeze-dark/mimetypes/16/application-x-archive.svg
 /usr/share/icons/breeze-dark/mimetypes/16/application-x-arj.svg
+/usr/share/icons/breeze-dark/mimetypes/16/application-x-audacity-project.svg
 /usr/share/icons/breeze-dark/mimetypes/16/application-x-awk.svg
 /usr/share/icons/breeze-dark/mimetypes/16/application-x-bittorrent.svg
 /usr/share/icons/breeze-dark/mimetypes/16/application-x-blender.svg
@@ -6383,6 +6386,7 @@ popd
 /usr/share/icons/breeze-dark/mimetypes/22/application-sxw.svg
 /usr/share/icons/breeze-dark/mimetypes/22/application-vnd-google-earth-kml.svg
 /usr/share/icons/breeze-dark/mimetypes/22/application-vnd.android.package-archive.svg
+/usr/share/icons/breeze-dark/mimetypes/22/application-vnd.apple.pkpass.svg
 /usr/share/icons/breeze-dark/mimetypes/22/application-vnd.debian.binary-package.svg
 /usr/share/icons/breeze-dark/mimetypes/22/application-vnd.iccprofile.svg
 /usr/share/icons/breeze-dark/mimetypes/22/application-vnd.ms-access.svg
@@ -6464,6 +6468,7 @@ popd
 /usr/share/icons/breeze-dark/mimetypes/22/application-x-arc.svg
 /usr/share/icons/breeze-dark/mimetypes/22/application-x-archive.svg
 /usr/share/icons/breeze-dark/mimetypes/22/application-x-arj.svg
+/usr/share/icons/breeze-dark/mimetypes/22/application-x-audacity-project.svg
 /usr/share/icons/breeze-dark/mimetypes/22/application-x-awk.svg
 /usr/share/icons/breeze-dark/mimetypes/22/application-x-bittorrent.svg
 /usr/share/icons/breeze-dark/mimetypes/22/application-x-blender.svg
@@ -6849,6 +6854,7 @@ popd
 /usr/share/icons/breeze-dark/mimetypes/32/application-sxw.svg
 /usr/share/icons/breeze-dark/mimetypes/32/application-vnd-google-earth-kml.svg
 /usr/share/icons/breeze-dark/mimetypes/32/application-vnd.android.package-archive.svg
+/usr/share/icons/breeze-dark/mimetypes/32/application-vnd.apple.pkpass.svg
 /usr/share/icons/breeze-dark/mimetypes/32/application-vnd.debian.binary-package.svg
 /usr/share/icons/breeze-dark/mimetypes/32/application-vnd.iccprofile.svg
 /usr/share/icons/breeze-dark/mimetypes/32/application-vnd.ms-access.svg
@@ -6930,6 +6936,7 @@ popd
 /usr/share/icons/breeze-dark/mimetypes/32/application-x-arc.svg
 /usr/share/icons/breeze-dark/mimetypes/32/application-x-archive.svg
 /usr/share/icons/breeze-dark/mimetypes/32/application-x-arj.svg
+/usr/share/icons/breeze-dark/mimetypes/32/application-x-audacity-project.svg
 /usr/share/icons/breeze-dark/mimetypes/32/application-x-awk.svg
 /usr/share/icons/breeze-dark/mimetypes/32/application-x-bittorrent.svg
 /usr/share/icons/breeze-dark/mimetypes/32/application-x-blender.svg
@@ -7315,6 +7322,7 @@ popd
 /usr/share/icons/breeze-dark/mimetypes/64/application-sxw.svg
 /usr/share/icons/breeze-dark/mimetypes/64/application-vnd-google-earth-kml.svg
 /usr/share/icons/breeze-dark/mimetypes/64/application-vnd.android.package-archive.svg
+/usr/share/icons/breeze-dark/mimetypes/64/application-vnd.apple.pkpass.svg
 /usr/share/icons/breeze-dark/mimetypes/64/application-vnd.debian.binary-package.svg
 /usr/share/icons/breeze-dark/mimetypes/64/application-vnd.iccprofile.svg
 /usr/share/icons/breeze-dark/mimetypes/64/application-vnd.ms-access.svg
@@ -7396,6 +7404,7 @@ popd
 /usr/share/icons/breeze-dark/mimetypes/64/application-x-arc.svg
 /usr/share/icons/breeze-dark/mimetypes/64/application-x-archive.svg
 /usr/share/icons/breeze-dark/mimetypes/64/application-x-arj.svg
+/usr/share/icons/breeze-dark/mimetypes/64/application-x-audacity-project.svg
 /usr/share/icons/breeze-dark/mimetypes/64/application-x-awk.svg
 /usr/share/icons/breeze-dark/mimetypes/64/application-x-bittorrent.svg
 /usr/share/icons/breeze-dark/mimetypes/64/application-x-blender.svg
@@ -13664,6 +13673,7 @@ popd
 /usr/share/icons/breeze/apps/32/kate.svg
 /usr/share/icons/breeze/apps/32/kwrite.svg
 /usr/share/icons/breeze/apps/32/plasmavault.svg
+/usr/share/icons/breeze/apps/32/preferences-system.svg
 /usr/share/icons/breeze/apps/32/system-file-manager.svg
 /usr/share/icons/breeze/apps/32/system-help.svg
 /usr/share/icons/breeze/apps/32/systemsettings.svg
@@ -13850,6 +13860,7 @@ popd
 /usr/share/icons/breeze/apps/48/kipi-dngconverter.svg
 /usr/share/icons/breeze/apps/48/kipi-expoblending.svg
 /usr/share/icons/breeze/apps/48/kipi-panorama.svg
+/usr/share/icons/breeze/apps/48/kipi.svg
 /usr/share/icons/breeze/apps/48/kiriki.svg
 /usr/share/icons/breeze/apps/48/kirogi.svg
 /usr/share/icons/breeze/apps/48/kiten.svg
@@ -13912,6 +13923,7 @@ popd
 /usr/share/icons/breeze/apps/48/ksysguardd.svg
 /usr/share/icons/breeze/apps/48/kteatime.svg
 /usr/share/icons/breeze/apps/48/ktimer.svg
+/usr/share/icons/breeze/apps/48/ktimetracker.svg
 /usr/share/icons/breeze/apps/48/ktip.svg
 /usr/share/icons/breeze/apps/48/ktnef.svg
 /usr/share/icons/breeze/apps/48/ktorrent.svg
@@ -14506,6 +14518,7 @@ popd
 /usr/share/icons/breeze/mimetypes/16/application-vnd-google-earth-kml.svg
 /usr/share/icons/breeze/mimetypes/16/application-vnd.android.package-archive.svg
 /usr/share/icons/breeze/mimetypes/16/application-vnd.appimage.svg
+/usr/share/icons/breeze/mimetypes/16/application-vnd.apple.pkpass.svg
 /usr/share/icons/breeze/mimetypes/16/application-vnd.debian.binary-package.svg
 /usr/share/icons/breeze/mimetypes/16/application-vnd.iccprofile.svg
 /usr/share/icons/breeze/mimetypes/16/application-vnd.ms-access.svg
@@ -14587,6 +14600,7 @@ popd
 /usr/share/icons/breeze/mimetypes/16/application-x-arc.svg
 /usr/share/icons/breeze/mimetypes/16/application-x-archive.svg
 /usr/share/icons/breeze/mimetypes/16/application-x-arj.svg
+/usr/share/icons/breeze/mimetypes/16/application-x-audacity-project.svg
 /usr/share/icons/breeze/mimetypes/16/application-x-awk.svg
 /usr/share/icons/breeze/mimetypes/16/application-x-bittorrent.svg
 /usr/share/icons/breeze/mimetypes/16/application-x-blender.svg
@@ -14974,6 +14988,7 @@ popd
 /usr/share/icons/breeze/mimetypes/22/application-vnd-google-earth-kml.svg
 /usr/share/icons/breeze/mimetypes/22/application-vnd.android.package-archive.svg
 /usr/share/icons/breeze/mimetypes/22/application-vnd.appimage.svg
+/usr/share/icons/breeze/mimetypes/22/application-vnd.apple.pkpass.svg
 /usr/share/icons/breeze/mimetypes/22/application-vnd.debian.binary-package.svg
 /usr/share/icons/breeze/mimetypes/22/application-vnd.iccprofile.svg
 /usr/share/icons/breeze/mimetypes/22/application-vnd.ms-access.svg
@@ -15055,6 +15070,7 @@ popd
 /usr/share/icons/breeze/mimetypes/22/application-x-arc.svg
 /usr/share/icons/breeze/mimetypes/22/application-x-archive.svg
 /usr/share/icons/breeze/mimetypes/22/application-x-arj.svg
+/usr/share/icons/breeze/mimetypes/22/application-x-audacity-project.svg
 /usr/share/icons/breeze/mimetypes/22/application-x-awk.svg
 /usr/share/icons/breeze/mimetypes/22/application-x-bittorrent.svg
 /usr/share/icons/breeze/mimetypes/22/application-x-blender.svg
@@ -15442,6 +15458,7 @@ popd
 /usr/share/icons/breeze/mimetypes/32/application-vnd-google-earth-kml.svg
 /usr/share/icons/breeze/mimetypes/32/application-vnd.android.package-archive.svg
 /usr/share/icons/breeze/mimetypes/32/application-vnd.appimage.svg
+/usr/share/icons/breeze/mimetypes/32/application-vnd.apple.pkpass.svg
 /usr/share/icons/breeze/mimetypes/32/application-vnd.debian.binary-package.svg
 /usr/share/icons/breeze/mimetypes/32/application-vnd.iccprofile.svg
 /usr/share/icons/breeze/mimetypes/32/application-vnd.ms-access.svg
@@ -15523,6 +15540,7 @@ popd
 /usr/share/icons/breeze/mimetypes/32/application-x-arc.svg
 /usr/share/icons/breeze/mimetypes/32/application-x-archive.svg
 /usr/share/icons/breeze/mimetypes/32/application-x-arj.svg
+/usr/share/icons/breeze/mimetypes/32/application-x-audacity-project.svg
 /usr/share/icons/breeze/mimetypes/32/application-x-awk.svg
 /usr/share/icons/breeze/mimetypes/32/application-x-bittorrent.svg
 /usr/share/icons/breeze/mimetypes/32/application-x-blender.svg
@@ -15910,6 +15928,7 @@ popd
 /usr/share/icons/breeze/mimetypes/64/application-vnd-google-earth-kml.svg
 /usr/share/icons/breeze/mimetypes/64/application-vnd.android.package-archive.svg
 /usr/share/icons/breeze/mimetypes/64/application-vnd.appimage.svg
+/usr/share/icons/breeze/mimetypes/64/application-vnd.apple.pkpass.svg
 /usr/share/icons/breeze/mimetypes/64/application-vnd.debian.binary-package.svg
 /usr/share/icons/breeze/mimetypes/64/application-vnd.iccprofile.svg
 /usr/share/icons/breeze/mimetypes/64/application-vnd.ms-access.svg
@@ -15991,6 +16010,7 @@ popd
 /usr/share/icons/breeze/mimetypes/64/application-x-arc.svg
 /usr/share/icons/breeze/mimetypes/64/application-x-archive.svg
 /usr/share/icons/breeze/mimetypes/64/application-x-arj.svg
+/usr/share/icons/breeze/mimetypes/64/application-x-audacity-project.svg
 /usr/share/icons/breeze/mimetypes/64/application-x-awk.svg
 /usr/share/icons/breeze/mimetypes/64/application-x-bittorrent.svg
 /usr/share/icons/breeze/mimetypes/64/application-x-blender.svg
