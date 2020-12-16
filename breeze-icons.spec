@@ -5,11 +5,11 @@
 # Source0 file verified with key 0x58D0EE648A48B3BB (faure@kde.org)
 #
 Name     : breeze-icons
-Version  : 5.76.0
-Release  : 38
-URL      : https://download.kde.org/stable/frameworks/5.76/breeze-icons-5.76.0.tar.xz
-Source0  : https://download.kde.org/stable/frameworks/5.76/breeze-icons-5.76.0.tar.xz
-Source1  : https://download.kde.org/stable/frameworks/5.76/breeze-icons-5.76.0.tar.xz.sig
+Version  : 5.77.0
+Release  : 39
+URL      : https://download.kde.org/stable/frameworks/5.77/breeze-icons-5.77.0.tar.xz
+Source0  : https://download.kde.org/stable/frameworks/5.77/breeze-icons-5.77.0.tar.xz
+Source1  : https://download.kde.org/stable/frameworks/5.77/breeze-icons-5.77.0.tar.xz.sig
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : LGPL-2.1 LGPL-3.0
@@ -43,15 +43,15 @@ license components for the breeze-icons package.
 
 
 %prep
-%setup -q -n breeze-icons-5.76.0
-cd %{_builddir}/breeze-icons-5.76.0
+%setup -q -n breeze-icons-5.77.0
+cd %{_builddir}/breeze-icons-5.77.0
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1605421462
+export SOURCE_DATE_EPOCH=1608132383
 mkdir -p clr-build
 pushd clr-build
 export GCC_IGNORE_WERROR=1
@@ -67,13 +67,13 @@ make  %{?_smp_mflags}
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1605421462
+export SOURCE_DATE_EPOCH=1608132383
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/breeze-icons
-cp %{_builddir}/breeze-icons-5.76.0/COPYING-ICONS %{buildroot}/usr/share/package-licenses/breeze-icons/64474638fded94568edef3950d35b464488065b5
-cp %{_builddir}/breeze-icons-5.76.0/COPYING.LIB %{buildroot}/usr/share/package-licenses/breeze-icons/9a1929f4700d2407c70b507b3b2aaf6226a9543c
-cp %{_builddir}/breeze-icons-5.76.0/icons-dark/LICENSE %{buildroot}/usr/share/package-licenses/breeze-icons/f45ee1c765646813b442ca58de72e20a64a7ddba
-cp %{_builddir}/breeze-icons-5.76.0/icons/LICENSE %{buildroot}/usr/share/package-licenses/breeze-icons/f45ee1c765646813b442ca58de72e20a64a7ddba
+cp %{_builddir}/breeze-icons-5.77.0/COPYING-ICONS %{buildroot}/usr/share/package-licenses/breeze-icons/64474638fded94568edef3950d35b464488065b5
+cp %{_builddir}/breeze-icons-5.77.0/COPYING.LIB %{buildroot}/usr/share/package-licenses/breeze-icons/9a1929f4700d2407c70b507b3b2aaf6226a9543c
+cp %{_builddir}/breeze-icons-5.77.0/icons-dark/LICENSE %{buildroot}/usr/share/package-licenses/breeze-icons/f45ee1c765646813b442ca58de72e20a64a7ddba
+cp %{_builddir}/breeze-icons-5.77.0/icons/LICENSE %{buildroot}/usr/share/package-licenses/breeze-icons/f45ee1c765646813b442ca58de72e20a64a7ddba
 pushd clr-build
 %make_install
 popd
@@ -465,6 +465,7 @@ popd
 /usr/share/icons/breeze-dark/actions/16/edit-line-width.svg
 /usr/share/icons/breeze-dark/actions/16/edit-link.svg
 /usr/share/icons/breeze-dark/actions/16/edit-map.svg
+/usr/share/icons/breeze-dark/actions/16/edit-move.svg
 /usr/share/icons/breeze-dark/actions/16/edit-node.svg
 /usr/share/icons/breeze-dark/actions/16/edit-none.svg
 /usr/share/icons/breeze-dark/actions/16/edit-opacity.svg
@@ -1461,6 +1462,8 @@ popd
 /usr/share/icons/breeze-dark/actions/16/taxes-finances.svg
 /usr/share/icons/breeze-dark/actions/16/template.svg
 /usr/share/icons/breeze-dark/actions/16/text-convert-to-regular.svg
+/usr/share/icons/breeze-dark/actions/16/text-field-framed.svg
+/usr/share/icons/breeze-dark/actions/16/text-field-frameless.svg
 /usr/share/icons/breeze-dark/actions/16/text-field.svg
 /usr/share/icons/breeze-dark/actions/16/text-flow-into-frame.svg
 /usr/share/icons/breeze-dark/actions/16/text-frame-link.svg
@@ -1813,6 +1816,7 @@ popd
 /usr/share/icons/breeze-dark/actions/22/activity-fork.svg
 /usr/share/icons/breeze-dark/actions/22/actor.svg
 /usr/share/icons/breeze-dark/actions/22/add-placemark.svg
+/usr/share/icons/breeze-dark/actions/22/add-subtitle.svg
 /usr/share/icons/breeze-dark/actions/22/address-book-new.svg
 /usr/share/icons/breeze-dark/actions/22/addressbook-details.svg
 /usr/share/icons/breeze-dark/actions/22/adjustcurves.svg
@@ -2189,6 +2193,7 @@ popd
 /usr/share/icons/breeze-dark/actions/22/edit-line-width.svg
 /usr/share/icons/breeze-dark/actions/22/edit-link.svg
 /usr/share/icons/breeze-dark/actions/22/edit-map.svg
+/usr/share/icons/breeze-dark/actions/22/edit-move.svg
 /usr/share/icons/breeze-dark/actions/22/edit-node.svg
 /usr/share/icons/breeze-dark/actions/22/edit-none.svg
 /usr/share/icons/breeze-dark/actions/22/edit-opacity.svg
@@ -3318,6 +3323,8 @@ popd
 /usr/share/icons/breeze-dark/actions/22/template.svg
 /usr/share/icons/breeze-dark/actions/22/texcompiler.svg
 /usr/share/icons/breeze-dark/actions/22/texlion.svg
+/usr/share/icons/breeze-dark/actions/22/text-field-framed.svg
+/usr/share/icons/breeze-dark/actions/22/text-field-frameless.svg
 /usr/share/icons/breeze-dark/actions/22/text-field.svg
 /usr/share/icons/breeze-dark/actions/22/text-flow-into-frame.svg
 /usr/share/icons/breeze-dark/actions/22/text-frame-link.svg
@@ -3693,6 +3700,7 @@ popd
 /usr/share/icons/breeze-dark/actions/24/activity-fork.svg
 /usr/share/icons/breeze-dark/actions/24/actor.svg
 /usr/share/icons/breeze-dark/actions/24/add-placemark.svg
+/usr/share/icons/breeze-dark/actions/24/add-subtitle.svg
 /usr/share/icons/breeze-dark/actions/24/address-book-new.svg
 /usr/share/icons/breeze-dark/actions/24/addressbook-details.svg
 /usr/share/icons/breeze-dark/actions/24/adjustcurves.svg
@@ -4069,6 +4077,7 @@ popd
 /usr/share/icons/breeze-dark/actions/24/edit-line-width.svg
 /usr/share/icons/breeze-dark/actions/24/edit-link.svg
 /usr/share/icons/breeze-dark/actions/24/edit-map.svg
+/usr/share/icons/breeze-dark/actions/24/edit-move.svg
 /usr/share/icons/breeze-dark/actions/24/edit-node.svg
 /usr/share/icons/breeze-dark/actions/24/edit-none.svg
 /usr/share/icons/breeze-dark/actions/24/edit-opacity.svg
@@ -5197,6 +5206,8 @@ popd
 /usr/share/icons/breeze-dark/actions/24/template.svg
 /usr/share/icons/breeze-dark/actions/24/texcompiler.svg
 /usr/share/icons/breeze-dark/actions/24/texlion.svg
+/usr/share/icons/breeze-dark/actions/24/text-field-framed.svg
+/usr/share/icons/breeze-dark/actions/24/text-field-frameless.svg
 /usr/share/icons/breeze-dark/actions/24/text-field.svg
 /usr/share/icons/breeze-dark/actions/24/text-flow-into-frame.svg
 /usr/share/icons/breeze-dark/actions/24/text-frame-link.svg
@@ -6937,7 +6948,11 @@ popd
 /usr/share/icons/breeze-dark/devices/symbolic/drive-removable-media-symbolic.svg
 /usr/share/icons/breeze-dark/devices/symbolic/input-dialpad-symbolic.svg
 /usr/share/icons/breeze-dark/devices/symbolic/input-gamepad-symbolic.svg
+/usr/share/icons/breeze-dark/devices/symbolic/input-keyboard-symbolic.svg
+/usr/share/icons/breeze-dark/devices/symbolic/input-keyboard-virtual-symbolic.svg
+/usr/share/icons/breeze-dark/devices/symbolic/input-mouse-symbolic.svg
 /usr/share/icons/breeze-dark/devices/symbolic/input-tablet-symbolic.svg
+/usr/share/icons/breeze-dark/devices/symbolic/input-touchpad-symbolic.svg
 /usr/share/icons/breeze-dark/devices/symbolic/media-flash-symbolic.svg
 /usr/share/icons/breeze-dark/devices/symbolic/media-floppy-symbolic.svg
 /usr/share/icons/breeze-dark/devices/symbolic/media-optical-bd-symbolic.svg
@@ -7164,6 +7179,7 @@ popd
 /usr/share/icons/breeze-dark/mimetypes/16/application-javascript.svg
 /usr/share/icons/breeze-dark/mimetypes/16/application-json.svg
 /usr/share/icons/breeze-dark/mimetypes/16/application-mac-binhex40.svg
+/usr/share/icons/breeze-dark/mimetypes/16/application-mathml+xml.svg
 /usr/share/icons/breeze-dark/mimetypes/16/application-msonenote.svg
 /usr/share/icons/breeze-dark/mimetypes/16/application-msoutlook.svg
 /usr/share/icons/breeze-dark/mimetypes/16/application-msword-template.svg
@@ -7232,6 +7248,7 @@ popd
 /usr/share/icons/breeze-dark/mimetypes/16/application-vnd.rn-realmedia.svg
 /usr/share/icons/breeze-dark/mimetypes/16/application-vnd.scribus.svg
 /usr/share/icons/breeze-dark/mimetypes/16/application-vnd.sqlite3.svg
+/usr/share/icons/breeze-dark/mimetypes/16/application-vnd.squashfs.svg
 /usr/share/icons/breeze-dark/mimetypes/16/application-vnd.stardivision.calc.svg
 /usr/share/icons/breeze-dark/mimetypes/16/application-vnd.stardivision.draw.svg
 /usr/share/icons/breeze-dark/mimetypes/16/application-vnd.stardivision.mail.svg
@@ -7282,6 +7299,7 @@ popd
 /usr/share/icons/breeze-dark/mimetypes/16/application-x-chm.svg
 /usr/share/icons/breeze-dark/mimetypes/16/application-x-compress.svg
 /usr/share/icons/breeze-dark/mimetypes/16/application-x-compressed-tar.svg
+/usr/share/icons/breeze-dark/mimetypes/16/application-x-core.svg
 /usr/share/icons/breeze-dark/mimetypes/16/application-x-cpio.svg
 /usr/share/icons/breeze-dark/mimetypes/16/application-x-cue.svg
 /usr/share/icons/breeze-dark/mimetypes/16/application-x-deb.svg
@@ -7298,6 +7316,7 @@ popd
 /usr/share/icons/breeze-dark/mimetypes/16/application-x-font-pcf.svg
 /usr/share/icons/breeze-dark/mimetypes/16/application-x-font-snf.svg
 /usr/share/icons/breeze-dark/mimetypes/16/application-x-font-ttf.svg
+/usr/share/icons/breeze-dark/mimetypes/16/application-x-font-ttx.svg
 /usr/share/icons/breeze-dark/mimetypes/16/application-x-font-type1.svg
 /usr/share/icons/breeze-dark/mimetypes/16/application-x-gameboy-rom.svg
 /usr/share/icons/breeze-dark/mimetypes/16/application-x-gamecube-rom.svg
@@ -7357,6 +7376,7 @@ popd
 /usr/share/icons/breeze-dark/mimetypes/16/application-x-pkcs7-certificates.svg
 /usr/share/icons/breeze-dark/mimetypes/16/application-x-plasma.svg
 /usr/share/icons/breeze-dark/mimetypes/16/application-x-python-bytecode.svg
+/usr/share/icons/breeze-dark/mimetypes/16/application-x-qemu-disk.svg
 /usr/share/icons/breeze-dark/mimetypes/16/application-x-qet-element.svg
 /usr/share/icons/breeze-dark/mimetypes/16/application-x-qet-project.svg
 /usr/share/icons/breeze-dark/mimetypes/16/application-x-quattropro.svg
@@ -7366,6 +7386,7 @@ popd
 /usr/share/icons/breeze-dark/mimetypes/16/application-x-root.svg
 /usr/share/icons/breeze-dark/mimetypes/16/application-x-rpm.svg
 /usr/share/icons/breeze-dark/mimetypes/16/application-x-ruby.svg
+/usr/share/icons/breeze-dark/mimetypes/16/application-x-sami.svg
 /usr/share/icons/breeze-dark/mimetypes/16/application-x-sharedlib.svg
 /usr/share/icons/breeze-dark/mimetypes/16/application-x-shellscript.svg
 /usr/share/icons/breeze-dark/mimetypes/16/application-x-shockwave-flash.svg
@@ -7504,7 +7525,6 @@ popd
 /usr/share/icons/breeze-dark/mimetypes/16/text-enriched.svg
 /usr/share/icons/breeze-dark/mimetypes/16/text-html.svg
 /usr/share/icons/breeze-dark/mimetypes/16/text-markdown.svg
-/usr/share/icons/breeze-dark/mimetypes/16/text-mathml.svg
 /usr/share/icons/breeze-dark/mimetypes/16/text-plain.svg
 /usr/share/icons/breeze-dark/mimetypes/16/text-rdf+xml.svg
 /usr/share/icons/breeze-dark/mimetypes/16/text-rdf.svg
@@ -7517,6 +7537,7 @@ popd
 /usr/share/icons/breeze-dark/mimetypes/16/text-vnd.kde.kcrash-report.svg
 /usr/share/icons/breeze-dark/mimetypes/16/text-vnd.trolltech.linguist.svg
 /usr/share/icons/breeze-dark/mimetypes/16/text-vnd.wap.wml.svg
+/usr/share/icons/breeze-dark/mimetypes/16/text-vtt.svg
 /usr/share/icons/breeze-dark/mimetypes/16/text-wiki.svg
 /usr/share/icons/breeze-dark/mimetypes/16/text-x-adasrc.svg
 /usr/share/icons/breeze-dark/mimetypes/16/text-x-apport.svg
@@ -7550,6 +7571,8 @@ popd
 /usr/share/icons/breeze-dark/mimetypes/16/text-x-lua.svg
 /usr/share/icons/breeze-dark/mimetypes/16/text-x-makefile.svg
 /usr/share/icons/breeze-dark/mimetypes/16/text-x-markdown.svg
+/usr/share/icons/breeze-dark/mimetypes/16/text-x-microdvd.svg
+/usr/share/icons/breeze-dark/mimetypes/16/text-x-mpsub.svg
 /usr/share/icons/breeze-dark/mimetypes/16/text-x-nfo.svg
 /usr/share/icons/breeze-dark/mimetypes/16/text-x-objchdr.svg
 /usr/share/icons/breeze-dark/mimetypes/16/text-x-objcsrc.svg
@@ -7569,6 +7592,8 @@ popd
 /usr/share/icons/breeze-dark/mimetypes/16/text-x-scala.svg
 /usr/share/icons/breeze-dark/mimetypes/16/text-x-script.svg
 /usr/share/icons/breeze-dark/mimetypes/16/text-x-sql.svg
+/usr/share/icons/breeze-dark/mimetypes/16/text-x-ssa.svg
+/usr/share/icons/breeze-dark/mimetypes/16/text-x-subviewer.svg
 /usr/share/icons/breeze-dark/mimetypes/16/text-x-tcl.svg
 /usr/share/icons/breeze-dark/mimetypes/16/text-x-tex.svg
 /usr/share/icons/breeze-dark/mimetypes/16/text-x-texinfo.svg
@@ -7639,6 +7664,7 @@ popd
 /usr/share/icons/breeze-dark/mimetypes/22/application-javascript.svg
 /usr/share/icons/breeze-dark/mimetypes/22/application-json.svg
 /usr/share/icons/breeze-dark/mimetypes/22/application-mac-binhex40.svg
+/usr/share/icons/breeze-dark/mimetypes/22/application-mathml+xml.svg
 /usr/share/icons/breeze-dark/mimetypes/22/application-msonenote.svg
 /usr/share/icons/breeze-dark/mimetypes/22/application-msoutlook.svg
 /usr/share/icons/breeze-dark/mimetypes/22/application-msword-template.svg
@@ -7707,6 +7733,7 @@ popd
 /usr/share/icons/breeze-dark/mimetypes/22/application-vnd.rn-realmedia.svg
 /usr/share/icons/breeze-dark/mimetypes/22/application-vnd.scribus.svg
 /usr/share/icons/breeze-dark/mimetypes/22/application-vnd.sqlite3.svg
+/usr/share/icons/breeze-dark/mimetypes/22/application-vnd.squashfs.svg
 /usr/share/icons/breeze-dark/mimetypes/22/application-vnd.stardivision.calc.svg
 /usr/share/icons/breeze-dark/mimetypes/22/application-vnd.stardivision.draw.svg
 /usr/share/icons/breeze-dark/mimetypes/22/application-vnd.stardivision.mail.svg
@@ -7757,6 +7784,7 @@ popd
 /usr/share/icons/breeze-dark/mimetypes/22/application-x-chm.svg
 /usr/share/icons/breeze-dark/mimetypes/22/application-x-compress.svg
 /usr/share/icons/breeze-dark/mimetypes/22/application-x-compressed-tar.svg
+/usr/share/icons/breeze-dark/mimetypes/22/application-x-core.svg
 /usr/share/icons/breeze-dark/mimetypes/22/application-x-cpio.svg
 /usr/share/icons/breeze-dark/mimetypes/22/application-x-cue.svg
 /usr/share/icons/breeze-dark/mimetypes/22/application-x-deb.svg
@@ -7773,6 +7801,7 @@ popd
 /usr/share/icons/breeze-dark/mimetypes/22/application-x-font-pcf.svg
 /usr/share/icons/breeze-dark/mimetypes/22/application-x-font-snf.svg
 /usr/share/icons/breeze-dark/mimetypes/22/application-x-font-ttf.svg
+/usr/share/icons/breeze-dark/mimetypes/22/application-x-font-ttx.svg
 /usr/share/icons/breeze-dark/mimetypes/22/application-x-font-type1.svg
 /usr/share/icons/breeze-dark/mimetypes/22/application-x-gameboy-rom.svg
 /usr/share/icons/breeze-dark/mimetypes/22/application-x-gamecube-rom.svg
@@ -7832,6 +7861,7 @@ popd
 /usr/share/icons/breeze-dark/mimetypes/22/application-x-pkcs7-certificates.svg
 /usr/share/icons/breeze-dark/mimetypes/22/application-x-plasma.svg
 /usr/share/icons/breeze-dark/mimetypes/22/application-x-python-bytecode.svg
+/usr/share/icons/breeze-dark/mimetypes/22/application-x-qemu-disk.svg
 /usr/share/icons/breeze-dark/mimetypes/22/application-x-qet-element.svg
 /usr/share/icons/breeze-dark/mimetypes/22/application-x-qet-project.svg
 /usr/share/icons/breeze-dark/mimetypes/22/application-x-quattropro.svg
@@ -7841,6 +7871,7 @@ popd
 /usr/share/icons/breeze-dark/mimetypes/22/application-x-root.svg
 /usr/share/icons/breeze-dark/mimetypes/22/application-x-rpm.svg
 /usr/share/icons/breeze-dark/mimetypes/22/application-x-ruby.svg
+/usr/share/icons/breeze-dark/mimetypes/22/application-x-sami.svg
 /usr/share/icons/breeze-dark/mimetypes/22/application-x-sharedlib.svg
 /usr/share/icons/breeze-dark/mimetypes/22/application-x-shellscript.svg
 /usr/share/icons/breeze-dark/mimetypes/22/application-x-shockwave-flash.svg
@@ -7979,7 +8010,6 @@ popd
 /usr/share/icons/breeze-dark/mimetypes/22/text-enriched.svg
 /usr/share/icons/breeze-dark/mimetypes/22/text-html.svg
 /usr/share/icons/breeze-dark/mimetypes/22/text-markdown.svg
-/usr/share/icons/breeze-dark/mimetypes/22/text-mathml.svg
 /usr/share/icons/breeze-dark/mimetypes/22/text-plain.svg
 /usr/share/icons/breeze-dark/mimetypes/22/text-rdf+xml.svg
 /usr/share/icons/breeze-dark/mimetypes/22/text-rdf.svg
@@ -7992,6 +8022,7 @@ popd
 /usr/share/icons/breeze-dark/mimetypes/22/text-vnd.kde.kcrash-report.svg
 /usr/share/icons/breeze-dark/mimetypes/22/text-vnd.trolltech.linguist.svg
 /usr/share/icons/breeze-dark/mimetypes/22/text-vnd.wap.wml.svg
+/usr/share/icons/breeze-dark/mimetypes/22/text-vtt.svg
 /usr/share/icons/breeze-dark/mimetypes/22/text-wiki.svg
 /usr/share/icons/breeze-dark/mimetypes/22/text-x-adasrc.svg
 /usr/share/icons/breeze-dark/mimetypes/22/text-x-apport.svg
@@ -8025,6 +8056,8 @@ popd
 /usr/share/icons/breeze-dark/mimetypes/22/text-x-lua.svg
 /usr/share/icons/breeze-dark/mimetypes/22/text-x-makefile.svg
 /usr/share/icons/breeze-dark/mimetypes/22/text-x-markdown.svg
+/usr/share/icons/breeze-dark/mimetypes/22/text-x-microdvd.svg
+/usr/share/icons/breeze-dark/mimetypes/22/text-x-mpsub.svg
 /usr/share/icons/breeze-dark/mimetypes/22/text-x-nfo.svg
 /usr/share/icons/breeze-dark/mimetypes/22/text-x-objchdr.svg
 /usr/share/icons/breeze-dark/mimetypes/22/text-x-objcsrc.svg
@@ -8044,6 +8077,8 @@ popd
 /usr/share/icons/breeze-dark/mimetypes/22/text-x-scala.svg
 /usr/share/icons/breeze-dark/mimetypes/22/text-x-script.svg
 /usr/share/icons/breeze-dark/mimetypes/22/text-x-sql.svg
+/usr/share/icons/breeze-dark/mimetypes/22/text-x-ssa.svg
+/usr/share/icons/breeze-dark/mimetypes/22/text-x-subviewer.svg
 /usr/share/icons/breeze-dark/mimetypes/22/text-x-tcl.svg
 /usr/share/icons/breeze-dark/mimetypes/22/text-x-tex.svg
 /usr/share/icons/breeze-dark/mimetypes/22/text-x-texinfo.svg
@@ -8114,6 +8149,7 @@ popd
 /usr/share/icons/breeze-dark/mimetypes/24/application-javascript.svg
 /usr/share/icons/breeze-dark/mimetypes/24/application-json.svg
 /usr/share/icons/breeze-dark/mimetypes/24/application-mac-binhex40.svg
+/usr/share/icons/breeze-dark/mimetypes/24/application-mathml+xml.svg
 /usr/share/icons/breeze-dark/mimetypes/24/application-msonenote.svg
 /usr/share/icons/breeze-dark/mimetypes/24/application-msoutlook.svg
 /usr/share/icons/breeze-dark/mimetypes/24/application-msword-template.svg
@@ -8182,6 +8218,7 @@ popd
 /usr/share/icons/breeze-dark/mimetypes/24/application-vnd.rn-realmedia.svg
 /usr/share/icons/breeze-dark/mimetypes/24/application-vnd.scribus.svg
 /usr/share/icons/breeze-dark/mimetypes/24/application-vnd.sqlite3.svg
+/usr/share/icons/breeze-dark/mimetypes/24/application-vnd.squashfs.svg
 /usr/share/icons/breeze-dark/mimetypes/24/application-vnd.stardivision.calc.svg
 /usr/share/icons/breeze-dark/mimetypes/24/application-vnd.stardivision.draw.svg
 /usr/share/icons/breeze-dark/mimetypes/24/application-vnd.stardivision.mail.svg
@@ -8232,6 +8269,7 @@ popd
 /usr/share/icons/breeze-dark/mimetypes/24/application-x-chm.svg
 /usr/share/icons/breeze-dark/mimetypes/24/application-x-compress.svg
 /usr/share/icons/breeze-dark/mimetypes/24/application-x-compressed-tar.svg
+/usr/share/icons/breeze-dark/mimetypes/24/application-x-core.svg
 /usr/share/icons/breeze-dark/mimetypes/24/application-x-cpio.svg
 /usr/share/icons/breeze-dark/mimetypes/24/application-x-cue.svg
 /usr/share/icons/breeze-dark/mimetypes/24/application-x-deb.svg
@@ -8248,6 +8286,7 @@ popd
 /usr/share/icons/breeze-dark/mimetypes/24/application-x-font-pcf.svg
 /usr/share/icons/breeze-dark/mimetypes/24/application-x-font-snf.svg
 /usr/share/icons/breeze-dark/mimetypes/24/application-x-font-ttf.svg
+/usr/share/icons/breeze-dark/mimetypes/24/application-x-font-ttx.svg
 /usr/share/icons/breeze-dark/mimetypes/24/application-x-font-type1.svg
 /usr/share/icons/breeze-dark/mimetypes/24/application-x-gameboy-rom.svg
 /usr/share/icons/breeze-dark/mimetypes/24/application-x-gamecube-rom.svg
@@ -8307,6 +8346,7 @@ popd
 /usr/share/icons/breeze-dark/mimetypes/24/application-x-pkcs7-certificates.svg
 /usr/share/icons/breeze-dark/mimetypes/24/application-x-plasma.svg
 /usr/share/icons/breeze-dark/mimetypes/24/application-x-python-bytecode.svg
+/usr/share/icons/breeze-dark/mimetypes/24/application-x-qemu-disk.svg
 /usr/share/icons/breeze-dark/mimetypes/24/application-x-qet-element.svg
 /usr/share/icons/breeze-dark/mimetypes/24/application-x-qet-project.svg
 /usr/share/icons/breeze-dark/mimetypes/24/application-x-quattropro.svg
@@ -8315,6 +8355,7 @@ popd
 /usr/share/icons/breeze-dark/mimetypes/24/application-x-rdata.svg
 /usr/share/icons/breeze-dark/mimetypes/24/application-x-rpm.svg
 /usr/share/icons/breeze-dark/mimetypes/24/application-x-ruby.svg
+/usr/share/icons/breeze-dark/mimetypes/24/application-x-sami.svg
 /usr/share/icons/breeze-dark/mimetypes/24/application-x-sharedlib.svg
 /usr/share/icons/breeze-dark/mimetypes/24/application-x-shellscript.svg
 /usr/share/icons/breeze-dark/mimetypes/24/application-x-shockwave-flash.svg
@@ -8453,7 +8494,6 @@ popd
 /usr/share/icons/breeze-dark/mimetypes/24/text-enriched.svg
 /usr/share/icons/breeze-dark/mimetypes/24/text-html.svg
 /usr/share/icons/breeze-dark/mimetypes/24/text-markdown.svg
-/usr/share/icons/breeze-dark/mimetypes/24/text-mathml.svg
 /usr/share/icons/breeze-dark/mimetypes/24/text-plain.svg
 /usr/share/icons/breeze-dark/mimetypes/24/text-rdf+xml.svg
 /usr/share/icons/breeze-dark/mimetypes/24/text-rdf.svg
@@ -8466,6 +8506,7 @@ popd
 /usr/share/icons/breeze-dark/mimetypes/24/text-vnd.kde.kcrash-report.svg
 /usr/share/icons/breeze-dark/mimetypes/24/text-vnd.trolltech.linguist.svg
 /usr/share/icons/breeze-dark/mimetypes/24/text-vnd.wap.wml.svg
+/usr/share/icons/breeze-dark/mimetypes/24/text-vtt.svg
 /usr/share/icons/breeze-dark/mimetypes/24/text-wiki.svg
 /usr/share/icons/breeze-dark/mimetypes/24/text-x-adasrc.svg
 /usr/share/icons/breeze-dark/mimetypes/24/text-x-apport.svg
@@ -8497,6 +8538,8 @@ popd
 /usr/share/icons/breeze-dark/mimetypes/24/text-x-log.svg
 /usr/share/icons/breeze-dark/mimetypes/24/text-x-makefile.svg
 /usr/share/icons/breeze-dark/mimetypes/24/text-x-markdown.svg
+/usr/share/icons/breeze-dark/mimetypes/24/text-x-microdvd.svg
+/usr/share/icons/breeze-dark/mimetypes/24/text-x-mpsub.svg
 /usr/share/icons/breeze-dark/mimetypes/24/text-x-nfo.svg
 /usr/share/icons/breeze-dark/mimetypes/24/text-x-objchdr.svg
 /usr/share/icons/breeze-dark/mimetypes/24/text-x-objcsrc.svg
@@ -8515,6 +8558,8 @@ popd
 /usr/share/icons/breeze-dark/mimetypes/24/text-x-rust.svg
 /usr/share/icons/breeze-dark/mimetypes/24/text-x-script.svg
 /usr/share/icons/breeze-dark/mimetypes/24/text-x-sql.svg
+/usr/share/icons/breeze-dark/mimetypes/24/text-x-ssa.svg
+/usr/share/icons/breeze-dark/mimetypes/24/text-x-subviewer.svg
 /usr/share/icons/breeze-dark/mimetypes/24/text-x-tcl.svg
 /usr/share/icons/breeze-dark/mimetypes/24/text-x-tex.svg
 /usr/share/icons/breeze-dark/mimetypes/24/text-x-texinfo.svg
@@ -8585,6 +8630,7 @@ popd
 /usr/share/icons/breeze-dark/mimetypes/32/application-javascript.svg
 /usr/share/icons/breeze-dark/mimetypes/32/application-json.svg
 /usr/share/icons/breeze-dark/mimetypes/32/application-mac-binhex40.svg
+/usr/share/icons/breeze-dark/mimetypes/32/application-mathml+xml.svg
 /usr/share/icons/breeze-dark/mimetypes/32/application-msonenote.svg
 /usr/share/icons/breeze-dark/mimetypes/32/application-msoutlook.svg
 /usr/share/icons/breeze-dark/mimetypes/32/application-msword-template.svg
@@ -8653,6 +8699,7 @@ popd
 /usr/share/icons/breeze-dark/mimetypes/32/application-vnd.rn-realmedia.svg
 /usr/share/icons/breeze-dark/mimetypes/32/application-vnd.scribus.svg
 /usr/share/icons/breeze-dark/mimetypes/32/application-vnd.sqlite3.svg
+/usr/share/icons/breeze-dark/mimetypes/32/application-vnd.squashfs.svg
 /usr/share/icons/breeze-dark/mimetypes/32/application-vnd.stardivision.calc.svg
 /usr/share/icons/breeze-dark/mimetypes/32/application-vnd.stardivision.draw.svg
 /usr/share/icons/breeze-dark/mimetypes/32/application-vnd.stardivision.mail.svg
@@ -8703,6 +8750,7 @@ popd
 /usr/share/icons/breeze-dark/mimetypes/32/application-x-chm.svg
 /usr/share/icons/breeze-dark/mimetypes/32/application-x-compress.svg
 /usr/share/icons/breeze-dark/mimetypes/32/application-x-compressed-tar.svg
+/usr/share/icons/breeze-dark/mimetypes/32/application-x-core.svg
 /usr/share/icons/breeze-dark/mimetypes/32/application-x-cpio.svg
 /usr/share/icons/breeze-dark/mimetypes/32/application-x-cue.svg
 /usr/share/icons/breeze-dark/mimetypes/32/application-x-deb.svg
@@ -8719,6 +8767,7 @@ popd
 /usr/share/icons/breeze-dark/mimetypes/32/application-x-font-pcf.svg
 /usr/share/icons/breeze-dark/mimetypes/32/application-x-font-snf.svg
 /usr/share/icons/breeze-dark/mimetypes/32/application-x-font-ttf.svg
+/usr/share/icons/breeze-dark/mimetypes/32/application-x-font-ttx.svg
 /usr/share/icons/breeze-dark/mimetypes/32/application-x-font-type1.svg
 /usr/share/icons/breeze-dark/mimetypes/32/application-x-gameboy-rom.svg
 /usr/share/icons/breeze-dark/mimetypes/32/application-x-gamecube-rom.svg
@@ -8778,6 +8827,7 @@ popd
 /usr/share/icons/breeze-dark/mimetypes/32/application-x-pkcs7-certificates.svg
 /usr/share/icons/breeze-dark/mimetypes/32/application-x-plasma.svg
 /usr/share/icons/breeze-dark/mimetypes/32/application-x-python-bytecode.svg
+/usr/share/icons/breeze-dark/mimetypes/32/application-x-qemu-disk.svg
 /usr/share/icons/breeze-dark/mimetypes/32/application-x-qet-element.svg
 /usr/share/icons/breeze-dark/mimetypes/32/application-x-qet-project.svg
 /usr/share/icons/breeze-dark/mimetypes/32/application-x-quattropro.svg
@@ -8787,6 +8837,7 @@ popd
 /usr/share/icons/breeze-dark/mimetypes/32/application-x-root.svg
 /usr/share/icons/breeze-dark/mimetypes/32/application-x-rpm.svg
 /usr/share/icons/breeze-dark/mimetypes/32/application-x-ruby.svg
+/usr/share/icons/breeze-dark/mimetypes/32/application-x-sami.svg
 /usr/share/icons/breeze-dark/mimetypes/32/application-x-sharedlib.svg
 /usr/share/icons/breeze-dark/mimetypes/32/application-x-shellscript.svg
 /usr/share/icons/breeze-dark/mimetypes/32/application-x-shockwave-flash.svg
@@ -8926,7 +8977,6 @@ popd
 /usr/share/icons/breeze-dark/mimetypes/32/text-enriched.svg
 /usr/share/icons/breeze-dark/mimetypes/32/text-html.svg
 /usr/share/icons/breeze-dark/mimetypes/32/text-markdown.svg
-/usr/share/icons/breeze-dark/mimetypes/32/text-mathml.svg
 /usr/share/icons/breeze-dark/mimetypes/32/text-plain.svg
 /usr/share/icons/breeze-dark/mimetypes/32/text-rdf+xml.svg
 /usr/share/icons/breeze-dark/mimetypes/32/text-rdf.svg
@@ -8939,6 +8989,7 @@ popd
 /usr/share/icons/breeze-dark/mimetypes/32/text-vnd.kde.kcrash-report.svg
 /usr/share/icons/breeze-dark/mimetypes/32/text-vnd.trolltech.linguist.svg
 /usr/share/icons/breeze-dark/mimetypes/32/text-vnd.wap.wml.svg
+/usr/share/icons/breeze-dark/mimetypes/32/text-vtt.svg
 /usr/share/icons/breeze-dark/mimetypes/32/text-wiki.svg
 /usr/share/icons/breeze-dark/mimetypes/32/text-x-adasrc.svg
 /usr/share/icons/breeze-dark/mimetypes/32/text-x-apport.svg
@@ -8972,6 +9023,8 @@ popd
 /usr/share/icons/breeze-dark/mimetypes/32/text-x-lua.svg
 /usr/share/icons/breeze-dark/mimetypes/32/text-x-makefile.svg
 /usr/share/icons/breeze-dark/mimetypes/32/text-x-markdown.svg
+/usr/share/icons/breeze-dark/mimetypes/32/text-x-microdvd.svg
+/usr/share/icons/breeze-dark/mimetypes/32/text-x-mpsub.svg
 /usr/share/icons/breeze-dark/mimetypes/32/text-x-nfo.svg
 /usr/share/icons/breeze-dark/mimetypes/32/text-x-objchdr.svg
 /usr/share/icons/breeze-dark/mimetypes/32/text-x-objcsrc.svg
@@ -8991,6 +9044,8 @@ popd
 /usr/share/icons/breeze-dark/mimetypes/32/text-x-scala.svg
 /usr/share/icons/breeze-dark/mimetypes/32/text-x-script.svg
 /usr/share/icons/breeze-dark/mimetypes/32/text-x-sql.svg
+/usr/share/icons/breeze-dark/mimetypes/32/text-x-ssa.svg
+/usr/share/icons/breeze-dark/mimetypes/32/text-x-subviewer.svg
 /usr/share/icons/breeze-dark/mimetypes/32/text-x-tcl.svg
 /usr/share/icons/breeze-dark/mimetypes/32/text-x-tex.svg
 /usr/share/icons/breeze-dark/mimetypes/32/text-x-texinfo.svg
@@ -9059,6 +9114,7 @@ popd
 /usr/share/icons/breeze-dark/mimetypes/64/application-javascript.svg
 /usr/share/icons/breeze-dark/mimetypes/64/application-json.svg
 /usr/share/icons/breeze-dark/mimetypes/64/application-mac-binhex40.svg
+/usr/share/icons/breeze-dark/mimetypes/64/application-mathml+xml.svg
 /usr/share/icons/breeze-dark/mimetypes/64/application-msonenote.svg
 /usr/share/icons/breeze-dark/mimetypes/64/application-msoutlook.svg
 /usr/share/icons/breeze-dark/mimetypes/64/application-msword-template.svg
@@ -9127,6 +9183,7 @@ popd
 /usr/share/icons/breeze-dark/mimetypes/64/application-vnd.rn-realmedia.svg
 /usr/share/icons/breeze-dark/mimetypes/64/application-vnd.scribus.svg
 /usr/share/icons/breeze-dark/mimetypes/64/application-vnd.sqlite3.svg
+/usr/share/icons/breeze-dark/mimetypes/64/application-vnd.squashfs.svg
 /usr/share/icons/breeze-dark/mimetypes/64/application-vnd.stardivision.calc.svg
 /usr/share/icons/breeze-dark/mimetypes/64/application-vnd.stardivision.draw.svg
 /usr/share/icons/breeze-dark/mimetypes/64/application-vnd.stardivision.mail.svg
@@ -9177,6 +9234,7 @@ popd
 /usr/share/icons/breeze-dark/mimetypes/64/application-x-chm.svg
 /usr/share/icons/breeze-dark/mimetypes/64/application-x-compress.svg
 /usr/share/icons/breeze-dark/mimetypes/64/application-x-compressed-tar.svg
+/usr/share/icons/breeze-dark/mimetypes/64/application-x-core.svg
 /usr/share/icons/breeze-dark/mimetypes/64/application-x-cpio.svg
 /usr/share/icons/breeze-dark/mimetypes/64/application-x-cue.svg
 /usr/share/icons/breeze-dark/mimetypes/64/application-x-deb.svg
@@ -9193,6 +9251,7 @@ popd
 /usr/share/icons/breeze-dark/mimetypes/64/application-x-font-pcf.svg
 /usr/share/icons/breeze-dark/mimetypes/64/application-x-font-snf.svg
 /usr/share/icons/breeze-dark/mimetypes/64/application-x-font-ttf.svg
+/usr/share/icons/breeze-dark/mimetypes/64/application-x-font-ttx.svg
 /usr/share/icons/breeze-dark/mimetypes/64/application-x-font-type1.svg
 /usr/share/icons/breeze-dark/mimetypes/64/application-x-gameboy-rom.svg
 /usr/share/icons/breeze-dark/mimetypes/64/application-x-gamecube-rom.svg
@@ -9252,6 +9311,7 @@ popd
 /usr/share/icons/breeze-dark/mimetypes/64/application-x-pkcs7-certificates.svg
 /usr/share/icons/breeze-dark/mimetypes/64/application-x-plasma.svg
 /usr/share/icons/breeze-dark/mimetypes/64/application-x-python-bytecode.svg
+/usr/share/icons/breeze-dark/mimetypes/64/application-x-qemu-disk.svg
 /usr/share/icons/breeze-dark/mimetypes/64/application-x-qet-element.svg
 /usr/share/icons/breeze-dark/mimetypes/64/application-x-qet-project.svg
 /usr/share/icons/breeze-dark/mimetypes/64/application-x-quattropro.svg
@@ -9261,6 +9321,7 @@ popd
 /usr/share/icons/breeze-dark/mimetypes/64/application-x-root.svg
 /usr/share/icons/breeze-dark/mimetypes/64/application-x-rpm.svg
 /usr/share/icons/breeze-dark/mimetypes/64/application-x-ruby.svg
+/usr/share/icons/breeze-dark/mimetypes/64/application-x-sami.svg
 /usr/share/icons/breeze-dark/mimetypes/64/application-x-sharedlib.svg
 /usr/share/icons/breeze-dark/mimetypes/64/application-x-shellscript.svg
 /usr/share/icons/breeze-dark/mimetypes/64/application-x-shockwave-flash.svg
@@ -9399,7 +9460,6 @@ popd
 /usr/share/icons/breeze-dark/mimetypes/64/text-enriched.svg
 /usr/share/icons/breeze-dark/mimetypes/64/text-html.svg
 /usr/share/icons/breeze-dark/mimetypes/64/text-markdown.svg
-/usr/share/icons/breeze-dark/mimetypes/64/text-mathml.svg
 /usr/share/icons/breeze-dark/mimetypes/64/text-plain.svg
 /usr/share/icons/breeze-dark/mimetypes/64/text-rdf+xml.svg
 /usr/share/icons/breeze-dark/mimetypes/64/text-rdf.svg
@@ -9412,6 +9472,7 @@ popd
 /usr/share/icons/breeze-dark/mimetypes/64/text-vnd.kde.kcrash-report.svg
 /usr/share/icons/breeze-dark/mimetypes/64/text-vnd.trolltech.linguist.svg
 /usr/share/icons/breeze-dark/mimetypes/64/text-vnd.wap.wml.svg
+/usr/share/icons/breeze-dark/mimetypes/64/text-vtt.svg
 /usr/share/icons/breeze-dark/mimetypes/64/text-wiki.svg
 /usr/share/icons/breeze-dark/mimetypes/64/text-x-adasrc.svg
 /usr/share/icons/breeze-dark/mimetypes/64/text-x-apport.svg
@@ -9445,6 +9506,8 @@ popd
 /usr/share/icons/breeze-dark/mimetypes/64/text-x-lua.svg
 /usr/share/icons/breeze-dark/mimetypes/64/text-x-makefile.svg
 /usr/share/icons/breeze-dark/mimetypes/64/text-x-markdown.svg
+/usr/share/icons/breeze-dark/mimetypes/64/text-x-microdvd.svg
+/usr/share/icons/breeze-dark/mimetypes/64/text-x-mpsub.svg
 /usr/share/icons/breeze-dark/mimetypes/64/text-x-nfo.svg
 /usr/share/icons/breeze-dark/mimetypes/64/text-x-objchdr.svg
 /usr/share/icons/breeze-dark/mimetypes/64/text-x-objcsrc.svg
@@ -9466,6 +9529,8 @@ popd
 /usr/share/icons/breeze-dark/mimetypes/64/text-x-script.svg
 /usr/share/icons/breeze-dark/mimetypes/64/text-x-scss.svg
 /usr/share/icons/breeze-dark/mimetypes/64/text-x-sql.svg
+/usr/share/icons/breeze-dark/mimetypes/64/text-x-ssa.svg
+/usr/share/icons/breeze-dark/mimetypes/64/text-x-subviewer.svg
 /usr/share/icons/breeze-dark/mimetypes/64/text-x-tcl.svg
 /usr/share/icons/breeze-dark/mimetypes/64/text-x-tex.svg
 /usr/share/icons/breeze-dark/mimetypes/64/text-x-texinfo.svg
@@ -11200,6 +11265,7 @@ popd
 /usr/share/icons/breeze/actions/16/edit-line-width.svg
 /usr/share/icons/breeze/actions/16/edit-link.svg
 /usr/share/icons/breeze/actions/16/edit-map.svg
+/usr/share/icons/breeze/actions/16/edit-move.svg
 /usr/share/icons/breeze/actions/16/edit-node.svg
 /usr/share/icons/breeze/actions/16/edit-none.svg
 /usr/share/icons/breeze/actions/16/edit-opacity.svg
@@ -12194,6 +12260,8 @@ popd
 /usr/share/icons/breeze/actions/16/taxes-finances.svg
 /usr/share/icons/breeze/actions/16/template.svg
 /usr/share/icons/breeze/actions/16/text-convert-to-regular.svg
+/usr/share/icons/breeze/actions/16/text-field-framed.svg
+/usr/share/icons/breeze/actions/16/text-field-frameless.svg
 /usr/share/icons/breeze/actions/16/text-field.svg
 /usr/share/icons/breeze/actions/16/text-flow-into-frame.svg
 /usr/share/icons/breeze/actions/16/text-frame-link.svg
@@ -12541,6 +12609,7 @@ popd
 /usr/share/icons/breeze/actions/22/activity-fork.svg
 /usr/share/icons/breeze/actions/22/actor.svg
 /usr/share/icons/breeze/actions/22/add-placemark.svg
+/usr/share/icons/breeze/actions/22/add-subtitle.svg
 /usr/share/icons/breeze/actions/22/address-book-new.svg
 /usr/share/icons/breeze/actions/22/addressbook-details.svg
 /usr/share/icons/breeze/actions/22/adjustcurves.svg
@@ -12917,6 +12986,7 @@ popd
 /usr/share/icons/breeze/actions/22/edit-line-width.svg
 /usr/share/icons/breeze/actions/22/edit-link.svg
 /usr/share/icons/breeze/actions/22/edit-map.svg
+/usr/share/icons/breeze/actions/22/edit-move.svg
 /usr/share/icons/breeze/actions/22/edit-node.svg
 /usr/share/icons/breeze/actions/22/edit-none.svg
 /usr/share/icons/breeze/actions/22/edit-opacity.svg
@@ -14044,6 +14114,8 @@ popd
 /usr/share/icons/breeze/actions/22/template.svg
 /usr/share/icons/breeze/actions/22/texcompiler.svg
 /usr/share/icons/breeze/actions/22/texlion.svg
+/usr/share/icons/breeze/actions/22/text-field-framed.svg
+/usr/share/icons/breeze/actions/22/text-field-frameless.svg
 /usr/share/icons/breeze/actions/22/text-field.svg
 /usr/share/icons/breeze/actions/22/text-flow-into-frame.svg
 /usr/share/icons/breeze/actions/22/text-frame-link.svg
@@ -14424,6 +14496,7 @@ popd
 /usr/share/icons/breeze/actions/24/activity-fork.svg
 /usr/share/icons/breeze/actions/24/actor.svg
 /usr/share/icons/breeze/actions/24/add-placemark.svg
+/usr/share/icons/breeze/actions/24/add-subtitle.svg
 /usr/share/icons/breeze/actions/24/address-book-new.svg
 /usr/share/icons/breeze/actions/24/addressbook-details.svg
 /usr/share/icons/breeze/actions/24/adjustcurves.svg
@@ -14800,6 +14873,7 @@ popd
 /usr/share/icons/breeze/actions/24/edit-line-width.svg
 /usr/share/icons/breeze/actions/24/edit-link.svg
 /usr/share/icons/breeze/actions/24/edit-map.svg
+/usr/share/icons/breeze/actions/24/edit-move.svg
 /usr/share/icons/breeze/actions/24/edit-node.svg
 /usr/share/icons/breeze/actions/24/edit-none.svg
 /usr/share/icons/breeze/actions/24/edit-opacity.svg
@@ -15926,6 +16000,8 @@ popd
 /usr/share/icons/breeze/actions/24/template.svg
 /usr/share/icons/breeze/actions/24/texcompiler.svg
 /usr/share/icons/breeze/actions/24/texlion.svg
+/usr/share/icons/breeze/actions/24/text-field-framed.svg
+/usr/share/icons/breeze/actions/24/text-field-frameless.svg
 /usr/share/icons/breeze/actions/24/text-field.svg
 /usr/share/icons/breeze/actions/24/text-flow-into-frame.svg
 /usr/share/icons/breeze/actions/24/text-frame-link.svg
@@ -16615,6 +16691,7 @@ popd
 /usr/share/icons/breeze/actions/symbolic/edit-delete-symbolic.svg
 /usr/share/icons/breeze/actions/symbolic/edit-find-replace-symbolic.svg
 /usr/share/icons/breeze/actions/symbolic/edit-find-symbolic.svg
+/usr/share/icons/breeze/actions/symbolic/edit-move-symbolic.svg
 /usr/share/icons/breeze/actions/symbolic/edit-paste-symbolic.svg
 /usr/share/icons/breeze/actions/symbolic/edit-redo-rtl-symbolic.svg
 /usr/share/icons/breeze/actions/symbolic/edit-redo-symbolic-rtl.svg
@@ -17697,7 +17774,11 @@ popd
 /usr/share/icons/breeze/devices/symbolic/drive-removable-media-symbolic.svg
 /usr/share/icons/breeze/devices/symbolic/input-dialpad-symbolic.svg
 /usr/share/icons/breeze/devices/symbolic/input-gamepad-symbolic.svg
+/usr/share/icons/breeze/devices/symbolic/input-keyboard-symbolic.svg
+/usr/share/icons/breeze/devices/symbolic/input-keyboard-virtual-symbolic.svg
+/usr/share/icons/breeze/devices/symbolic/input-mouse-symbolic.svg
 /usr/share/icons/breeze/devices/symbolic/input-tablet-symbolic.svg
+/usr/share/icons/breeze/devices/symbolic/input-touchpad-symbolic.svg
 /usr/share/icons/breeze/devices/symbolic/media-flash-symbolic.svg
 /usr/share/icons/breeze/devices/symbolic/media-floppy-symbolic.svg
 /usr/share/icons/breeze/devices/symbolic/media-optical-bd-symbolic.svg
@@ -17924,6 +18005,7 @@ popd
 /usr/share/icons/breeze/mimetypes/16/application-javascript.svg
 /usr/share/icons/breeze/mimetypes/16/application-json.svg
 /usr/share/icons/breeze/mimetypes/16/application-mac-binhex40.svg
+/usr/share/icons/breeze/mimetypes/16/application-mathml+xml.svg
 /usr/share/icons/breeze/mimetypes/16/application-msonenote.svg
 /usr/share/icons/breeze/mimetypes/16/application-msoutlook.svg
 /usr/share/icons/breeze/mimetypes/16/application-msword-template.svg
@@ -17993,6 +18075,7 @@ popd
 /usr/share/icons/breeze/mimetypes/16/application-vnd.rn-realmedia.svg
 /usr/share/icons/breeze/mimetypes/16/application-vnd.scribus.svg
 /usr/share/icons/breeze/mimetypes/16/application-vnd.sqlite3.svg
+/usr/share/icons/breeze/mimetypes/16/application-vnd.squashfs.svg
 /usr/share/icons/breeze/mimetypes/16/application-vnd.stardivision.calc.svg
 /usr/share/icons/breeze/mimetypes/16/application-vnd.stardivision.draw.svg
 /usr/share/icons/breeze/mimetypes/16/application-vnd.stardivision.mail.svg
@@ -18043,6 +18126,7 @@ popd
 /usr/share/icons/breeze/mimetypes/16/application-x-chm.svg
 /usr/share/icons/breeze/mimetypes/16/application-x-compress.svg
 /usr/share/icons/breeze/mimetypes/16/application-x-compressed-tar.svg
+/usr/share/icons/breeze/mimetypes/16/application-x-core.svg
 /usr/share/icons/breeze/mimetypes/16/application-x-cpio.svg
 /usr/share/icons/breeze/mimetypes/16/application-x-cue.svg
 /usr/share/icons/breeze/mimetypes/16/application-x-deb.svg
@@ -18059,6 +18143,7 @@ popd
 /usr/share/icons/breeze/mimetypes/16/application-x-font-pcf.svg
 /usr/share/icons/breeze/mimetypes/16/application-x-font-snf.svg
 /usr/share/icons/breeze/mimetypes/16/application-x-font-ttf.svg
+/usr/share/icons/breeze/mimetypes/16/application-x-font-ttx.svg
 /usr/share/icons/breeze/mimetypes/16/application-x-font-type1.svg
 /usr/share/icons/breeze/mimetypes/16/application-x-gameboy-rom.svg
 /usr/share/icons/breeze/mimetypes/16/application-x-gamecube-rom.svg
@@ -18120,6 +18205,7 @@ popd
 /usr/share/icons/breeze/mimetypes/16/application-x-pkcs7-certificates.svg
 /usr/share/icons/breeze/mimetypes/16/application-x-plasma.svg
 /usr/share/icons/breeze/mimetypes/16/application-x-python-bytecode.svg
+/usr/share/icons/breeze/mimetypes/16/application-x-qemu-disk.svg
 /usr/share/icons/breeze/mimetypes/16/application-x-qet-element.svg
 /usr/share/icons/breeze/mimetypes/16/application-x-qet-project.svg
 /usr/share/icons/breeze/mimetypes/16/application-x-quattropro.svg
@@ -18129,6 +18215,7 @@ popd
 /usr/share/icons/breeze/mimetypes/16/application-x-root.svg
 /usr/share/icons/breeze/mimetypes/16/application-x-rpm.svg
 /usr/share/icons/breeze/mimetypes/16/application-x-ruby.svg
+/usr/share/icons/breeze/mimetypes/16/application-x-sami.svg
 /usr/share/icons/breeze/mimetypes/16/application-x-sharedlib.svg
 /usr/share/icons/breeze/mimetypes/16/application-x-shellscript.svg
 /usr/share/icons/breeze/mimetypes/16/application-x-shockwave-flash.svg
@@ -18267,7 +18354,6 @@ popd
 /usr/share/icons/breeze/mimetypes/16/text-enriched.svg
 /usr/share/icons/breeze/mimetypes/16/text-html.svg
 /usr/share/icons/breeze/mimetypes/16/text-markdown.svg
-/usr/share/icons/breeze/mimetypes/16/text-mathml.svg
 /usr/share/icons/breeze/mimetypes/16/text-plain.svg
 /usr/share/icons/breeze/mimetypes/16/text-rdf+xml.svg
 /usr/share/icons/breeze/mimetypes/16/text-rdf.svg
@@ -18280,6 +18366,7 @@ popd
 /usr/share/icons/breeze/mimetypes/16/text-vnd.kde.kcrash-report.svg
 /usr/share/icons/breeze/mimetypes/16/text-vnd.trolltech.linguist.svg
 /usr/share/icons/breeze/mimetypes/16/text-vnd.wap.wml.svg
+/usr/share/icons/breeze/mimetypes/16/text-vtt.svg
 /usr/share/icons/breeze/mimetypes/16/text-wiki.svg
 /usr/share/icons/breeze/mimetypes/16/text-x-adasrc.svg
 /usr/share/icons/breeze/mimetypes/16/text-x-apport.svg
@@ -18313,6 +18400,8 @@ popd
 /usr/share/icons/breeze/mimetypes/16/text-x-lua.svg
 /usr/share/icons/breeze/mimetypes/16/text-x-makefile.svg
 /usr/share/icons/breeze/mimetypes/16/text-x-markdown.svg
+/usr/share/icons/breeze/mimetypes/16/text-x-microdvd.svg
+/usr/share/icons/breeze/mimetypes/16/text-x-mpsub.svg
 /usr/share/icons/breeze/mimetypes/16/text-x-nfo.svg
 /usr/share/icons/breeze/mimetypes/16/text-x-objchdr.svg
 /usr/share/icons/breeze/mimetypes/16/text-x-objcsrc.svg
@@ -18332,6 +18421,8 @@ popd
 /usr/share/icons/breeze/mimetypes/16/text-x-scala.svg
 /usr/share/icons/breeze/mimetypes/16/text-x-script.svg
 /usr/share/icons/breeze/mimetypes/16/text-x-sql.svg
+/usr/share/icons/breeze/mimetypes/16/text-x-ssa.svg
+/usr/share/icons/breeze/mimetypes/16/text-x-subviewer.svg
 /usr/share/icons/breeze/mimetypes/16/text-x-tcl.svg
 /usr/share/icons/breeze/mimetypes/16/text-x-tex.svg
 /usr/share/icons/breeze/mimetypes/16/text-x-texinfo.svg
@@ -18402,6 +18493,7 @@ popd
 /usr/share/icons/breeze/mimetypes/22/application-javascript.svg
 /usr/share/icons/breeze/mimetypes/22/application-json.svg
 /usr/share/icons/breeze/mimetypes/22/application-mac-binhex40.svg
+/usr/share/icons/breeze/mimetypes/22/application-mathml+xml.svg
 /usr/share/icons/breeze/mimetypes/22/application-msonenote.svg
 /usr/share/icons/breeze/mimetypes/22/application-msoutlook.svg
 /usr/share/icons/breeze/mimetypes/22/application-msword-template.svg
@@ -18471,6 +18563,7 @@ popd
 /usr/share/icons/breeze/mimetypes/22/application-vnd.rn-realmedia.svg
 /usr/share/icons/breeze/mimetypes/22/application-vnd.scribus.svg
 /usr/share/icons/breeze/mimetypes/22/application-vnd.sqlite3.svg
+/usr/share/icons/breeze/mimetypes/22/application-vnd.squashfs.svg
 /usr/share/icons/breeze/mimetypes/22/application-vnd.stardivision.calc.svg
 /usr/share/icons/breeze/mimetypes/22/application-vnd.stardivision.draw.svg
 /usr/share/icons/breeze/mimetypes/22/application-vnd.stardivision.mail.svg
@@ -18521,6 +18614,7 @@ popd
 /usr/share/icons/breeze/mimetypes/22/application-x-chm.svg
 /usr/share/icons/breeze/mimetypes/22/application-x-compress.svg
 /usr/share/icons/breeze/mimetypes/22/application-x-compressed-tar.svg
+/usr/share/icons/breeze/mimetypes/22/application-x-core.svg
 /usr/share/icons/breeze/mimetypes/22/application-x-cpio.svg
 /usr/share/icons/breeze/mimetypes/22/application-x-cue.svg
 /usr/share/icons/breeze/mimetypes/22/application-x-deb.svg
@@ -18537,6 +18631,7 @@ popd
 /usr/share/icons/breeze/mimetypes/22/application-x-font-pcf.svg
 /usr/share/icons/breeze/mimetypes/22/application-x-font-snf.svg
 /usr/share/icons/breeze/mimetypes/22/application-x-font-ttf.svg
+/usr/share/icons/breeze/mimetypes/22/application-x-font-ttx.svg
 /usr/share/icons/breeze/mimetypes/22/application-x-font-type1.svg
 /usr/share/icons/breeze/mimetypes/22/application-x-gameboy-rom.svg
 /usr/share/icons/breeze/mimetypes/22/application-x-gamecube-rom.svg
@@ -18598,6 +18693,7 @@ popd
 /usr/share/icons/breeze/mimetypes/22/application-x-pkcs7-certificates.svg
 /usr/share/icons/breeze/mimetypes/22/application-x-plasma.svg
 /usr/share/icons/breeze/mimetypes/22/application-x-python-bytecode.svg
+/usr/share/icons/breeze/mimetypes/22/application-x-qemu-disk.svg
 /usr/share/icons/breeze/mimetypes/22/application-x-qet-element.svg
 /usr/share/icons/breeze/mimetypes/22/application-x-qet-project.svg
 /usr/share/icons/breeze/mimetypes/22/application-x-quattropro.svg
@@ -18607,6 +18703,7 @@ popd
 /usr/share/icons/breeze/mimetypes/22/application-x-root.svg
 /usr/share/icons/breeze/mimetypes/22/application-x-rpm.svg
 /usr/share/icons/breeze/mimetypes/22/application-x-ruby.svg
+/usr/share/icons/breeze/mimetypes/22/application-x-sami.svg
 /usr/share/icons/breeze/mimetypes/22/application-x-sharedlib.svg
 /usr/share/icons/breeze/mimetypes/22/application-x-shellscript.svg
 /usr/share/icons/breeze/mimetypes/22/application-x-shockwave-flash.svg
@@ -18745,7 +18842,6 @@ popd
 /usr/share/icons/breeze/mimetypes/22/text-enriched.svg
 /usr/share/icons/breeze/mimetypes/22/text-html.svg
 /usr/share/icons/breeze/mimetypes/22/text-markdown.svg
-/usr/share/icons/breeze/mimetypes/22/text-mathml.svg
 /usr/share/icons/breeze/mimetypes/22/text-plain.svg
 /usr/share/icons/breeze/mimetypes/22/text-rdf+xml.svg
 /usr/share/icons/breeze/mimetypes/22/text-rdf.svg
@@ -18758,6 +18854,7 @@ popd
 /usr/share/icons/breeze/mimetypes/22/text-vnd.kde.kcrash-report.svg
 /usr/share/icons/breeze/mimetypes/22/text-vnd.trolltech.linguist.svg
 /usr/share/icons/breeze/mimetypes/22/text-vnd.wap.wml.svg
+/usr/share/icons/breeze/mimetypes/22/text-vtt.svg
 /usr/share/icons/breeze/mimetypes/22/text-wiki.svg
 /usr/share/icons/breeze/mimetypes/22/text-x-adasrc.svg
 /usr/share/icons/breeze/mimetypes/22/text-x-apport.svg
@@ -18791,6 +18888,8 @@ popd
 /usr/share/icons/breeze/mimetypes/22/text-x-lua.svg
 /usr/share/icons/breeze/mimetypes/22/text-x-makefile.svg
 /usr/share/icons/breeze/mimetypes/22/text-x-markdown.svg
+/usr/share/icons/breeze/mimetypes/22/text-x-microdvd.svg
+/usr/share/icons/breeze/mimetypes/22/text-x-mpsub.svg
 /usr/share/icons/breeze/mimetypes/22/text-x-nfo.svg
 /usr/share/icons/breeze/mimetypes/22/text-x-objchdr.svg
 /usr/share/icons/breeze/mimetypes/22/text-x-objcsrc.svg
@@ -18810,6 +18909,8 @@ popd
 /usr/share/icons/breeze/mimetypes/22/text-x-scala.svg
 /usr/share/icons/breeze/mimetypes/22/text-x-script.svg
 /usr/share/icons/breeze/mimetypes/22/text-x-sql.svg
+/usr/share/icons/breeze/mimetypes/22/text-x-ssa.svg
+/usr/share/icons/breeze/mimetypes/22/text-x-subviewer.svg
 /usr/share/icons/breeze/mimetypes/22/text-x-tcl.svg
 /usr/share/icons/breeze/mimetypes/22/text-x-tex.svg
 /usr/share/icons/breeze/mimetypes/22/text-x-texinfo.svg
@@ -18880,6 +18981,7 @@ popd
 /usr/share/icons/breeze/mimetypes/24/application-javascript.svg
 /usr/share/icons/breeze/mimetypes/24/application-json.svg
 /usr/share/icons/breeze/mimetypes/24/application-mac-binhex40.svg
+/usr/share/icons/breeze/mimetypes/24/application-mathml+xml.svg
 /usr/share/icons/breeze/mimetypes/24/application-msonenote.svg
 /usr/share/icons/breeze/mimetypes/24/application-msoutlook.svg
 /usr/share/icons/breeze/mimetypes/24/application-msword-template.svg
@@ -18949,6 +19051,7 @@ popd
 /usr/share/icons/breeze/mimetypes/24/application-vnd.rn-realmedia.svg
 /usr/share/icons/breeze/mimetypes/24/application-vnd.scribus.svg
 /usr/share/icons/breeze/mimetypes/24/application-vnd.sqlite3.svg
+/usr/share/icons/breeze/mimetypes/24/application-vnd.squashfs.svg
 /usr/share/icons/breeze/mimetypes/24/application-vnd.stardivision.calc.svg
 /usr/share/icons/breeze/mimetypes/24/application-vnd.stardivision.draw.svg
 /usr/share/icons/breeze/mimetypes/24/application-vnd.stardivision.mail.svg
@@ -18999,6 +19102,7 @@ popd
 /usr/share/icons/breeze/mimetypes/24/application-x-chm.svg
 /usr/share/icons/breeze/mimetypes/24/application-x-compress.svg
 /usr/share/icons/breeze/mimetypes/24/application-x-compressed-tar.svg
+/usr/share/icons/breeze/mimetypes/24/application-x-core.svg
 /usr/share/icons/breeze/mimetypes/24/application-x-cpio.svg
 /usr/share/icons/breeze/mimetypes/24/application-x-cue.svg
 /usr/share/icons/breeze/mimetypes/24/application-x-deb.svg
@@ -19015,6 +19119,7 @@ popd
 /usr/share/icons/breeze/mimetypes/24/application-x-font-pcf.svg
 /usr/share/icons/breeze/mimetypes/24/application-x-font-snf.svg
 /usr/share/icons/breeze/mimetypes/24/application-x-font-ttf.svg
+/usr/share/icons/breeze/mimetypes/24/application-x-font-ttx.svg
 /usr/share/icons/breeze/mimetypes/24/application-x-font-type1.svg
 /usr/share/icons/breeze/mimetypes/24/application-x-gameboy-rom.svg
 /usr/share/icons/breeze/mimetypes/24/application-x-gamecube-rom.svg
@@ -19076,6 +19181,7 @@ popd
 /usr/share/icons/breeze/mimetypes/24/application-x-pkcs7-certificates.svg
 /usr/share/icons/breeze/mimetypes/24/application-x-plasma.svg
 /usr/share/icons/breeze/mimetypes/24/application-x-python-bytecode.svg
+/usr/share/icons/breeze/mimetypes/24/application-x-qemu-disk.svg
 /usr/share/icons/breeze/mimetypes/24/application-x-qet-element.svg
 /usr/share/icons/breeze/mimetypes/24/application-x-qet-project.svg
 /usr/share/icons/breeze/mimetypes/24/application-x-quattropro.svg
@@ -19084,6 +19190,7 @@ popd
 /usr/share/icons/breeze/mimetypes/24/application-x-rdata.svg
 /usr/share/icons/breeze/mimetypes/24/application-x-rpm.svg
 /usr/share/icons/breeze/mimetypes/24/application-x-ruby.svg
+/usr/share/icons/breeze/mimetypes/24/application-x-sami.svg
 /usr/share/icons/breeze/mimetypes/24/application-x-sharedlib.svg
 /usr/share/icons/breeze/mimetypes/24/application-x-shellscript.svg
 /usr/share/icons/breeze/mimetypes/24/application-x-shockwave-flash.svg
@@ -19222,7 +19329,6 @@ popd
 /usr/share/icons/breeze/mimetypes/24/text-enriched.svg
 /usr/share/icons/breeze/mimetypes/24/text-html.svg
 /usr/share/icons/breeze/mimetypes/24/text-markdown.svg
-/usr/share/icons/breeze/mimetypes/24/text-mathml.svg
 /usr/share/icons/breeze/mimetypes/24/text-plain.svg
 /usr/share/icons/breeze/mimetypes/24/text-rdf+xml.svg
 /usr/share/icons/breeze/mimetypes/24/text-rdf.svg
@@ -19235,6 +19341,7 @@ popd
 /usr/share/icons/breeze/mimetypes/24/text-vnd.kde.kcrash-report.svg
 /usr/share/icons/breeze/mimetypes/24/text-vnd.trolltech.linguist.svg
 /usr/share/icons/breeze/mimetypes/24/text-vnd.wap.wml.svg
+/usr/share/icons/breeze/mimetypes/24/text-vtt.svg
 /usr/share/icons/breeze/mimetypes/24/text-wiki.svg
 /usr/share/icons/breeze/mimetypes/24/text-x-adasrc.svg
 /usr/share/icons/breeze/mimetypes/24/text-x-apport.svg
@@ -19266,6 +19373,8 @@ popd
 /usr/share/icons/breeze/mimetypes/24/text-x-log.svg
 /usr/share/icons/breeze/mimetypes/24/text-x-makefile.svg
 /usr/share/icons/breeze/mimetypes/24/text-x-markdown.svg
+/usr/share/icons/breeze/mimetypes/24/text-x-microdvd.svg
+/usr/share/icons/breeze/mimetypes/24/text-x-mpsub.svg
 /usr/share/icons/breeze/mimetypes/24/text-x-nfo.svg
 /usr/share/icons/breeze/mimetypes/24/text-x-objchdr.svg
 /usr/share/icons/breeze/mimetypes/24/text-x-objcsrc.svg
@@ -19284,6 +19393,8 @@ popd
 /usr/share/icons/breeze/mimetypes/24/text-x-rust.svg
 /usr/share/icons/breeze/mimetypes/24/text-x-script.svg
 /usr/share/icons/breeze/mimetypes/24/text-x-sql.svg
+/usr/share/icons/breeze/mimetypes/24/text-x-ssa.svg
+/usr/share/icons/breeze/mimetypes/24/text-x-subviewer.svg
 /usr/share/icons/breeze/mimetypes/24/text-x-tcl.svg
 /usr/share/icons/breeze/mimetypes/24/text-x-tex.svg
 /usr/share/icons/breeze/mimetypes/24/text-x-texinfo.svg
@@ -19354,6 +19465,7 @@ popd
 /usr/share/icons/breeze/mimetypes/32/application-javascript.svg
 /usr/share/icons/breeze/mimetypes/32/application-json.svg
 /usr/share/icons/breeze/mimetypes/32/application-mac-binhex40.svg
+/usr/share/icons/breeze/mimetypes/32/application-mathml+xml.svg
 /usr/share/icons/breeze/mimetypes/32/application-msonenote.svg
 /usr/share/icons/breeze/mimetypes/32/application-msoutlook.svg
 /usr/share/icons/breeze/mimetypes/32/application-msword-template.svg
@@ -19423,6 +19535,7 @@ popd
 /usr/share/icons/breeze/mimetypes/32/application-vnd.rn-realmedia.svg
 /usr/share/icons/breeze/mimetypes/32/application-vnd.scribus.svg
 /usr/share/icons/breeze/mimetypes/32/application-vnd.sqlite3.svg
+/usr/share/icons/breeze/mimetypes/32/application-vnd.squashfs.svg
 /usr/share/icons/breeze/mimetypes/32/application-vnd.stardivision.calc.svg
 /usr/share/icons/breeze/mimetypes/32/application-vnd.stardivision.draw.svg
 /usr/share/icons/breeze/mimetypes/32/application-vnd.stardivision.mail.svg
@@ -19473,6 +19586,7 @@ popd
 /usr/share/icons/breeze/mimetypes/32/application-x-chm.svg
 /usr/share/icons/breeze/mimetypes/32/application-x-compress.svg
 /usr/share/icons/breeze/mimetypes/32/application-x-compressed-tar.svg
+/usr/share/icons/breeze/mimetypes/32/application-x-core.svg
 /usr/share/icons/breeze/mimetypes/32/application-x-cpio.svg
 /usr/share/icons/breeze/mimetypes/32/application-x-cue.svg
 /usr/share/icons/breeze/mimetypes/32/application-x-deb.svg
@@ -19489,6 +19603,7 @@ popd
 /usr/share/icons/breeze/mimetypes/32/application-x-font-pcf.svg
 /usr/share/icons/breeze/mimetypes/32/application-x-font-snf.svg
 /usr/share/icons/breeze/mimetypes/32/application-x-font-ttf.svg
+/usr/share/icons/breeze/mimetypes/32/application-x-font-ttx.svg
 /usr/share/icons/breeze/mimetypes/32/application-x-font-type1.svg
 /usr/share/icons/breeze/mimetypes/32/application-x-gameboy-rom.svg
 /usr/share/icons/breeze/mimetypes/32/application-x-gamecube-rom.svg
@@ -19550,6 +19665,7 @@ popd
 /usr/share/icons/breeze/mimetypes/32/application-x-pkcs7-certificates.svg
 /usr/share/icons/breeze/mimetypes/32/application-x-plasma.svg
 /usr/share/icons/breeze/mimetypes/32/application-x-python-bytecode.svg
+/usr/share/icons/breeze/mimetypes/32/application-x-qemu-disk.svg
 /usr/share/icons/breeze/mimetypes/32/application-x-qet-element.svg
 /usr/share/icons/breeze/mimetypes/32/application-x-qet-project.svg
 /usr/share/icons/breeze/mimetypes/32/application-x-quattropro.svg
@@ -19559,6 +19675,7 @@ popd
 /usr/share/icons/breeze/mimetypes/32/application-x-root.svg
 /usr/share/icons/breeze/mimetypes/32/application-x-rpm.svg
 /usr/share/icons/breeze/mimetypes/32/application-x-ruby.svg
+/usr/share/icons/breeze/mimetypes/32/application-x-sami.svg
 /usr/share/icons/breeze/mimetypes/32/application-x-sharedlib.svg
 /usr/share/icons/breeze/mimetypes/32/application-x-shellscript.svg
 /usr/share/icons/breeze/mimetypes/32/application-x-shockwave-flash.svg
@@ -19698,7 +19815,6 @@ popd
 /usr/share/icons/breeze/mimetypes/32/text-enriched.svg
 /usr/share/icons/breeze/mimetypes/32/text-html.svg
 /usr/share/icons/breeze/mimetypes/32/text-markdown.svg
-/usr/share/icons/breeze/mimetypes/32/text-mathml.svg
 /usr/share/icons/breeze/mimetypes/32/text-plain.svg
 /usr/share/icons/breeze/mimetypes/32/text-rdf+xml.svg
 /usr/share/icons/breeze/mimetypes/32/text-rdf.svg
@@ -19711,6 +19827,7 @@ popd
 /usr/share/icons/breeze/mimetypes/32/text-vnd.kde.kcrash-report.svg
 /usr/share/icons/breeze/mimetypes/32/text-vnd.trolltech.linguist.svg
 /usr/share/icons/breeze/mimetypes/32/text-vnd.wap.wml.svg
+/usr/share/icons/breeze/mimetypes/32/text-vtt.svg
 /usr/share/icons/breeze/mimetypes/32/text-wiki.svg
 /usr/share/icons/breeze/mimetypes/32/text-x-adasrc.svg
 /usr/share/icons/breeze/mimetypes/32/text-x-apport.svg
@@ -19744,6 +19861,8 @@ popd
 /usr/share/icons/breeze/mimetypes/32/text-x-lua.svg
 /usr/share/icons/breeze/mimetypes/32/text-x-makefile.svg
 /usr/share/icons/breeze/mimetypes/32/text-x-markdown.svg
+/usr/share/icons/breeze/mimetypes/32/text-x-microdvd.svg
+/usr/share/icons/breeze/mimetypes/32/text-x-mpsub.svg
 /usr/share/icons/breeze/mimetypes/32/text-x-nfo.svg
 /usr/share/icons/breeze/mimetypes/32/text-x-objchdr.svg
 /usr/share/icons/breeze/mimetypes/32/text-x-objcsrc.svg
@@ -19763,6 +19882,8 @@ popd
 /usr/share/icons/breeze/mimetypes/32/text-x-scala.svg
 /usr/share/icons/breeze/mimetypes/32/text-x-script.svg
 /usr/share/icons/breeze/mimetypes/32/text-x-sql.svg
+/usr/share/icons/breeze/mimetypes/32/text-x-ssa.svg
+/usr/share/icons/breeze/mimetypes/32/text-x-subviewer.svg
 /usr/share/icons/breeze/mimetypes/32/text-x-tcl.svg
 /usr/share/icons/breeze/mimetypes/32/text-x-tex.svg
 /usr/share/icons/breeze/mimetypes/32/text-x-texinfo.svg
@@ -19831,6 +19952,7 @@ popd
 /usr/share/icons/breeze/mimetypes/64/application-javascript.svg
 /usr/share/icons/breeze/mimetypes/64/application-json.svg
 /usr/share/icons/breeze/mimetypes/64/application-mac-binhex40.svg
+/usr/share/icons/breeze/mimetypes/64/application-mathml+xml.svg
 /usr/share/icons/breeze/mimetypes/64/application-msonenote.svg
 /usr/share/icons/breeze/mimetypes/64/application-msoutlook.svg
 /usr/share/icons/breeze/mimetypes/64/application-msword-template.svg
@@ -19900,6 +20022,7 @@ popd
 /usr/share/icons/breeze/mimetypes/64/application-vnd.rn-realmedia.svg
 /usr/share/icons/breeze/mimetypes/64/application-vnd.scribus.svg
 /usr/share/icons/breeze/mimetypes/64/application-vnd.sqlite3.svg
+/usr/share/icons/breeze/mimetypes/64/application-vnd.squashfs.svg
 /usr/share/icons/breeze/mimetypes/64/application-vnd.stardivision.calc.svg
 /usr/share/icons/breeze/mimetypes/64/application-vnd.stardivision.draw.svg
 /usr/share/icons/breeze/mimetypes/64/application-vnd.stardivision.mail.svg
@@ -19950,6 +20073,7 @@ popd
 /usr/share/icons/breeze/mimetypes/64/application-x-chm.svg
 /usr/share/icons/breeze/mimetypes/64/application-x-compress.svg
 /usr/share/icons/breeze/mimetypes/64/application-x-compressed-tar.svg
+/usr/share/icons/breeze/mimetypes/64/application-x-core.svg
 /usr/share/icons/breeze/mimetypes/64/application-x-cpio.svg
 /usr/share/icons/breeze/mimetypes/64/application-x-cue.svg
 /usr/share/icons/breeze/mimetypes/64/application-x-deb.svg
@@ -19966,6 +20090,7 @@ popd
 /usr/share/icons/breeze/mimetypes/64/application-x-font-pcf.svg
 /usr/share/icons/breeze/mimetypes/64/application-x-font-snf.svg
 /usr/share/icons/breeze/mimetypes/64/application-x-font-ttf.svg
+/usr/share/icons/breeze/mimetypes/64/application-x-font-ttx.svg
 /usr/share/icons/breeze/mimetypes/64/application-x-font-type1.svg
 /usr/share/icons/breeze/mimetypes/64/application-x-gameboy-rom.svg
 /usr/share/icons/breeze/mimetypes/64/application-x-gamecube-rom.svg
@@ -20028,6 +20153,7 @@ popd
 /usr/share/icons/breeze/mimetypes/64/application-x-pkcs7-certificates.svg
 /usr/share/icons/breeze/mimetypes/64/application-x-plasma.svg
 /usr/share/icons/breeze/mimetypes/64/application-x-python-bytecode.svg
+/usr/share/icons/breeze/mimetypes/64/application-x-qemu-disk.svg
 /usr/share/icons/breeze/mimetypes/64/application-x-qet-element.svg
 /usr/share/icons/breeze/mimetypes/64/application-x-qet-project.svg
 /usr/share/icons/breeze/mimetypes/64/application-x-quattropro.svg
@@ -20037,6 +20163,7 @@ popd
 /usr/share/icons/breeze/mimetypes/64/application-x-root.svg
 /usr/share/icons/breeze/mimetypes/64/application-x-rpm.svg
 /usr/share/icons/breeze/mimetypes/64/application-x-ruby.svg
+/usr/share/icons/breeze/mimetypes/64/application-x-sami.svg
 /usr/share/icons/breeze/mimetypes/64/application-x-sharedlib.svg
 /usr/share/icons/breeze/mimetypes/64/application-x-shellscript.svg
 /usr/share/icons/breeze/mimetypes/64/application-x-shockwave-flash.svg
@@ -20175,7 +20302,6 @@ popd
 /usr/share/icons/breeze/mimetypes/64/text-enriched.svg
 /usr/share/icons/breeze/mimetypes/64/text-html.svg
 /usr/share/icons/breeze/mimetypes/64/text-markdown.svg
-/usr/share/icons/breeze/mimetypes/64/text-mathml.svg
 /usr/share/icons/breeze/mimetypes/64/text-plain.svg
 /usr/share/icons/breeze/mimetypes/64/text-rdf+xml.svg
 /usr/share/icons/breeze/mimetypes/64/text-rdf.svg
@@ -20188,6 +20314,7 @@ popd
 /usr/share/icons/breeze/mimetypes/64/text-vnd.kde.kcrash-report.svg
 /usr/share/icons/breeze/mimetypes/64/text-vnd.trolltech.linguist.svg
 /usr/share/icons/breeze/mimetypes/64/text-vnd.wap.wml.svg
+/usr/share/icons/breeze/mimetypes/64/text-vtt.svg
 /usr/share/icons/breeze/mimetypes/64/text-wiki.svg
 /usr/share/icons/breeze/mimetypes/64/text-x-adasrc.svg
 /usr/share/icons/breeze/mimetypes/64/text-x-apport.svg
@@ -20221,6 +20348,8 @@ popd
 /usr/share/icons/breeze/mimetypes/64/text-x-lua.svg
 /usr/share/icons/breeze/mimetypes/64/text-x-makefile.svg
 /usr/share/icons/breeze/mimetypes/64/text-x-markdown.svg
+/usr/share/icons/breeze/mimetypes/64/text-x-microdvd.svg
+/usr/share/icons/breeze/mimetypes/64/text-x-mpsub.svg
 /usr/share/icons/breeze/mimetypes/64/text-x-nfo.svg
 /usr/share/icons/breeze/mimetypes/64/text-x-objchdr.svg
 /usr/share/icons/breeze/mimetypes/64/text-x-objcsrc.svg
@@ -20242,6 +20371,8 @@ popd
 /usr/share/icons/breeze/mimetypes/64/text-x-script.svg
 /usr/share/icons/breeze/mimetypes/64/text-x-scss.svg
 /usr/share/icons/breeze/mimetypes/64/text-x-sql.svg
+/usr/share/icons/breeze/mimetypes/64/text-x-ssa.svg
+/usr/share/icons/breeze/mimetypes/64/text-x-subviewer.svg
 /usr/share/icons/breeze/mimetypes/64/text-x-tcl.svg
 /usr/share/icons/breeze/mimetypes/64/text-x-tex.svg
 /usr/share/icons/breeze/mimetypes/64/text-x-texinfo.svg
