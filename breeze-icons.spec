@@ -5,11 +5,11 @@
 # Source0 file verified with key 0x58D0EE648A48B3BB (faure@kde.org)
 #
 Name     : breeze-icons
-Version  : 5.81.0
-Release  : 41
-URL      : https://download.kde.org/stable/frameworks/5.81/breeze-icons-5.81.0.tar.xz
-Source0  : https://download.kde.org/stable/frameworks/5.81/breeze-icons-5.81.0.tar.xz
-Source1  : https://download.kde.org/stable/frameworks/5.81/breeze-icons-5.81.0.tar.xz.sig
+Version  : 5.82.0
+Release  : 42
+URL      : https://download.kde.org/stable/frameworks/5.82/breeze-icons-5.82.0.tar.xz
+Source0  : https://download.kde.org/stable/frameworks/5.82/breeze-icons-5.82.0.tar.xz
+Source1  : https://download.kde.org/stable/frameworks/5.82/breeze-icons-5.82.0.tar.xz.sig
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : LGPL-2.1 LGPL-3.0
@@ -43,15 +43,15 @@ license components for the breeze-icons package.
 
 
 %prep
-%setup -q -n breeze-icons-5.81.0
-cd %{_builddir}/breeze-icons-5.81.0
+%setup -q -n breeze-icons-5.82.0
+cd %{_builddir}/breeze-icons-5.82.0
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1618650804
+export SOURCE_DATE_EPOCH=1623289248
 mkdir -p clr-build
 pushd clr-build
 export GCC_IGNORE_WERROR=1
@@ -67,13 +67,13 @@ make  %{?_smp_mflags}
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1618650804
+export SOURCE_DATE_EPOCH=1623289248
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/breeze-icons
-cp %{_builddir}/breeze-icons-5.81.0/COPYING-ICONS %{buildroot}/usr/share/package-licenses/breeze-icons/64474638fded94568edef3950d35b464488065b5
-cp %{_builddir}/breeze-icons-5.81.0/COPYING.LIB %{buildroot}/usr/share/package-licenses/breeze-icons/9a1929f4700d2407c70b507b3b2aaf6226a9543c
-cp %{_builddir}/breeze-icons-5.81.0/icons-dark/LICENSE %{buildroot}/usr/share/package-licenses/breeze-icons/f45ee1c765646813b442ca58de72e20a64a7ddba
-cp %{_builddir}/breeze-icons-5.81.0/icons/LICENSE %{buildroot}/usr/share/package-licenses/breeze-icons/f45ee1c765646813b442ca58de72e20a64a7ddba
+cp %{_builddir}/breeze-icons-5.82.0/COPYING-ICONS %{buildroot}/usr/share/package-licenses/breeze-icons/64474638fded94568edef3950d35b464488065b5
+cp %{_builddir}/breeze-icons-5.82.0/COPYING.LIB %{buildroot}/usr/share/package-licenses/breeze-icons/9a1929f4700d2407c70b507b3b2aaf6226a9543c
+cp %{_builddir}/breeze-icons-5.82.0/icons-dark/LICENSE %{buildroot}/usr/share/package-licenses/breeze-icons/f45ee1c765646813b442ca58de72e20a64a7ddba
+cp %{_builddir}/breeze-icons-5.82.0/icons/LICENSE %{buildroot}/usr/share/package-licenses/breeze-icons/f45ee1c765646813b442ca58de72e20a64a7ddba
 pushd clr-build
 %make_install
 popd
@@ -1365,6 +1365,8 @@ popd
 /usr/share/icons/breeze-dark/actions/16/show_table_column.svg
 /usr/share/icons/breeze-dark/actions/16/show_table_row.svg
 /usr/share/icons/breeze-dark/actions/16/shuffle.svg
+/usr/share/icons/breeze-dark/actions/16/sidebar-collapse.svg
+/usr/share/icons/breeze-dark/actions/16/sidebar-expand.svg
 /usr/share/icons/breeze-dark/actions/16/similarartists-amarok.svg
 /usr/share/icons/breeze-dark/actions/16/slanted.svg
 /usr/share/icons/breeze-dark/actions/16/smallclock.svg
@@ -3223,6 +3225,8 @@ popd
 /usr/share/icons/breeze-dark/actions/22/show_table_column.svg
 /usr/share/icons/breeze-dark/actions/22/show_table_row.svg
 /usr/share/icons/breeze-dark/actions/22/shuffle.svg
+/usr/share/icons/breeze-dark/actions/22/sidebar-collapse.svg
+/usr/share/icons/breeze-dark/actions/22/sidebar-expand.svg
 /usr/share/icons/breeze-dark/actions/22/similarartists-amarok.svg
 /usr/share/icons/breeze-dark/actions/22/skg-chart-bubble.svg
 /usr/share/icons/breeze-dark/actions/22/skrooge_credit_card.svg
@@ -5129,6 +5133,8 @@ popd
 /usr/share/icons/breeze-dark/actions/24/show_table_column.svg
 /usr/share/icons/breeze-dark/actions/24/show_table_row.svg
 /usr/share/icons/breeze-dark/actions/24/shuffle.svg
+/usr/share/icons/breeze-dark/actions/24/sidebar-collapse.svg
+/usr/share/icons/breeze-dark/actions/24/sidebar-expand.svg
 /usr/share/icons/breeze-dark/actions/24/similarartists-amarok.svg
 /usr/share/icons/breeze-dark/actions/24/skg-chart-bubble.svg
 /usr/share/icons/breeze-dark/actions/24/skrooge_credit_card.svg
@@ -5744,6 +5750,7 @@ popd
 /usr/share/icons/breeze-dark/actions/32/file-zoom-in.svg
 /usr/share/icons/breeze-dark/actions/32/file-zoom-out.svg
 /usr/share/icons/breeze-dark/actions/32/financial-account.svg
+/usr/share/icons/breeze-dark/actions/32/financial-budget.svg
 /usr/share/icons/breeze-dark/actions/32/financial-list.svg
 /usr/share/icons/breeze-dark/actions/32/financial-payees.svg
 /usr/share/icons/breeze-dark/actions/32/flash.svg
@@ -12246,6 +12253,8 @@ popd
 /usr/share/icons/breeze/actions/16/show_table_column.svg
 /usr/share/icons/breeze/actions/16/show_table_row.svg
 /usr/share/icons/breeze/actions/16/shuffle.svg
+/usr/share/icons/breeze/actions/16/sidebar-collapse.svg
+/usr/share/icons/breeze/actions/16/sidebar-expand.svg
 /usr/share/icons/breeze/actions/16/similarartists-amarok.svg
 /usr/share/icons/breeze/actions/16/slanted.svg
 /usr/share/icons/breeze/actions/16/smallclock.svg
@@ -14097,6 +14106,8 @@ popd
 /usr/share/icons/breeze/actions/22/show_table_column.svg
 /usr/share/icons/breeze/actions/22/show_table_row.svg
 /usr/share/icons/breeze/actions/22/shuffle.svg
+/usr/share/icons/breeze/actions/22/sidebar-collapse.svg
+/usr/share/icons/breeze/actions/22/sidebar-expand.svg
 /usr/share/icons/breeze/actions/22/similarartists-amarok.svg
 /usr/share/icons/breeze/actions/22/skg-chart-bubble.svg
 /usr/share/icons/breeze/actions/22/skrooge_credit_card.svg
@@ -16006,6 +16017,8 @@ popd
 /usr/share/icons/breeze/actions/24/show_table_column.svg
 /usr/share/icons/breeze/actions/24/show_table_row.svg
 /usr/share/icons/breeze/actions/24/shuffle.svg
+/usr/share/icons/breeze/actions/24/sidebar-collapse.svg
+/usr/share/icons/breeze/actions/24/sidebar-expand.svg
 /usr/share/icons/breeze/actions/24/similarartists-amarok.svg
 /usr/share/icons/breeze/actions/24/skg-chart-bubble.svg
 /usr/share/icons/breeze/actions/24/skrooge_credit_card.svg
@@ -16626,6 +16639,7 @@ popd
 /usr/share/icons/breeze/actions/32/file-zoom-in.svg
 /usr/share/icons/breeze/actions/32/file-zoom-out.svg
 /usr/share/icons/breeze/actions/32/financial-account.svg
+/usr/share/icons/breeze/actions/32/financial-budget.svg
 /usr/share/icons/breeze/actions/32/financial-list.svg
 /usr/share/icons/breeze/actions/32/financial-payees.svg
 /usr/share/icons/breeze/actions/32/flash.svg
