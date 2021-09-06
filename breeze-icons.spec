@@ -5,11 +5,11 @@
 # Source0 file verified with key 0x58D0EE648A48B3BB (faure@kde.org)
 #
 Name     : breeze-icons
-Version  : 5.83.0
-Release  : 43
-URL      : https://download.kde.org/stable/frameworks/5.83/breeze-icons-5.83.0.tar.xz
-Source0  : https://download.kde.org/stable/frameworks/5.83/breeze-icons-5.83.0.tar.xz
-Source1  : https://download.kde.org/stable/frameworks/5.83/breeze-icons-5.83.0.tar.xz.sig
+Version  : 5.85.0
+Release  : 44
+URL      : https://download.kde.org/stable/frameworks/5.85/breeze-icons-5.85.0.tar.xz
+Source0  : https://download.kde.org/stable/frameworks/5.85/breeze-icons-5.85.0.tar.xz
+Source1  : https://download.kde.org/stable/frameworks/5.85/breeze-icons-5.85.0.tar.xz.sig
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : LGPL-2.1 LGPL-3.0
@@ -43,37 +43,37 @@ license components for the breeze-icons package.
 
 
 %prep
-%setup -q -n breeze-icons-5.83.0
-cd %{_builddir}/breeze-icons-5.83.0
+%setup -q -n breeze-icons-5.85.0
+cd %{_builddir}/breeze-icons-5.85.0
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1623648707
+export SOURCE_DATE_EPOCH=1630895107
 mkdir -p clr-build
 pushd clr-build
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
 export NM=gcc-nm
-export CFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=4 "
-export FCFLAGS="$FFLAGS -O3 -ffat-lto-objects -flto=4 "
-export FFLAGS="$FFLAGS -O3 -ffat-lto-objects -flto=4 "
-export CXXFLAGS="$CXXFLAGS -O3 -ffat-lto-objects -flto=4 "
+export CFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=auto "
+export FCFLAGS="$FFLAGS -O3 -ffat-lto-objects -flto=auto "
+export FFLAGS="$FFLAGS -O3 -ffat-lto-objects -flto=auto "
+export CXXFLAGS="$CXXFLAGS -O3 -ffat-lto-objects -flto=auto "
 %cmake ..
 make  %{?_smp_mflags}
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1623648707
+export SOURCE_DATE_EPOCH=1630895107
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/breeze-icons
-cp %{_builddir}/breeze-icons-5.83.0/COPYING-ICONS %{buildroot}/usr/share/package-licenses/breeze-icons/64474638fded94568edef3950d35b464488065b5
-cp %{_builddir}/breeze-icons-5.83.0/COPYING.LIB %{buildroot}/usr/share/package-licenses/breeze-icons/9a1929f4700d2407c70b507b3b2aaf6226a9543c
-cp %{_builddir}/breeze-icons-5.83.0/icons-dark/LICENSE %{buildroot}/usr/share/package-licenses/breeze-icons/f45ee1c765646813b442ca58de72e20a64a7ddba
-cp %{_builddir}/breeze-icons-5.83.0/icons/LICENSE %{buildroot}/usr/share/package-licenses/breeze-icons/f45ee1c765646813b442ca58de72e20a64a7ddba
+cp %{_builddir}/breeze-icons-5.85.0/COPYING-ICONS %{buildroot}/usr/share/package-licenses/breeze-icons/64474638fded94568edef3950d35b464488065b5
+cp %{_builddir}/breeze-icons-5.85.0/COPYING.LIB %{buildroot}/usr/share/package-licenses/breeze-icons/9a1929f4700d2407c70b507b3b2aaf6226a9543c
+cp %{_builddir}/breeze-icons-5.85.0/icons-dark/LICENSE %{buildroot}/usr/share/package-licenses/breeze-icons/f45ee1c765646813b442ca58de72e20a64a7ddba
+cp %{_builddir}/breeze-icons-5.85.0/icons/LICENSE %{buildroot}/usr/share/package-licenses/breeze-icons/f45ee1c765646813b442ca58de72e20a64a7ddba
 pushd clr-build
 %make_install
 popd
@@ -880,11 +880,15 @@ popd
 /usr/share/icons/breeze-dark/actions/16/kdenlive-down.svg
 /usr/share/icons/breeze-dark/actions/16/kdenlive-lock.svg
 /usr/share/icons/breeze-dark/actions/16/kdenlive-menu.svg
+/usr/share/icons/breeze-dark/actions/16/kdenlive-ripple.svg
+/usr/share/icons/breeze-dark/actions/16/kdenlive-rolling.svg
 /usr/share/icons/breeze-dark/actions/16/kdenlive-select-rects.svg
 /usr/share/icons/breeze-dark/actions/16/kdenlive-select-tool.svg
 /usr/share/icons/breeze-dark/actions/16/kdenlive-show-audiothumb.svg
 /usr/share/icons/breeze-dark/actions/16/kdenlive-show-video.svg
 /usr/share/icons/breeze-dark/actions/16/kdenlive-show-videothumb.svg
+/usr/share/icons/breeze-dark/actions/16/kdenlive-slide.svg
+/usr/share/icons/breeze-dark/actions/16/kdenlive-slip.svg
 /usr/share/icons/breeze-dark/actions/16/kdenlive-snap.svg
 /usr/share/icons/breeze-dark/actions/16/kdenlive-spacer-tool.svg
 /usr/share/icons/breeze-dark/actions/16/kdenlive-unlock.svg
@@ -1353,6 +1357,7 @@ popd
 /usr/share/icons/breeze-dark/actions/16/settings-configure.svg
 /usr/share/icons/breeze-dark/actions/16/shallow-history.svg
 /usr/share/icons/breeze-dark/actions/16/shape-choose.svg
+/usr/share/icons/breeze-dark/actions/16/shape-cuboid.svg
 /usr/share/icons/breeze-dark/actions/16/shapes.svg
 /usr/share/icons/breeze-dark/actions/16/shear.svg
 /usr/share/icons/breeze-dark/actions/16/show-dialogs.svg
@@ -1429,6 +1434,7 @@ popd
 /usr/share/icons/breeze-dark/actions/16/step_object_Polygon.svg
 /usr/share/icons/breeze-dark/actions/16/step_object_Rope.svg
 /usr/share/icons/breeze-dark/actions/16/step_object_Stick.svg
+/usr/share/icons/breeze-dark/actions/16/stickers.svg
 /usr/share/icons/breeze-dark/actions/16/sticky_zoom.svg
 /usr/share/icons/breeze-dark/actions/16/story-editor.svg
 /usr/share/icons/breeze-dark/actions/16/straight-connector.svg
@@ -2694,6 +2700,8 @@ popd
 /usr/share/icons/breeze-dark/actions/22/kdenlive-object-height.svg
 /usr/share/icons/breeze-dark/actions/22/kdenlive-object-width.svg
 /usr/share/icons/breeze-dark/actions/22/kdenlive-overwrite-edit.svg
+/usr/share/icons/breeze-dark/actions/22/kdenlive-ripple.svg
+/usr/share/icons/breeze-dark/actions/22/kdenlive-rolling.svg
 /usr/share/icons/breeze-dark/actions/22/kdenlive-select-all.svg
 /usr/share/icons/breeze-dark/actions/22/kdenlive-select-images.svg
 /usr/share/icons/breeze-dark/actions/22/kdenlive-select-rects.svg
@@ -2704,6 +2712,8 @@ popd
 /usr/share/icons/breeze-dark/actions/22/kdenlive-show-markers.svg
 /usr/share/icons/breeze-dark/actions/22/kdenlive-show-video.svg
 /usr/share/icons/breeze-dark/actions/22/kdenlive-show-videothumb.svg
+/usr/share/icons/breeze-dark/actions/22/kdenlive-slide.svg
+/usr/share/icons/breeze-dark/actions/22/kdenlive-slip.svg
 /usr/share/icons/breeze-dark/actions/22/kdenlive-snap.svg
 /usr/share/icons/breeze-dark/actions/22/kdenlive-spacer-tool.svg
 /usr/share/icons/breeze-dark/actions/22/kdenlive-split-audio.svg
@@ -3217,6 +3227,7 @@ popd
 /usr/share/icons/breeze-dark/actions/22/settings-configure.svg
 /usr/share/icons/breeze-dark/actions/22/shallow-history.svg
 /usr/share/icons/breeze-dark/actions/22/shape-choose.svg
+/usr/share/icons/breeze-dark/actions/22/shape-cuboid.svg
 /usr/share/icons/breeze-dark/actions/22/shapes.svg
 /usr/share/icons/breeze-dark/actions/22/sharpenimage.svg
 /usr/share/icons/breeze-dark/actions/22/shear.svg
@@ -3315,6 +3326,7 @@ popd
 /usr/share/icons/breeze-dark/actions/22/step_object_Stick.svg
 /usr/share/icons/breeze-dark/actions/22/step_object_Tracer.svg
 /usr/share/icons/breeze-dark/actions/22/step_object_WeightForce.svg
+/usr/share/icons/breeze-dark/actions/22/stickers.svg
 /usr/share/icons/breeze-dark/actions/22/story-editor.svg
 /usr/share/icons/breeze-dark/actions/22/straight-connector.svg
 /usr/share/icons/breeze-dark/actions/22/stroke-cap-bevel.svg
@@ -3724,6 +3736,7 @@ popd
 /usr/share/icons/breeze-dark/actions/22/zoom-draw.svg
 /usr/share/icons/breeze-dark/actions/22/zoom-fit-best.svg
 /usr/share/icons/breeze-dark/actions/22/zoom-fit-height.svg
+/usr/share/icons/breeze-dark/actions/22/zoom-fit-page.svg
 /usr/share/icons/breeze-dark/actions/22/zoom-fit-selection.svg
 /usr/share/icons/breeze-dark/actions/22/zoom-fit-width.svg
 /usr/share/icons/breeze-dark/actions/22/zoom-in-large.svg
@@ -4606,6 +4619,8 @@ popd
 /usr/share/icons/breeze-dark/actions/24/kdenlive-object-height.svg
 /usr/share/icons/breeze-dark/actions/24/kdenlive-object-width.svg
 /usr/share/icons/breeze-dark/actions/24/kdenlive-overwrite-edit.svg
+/usr/share/icons/breeze-dark/actions/24/kdenlive-ripple.svg
+/usr/share/icons/breeze-dark/actions/24/kdenlive-rolling.svg
 /usr/share/icons/breeze-dark/actions/24/kdenlive-select-all.svg
 /usr/share/icons/breeze-dark/actions/24/kdenlive-select-images.svg
 /usr/share/icons/breeze-dark/actions/24/kdenlive-select-rects.svg
@@ -4616,6 +4631,8 @@ popd
 /usr/share/icons/breeze-dark/actions/24/kdenlive-show-markers.svg
 /usr/share/icons/breeze-dark/actions/24/kdenlive-show-video.svg
 /usr/share/icons/breeze-dark/actions/24/kdenlive-show-videothumb.svg
+/usr/share/icons/breeze-dark/actions/24/kdenlive-slide.svg
+/usr/share/icons/breeze-dark/actions/24/kdenlive-slip.svg
 /usr/share/icons/breeze-dark/actions/24/kdenlive-snap.svg
 /usr/share/icons/breeze-dark/actions/24/kdenlive-spacer-tool.svg
 /usr/share/icons/breeze-dark/actions/24/kdenlive-split-audio.svg
@@ -5129,6 +5146,7 @@ popd
 /usr/share/icons/breeze-dark/actions/24/settings-configure.svg
 /usr/share/icons/breeze-dark/actions/24/shallow-history.svg
 /usr/share/icons/breeze-dark/actions/24/shape-choose.svg
+/usr/share/icons/breeze-dark/actions/24/shape-cuboid.svg
 /usr/share/icons/breeze-dark/actions/24/shapes.svg
 /usr/share/icons/breeze-dark/actions/24/sharpenimage.svg
 /usr/share/icons/breeze-dark/actions/24/shear.svg
@@ -5227,6 +5245,7 @@ popd
 /usr/share/icons/breeze-dark/actions/24/step_object_Stick.svg
 /usr/share/icons/breeze-dark/actions/24/step_object_Tracer.svg
 /usr/share/icons/breeze-dark/actions/24/step_object_WeightForce.svg
+/usr/share/icons/breeze-dark/actions/24/stickers.svg
 /usr/share/icons/breeze-dark/actions/24/story-editor.svg
 /usr/share/icons/breeze-dark/actions/24/straight-connector.svg
 /usr/share/icons/breeze-dark/actions/24/stroke-cap-bevel.svg
@@ -5636,6 +5655,7 @@ popd
 /usr/share/icons/breeze-dark/actions/24/zoom-draw.svg
 /usr/share/icons/breeze-dark/actions/24/zoom-fit-best.svg
 /usr/share/icons/breeze-dark/actions/24/zoom-fit-height.svg
+/usr/share/icons/breeze-dark/actions/24/zoom-fit-page.svg
 /usr/share/icons/breeze-dark/actions/24/zoom-fit-selection.svg
 /usr/share/icons/breeze-dark/actions/24/zoom-fit-width.svg
 /usr/share/icons/breeze-dark/actions/24/zoom-in-large.svg
@@ -5925,6 +5945,7 @@ popd
 /usr/share/icons/breeze-dark/actions/32/zoom-draw.svg
 /usr/share/icons/breeze-dark/actions/32/zoom-fit-best.svg
 /usr/share/icons/breeze-dark/actions/32/zoom-fit-height.svg
+/usr/share/icons/breeze-dark/actions/32/zoom-fit-page.svg
 /usr/share/icons/breeze-dark/actions/32/zoom-fit-selection.svg
 /usr/share/icons/breeze-dark/actions/32/zoom-fit-width.svg
 /usr/share/icons/breeze-dark/actions/32/zoom-in-large.svg
@@ -6668,7 +6689,9 @@ popd
 /usr/share/icons/breeze-dark/apps/48/okular.svg
 /usr/share/icons/breeze-dark/apps/48/openbravo-erp.svg
 /usr/share/icons/breeze-dark/apps/48/org.fedoraproject.AnacondaInstaller.svg
+/usr/share/icons/breeze-dark/apps/48/org.inkscape.Inkscape.svg
 /usr/share/icons/breeze-dark/apps/48/org.kde.Ikona.svg
+/usr/share/icons/breeze-dark/apps/48/org.telegram.desktop.svg
 /usr/share/icons/breeze-dark/apps/48/partitionmanager.svg
 /usr/share/icons/breeze-dark/apps/48/phonon-gstreamer.svg
 /usr/share/icons/breeze-dark/apps/48/photolayoutseditor.svg
@@ -7327,6 +7350,7 @@ popd
 /usr/share/icons/breeze-dark/mimetypes/16/application-vnd.ms-word.svg
 /usr/share/icons/breeze-dark/mimetypes/16/application-vnd.ms-word.template.macroenabled.12.svg
 /usr/share/icons/breeze-dark/mimetypes/16/application-vnd.nintendo.snes.rom.svg
+/usr/share/icons/breeze-dark/mimetypes/16/application-vnd.nokia.xml.qt.resource.svg
 /usr/share/icons/breeze-dark/mimetypes/16/application-vnd.oasis.opendocument.chart.svg
 /usr/share/icons/breeze-dark/mimetypes/16/application-vnd.oasis.opendocument.database.svg
 /usr/share/icons/breeze-dark/mimetypes/16/application-vnd.oasis.opendocument.draw.template.svg
@@ -7813,6 +7837,7 @@ popd
 /usr/share/icons/breeze-dark/mimetypes/22/application-vnd.ms-word.svg
 /usr/share/icons/breeze-dark/mimetypes/22/application-vnd.ms-word.template.macroenabled.12.svg
 /usr/share/icons/breeze-dark/mimetypes/22/application-vnd.nintendo.snes.rom.svg
+/usr/share/icons/breeze-dark/mimetypes/22/application-vnd.nokia.xml.qt.resource.svg
 /usr/share/icons/breeze-dark/mimetypes/22/application-vnd.oasis.opendocument.chart.svg
 /usr/share/icons/breeze-dark/mimetypes/22/application-vnd.oasis.opendocument.database.svg
 /usr/share/icons/breeze-dark/mimetypes/22/application-vnd.oasis.opendocument.draw.template.svg
@@ -8299,6 +8324,7 @@ popd
 /usr/share/icons/breeze-dark/mimetypes/24/application-vnd.ms-word.svg
 /usr/share/icons/breeze-dark/mimetypes/24/application-vnd.ms-word.template.macroenabled.12.svg
 /usr/share/icons/breeze-dark/mimetypes/24/application-vnd.nintendo.snes.rom.svg
+/usr/share/icons/breeze-dark/mimetypes/24/application-vnd.nokia.xml.qt.resource.svg
 /usr/share/icons/breeze-dark/mimetypes/24/application-vnd.oasis.opendocument.chart.svg
 /usr/share/icons/breeze-dark/mimetypes/24/application-vnd.oasis.opendocument.database.svg
 /usr/share/icons/breeze-dark/mimetypes/24/application-vnd.oasis.opendocument.draw.template.svg
@@ -8781,6 +8807,7 @@ popd
 /usr/share/icons/breeze-dark/mimetypes/32/application-vnd.ms-word.svg
 /usr/share/icons/breeze-dark/mimetypes/32/application-vnd.ms-word.template.macroenabled.12.svg
 /usr/share/icons/breeze-dark/mimetypes/32/application-vnd.nintendo.snes.rom.svg
+/usr/share/icons/breeze-dark/mimetypes/32/application-vnd.nokia.xml.qt.resource.svg
 /usr/share/icons/breeze-dark/mimetypes/32/application-vnd.oasis.opendocument.chart.svg
 /usr/share/icons/breeze-dark/mimetypes/32/application-vnd.oasis.opendocument.database.svg
 /usr/share/icons/breeze-dark/mimetypes/32/application-vnd.oasis.opendocument.draw.template.svg
@@ -9266,6 +9293,7 @@ popd
 /usr/share/icons/breeze-dark/mimetypes/64/application-vnd.ms-word.svg
 /usr/share/icons/breeze-dark/mimetypes/64/application-vnd.ms-word.template.macroenabled.12.svg
 /usr/share/icons/breeze-dark/mimetypes/64/application-vnd.nintendo.snes.rom.svg
+/usr/share/icons/breeze-dark/mimetypes/64/application-vnd.nokia.xml.qt.resource.svg
 /usr/share/icons/breeze-dark/mimetypes/64/application-vnd.oasis.opendocument.chart.svg
 /usr/share/icons/breeze-dark/mimetypes/64/application-vnd.oasis.opendocument.database.svg
 /usr/share/icons/breeze-dark/mimetypes/64/application-vnd.oasis.opendocument.draw.template.svg
@@ -10529,6 +10557,9 @@ popd
 /usr/share/icons/breeze-dark/status/16/task-complete.svg
 /usr/share/icons/breeze-dark/status/16/task-recurring.svg
 /usr/share/icons/breeze-dark/status/16/task-reminder.svg
+/usr/share/icons/breeze-dark/status/16/temperature-cold.svg
+/usr/share/icons/breeze-dark/status/16/temperature-normal.svg
+/usr/share/icons/breeze-dark/status/16/temperature-warm.svg
 /usr/share/icons/breeze-dark/status/16/user-available.svg
 /usr/share/icons/breeze-dark/status/16/user-away-extended.svg
 /usr/share/icons/breeze-dark/status/16/user-away.svg
@@ -10687,6 +10718,9 @@ popd
 /usr/share/icons/breeze-dark/status/22/telegram-attention-panel.svg
 /usr/share/icons/breeze-dark/status/22/telegram-mute-panel.svg
 /usr/share/icons/breeze-dark/status/22/telegram-panel.svg
+/usr/share/icons/breeze-dark/status/22/temperature-cold.svg
+/usr/share/icons/breeze-dark/status/22/temperature-normal.svg
+/usr/share/icons/breeze-dark/status/22/temperature-warm.svg
 /usr/share/icons/breeze-dark/status/22/transmission-tray-icon.svg
 /usr/share/icons/breeze-dark/status/22/uninstall.svg
 /usr/share/icons/breeze-dark/status/22/update-high.svg
@@ -10852,6 +10886,9 @@ popd
 /usr/share/icons/breeze-dark/status/24/telegram-attention-panel.svg
 /usr/share/icons/breeze-dark/status/24/telegram-mute-panel.svg
 /usr/share/icons/breeze-dark/status/24/telegram-panel.svg
+/usr/share/icons/breeze-dark/status/24/temperature-cold.svg
+/usr/share/icons/breeze-dark/status/24/temperature-normal.svg
+/usr/share/icons/breeze-dark/status/24/temperature-warm.svg
 /usr/share/icons/breeze-dark/status/24/transmission-tray-icon.svg
 /usr/share/icons/breeze-dark/status/24/uninstall.svg
 /usr/share/icons/breeze-dark/status/24/update-high.svg
@@ -11785,11 +11822,15 @@ popd
 /usr/share/icons/breeze/actions/16/kdenlive-down.svg
 /usr/share/icons/breeze/actions/16/kdenlive-lock.svg
 /usr/share/icons/breeze/actions/16/kdenlive-menu.svg
+/usr/share/icons/breeze/actions/16/kdenlive-ripple.svg
+/usr/share/icons/breeze/actions/16/kdenlive-rolling.svg
 /usr/share/icons/breeze/actions/16/kdenlive-select-rects.svg
 /usr/share/icons/breeze/actions/16/kdenlive-select-tool.svg
 /usr/share/icons/breeze/actions/16/kdenlive-show-audiothumb.svg
 /usr/share/icons/breeze/actions/16/kdenlive-show-video.svg
 /usr/share/icons/breeze/actions/16/kdenlive-show-videothumb.svg
+/usr/share/icons/breeze/actions/16/kdenlive-slide.svg
+/usr/share/icons/breeze/actions/16/kdenlive-slip.svg
 /usr/share/icons/breeze/actions/16/kdenlive-snap.svg
 /usr/share/icons/breeze/actions/16/kdenlive-spacer-tool.svg
 /usr/share/icons/breeze/actions/16/kdenlive-unlock.svg
@@ -12256,6 +12297,7 @@ popd
 /usr/share/icons/breeze/actions/16/settings-configure.svg
 /usr/share/icons/breeze/actions/16/shallow-history.svg
 /usr/share/icons/breeze/actions/16/shape-choose.svg
+/usr/share/icons/breeze/actions/16/shape-cuboid.svg
 /usr/share/icons/breeze/actions/16/shapes.svg
 /usr/share/icons/breeze/actions/16/shear.svg
 /usr/share/icons/breeze/actions/16/show-dialogs.svg
@@ -12332,6 +12374,7 @@ popd
 /usr/share/icons/breeze/actions/16/step_object_Polygon.svg
 /usr/share/icons/breeze/actions/16/step_object_Rope.svg
 /usr/share/icons/breeze/actions/16/step_object_Stick.svg
+/usr/share/icons/breeze/actions/16/stickers.svg
 /usr/share/icons/breeze/actions/16/sticky_zoom.svg
 /usr/share/icons/breeze/actions/16/story-editor.svg
 /usr/share/icons/breeze/actions/16/straight-connector.svg
@@ -13592,6 +13635,8 @@ popd
 /usr/share/icons/breeze/actions/22/kdenlive-object-height.svg
 /usr/share/icons/breeze/actions/22/kdenlive-object-width.svg
 /usr/share/icons/breeze/actions/22/kdenlive-overwrite-edit.svg
+/usr/share/icons/breeze/actions/22/kdenlive-ripple.svg
+/usr/share/icons/breeze/actions/22/kdenlive-rolling.svg
 /usr/share/icons/breeze/actions/22/kdenlive-select-all.svg
 /usr/share/icons/breeze/actions/22/kdenlive-select-images.svg
 /usr/share/icons/breeze/actions/22/kdenlive-select-rects.svg
@@ -13602,6 +13647,8 @@ popd
 /usr/share/icons/breeze/actions/22/kdenlive-show-markers.svg
 /usr/share/icons/breeze/actions/22/kdenlive-show-video.svg
 /usr/share/icons/breeze/actions/22/kdenlive-show-videothumb.svg
+/usr/share/icons/breeze/actions/22/kdenlive-slide.svg
+/usr/share/icons/breeze/actions/22/kdenlive-slip.svg
 /usr/share/icons/breeze/actions/22/kdenlive-snap.svg
 /usr/share/icons/breeze/actions/22/kdenlive-spacer-tool.svg
 /usr/share/icons/breeze/actions/22/kdenlive-split-audio.svg
@@ -14113,6 +14160,7 @@ popd
 /usr/share/icons/breeze/actions/22/settings-configure.svg
 /usr/share/icons/breeze/actions/22/shallow-history.svg
 /usr/share/icons/breeze/actions/22/shape-choose.svg
+/usr/share/icons/breeze/actions/22/shape-cuboid.svg
 /usr/share/icons/breeze/actions/22/shapes.svg
 /usr/share/icons/breeze/actions/22/sharpenimage.svg
 /usr/share/icons/breeze/actions/22/shear.svg
@@ -14211,6 +14259,7 @@ popd
 /usr/share/icons/breeze/actions/22/step_object_Stick.svg
 /usr/share/icons/breeze/actions/22/step_object_Tracer.svg
 /usr/share/icons/breeze/actions/22/step_object_WeightForce.svg
+/usr/share/icons/breeze/actions/22/stickers.svg
 /usr/share/icons/breeze/actions/22/story-editor.svg
 /usr/share/icons/breeze/actions/22/straight-connector.svg
 /usr/share/icons/breeze/actions/22/stroke-cap-bevel.svg
@@ -14625,6 +14674,7 @@ popd
 /usr/share/icons/breeze/actions/22/zoom-draw.svg
 /usr/share/icons/breeze/actions/22/zoom-fit-best.svg
 /usr/share/icons/breeze/actions/22/zoom-fit-height.svg
+/usr/share/icons/breeze/actions/22/zoom-fit-page.svg
 /usr/share/icons/breeze/actions/22/zoom-fit-selection.svg
 /usr/share/icons/breeze/actions/22/zoom-fit-width.svg
 /usr/share/icons/breeze/actions/22/zoom-in-large.svg
@@ -15507,6 +15557,8 @@ popd
 /usr/share/icons/breeze/actions/24/kdenlive-object-height.svg
 /usr/share/icons/breeze/actions/24/kdenlive-object-width.svg
 /usr/share/icons/breeze/actions/24/kdenlive-overwrite-edit.svg
+/usr/share/icons/breeze/actions/24/kdenlive-ripple.svg
+/usr/share/icons/breeze/actions/24/kdenlive-rolling.svg
 /usr/share/icons/breeze/actions/24/kdenlive-select-all.svg
 /usr/share/icons/breeze/actions/24/kdenlive-select-images.svg
 /usr/share/icons/breeze/actions/24/kdenlive-select-rects.svg
@@ -15517,6 +15569,8 @@ popd
 /usr/share/icons/breeze/actions/24/kdenlive-show-markers.svg
 /usr/share/icons/breeze/actions/24/kdenlive-show-video.svg
 /usr/share/icons/breeze/actions/24/kdenlive-show-videothumb.svg
+/usr/share/icons/breeze/actions/24/kdenlive-slide.svg
+/usr/share/icons/breeze/actions/24/kdenlive-slip.svg
 /usr/share/icons/breeze/actions/24/kdenlive-snap.svg
 /usr/share/icons/breeze/actions/24/kdenlive-spacer-tool.svg
 /usr/share/icons/breeze/actions/24/kdenlive-split-audio.svg
@@ -16028,6 +16082,7 @@ popd
 /usr/share/icons/breeze/actions/24/settings-configure.svg
 /usr/share/icons/breeze/actions/24/shallow-history.svg
 /usr/share/icons/breeze/actions/24/shape-choose.svg
+/usr/share/icons/breeze/actions/24/shape-cuboid.svg
 /usr/share/icons/breeze/actions/24/shapes.svg
 /usr/share/icons/breeze/actions/24/sharpenimage.svg
 /usr/share/icons/breeze/actions/24/shear.svg
@@ -16126,6 +16181,7 @@ popd
 /usr/share/icons/breeze/actions/24/step_object_Stick.svg
 /usr/share/icons/breeze/actions/24/step_object_Tracer.svg
 /usr/share/icons/breeze/actions/24/step_object_WeightForce.svg
+/usr/share/icons/breeze/actions/24/stickers.svg
 /usr/share/icons/breeze/actions/24/story-editor.svg
 /usr/share/icons/breeze/actions/24/straight-connector.svg
 /usr/share/icons/breeze/actions/24/stroke-cap-bevel.svg
@@ -16540,6 +16596,7 @@ popd
 /usr/share/icons/breeze/actions/24/zoom-draw.svg
 /usr/share/icons/breeze/actions/24/zoom-fit-best.svg
 /usr/share/icons/breeze/actions/24/zoom-fit-height.svg
+/usr/share/icons/breeze/actions/24/zoom-fit-page.svg
 /usr/share/icons/breeze/actions/24/zoom-fit-selection.svg
 /usr/share/icons/breeze/actions/24/zoom-fit-width.svg
 /usr/share/icons/breeze/actions/24/zoom-in-large.svg
@@ -16827,6 +16884,7 @@ popd
 /usr/share/icons/breeze/actions/32/zoom-draw.svg
 /usr/share/icons/breeze/actions/32/zoom-fit-best.svg
 /usr/share/icons/breeze/actions/32/zoom-fit-height.svg
+/usr/share/icons/breeze/actions/32/zoom-fit-page.svg
 /usr/share/icons/breeze/actions/32/zoom-fit-selection.svg
 /usr/share/icons/breeze/actions/32/zoom-fit-width.svg
 /usr/share/icons/breeze/actions/32/zoom-in-large.svg
@@ -17594,9 +17652,11 @@ popd
 /usr/share/icons/breeze/apps/48/okular.svg
 /usr/share/icons/breeze/apps/48/openbravo-erp.svg
 /usr/share/icons/breeze/apps/48/org.fedoraproject.AnacondaInstaller.svg
+/usr/share/icons/breeze/apps/48/org.inkscape.Inkscape.svg
 /usr/share/icons/breeze/apps/48/org.kde.Ikona.svg
 /usr/share/icons/breeze/apps/48/org.kde.kontrast.svg
 /usr/share/icons/breeze/apps/48/org.kde.neochat.svg
+/usr/share/icons/breeze/apps/48/org.telegram.desktop.svg
 /usr/share/icons/breeze/apps/48/parley.svg
 /usr/share/icons/breeze/apps/48/partitionmanager.svg
 /usr/share/icons/breeze/apps/48/phonon-gstreamer.svg
@@ -18262,6 +18322,7 @@ popd
 /usr/share/icons/breeze/mimetypes/16/application-vnd.ms-word.svg
 /usr/share/icons/breeze/mimetypes/16/application-vnd.ms-word.template.macroenabled.12.svg
 /usr/share/icons/breeze/mimetypes/16/application-vnd.nintendo.snes.rom.svg
+/usr/share/icons/breeze/mimetypes/16/application-vnd.nokia.xml.qt.resource.svg
 /usr/share/icons/breeze/mimetypes/16/application-vnd.oasis.opendocument.chart.svg
 /usr/share/icons/breeze/mimetypes/16/application-vnd.oasis.opendocument.database.svg
 /usr/share/icons/breeze/mimetypes/16/application-vnd.oasis.opendocument.draw.template.svg
@@ -18751,6 +18812,7 @@ popd
 /usr/share/icons/breeze/mimetypes/22/application-vnd.ms-word.svg
 /usr/share/icons/breeze/mimetypes/22/application-vnd.ms-word.template.macroenabled.12.svg
 /usr/share/icons/breeze/mimetypes/22/application-vnd.nintendo.snes.rom.svg
+/usr/share/icons/breeze/mimetypes/22/application-vnd.nokia.xml.qt.resource.svg
 /usr/share/icons/breeze/mimetypes/22/application-vnd.oasis.opendocument.chart.svg
 /usr/share/icons/breeze/mimetypes/22/application-vnd.oasis.opendocument.database.svg
 /usr/share/icons/breeze/mimetypes/22/application-vnd.oasis.opendocument.draw.template.svg
@@ -19240,6 +19302,7 @@ popd
 /usr/share/icons/breeze/mimetypes/24/application-vnd.ms-word.svg
 /usr/share/icons/breeze/mimetypes/24/application-vnd.ms-word.template.macroenabled.12.svg
 /usr/share/icons/breeze/mimetypes/24/application-vnd.nintendo.snes.rom.svg
+/usr/share/icons/breeze/mimetypes/24/application-vnd.nokia.xml.qt.resource.svg
 /usr/share/icons/breeze/mimetypes/24/application-vnd.oasis.opendocument.chart.svg
 /usr/share/icons/breeze/mimetypes/24/application-vnd.oasis.opendocument.database.svg
 /usr/share/icons/breeze/mimetypes/24/application-vnd.oasis.opendocument.draw.template.svg
@@ -19725,6 +19788,7 @@ popd
 /usr/share/icons/breeze/mimetypes/32/application-vnd.ms-word.svg
 /usr/share/icons/breeze/mimetypes/32/application-vnd.ms-word.template.macroenabled.12.svg
 /usr/share/icons/breeze/mimetypes/32/application-vnd.nintendo.snes.rom.svg
+/usr/share/icons/breeze/mimetypes/32/application-vnd.nokia.xml.qt.resource.svg
 /usr/share/icons/breeze/mimetypes/32/application-vnd.oasis.opendocument.chart.svg
 /usr/share/icons/breeze/mimetypes/32/application-vnd.oasis.opendocument.database.svg
 /usr/share/icons/breeze/mimetypes/32/application-vnd.oasis.opendocument.draw.template.svg
@@ -20213,6 +20277,7 @@ popd
 /usr/share/icons/breeze/mimetypes/64/application-vnd.ms-word.svg
 /usr/share/icons/breeze/mimetypes/64/application-vnd.ms-word.template.macroenabled.12.svg
 /usr/share/icons/breeze/mimetypes/64/application-vnd.nintendo.snes.rom.svg
+/usr/share/icons/breeze/mimetypes/64/application-vnd.nokia.xml.qt.resource.svg
 /usr/share/icons/breeze/mimetypes/64/application-vnd.oasis.opendocument.chart.svg
 /usr/share/icons/breeze/mimetypes/64/application-vnd.oasis.opendocument.database.svg
 /usr/share/icons/breeze/mimetypes/64/application-vnd.oasis.opendocument.draw.template.svg
@@ -21479,6 +21544,9 @@ popd
 /usr/share/icons/breeze/status/16/task-complete.svg
 /usr/share/icons/breeze/status/16/task-recurring.svg
 /usr/share/icons/breeze/status/16/task-reminder.svg
+/usr/share/icons/breeze/status/16/temperature-cold.svg
+/usr/share/icons/breeze/status/16/temperature-normal.svg
+/usr/share/icons/breeze/status/16/temperature-warm.svg
 /usr/share/icons/breeze/status/16/user-available.svg
 /usr/share/icons/breeze/status/16/user-away-extended.svg
 /usr/share/icons/breeze/status/16/user-away.svg
@@ -21597,7 +21665,111 @@ popd
 /usr/share/icons/breeze/status/22/microphone-sensitivity-low.svg
 /usr/share/icons/breeze/status/22/microphone-sensitivity-medium.svg
 /usr/share/icons/breeze/status/22/microphone-sensitivity-muted.svg
+/usr/share/icons/breeze/status/22/network-bluetooth-activated-locked.svg
+/usr/share/icons/breeze/status/22/network-bluetooth-activated.svg
+/usr/share/icons/breeze/status/22/network-bluetooth.svg
+/usr/share/icons/breeze/status/22/network-flightmode-off.svg
+/usr/share/icons/breeze/status/22/network-flightmode-on.svg
 /usr/share/icons/breeze/status/22/network-limited.svg
+/usr/share/icons/breeze/status/22/network-mobile-0-edge-locked.svg
+/usr/share/icons/breeze/status/22/network-mobile-0-edge.svg
+/usr/share/icons/breeze/status/22/network-mobile-0-gprs-locked.svg
+/usr/share/icons/breeze/status/22/network-mobile-0-gprs.svg
+/usr/share/icons/breeze/status/22/network-mobile-0-hsdpa-locked.svg
+/usr/share/icons/breeze/status/22/network-mobile-0-hsdpa.svg
+/usr/share/icons/breeze/status/22/network-mobile-0-hspa-locked.svg
+/usr/share/icons/breeze/status/22/network-mobile-0-hspa.svg
+/usr/share/icons/breeze/status/22/network-mobile-0-hsupa-locked.svg
+/usr/share/icons/breeze/status/22/network-mobile-0-hsupa.svg
+/usr/share/icons/breeze/status/22/network-mobile-0-locked.svg
+/usr/share/icons/breeze/status/22/network-mobile-0-lte-locked.svg
+/usr/share/icons/breeze/status/22/network-mobile-0-lte.svg
+/usr/share/icons/breeze/status/22/network-mobile-0-umts-locked.svg
+/usr/share/icons/breeze/status/22/network-mobile-0-umts.svg
+/usr/share/icons/breeze/status/22/network-mobile-0.svg
+/usr/share/icons/breeze/status/22/network-mobile-100-edge-locked.svg
+/usr/share/icons/breeze/status/22/network-mobile-100-edge.svg
+/usr/share/icons/breeze/status/22/network-mobile-100-gprs-locked.svg
+/usr/share/icons/breeze/status/22/network-mobile-100-gprs.svg
+/usr/share/icons/breeze/status/22/network-mobile-100-hsdpa-locked.svg
+/usr/share/icons/breeze/status/22/network-mobile-100-hsdpa.svg
+/usr/share/icons/breeze/status/22/network-mobile-100-hspa-locked.svg
+/usr/share/icons/breeze/status/22/network-mobile-100-hspa.svg
+/usr/share/icons/breeze/status/22/network-mobile-100-hsupa-locked.svg
+/usr/share/icons/breeze/status/22/network-mobile-100-hsupa.svg
+/usr/share/icons/breeze/status/22/network-mobile-100-locked.svg
+/usr/share/icons/breeze/status/22/network-mobile-100-lte-locked.svg
+/usr/share/icons/breeze/status/22/network-mobile-100-lte.svg
+/usr/share/icons/breeze/status/22/network-mobile-100-umts-locked.svg
+/usr/share/icons/breeze/status/22/network-mobile-100-umts.svg
+/usr/share/icons/breeze/status/22/network-mobile-100.svg
+/usr/share/icons/breeze/status/22/network-mobile-20-edge-locked.svg
+/usr/share/icons/breeze/status/22/network-mobile-20-edge.svg
+/usr/share/icons/breeze/status/22/network-mobile-20-gprs-locked.svg
+/usr/share/icons/breeze/status/22/network-mobile-20-gprs.svg
+/usr/share/icons/breeze/status/22/network-mobile-20-hsdpa-locked.svg
+/usr/share/icons/breeze/status/22/network-mobile-20-hsdpa.svg
+/usr/share/icons/breeze/status/22/network-mobile-20-hspa-locked.svg
+/usr/share/icons/breeze/status/22/network-mobile-20-hspa.svg
+/usr/share/icons/breeze/status/22/network-mobile-20-hsupa-locked.svg
+/usr/share/icons/breeze/status/22/network-mobile-20-hsupa.svg
+/usr/share/icons/breeze/status/22/network-mobile-20-locked.svg
+/usr/share/icons/breeze/status/22/network-mobile-20-lte-locked.svg
+/usr/share/icons/breeze/status/22/network-mobile-20-lte.svg
+/usr/share/icons/breeze/status/22/network-mobile-20-umts-locked.svg
+/usr/share/icons/breeze/status/22/network-mobile-20-umts.svg
+/usr/share/icons/breeze/status/22/network-mobile-20.svg
+/usr/share/icons/breeze/status/22/network-mobile-40-edge-locked.svg
+/usr/share/icons/breeze/status/22/network-mobile-40-edge.svg
+/usr/share/icons/breeze/status/22/network-mobile-40-gprs-locked.svg
+/usr/share/icons/breeze/status/22/network-mobile-40-gprs.svg
+/usr/share/icons/breeze/status/22/network-mobile-40-hsdpa-locked.svg
+/usr/share/icons/breeze/status/22/network-mobile-40-hsdpa.svg
+/usr/share/icons/breeze/status/22/network-mobile-40-hspa-locked.svg
+/usr/share/icons/breeze/status/22/network-mobile-40-hspa.svg
+/usr/share/icons/breeze/status/22/network-mobile-40-hsupa-locked.svg
+/usr/share/icons/breeze/status/22/network-mobile-40-hsupa.svg
+/usr/share/icons/breeze/status/22/network-mobile-40-locked.svg
+/usr/share/icons/breeze/status/22/network-mobile-40-lte-locked.svg
+/usr/share/icons/breeze/status/22/network-mobile-40-lte.svg
+/usr/share/icons/breeze/status/22/network-mobile-40-umts-locked.svg
+/usr/share/icons/breeze/status/22/network-mobile-40-umts.svg
+/usr/share/icons/breeze/status/22/network-mobile-40.svg
+/usr/share/icons/breeze/status/22/network-mobile-60-edge-locked.svg
+/usr/share/icons/breeze/status/22/network-mobile-60-edge.svg
+/usr/share/icons/breeze/status/22/network-mobile-60-gprs-locked.svg
+/usr/share/icons/breeze/status/22/network-mobile-60-gprs.svg
+/usr/share/icons/breeze/status/22/network-mobile-60-hsdpa-locked.svg
+/usr/share/icons/breeze/status/22/network-mobile-60-hsdpa.svg
+/usr/share/icons/breeze/status/22/network-mobile-60-hspa-locked.svg
+/usr/share/icons/breeze/status/22/network-mobile-60-hspa.svg
+/usr/share/icons/breeze/status/22/network-mobile-60-hsupa-locked.svg
+/usr/share/icons/breeze/status/22/network-mobile-60-hsupa.svg
+/usr/share/icons/breeze/status/22/network-mobile-60-locked.svg
+/usr/share/icons/breeze/status/22/network-mobile-60-lte-locked.svg
+/usr/share/icons/breeze/status/22/network-mobile-60-lte.svg
+/usr/share/icons/breeze/status/22/network-mobile-60-umts-locked.svg
+/usr/share/icons/breeze/status/22/network-mobile-60-umts.svg
+/usr/share/icons/breeze/status/22/network-mobile-60.svg
+/usr/share/icons/breeze/status/22/network-mobile-80-edge-locked.svg
+/usr/share/icons/breeze/status/22/network-mobile-80-edge.svg
+/usr/share/icons/breeze/status/22/network-mobile-80-gprs-locked.svg
+/usr/share/icons/breeze/status/22/network-mobile-80-gprs.svg
+/usr/share/icons/breeze/status/22/network-mobile-80-hsdpa-locked.svg
+/usr/share/icons/breeze/status/22/network-mobile-80-hsdpa.svg
+/usr/share/icons/breeze/status/22/network-mobile-80-hspa-locked.svg
+/usr/share/icons/breeze/status/22/network-mobile-80-hspa.svg
+/usr/share/icons/breeze/status/22/network-mobile-80-hsupa-locked.svg
+/usr/share/icons/breeze/status/22/network-mobile-80-hsupa.svg
+/usr/share/icons/breeze/status/22/network-mobile-80-locked.svg
+/usr/share/icons/breeze/status/22/network-mobile-80-lte-locked.svg
+/usr/share/icons/breeze/status/22/network-mobile-80-lte.svg
+/usr/share/icons/breeze/status/22/network-mobile-80-umts-locked.svg
+/usr/share/icons/breeze/status/22/network-mobile-80-umts.svg
+/usr/share/icons/breeze/status/22/network-mobile-80.svg
+/usr/share/icons/breeze/status/22/network-mobile-available.svg
+/usr/share/icons/breeze/status/22/network-mobile-off.svg
+/usr/share/icons/breeze/status/22/network-mobile-on.svg
 /usr/share/icons/breeze/status/22/network-offline.svg
 /usr/share/icons/breeze/status/22/network-wired-activated.svg
 /usr/share/icons/breeze/status/22/network-wired-disconnected.svg
@@ -21637,6 +21809,9 @@ popd
 /usr/share/icons/breeze/status/22/telegram-attention-panel.svg
 /usr/share/icons/breeze/status/22/telegram-mute-panel.svg
 /usr/share/icons/breeze/status/22/telegram-panel.svg
+/usr/share/icons/breeze/status/22/temperature-cold.svg
+/usr/share/icons/breeze/status/22/temperature-normal.svg
+/usr/share/icons/breeze/status/22/temperature-warm.svg
 /usr/share/icons/breeze/status/22/transmission-tray-icon.svg
 /usr/share/icons/breeze/status/22/uninstall.svg
 /usr/share/icons/breeze/status/22/update-high.svg
@@ -21762,7 +21937,111 @@ popd
 /usr/share/icons/breeze/status/24/microphone-sensitivity-low.svg
 /usr/share/icons/breeze/status/24/microphone-sensitivity-medium.svg
 /usr/share/icons/breeze/status/24/microphone-sensitivity-muted.svg
+/usr/share/icons/breeze/status/24/network-bluetooth-activated-locked.svg
+/usr/share/icons/breeze/status/24/network-bluetooth-activated.svg
+/usr/share/icons/breeze/status/24/network-bluetooth.svg
+/usr/share/icons/breeze/status/24/network-flightmode-off.svg
+/usr/share/icons/breeze/status/24/network-flightmode-on.svg
 /usr/share/icons/breeze/status/24/network-limited.svg
+/usr/share/icons/breeze/status/24/network-mobile-0-edge-locked.svg
+/usr/share/icons/breeze/status/24/network-mobile-0-edge.svg
+/usr/share/icons/breeze/status/24/network-mobile-0-gprs-locked.svg
+/usr/share/icons/breeze/status/24/network-mobile-0-gprs.svg
+/usr/share/icons/breeze/status/24/network-mobile-0-hsdpa-locked.svg
+/usr/share/icons/breeze/status/24/network-mobile-0-hsdpa.svg
+/usr/share/icons/breeze/status/24/network-mobile-0-hspa-locked.svg
+/usr/share/icons/breeze/status/24/network-mobile-0-hspa.svg
+/usr/share/icons/breeze/status/24/network-mobile-0-hsupa-locked.svg
+/usr/share/icons/breeze/status/24/network-mobile-0-hsupa.svg
+/usr/share/icons/breeze/status/24/network-mobile-0-locked.svg
+/usr/share/icons/breeze/status/24/network-mobile-0-lte-locked.svg
+/usr/share/icons/breeze/status/24/network-mobile-0-lte.svg
+/usr/share/icons/breeze/status/24/network-mobile-0-umts-locked.svg
+/usr/share/icons/breeze/status/24/network-mobile-0-umts.svg
+/usr/share/icons/breeze/status/24/network-mobile-0.svg
+/usr/share/icons/breeze/status/24/network-mobile-100-edge-locked.svg
+/usr/share/icons/breeze/status/24/network-mobile-100-edge.svg
+/usr/share/icons/breeze/status/24/network-mobile-100-gprs-locked.svg
+/usr/share/icons/breeze/status/24/network-mobile-100-gprs.svg
+/usr/share/icons/breeze/status/24/network-mobile-100-hsdpa-locked.svg
+/usr/share/icons/breeze/status/24/network-mobile-100-hsdpa.svg
+/usr/share/icons/breeze/status/24/network-mobile-100-hspa-locked.svg
+/usr/share/icons/breeze/status/24/network-mobile-100-hspa.svg
+/usr/share/icons/breeze/status/24/network-mobile-100-hsupa-locked.svg
+/usr/share/icons/breeze/status/24/network-mobile-100-hsupa.svg
+/usr/share/icons/breeze/status/24/network-mobile-100-locked.svg
+/usr/share/icons/breeze/status/24/network-mobile-100-lte-locked.svg
+/usr/share/icons/breeze/status/24/network-mobile-100-lte.svg
+/usr/share/icons/breeze/status/24/network-mobile-100-umts-locked.svg
+/usr/share/icons/breeze/status/24/network-mobile-100-umts.svg
+/usr/share/icons/breeze/status/24/network-mobile-100.svg
+/usr/share/icons/breeze/status/24/network-mobile-20-edge-locked.svg
+/usr/share/icons/breeze/status/24/network-mobile-20-edge.svg
+/usr/share/icons/breeze/status/24/network-mobile-20-gprs-locked.svg
+/usr/share/icons/breeze/status/24/network-mobile-20-gprs.svg
+/usr/share/icons/breeze/status/24/network-mobile-20-hsdpa-locked.svg
+/usr/share/icons/breeze/status/24/network-mobile-20-hsdpa.svg
+/usr/share/icons/breeze/status/24/network-mobile-20-hspa-locked.svg
+/usr/share/icons/breeze/status/24/network-mobile-20-hspa.svg
+/usr/share/icons/breeze/status/24/network-mobile-20-hsupa-locked.svg
+/usr/share/icons/breeze/status/24/network-mobile-20-hsupa.svg
+/usr/share/icons/breeze/status/24/network-mobile-20-locked.svg
+/usr/share/icons/breeze/status/24/network-mobile-20-lte-locked.svg
+/usr/share/icons/breeze/status/24/network-mobile-20-lte.svg
+/usr/share/icons/breeze/status/24/network-mobile-20-umts-locked.svg
+/usr/share/icons/breeze/status/24/network-mobile-20-umts.svg
+/usr/share/icons/breeze/status/24/network-mobile-20.svg
+/usr/share/icons/breeze/status/24/network-mobile-40-edge-locked.svg
+/usr/share/icons/breeze/status/24/network-mobile-40-edge.svg
+/usr/share/icons/breeze/status/24/network-mobile-40-gprs-locked.svg
+/usr/share/icons/breeze/status/24/network-mobile-40-gprs.svg
+/usr/share/icons/breeze/status/24/network-mobile-40-hsdpa-locked.svg
+/usr/share/icons/breeze/status/24/network-mobile-40-hsdpa.svg
+/usr/share/icons/breeze/status/24/network-mobile-40-hspa-locked.svg
+/usr/share/icons/breeze/status/24/network-mobile-40-hspa.svg
+/usr/share/icons/breeze/status/24/network-mobile-40-hsupa-locked.svg
+/usr/share/icons/breeze/status/24/network-mobile-40-hsupa.svg
+/usr/share/icons/breeze/status/24/network-mobile-40-locked.svg
+/usr/share/icons/breeze/status/24/network-mobile-40-lte-locked.svg
+/usr/share/icons/breeze/status/24/network-mobile-40-lte.svg
+/usr/share/icons/breeze/status/24/network-mobile-40-umts-locked.svg
+/usr/share/icons/breeze/status/24/network-mobile-40-umts.svg
+/usr/share/icons/breeze/status/24/network-mobile-40.svg
+/usr/share/icons/breeze/status/24/network-mobile-60-edge-locked.svg
+/usr/share/icons/breeze/status/24/network-mobile-60-edge.svg
+/usr/share/icons/breeze/status/24/network-mobile-60-gprs-locked.svg
+/usr/share/icons/breeze/status/24/network-mobile-60-gprs.svg
+/usr/share/icons/breeze/status/24/network-mobile-60-hsdpa-locked.svg
+/usr/share/icons/breeze/status/24/network-mobile-60-hsdpa.svg
+/usr/share/icons/breeze/status/24/network-mobile-60-hspa-locked.svg
+/usr/share/icons/breeze/status/24/network-mobile-60-hspa.svg
+/usr/share/icons/breeze/status/24/network-mobile-60-hsupa-locked.svg
+/usr/share/icons/breeze/status/24/network-mobile-60-hsupa.svg
+/usr/share/icons/breeze/status/24/network-mobile-60-locked.svg
+/usr/share/icons/breeze/status/24/network-mobile-60-lte-locked.svg
+/usr/share/icons/breeze/status/24/network-mobile-60-lte.svg
+/usr/share/icons/breeze/status/24/network-mobile-60-umts-locked.svg
+/usr/share/icons/breeze/status/24/network-mobile-60-umts.svg
+/usr/share/icons/breeze/status/24/network-mobile-60.svg
+/usr/share/icons/breeze/status/24/network-mobile-80-edge-locked.svg
+/usr/share/icons/breeze/status/24/network-mobile-80-edge.svg
+/usr/share/icons/breeze/status/24/network-mobile-80-gprs-locked.svg
+/usr/share/icons/breeze/status/24/network-mobile-80-gprs.svg
+/usr/share/icons/breeze/status/24/network-mobile-80-hsdpa-locked.svg
+/usr/share/icons/breeze/status/24/network-mobile-80-hsdpa.svg
+/usr/share/icons/breeze/status/24/network-mobile-80-hspa-locked.svg
+/usr/share/icons/breeze/status/24/network-mobile-80-hspa.svg
+/usr/share/icons/breeze/status/24/network-mobile-80-hsupa-locked.svg
+/usr/share/icons/breeze/status/24/network-mobile-80-hsupa.svg
+/usr/share/icons/breeze/status/24/network-mobile-80-locked.svg
+/usr/share/icons/breeze/status/24/network-mobile-80-lte-locked.svg
+/usr/share/icons/breeze/status/24/network-mobile-80-lte.svg
+/usr/share/icons/breeze/status/24/network-mobile-80-umts-locked.svg
+/usr/share/icons/breeze/status/24/network-mobile-80-umts.svg
+/usr/share/icons/breeze/status/24/network-mobile-80.svg
+/usr/share/icons/breeze/status/24/network-mobile-available.svg
+/usr/share/icons/breeze/status/24/network-mobile-off.svg
+/usr/share/icons/breeze/status/24/network-mobile-on.svg
 /usr/share/icons/breeze/status/24/network-offline.svg
 /usr/share/icons/breeze/status/24/network-wired-activated.svg
 /usr/share/icons/breeze/status/24/network-wired-disconnected.svg
@@ -21802,6 +22081,9 @@ popd
 /usr/share/icons/breeze/status/24/telegram-attention-panel.svg
 /usr/share/icons/breeze/status/24/telegram-mute-panel.svg
 /usr/share/icons/breeze/status/24/telegram-panel.svg
+/usr/share/icons/breeze/status/24/temperature-cold.svg
+/usr/share/icons/breeze/status/24/temperature-normal.svg
+/usr/share/icons/breeze/status/24/temperature-warm.svg
 /usr/share/icons/breeze/status/24/transmission-tray-icon.svg
 /usr/share/icons/breeze/status/24/uninstall.svg
 /usr/share/icons/breeze/status/24/update-high.svg
