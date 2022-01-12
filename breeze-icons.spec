@@ -5,11 +5,11 @@
 # Source0 file verified with key 0x58D0EE648A48B3BB (faure@kde.org)
 #
 Name     : breeze-icons
-Version  : 5.89.0
-Release  : 48
-URL      : https://download.kde.org/stable/frameworks/5.89/breeze-icons-5.89.0.tar.xz
-Source0  : https://download.kde.org/stable/frameworks/5.89/breeze-icons-5.89.0.tar.xz
-Source1  : https://download.kde.org/stable/frameworks/5.89/breeze-icons-5.89.0.tar.xz.sig
+Version  : 5.90.0
+Release  : 49
+URL      : https://download.kde.org/stable/frameworks/5.90/breeze-icons-5.90.0.tar.xz
+Source0  : https://download.kde.org/stable/frameworks/5.90/breeze-icons-5.90.0.tar.xz
+Source1  : https://download.kde.org/stable/frameworks/5.90/breeze-icons-5.90.0.tar.xz.sig
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : LGPL-2.1 LGPL-3.0
@@ -19,7 +19,6 @@ BuildRequires : buildreq-cmake
 BuildRequires : buildreq-kde
 BuildRequires : extra-cmake-modules-data
 BuildRequires : lxml
-BuildRequires : qtbase-dev mesa-dev
 
 %description
 To create a webfront from all breeze action icons run
@@ -43,15 +42,15 @@ license components for the breeze-icons package.
 
 
 %prep
-%setup -q -n breeze-icons-5.89.0
-cd %{_builddir}/breeze-icons-5.89.0
+%setup -q -n breeze-icons-5.90.0
+cd %{_builddir}/breeze-icons-5.90.0
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1639673852
+export SOURCE_DATE_EPOCH=1641960194
 mkdir -p clr-build
 pushd clr-build
 export GCC_IGNORE_WERROR=1
@@ -67,13 +66,13 @@ make  %{?_smp_mflags}
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1639673852
+export SOURCE_DATE_EPOCH=1641960194
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/breeze-icons
-cp %{_builddir}/breeze-icons-5.89.0/COPYING-ICONS %{buildroot}/usr/share/package-licenses/breeze-icons/64474638fded94568edef3950d35b464488065b5
-cp %{_builddir}/breeze-icons-5.89.0/COPYING.LIB %{buildroot}/usr/share/package-licenses/breeze-icons/9a1929f4700d2407c70b507b3b2aaf6226a9543c
-cp %{_builddir}/breeze-icons-5.89.0/icons-dark/LICENSE %{buildroot}/usr/share/package-licenses/breeze-icons/f45ee1c765646813b442ca58de72e20a64a7ddba
-cp %{_builddir}/breeze-icons-5.89.0/icons/LICENSE %{buildroot}/usr/share/package-licenses/breeze-icons/f45ee1c765646813b442ca58de72e20a64a7ddba
+cp %{_builddir}/breeze-icons-5.90.0/COPYING-ICONS %{buildroot}/usr/share/package-licenses/breeze-icons/64474638fded94568edef3950d35b464488065b5
+cp %{_builddir}/breeze-icons-5.90.0/COPYING.LIB %{buildroot}/usr/share/package-licenses/breeze-icons/9a1929f4700d2407c70b507b3b2aaf6226a9543c
+cp %{_builddir}/breeze-icons-5.90.0/icons-dark/LICENSE %{buildroot}/usr/share/package-licenses/breeze-icons/f45ee1c765646813b442ca58de72e20a64a7ddba
+cp %{_builddir}/breeze-icons-5.90.0/icons/LICENSE %{buildroot}/usr/share/package-licenses/breeze-icons/f45ee1c765646813b442ca58de72e20a64a7ddba
 pushd clr-build
 %make_install
 popd
@@ -7359,8 +7358,6 @@ popd
 /usr/share/icons/breeze-dark/emotes/22/face-worried.svg
 /usr/share/icons/breeze-dark/emotes/22/face-yawn.svg
 /usr/share/icons/breeze-dark/emotes/22/food-cake.svg
-/usr/share/icons/breeze-dark/emotes/22@2x
-/usr/share/icons/breeze-dark/emotes/22@3x
 /usr/share/icons/breeze-dark/index.theme
 /usr/share/icons/breeze-dark/mimetypes/16/android-package-archive.svg
 /usr/share/icons/breeze-dark/mimetypes/16/application-atom+xml.svg
@@ -9367,12 +9364,14 @@ popd
 /usr/share/icons/breeze-dark/places/16/folder-black.svg
 /usr/share/icons/breeze-dark/places/16/folder-blender.svg
 /usr/share/icons/breeze-dark/places/16/folder-blue.svg
+/usr/share/icons/breeze-dark/places/16/folder-book.svg
 /usr/share/icons/breeze-dark/places/16/folder-bookmark.svg
 /usr/share/icons/breeze-dark/places/16/folder-brown.svg
 /usr/share/icons/breeze-dark/places/16/folder-build.svg
 /usr/share/icons/breeze-dark/places/16/folder-calculate.svg
 /usr/share/icons/breeze-dark/places/16/folder-chart.svg
 /usr/share/icons/breeze-dark/places/16/folder-cloud.svg
+/usr/share/icons/breeze-dark/places/16/folder-comic.svg
 /usr/share/icons/breeze-dark/places/16/folder-crash.svg
 /usr/share/icons/breeze-dark/places/16/folder-cyan.svg
 /usr/share/icons/breeze-dark/places/16/folder-database.svg
@@ -9402,6 +9401,7 @@ popd
 /usr/share/icons/breeze-dark/places/16/folder-important.svg
 /usr/share/icons/breeze-dark/places/16/folder-java.svg
 /usr/share/icons/breeze-dark/places/16/folder-language.svg
+/usr/share/icons/breeze-dark/places/16/folder-library.svg
 /usr/share/icons/breeze-dark/places/16/folder-locked.svg
 /usr/share/icons/breeze-dark/places/16/folder-log.svg
 /usr/share/icons/breeze-dark/places/16/folder-mac.svg
@@ -9477,12 +9477,14 @@ popd
 /usr/share/icons/breeze-dark/places/22/folder-black.svg
 /usr/share/icons/breeze-dark/places/22/folder-blender.svg
 /usr/share/icons/breeze-dark/places/22/folder-blue.svg
+/usr/share/icons/breeze-dark/places/22/folder-book.svg
 /usr/share/icons/breeze-dark/places/22/folder-bookmark.svg
 /usr/share/icons/breeze-dark/places/22/folder-brown.svg
 /usr/share/icons/breeze-dark/places/22/folder-build.svg
 /usr/share/icons/breeze-dark/places/22/folder-calculate.svg
 /usr/share/icons/breeze-dark/places/22/folder-chart.svg
 /usr/share/icons/breeze-dark/places/22/folder-cloud.svg
+/usr/share/icons/breeze-dark/places/22/folder-comic.svg
 /usr/share/icons/breeze-dark/places/22/folder-crash.svg
 /usr/share/icons/breeze-dark/places/22/folder-cyan.svg
 /usr/share/icons/breeze-dark/places/22/folder-database.svg
@@ -9512,6 +9514,7 @@ popd
 /usr/share/icons/breeze-dark/places/22/folder-important.svg
 /usr/share/icons/breeze-dark/places/22/folder-java.svg
 /usr/share/icons/breeze-dark/places/22/folder-language.svg
+/usr/share/icons/breeze-dark/places/22/folder-library.svg
 /usr/share/icons/breeze-dark/places/22/folder-locked.svg
 /usr/share/icons/breeze-dark/places/22/folder-log.svg
 /usr/share/icons/breeze-dark/places/22/folder-mac.svg
@@ -9652,12 +9655,14 @@ popd
 /usr/share/icons/breeze-dark/places/32/folder-black.svg
 /usr/share/icons/breeze-dark/places/32/folder-blender.svg
 /usr/share/icons/breeze-dark/places/32/folder-blue.svg
+/usr/share/icons/breeze-dark/places/32/folder-book.svg
 /usr/share/icons/breeze-dark/places/32/folder-bookmark.svg
 /usr/share/icons/breeze-dark/places/32/folder-brown.svg
 /usr/share/icons/breeze-dark/places/32/folder-build.svg
 /usr/share/icons/breeze-dark/places/32/folder-calculate.svg
 /usr/share/icons/breeze-dark/places/32/folder-chart.svg
 /usr/share/icons/breeze-dark/places/32/folder-cloud.svg
+/usr/share/icons/breeze-dark/places/32/folder-comic.svg
 /usr/share/icons/breeze-dark/places/32/folder-crash.svg
 /usr/share/icons/breeze-dark/places/32/folder-cyan.svg
 /usr/share/icons/breeze-dark/places/32/folder-database.svg
@@ -9689,6 +9694,7 @@ popd
 /usr/share/icons/breeze-dark/places/32/folder-important.svg
 /usr/share/icons/breeze-dark/places/32/folder-java.svg
 /usr/share/icons/breeze-dark/places/32/folder-language.svg
+/usr/share/icons/breeze-dark/places/32/folder-library.svg
 /usr/share/icons/breeze-dark/places/32/folder-locked.svg
 /usr/share/icons/breeze-dark/places/32/folder-log.svg
 /usr/share/icons/breeze-dark/places/32/folder-mac.svg
@@ -9747,9 +9753,11 @@ popd
 /usr/share/icons/breeze-dark/places/48/folder-activities.svg
 /usr/share/icons/breeze-dark/places/48/folder-black.svg
 /usr/share/icons/breeze-dark/places/48/folder-blue.svg
+/usr/share/icons/breeze-dark/places/48/folder-book.svg
 /usr/share/icons/breeze-dark/places/48/folder-bookmark.svg
 /usr/share/icons/breeze-dark/places/48/folder-brown.svg
 /usr/share/icons/breeze-dark/places/48/folder-cloud.svg
+/usr/share/icons/breeze-dark/places/48/folder-comic.svg
 /usr/share/icons/breeze-dark/places/48/folder-cyan.svg
 /usr/share/icons/breeze-dark/places/48/folder-decrypted.svg
 /usr/share/icons/breeze-dark/places/48/folder-development.svg
@@ -9768,6 +9776,7 @@ popd
 /usr/share/icons/breeze-dark/places/48/folder-image.svg
 /usr/share/icons/breeze-dark/places/48/folder-images.svg
 /usr/share/icons/breeze-dark/places/48/folder-important.svg
+/usr/share/icons/breeze-dark/places/48/folder-library.svg
 /usr/share/icons/breeze-dark/places/48/folder-locked.svg
 /usr/share/icons/breeze-dark/places/48/folder-magenta.svg
 /usr/share/icons/breeze-dark/places/48/folder-mail.svg
@@ -9817,12 +9826,14 @@ popd
 /usr/share/icons/breeze-dark/places/64/folder-black.svg
 /usr/share/icons/breeze-dark/places/64/folder-blender.svg
 /usr/share/icons/breeze-dark/places/64/folder-blue.svg
+/usr/share/icons/breeze-dark/places/64/folder-book.svg
 /usr/share/icons/breeze-dark/places/64/folder-bookmark.svg
 /usr/share/icons/breeze-dark/places/64/folder-brown.svg
 /usr/share/icons/breeze-dark/places/64/folder-build.svg
 /usr/share/icons/breeze-dark/places/64/folder-calculate.svg
 /usr/share/icons/breeze-dark/places/64/folder-chart.svg
 /usr/share/icons/breeze-dark/places/64/folder-cloud.svg
+/usr/share/icons/breeze-dark/places/64/folder-comic.svg
 /usr/share/icons/breeze-dark/places/64/folder-crash.svg
 /usr/share/icons/breeze-dark/places/64/folder-cyan.svg
 /usr/share/icons/breeze-dark/places/64/folder-database.svg
@@ -9854,6 +9865,7 @@ popd
 /usr/share/icons/breeze-dark/places/64/folder-important.svg
 /usr/share/icons/breeze-dark/places/64/folder-java.svg
 /usr/share/icons/breeze-dark/places/64/folder-language.svg
+/usr/share/icons/breeze-dark/places/64/folder-library.svg
 /usr/share/icons/breeze-dark/places/64/folder-locked.svg
 /usr/share/icons/breeze-dark/places/64/folder-log.svg
 /usr/share/icons/breeze-dark/places/64/folder-mac.svg
@@ -9914,9 +9926,11 @@ popd
 /usr/share/icons/breeze-dark/places/96/folder-activities.svg
 /usr/share/icons/breeze-dark/places/96/folder-black.svg
 /usr/share/icons/breeze-dark/places/96/folder-blue.svg
+/usr/share/icons/breeze-dark/places/96/folder-book.svg
 /usr/share/icons/breeze-dark/places/96/folder-bookmark.svg
 /usr/share/icons/breeze-dark/places/96/folder-brown.svg
 /usr/share/icons/breeze-dark/places/96/folder-cloud.svg
+/usr/share/icons/breeze-dark/places/96/folder-comic.svg
 /usr/share/icons/breeze-dark/places/96/folder-cyan.svg
 /usr/share/icons/breeze-dark/places/96/folder-decrypted.svg
 /usr/share/icons/breeze-dark/places/96/folder-development.svg
@@ -9935,6 +9949,7 @@ popd
 /usr/share/icons/breeze-dark/places/96/folder-image.svg
 /usr/share/icons/breeze-dark/places/96/folder-images.svg
 /usr/share/icons/breeze-dark/places/96/folder-important.svg
+/usr/share/icons/breeze-dark/places/96/folder-library.svg
 /usr/share/icons/breeze-dark/places/96/folder-locked.svg
 /usr/share/icons/breeze-dark/places/96/folder-magenta.svg
 /usr/share/icons/breeze-dark/places/96/folder-mail.svg
@@ -20835,12 +20850,14 @@ popd
 /usr/share/icons/breeze/places/16/folder-black.svg
 /usr/share/icons/breeze/places/16/folder-blender.svg
 /usr/share/icons/breeze/places/16/folder-blue.svg
+/usr/share/icons/breeze/places/16/folder-book.svg
 /usr/share/icons/breeze/places/16/folder-bookmark.svg
 /usr/share/icons/breeze/places/16/folder-brown.svg
 /usr/share/icons/breeze/places/16/folder-build.svg
 /usr/share/icons/breeze/places/16/folder-calculate.svg
 /usr/share/icons/breeze/places/16/folder-chart.svg
 /usr/share/icons/breeze/places/16/folder-cloud.svg
+/usr/share/icons/breeze/places/16/folder-comic.svg
 /usr/share/icons/breeze/places/16/folder-crash.svg
 /usr/share/icons/breeze/places/16/folder-cyan.svg
 /usr/share/icons/breeze/places/16/folder-database.svg
@@ -20870,6 +20887,7 @@ popd
 /usr/share/icons/breeze/places/16/folder-important.svg
 /usr/share/icons/breeze/places/16/folder-java.svg
 /usr/share/icons/breeze/places/16/folder-language.svg
+/usr/share/icons/breeze/places/16/folder-library.svg
 /usr/share/icons/breeze/places/16/folder-locked.svg
 /usr/share/icons/breeze/places/16/folder-log.svg
 /usr/share/icons/breeze/places/16/folder-mac.svg
@@ -20945,12 +20963,14 @@ popd
 /usr/share/icons/breeze/places/22/folder-black.svg
 /usr/share/icons/breeze/places/22/folder-blender.svg
 /usr/share/icons/breeze/places/22/folder-blue.svg
+/usr/share/icons/breeze/places/22/folder-book.svg
 /usr/share/icons/breeze/places/22/folder-bookmark.svg
 /usr/share/icons/breeze/places/22/folder-brown.svg
 /usr/share/icons/breeze/places/22/folder-build.svg
 /usr/share/icons/breeze/places/22/folder-calculate.svg
 /usr/share/icons/breeze/places/22/folder-chart.svg
 /usr/share/icons/breeze/places/22/folder-cloud.svg
+/usr/share/icons/breeze/places/22/folder-comic.svg
 /usr/share/icons/breeze/places/22/folder-crash.svg
 /usr/share/icons/breeze/places/22/folder-cyan.svg
 /usr/share/icons/breeze/places/22/folder-database.svg
@@ -20980,6 +21000,7 @@ popd
 /usr/share/icons/breeze/places/22/folder-important.svg
 /usr/share/icons/breeze/places/22/folder-java.svg
 /usr/share/icons/breeze/places/22/folder-language.svg
+/usr/share/icons/breeze/places/22/folder-library.svg
 /usr/share/icons/breeze/places/22/folder-locked.svg
 /usr/share/icons/breeze/places/22/folder-log.svg
 /usr/share/icons/breeze/places/22/folder-mac.svg
@@ -21055,12 +21076,14 @@ popd
 /usr/share/icons/breeze/places/24/folder-black.svg
 /usr/share/icons/breeze/places/24/folder-blender.svg
 /usr/share/icons/breeze/places/24/folder-blue.svg
+/usr/share/icons/breeze/places/24/folder-book.svg
 /usr/share/icons/breeze/places/24/folder-bookmark.svg
 /usr/share/icons/breeze/places/24/folder-brown.svg
 /usr/share/icons/breeze/places/24/folder-build.svg
 /usr/share/icons/breeze/places/24/folder-calculate.svg
 /usr/share/icons/breeze/places/24/folder-chart.svg
 /usr/share/icons/breeze/places/24/folder-cloud.svg
+/usr/share/icons/breeze/places/24/folder-comic.svg
 /usr/share/icons/breeze/places/24/folder-crash.svg
 /usr/share/icons/breeze/places/24/folder-cyan.svg
 /usr/share/icons/breeze/places/24/folder-database.svg
@@ -21090,6 +21113,7 @@ popd
 /usr/share/icons/breeze/places/24/folder-important.svg
 /usr/share/icons/breeze/places/24/folder-java.svg
 /usr/share/icons/breeze/places/24/folder-language.svg
+/usr/share/icons/breeze/places/24/folder-library.svg
 /usr/share/icons/breeze/places/24/folder-locked.svg
 /usr/share/icons/breeze/places/24/folder-log.svg
 /usr/share/icons/breeze/places/24/folder-mac.svg
@@ -21163,12 +21187,14 @@ popd
 /usr/share/icons/breeze/places/32/folder-black.svg
 /usr/share/icons/breeze/places/32/folder-blender.svg
 /usr/share/icons/breeze/places/32/folder-blue.svg
+/usr/share/icons/breeze/places/32/folder-book.svg
 /usr/share/icons/breeze/places/32/folder-bookmark.svg
 /usr/share/icons/breeze/places/32/folder-brown.svg
 /usr/share/icons/breeze/places/32/folder-build.svg
 /usr/share/icons/breeze/places/32/folder-calculate.svg
 /usr/share/icons/breeze/places/32/folder-chart.svg
 /usr/share/icons/breeze/places/32/folder-cloud.svg
+/usr/share/icons/breeze/places/32/folder-comic.svg
 /usr/share/icons/breeze/places/32/folder-crash.svg
 /usr/share/icons/breeze/places/32/folder-cyan.svg
 /usr/share/icons/breeze/places/32/folder-database.svg
@@ -21200,6 +21226,7 @@ popd
 /usr/share/icons/breeze/places/32/folder-important.svg
 /usr/share/icons/breeze/places/32/folder-java.svg
 /usr/share/icons/breeze/places/32/folder-language.svg
+/usr/share/icons/breeze/places/32/folder-library.svg
 /usr/share/icons/breeze/places/32/folder-locked.svg
 /usr/share/icons/breeze/places/32/folder-log.svg
 /usr/share/icons/breeze/places/32/folder-mac.svg
@@ -21258,9 +21285,11 @@ popd
 /usr/share/icons/breeze/places/48/folder-activities.svg
 /usr/share/icons/breeze/places/48/folder-black.svg
 /usr/share/icons/breeze/places/48/folder-blue.svg
+/usr/share/icons/breeze/places/48/folder-book.svg
 /usr/share/icons/breeze/places/48/folder-bookmark.svg
 /usr/share/icons/breeze/places/48/folder-brown.svg
 /usr/share/icons/breeze/places/48/folder-cloud.svg
+/usr/share/icons/breeze/places/48/folder-comic.svg
 /usr/share/icons/breeze/places/48/folder-cyan.svg
 /usr/share/icons/breeze/places/48/folder-decrypted.svg
 /usr/share/icons/breeze/places/48/folder-development.svg
@@ -21279,6 +21308,7 @@ popd
 /usr/share/icons/breeze/places/48/folder-image.svg
 /usr/share/icons/breeze/places/48/folder-images.svg
 /usr/share/icons/breeze/places/48/folder-important.svg
+/usr/share/icons/breeze/places/48/folder-library.svg
 /usr/share/icons/breeze/places/48/folder-locked.svg
 /usr/share/icons/breeze/places/48/folder-magenta.svg
 /usr/share/icons/breeze/places/48/folder-mail.svg
@@ -21328,12 +21358,14 @@ popd
 /usr/share/icons/breeze/places/64/folder-black.svg
 /usr/share/icons/breeze/places/64/folder-blender.svg
 /usr/share/icons/breeze/places/64/folder-blue.svg
+/usr/share/icons/breeze/places/64/folder-book.svg
 /usr/share/icons/breeze/places/64/folder-bookmark.svg
 /usr/share/icons/breeze/places/64/folder-brown.svg
 /usr/share/icons/breeze/places/64/folder-build.svg
 /usr/share/icons/breeze/places/64/folder-calculate.svg
 /usr/share/icons/breeze/places/64/folder-chart.svg
 /usr/share/icons/breeze/places/64/folder-cloud.svg
+/usr/share/icons/breeze/places/64/folder-comic.svg
 /usr/share/icons/breeze/places/64/folder-crash.svg
 /usr/share/icons/breeze/places/64/folder-cyan.svg
 /usr/share/icons/breeze/places/64/folder-database.svg
@@ -21365,6 +21397,7 @@ popd
 /usr/share/icons/breeze/places/64/folder-important.svg
 /usr/share/icons/breeze/places/64/folder-java.svg
 /usr/share/icons/breeze/places/64/folder-language.svg
+/usr/share/icons/breeze/places/64/folder-library.svg
 /usr/share/icons/breeze/places/64/folder-locked.svg
 /usr/share/icons/breeze/places/64/folder-log.svg
 /usr/share/icons/breeze/places/64/folder-mac.svg
@@ -21425,9 +21458,11 @@ popd
 /usr/share/icons/breeze/places/96/folder-activities.svg
 /usr/share/icons/breeze/places/96/folder-black.svg
 /usr/share/icons/breeze/places/96/folder-blue.svg
+/usr/share/icons/breeze/places/96/folder-book.svg
 /usr/share/icons/breeze/places/96/folder-bookmark.svg
 /usr/share/icons/breeze/places/96/folder-brown.svg
 /usr/share/icons/breeze/places/96/folder-cloud.svg
+/usr/share/icons/breeze/places/96/folder-comic.svg
 /usr/share/icons/breeze/places/96/folder-cyan.svg
 /usr/share/icons/breeze/places/96/folder-decrypted.svg
 /usr/share/icons/breeze/places/96/folder-development.svg
@@ -21446,6 +21481,7 @@ popd
 /usr/share/icons/breeze/places/96/folder-image.svg
 /usr/share/icons/breeze/places/96/folder-images.svg
 /usr/share/icons/breeze/places/96/folder-important.svg
+/usr/share/icons/breeze/places/96/folder-library.svg
 /usr/share/icons/breeze/places/96/folder-locked.svg
 /usr/share/icons/breeze/places/96/folder-magenta.svg
 /usr/share/icons/breeze/places/96/folder-mail.svg
