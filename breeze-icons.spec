@@ -5,11 +5,11 @@
 # Source0 file verified with key 0x58D0EE648A48B3BB (faure@kde.org)
 #
 Name     : breeze-icons
-Version  : 5.90.0
-Release  : 49
-URL      : https://download.kde.org/stable/frameworks/5.90/breeze-icons-5.90.0.tar.xz
-Source0  : https://download.kde.org/stable/frameworks/5.90/breeze-icons-5.90.0.tar.xz
-Source1  : https://download.kde.org/stable/frameworks/5.90/breeze-icons-5.90.0.tar.xz.sig
+Version  : 5.91.0
+Release  : 50
+URL      : https://download.kde.org/stable/frameworks/5.91/breeze-icons-5.91.0.tar.xz
+Source0  : https://download.kde.org/stable/frameworks/5.91/breeze-icons-5.91.0.tar.xz
+Source1  : https://download.kde.org/stable/frameworks/5.91/breeze-icons-5.91.0.tar.xz.sig
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : LGPL-2.1 LGPL-3.0
@@ -42,15 +42,15 @@ license components for the breeze-icons package.
 
 
 %prep
-%setup -q -n breeze-icons-5.90.0
-cd %{_builddir}/breeze-icons-5.90.0
+%setup -q -n breeze-icons-5.91.0
+cd %{_builddir}/breeze-icons-5.91.0
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1641960194
+export SOURCE_DATE_EPOCH=1644796845
 mkdir -p clr-build
 pushd clr-build
 export GCC_IGNORE_WERROR=1
@@ -66,13 +66,13 @@ make  %{?_smp_mflags}
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1641960194
+export SOURCE_DATE_EPOCH=1644796845
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/breeze-icons
-cp %{_builddir}/breeze-icons-5.90.0/COPYING-ICONS %{buildroot}/usr/share/package-licenses/breeze-icons/64474638fded94568edef3950d35b464488065b5
-cp %{_builddir}/breeze-icons-5.90.0/COPYING.LIB %{buildroot}/usr/share/package-licenses/breeze-icons/9a1929f4700d2407c70b507b3b2aaf6226a9543c
-cp %{_builddir}/breeze-icons-5.90.0/icons-dark/LICENSE %{buildroot}/usr/share/package-licenses/breeze-icons/f45ee1c765646813b442ca58de72e20a64a7ddba
-cp %{_builddir}/breeze-icons-5.90.0/icons/LICENSE %{buildroot}/usr/share/package-licenses/breeze-icons/f45ee1c765646813b442ca58de72e20a64a7ddba
+cp %{_builddir}/breeze-icons-5.91.0/COPYING-ICONS %{buildroot}/usr/share/package-licenses/breeze-icons/64474638fded94568edef3950d35b464488065b5
+cp %{_builddir}/breeze-icons-5.91.0/COPYING.LIB %{buildroot}/usr/share/package-licenses/breeze-icons/9a1929f4700d2407c70b507b3b2aaf6226a9543c
+cp %{_builddir}/breeze-icons-5.91.0/icons-dark/LICENSE %{buildroot}/usr/share/package-licenses/breeze-icons/f45ee1c765646813b442ca58de72e20a64a7ddba
+cp %{_builddir}/breeze-icons-5.91.0/icons/LICENSE %{buildroot}/usr/share/package-licenses/breeze-icons/f45ee1c765646813b442ca58de72e20a64a7ddba
 pushd clr-build
 %make_install
 popd
@@ -1960,6 +1960,8 @@ popd
 /usr/share/icons/breeze-dark/actions/22/bqm-remove.svg
 /usr/share/icons/breeze-dark/actions/22/bqm-rmqueue.svg
 /usr/share/icons/breeze-dark/actions/22/branch.svg
+/usr/share/icons/breeze-dark/actions/22/brightness-high.svg
+/usr/share/icons/breeze-dark/actions/22/brightness-low.svg
 /usr/share/icons/breeze-dark/actions/22/bwtonal.svg
 /usr/share/icons/breeze-dark/actions/22/call-start.svg
 /usr/share/icons/breeze-dark/actions/22/call-stop.svg
@@ -12899,6 +12901,8 @@ popd
 /usr/share/icons/breeze/actions/22/bqm-remove.svg
 /usr/share/icons/breeze/actions/22/bqm-rmqueue.svg
 /usr/share/icons/breeze/actions/22/branch.svg
+/usr/share/icons/breeze/actions/22/brightness-high.svg
+/usr/share/icons/breeze/actions/22/brightness-low.svg
 /usr/share/icons/breeze/actions/22/bwtonal.svg
 /usr/share/icons/breeze/actions/22/call-start.svg
 /usr/share/icons/breeze/actions/22/call-stop.svg
@@ -14832,6 +14836,8 @@ popd
 /usr/share/icons/breeze/actions/24/bqm-remove.svg
 /usr/share/icons/breeze/actions/24/bqm-rmqueue.svg
 /usr/share/icons/breeze/actions/24/branch.svg
+/usr/share/icons/breeze/actions/24/brightness-high.svg
+/usr/share/icons/breeze/actions/24/brightness-low.svg
 /usr/share/icons/breeze/actions/24/bwtonal.svg
 /usr/share/icons/breeze/actions/24/call-start.svg
 /usr/share/icons/breeze/actions/24/call-stop.svg
