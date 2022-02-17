@@ -6,7 +6,7 @@
 #
 Name     : breeze-icons
 Version  : 5.91.0
-Release  : 50
+Release  : 51
 URL      : https://download.kde.org/stable/frameworks/5.91/breeze-icons-5.91.0.tar.xz
 Source0  : https://download.kde.org/stable/frameworks/5.91/breeze-icons-5.91.0.tar.xz
 Source1  : https://download.kde.org/stable/frameworks/5.91/breeze-icons-5.91.0.tar.xz.sig
@@ -18,7 +18,7 @@ Requires: breeze-icons-license = %{version}-%{release}
 BuildRequires : buildreq-cmake
 BuildRequires : buildreq-kde
 BuildRequires : extra-cmake-modules-data
-BuildRequires : lxml
+BuildRequires : pypi-lxml
 
 %description
 To create a webfront from all breeze action icons run
@@ -50,7 +50,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1644796845
+export SOURCE_DATE_EPOCH=1645121362
 mkdir -p clr-build
 pushd clr-build
 export GCC_IGNORE_WERROR=1
@@ -66,7 +66,7 @@ make  %{?_smp_mflags}
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1644796845
+export SOURCE_DATE_EPOCH=1645121362
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/breeze-icons
 cp %{_builddir}/breeze-icons-5.91.0/COPYING-ICONS %{buildroot}/usr/share/package-licenses/breeze-icons/64474638fded94568edef3950d35b464488065b5
