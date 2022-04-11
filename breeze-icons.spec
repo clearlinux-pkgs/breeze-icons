@@ -5,11 +5,11 @@
 # Source0 file verified with key 0x58D0EE648A48B3BB (faure@kde.org)
 #
 Name     : breeze-icons
-Version  : 5.92.0
-Release  : 52
-URL      : https://download.kde.org/stable/frameworks/5.92/breeze-icons-5.92.0.tar.xz
-Source0  : https://download.kde.org/stable/frameworks/5.92/breeze-icons-5.92.0.tar.xz
-Source1  : https://download.kde.org/stable/frameworks/5.92/breeze-icons-5.92.0.tar.xz.sig
+Version  : 5.93.0
+Release  : 53
+URL      : https://download.kde.org/stable/frameworks/5.93/breeze-icons-5.93.0.tar.xz
+Source0  : https://download.kde.org/stable/frameworks/5.93/breeze-icons-5.93.0.tar.xz
+Source1  : https://download.kde.org/stable/frameworks/5.93/breeze-icons-5.93.0.tar.xz.sig
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : LGPL-2.1 LGPL-3.0
@@ -42,15 +42,15 @@ license components for the breeze-icons package.
 
 
 %prep
-%setup -q -n breeze-icons-5.92.0
-cd %{_builddir}/breeze-icons-5.92.0
+%setup -q -n breeze-icons-5.93.0
+cd %{_builddir}/breeze-icons-5.93.0
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1647274657
+export SOURCE_DATE_EPOCH=1649698201
 mkdir -p clr-build
 pushd clr-build
 export GCC_IGNORE_WERROR=1
@@ -66,13 +66,13 @@ make  %{?_smp_mflags}
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1647274657
+export SOURCE_DATE_EPOCH=1649698201
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/breeze-icons
-cp %{_builddir}/breeze-icons-5.92.0/COPYING-ICONS %{buildroot}/usr/share/package-licenses/breeze-icons/64474638fded94568edef3950d35b464488065b5
-cp %{_builddir}/breeze-icons-5.92.0/COPYING.LIB %{buildroot}/usr/share/package-licenses/breeze-icons/9a1929f4700d2407c70b507b3b2aaf6226a9543c
-cp %{_builddir}/breeze-icons-5.92.0/icons-dark/LICENSE %{buildroot}/usr/share/package-licenses/breeze-icons/f45ee1c765646813b442ca58de72e20a64a7ddba
-cp %{_builddir}/breeze-icons-5.92.0/icons/LICENSE %{buildroot}/usr/share/package-licenses/breeze-icons/f45ee1c765646813b442ca58de72e20a64a7ddba
+cp %{_builddir}/breeze-icons-5.93.0/COPYING-ICONS %{buildroot}/usr/share/package-licenses/breeze-icons/64474638fded94568edef3950d35b464488065b5
+cp %{_builddir}/breeze-icons-5.93.0/COPYING.LIB %{buildroot}/usr/share/package-licenses/breeze-icons/9a1929f4700d2407c70b507b3b2aaf6226a9543c
+cp %{_builddir}/breeze-icons-5.93.0/icons-dark/LICENSE %{buildroot}/usr/share/package-licenses/breeze-icons/f45ee1c765646813b442ca58de72e20a64a7ddba
+cp %{_builddir}/breeze-icons-5.93.0/icons/LICENSE %{buildroot}/usr/share/package-licenses/breeze-icons/f45ee1c765646813b442ca58de72e20a64a7ddba
 pushd clr-build
 %make_install
 popd
@@ -1816,6 +1816,7 @@ popd
 /usr/share/icons/breeze-dark/actions/16/y-zoom-out.svg
 /usr/share/icons/breeze-dark/actions/16/zoom-1-to-2.svg
 /usr/share/icons/breeze-dark/actions/16/zoom-2-to-1.svg
+/usr/share/icons/breeze-dark/actions/16/zoom-all.svg
 /usr/share/icons/breeze-dark/actions/16/zoom-double-size.svg
 /usr/share/icons/breeze-dark/actions/16/zoom-draw.svg
 /usr/share/icons/breeze-dark/actions/16/zoom-fit-best.svg
@@ -1840,6 +1841,7 @@ popd
 /usr/share/icons/breeze-dark/actions/16/zoom-select-x.svg
 /usr/share/icons/breeze-dark/actions/16/zoom-select-y.svg
 /usr/share/icons/breeze-dark/actions/16/zoom-select.svg
+/usr/share/icons/breeze-dark/actions/16/zoom-selection.svg
 /usr/share/icons/breeze-dark/actions/16/zoom.svg
 /usr/share/icons/breeze-dark/actions/16@2x
 /usr/share/icons/breeze-dark/actions/16@3x
@@ -3756,6 +3758,7 @@ popd
 /usr/share/icons/breeze-dark/actions/22/zone-out.svg
 /usr/share/icons/breeze-dark/actions/22/zoom-1-to-2.svg
 /usr/share/icons/breeze-dark/actions/22/zoom-2-to-1.svg
+/usr/share/icons/breeze-dark/actions/22/zoom-all.svg
 /usr/share/icons/breeze-dark/actions/22/zoom-draw.svg
 /usr/share/icons/breeze-dark/actions/22/zoom-fit-best.svg
 /usr/share/icons/breeze-dark/actions/22/zoom-fit-height.svg
@@ -3777,6 +3780,7 @@ popd
 /usr/share/icons/breeze-dark/actions/22/zoom-select-x.svg
 /usr/share/icons/breeze-dark/actions/22/zoom-select-y.svg
 /usr/share/icons/breeze-dark/actions/22/zoom-select.svg
+/usr/share/icons/breeze-dark/actions/22/zoom-selection.svg
 /usr/share/icons/breeze-dark/actions/22/zoom.svg
 /usr/share/icons/breeze-dark/actions/22@2x
 /usr/share/icons/breeze-dark/actions/22@3x
@@ -5634,6 +5638,7 @@ popd
 /usr/share/icons/breeze-dark/actions/24/zone-out.svg
 /usr/share/icons/breeze-dark/actions/24/zoom-1-to-2.svg
 /usr/share/icons/breeze-dark/actions/24/zoom-2-to-1.svg
+/usr/share/icons/breeze-dark/actions/24/zoom-all.svg
 /usr/share/icons/breeze-dark/actions/24/zoom-draw.svg
 /usr/share/icons/breeze-dark/actions/24/zoom-fit-best.svg
 /usr/share/icons/breeze-dark/actions/24/zoom-fit-height.svg
@@ -5655,6 +5660,7 @@ popd
 /usr/share/icons/breeze-dark/actions/24/zoom-select-x.svg
 /usr/share/icons/breeze-dark/actions/24/zoom-select-y.svg
 /usr/share/icons/breeze-dark/actions/24/zoom-select.svg
+/usr/share/icons/breeze-dark/actions/24/zoom-selection.svg
 /usr/share/icons/breeze-dark/actions/24/zoom.svg
 /usr/share/icons/breeze-dark/actions/24@2x
 /usr/share/icons/breeze-dark/actions/24@3x
@@ -5929,6 +5935,7 @@ popd
 /usr/share/icons/breeze-dark/actions/32/xfsm-hibernate.svg
 /usr/share/icons/breeze-dark/actions/32/zoom-1-to-2.svg
 /usr/share/icons/breeze-dark/actions/32/zoom-2-to-1.svg
+/usr/share/icons/breeze-dark/actions/32/zoom-all.svg
 /usr/share/icons/breeze-dark/actions/32/zoom-draw.svg
 /usr/share/icons/breeze-dark/actions/32/zoom-fit-best.svg
 /usr/share/icons/breeze-dark/actions/32/zoom-fit-height.svg
@@ -5946,6 +5953,7 @@ popd
 /usr/share/icons/breeze-dark/actions/32/zoom-select-x.svg
 /usr/share/icons/breeze-dark/actions/32/zoom-select-y.svg
 /usr/share/icons/breeze-dark/actions/32/zoom-select.svg
+/usr/share/icons/breeze-dark/actions/32/zoom-selection.svg
 /usr/share/icons/breeze-dark/actions/32/zoom.svg
 /usr/share/icons/breeze-dark/actions/32@2x
 /usr/share/icons/breeze-dark/actions/32@3x
@@ -6890,6 +6898,7 @@ popd
 /usr/share/icons/breeze-dark/devices/16/input-mouse.svg
 /usr/share/icons/breeze-dark/devices/16/input-tablet.svg
 /usr/share/icons/breeze-dark/devices/16/input-touchpad.svg
+/usr/share/icons/breeze-dark/devices/16/input-tvremote.svg
 /usr/share/icons/breeze-dark/devices/16/keyboard-caps-disabled.svg
 /usr/share/icons/breeze-dark/devices/16/keyboard-caps-enabled.svg
 /usr/share/icons/breeze-dark/devices/16/keyboard-caps-locked.svg
@@ -6965,6 +6974,7 @@ popd
 /usr/share/icons/breeze-dark/devices/22/input-mouse.svg
 /usr/share/icons/breeze-dark/devices/22/input-tablet.svg
 /usr/share/icons/breeze-dark/devices/22/input-touchpad.svg
+/usr/share/icons/breeze-dark/devices/22/input-tvremote.svg
 /usr/share/icons/breeze-dark/devices/22/keyboard-caps-disabled.svg
 /usr/share/icons/breeze-dark/devices/22/keyboard-caps-enabled.svg
 /usr/share/icons/breeze-dark/devices/22/keyboard-caps-locked.svg
@@ -7032,6 +7042,7 @@ popd
 /usr/share/icons/breeze-dark/devices/24/input-mouse.svg
 /usr/share/icons/breeze-dark/devices/24/input-tablet.svg
 /usr/share/icons/breeze-dark/devices/24/input-touchpad.svg
+/usr/share/icons/breeze-dark/devices/24/input-tvremote.svg
 /usr/share/icons/breeze-dark/devices/24/keyboard-caps-disabled.svg
 /usr/share/icons/breeze-dark/devices/24/keyboard-caps-enabled.svg
 /usr/share/icons/breeze-dark/devices/24/keyboard-caps-locked.svg
@@ -7095,6 +7106,7 @@ popd
 /usr/share/icons/breeze-dark/devices/64/input-mouse.svg
 /usr/share/icons/breeze-dark/devices/64/input-tablet.svg
 /usr/share/icons/breeze-dark/devices/64/input-touchpad.svg
+/usr/share/icons/breeze-dark/devices/64/input-tvremote.svg
 /usr/share/icons/breeze-dark/devices/64/media-flash-memory-stick.svg
 /usr/share/icons/breeze-dark/devices/64/media-flash-sd-mmc.svg
 /usr/share/icons/breeze-dark/devices/64/media-flash-smart-media.svg
@@ -12758,6 +12770,7 @@ popd
 /usr/share/icons/breeze/actions/16/y-zoom-out.svg
 /usr/share/icons/breeze/actions/16/zoom-1-to-2.svg
 /usr/share/icons/breeze/actions/16/zoom-2-to-1.svg
+/usr/share/icons/breeze/actions/16/zoom-all.svg
 /usr/share/icons/breeze/actions/16/zoom-double-size.svg
 /usr/share/icons/breeze/actions/16/zoom-draw.svg
 /usr/share/icons/breeze/actions/16/zoom-fit-best.svg
@@ -12782,6 +12795,7 @@ popd
 /usr/share/icons/breeze/actions/16/zoom-select-x.svg
 /usr/share/icons/breeze/actions/16/zoom-select-y.svg
 /usr/share/icons/breeze/actions/16/zoom-select.svg
+/usr/share/icons/breeze/actions/16/zoom-selection.svg
 /usr/share/icons/breeze/actions/16/zoom.svg
 /usr/share/icons/breeze/actions/16@2x
 /usr/share/icons/breeze/actions/16@3x
@@ -14696,6 +14710,7 @@ popd
 /usr/share/icons/breeze/actions/22/zone-out.svg
 /usr/share/icons/breeze/actions/22/zoom-1-to-2.svg
 /usr/share/icons/breeze/actions/22/zoom-2-to-1.svg
+/usr/share/icons/breeze/actions/22/zoom-all.svg
 /usr/share/icons/breeze/actions/22/zoom-draw.svg
 /usr/share/icons/breeze/actions/22/zoom-fit-best.svg
 /usr/share/icons/breeze/actions/22/zoom-fit-height.svg
@@ -14717,6 +14732,7 @@ popd
 /usr/share/icons/breeze/actions/22/zoom-select-x.svg
 /usr/share/icons/breeze/actions/22/zoom-select-y.svg
 /usr/share/icons/breeze/actions/22/zoom-select.svg
+/usr/share/icons/breeze/actions/22/zoom-selection.svg
 /usr/share/icons/breeze/actions/22/zoom.svg
 /usr/share/icons/breeze/actions/22@2x
 /usr/share/icons/breeze/actions/22@3x
@@ -16630,6 +16646,7 @@ popd
 /usr/share/icons/breeze/actions/24/zone-out.svg
 /usr/share/icons/breeze/actions/24/zoom-1-to-2.svg
 /usr/share/icons/breeze/actions/24/zoom-2-to-1.svg
+/usr/share/icons/breeze/actions/24/zoom-all.svg
 /usr/share/icons/breeze/actions/24/zoom-draw.svg
 /usr/share/icons/breeze/actions/24/zoom-fit-best.svg
 /usr/share/icons/breeze/actions/24/zoom-fit-height.svg
@@ -16651,6 +16668,7 @@ popd
 /usr/share/icons/breeze/actions/24/zoom-select-x.svg
 /usr/share/icons/breeze/actions/24/zoom-select-y.svg
 /usr/share/icons/breeze/actions/24/zoom-select.svg
+/usr/share/icons/breeze/actions/24/zoom-selection.svg
 /usr/share/icons/breeze/actions/24/zoom.svg
 /usr/share/icons/breeze/actions/24@2x
 /usr/share/icons/breeze/actions/24@3x
@@ -16923,6 +16941,7 @@ popd
 /usr/share/icons/breeze/actions/32/xfsm-hibernate.svg
 /usr/share/icons/breeze/actions/32/zoom-1-to-2.svg
 /usr/share/icons/breeze/actions/32/zoom-2-to-1.svg
+/usr/share/icons/breeze/actions/32/zoom-all.svg
 /usr/share/icons/breeze/actions/32/zoom-draw.svg
 /usr/share/icons/breeze/actions/32/zoom-fit-best.svg
 /usr/share/icons/breeze/actions/32/zoom-fit-height.svg
@@ -16940,6 +16959,7 @@ popd
 /usr/share/icons/breeze/actions/32/zoom-select-x.svg
 /usr/share/icons/breeze/actions/32/zoom-select-y.svg
 /usr/share/icons/breeze/actions/32/zoom-select.svg
+/usr/share/icons/breeze/actions/32/zoom-selection.svg
 /usr/share/icons/breeze/actions/32/zoom.svg
 /usr/share/icons/breeze/actions/32@2x
 /usr/share/icons/breeze/actions/32@3x
@@ -17889,6 +17909,7 @@ popd
 /usr/share/icons/breeze/devices/16/input-mouse.svg
 /usr/share/icons/breeze/devices/16/input-tablet.svg
 /usr/share/icons/breeze/devices/16/input-touchpad.svg
+/usr/share/icons/breeze/devices/16/input-tvremote.svg
 /usr/share/icons/breeze/devices/16/keyboard-caps-disabled.svg
 /usr/share/icons/breeze/devices/16/keyboard-caps-enabled.svg
 /usr/share/icons/breeze/devices/16/keyboard-caps-locked.svg
@@ -17964,6 +17985,7 @@ popd
 /usr/share/icons/breeze/devices/22/input-mouse.svg
 /usr/share/icons/breeze/devices/22/input-tablet.svg
 /usr/share/icons/breeze/devices/22/input-touchpad.svg
+/usr/share/icons/breeze/devices/22/input-tvremote.svg
 /usr/share/icons/breeze/devices/22/keyboard-caps-disabled.svg
 /usr/share/icons/breeze/devices/22/keyboard-caps-enabled.svg
 /usr/share/icons/breeze/devices/22/keyboard-caps-locked.svg
@@ -18031,6 +18053,7 @@ popd
 /usr/share/icons/breeze/devices/24/input-mouse.svg
 /usr/share/icons/breeze/devices/24/input-tablet.svg
 /usr/share/icons/breeze/devices/24/input-touchpad.svg
+/usr/share/icons/breeze/devices/24/input-tvremote.svg
 /usr/share/icons/breeze/devices/24/keyboard-caps-disabled.svg
 /usr/share/icons/breeze/devices/24/keyboard-caps-enabled.svg
 /usr/share/icons/breeze/devices/24/keyboard-caps-locked.svg
@@ -18095,6 +18118,7 @@ popd
 /usr/share/icons/breeze/devices/64/input-mouse.svg
 /usr/share/icons/breeze/devices/64/input-tablet.svg
 /usr/share/icons/breeze/devices/64/input-touchpad.svg
+/usr/share/icons/breeze/devices/64/input-tvremote.svg
 /usr/share/icons/breeze/devices/64/media-flash-memory-stick.svg
 /usr/share/icons/breeze/devices/64/media-flash-sd-mmc.svg
 /usr/share/icons/breeze/devices/64/media-flash-smart-media.svg
