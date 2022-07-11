@@ -5,11 +5,11 @@
 # Source0 file verified with key 0x58D0EE648A48B3BB (faure@kde.org)
 #
 Name     : breeze-icons
-Version  : 5.95.0
-Release  : 55
-URL      : https://download.kde.org/stable/frameworks/5.95/breeze-icons-5.95.0.tar.xz
-Source0  : https://download.kde.org/stable/frameworks/5.95/breeze-icons-5.95.0.tar.xz
-Source1  : https://download.kde.org/stable/frameworks/5.95/breeze-icons-5.95.0.tar.xz.sig
+Version  : 5.96.0
+Release  : 56
+URL      : https://download.kde.org/stable/frameworks/5.96/breeze-icons-5.96.0.tar.xz
+Source0  : https://download.kde.org/stable/frameworks/5.96/breeze-icons-5.96.0.tar.xz
+Source1  : https://download.kde.org/stable/frameworks/5.96/breeze-icons-5.96.0.tar.xz.sig
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : LGPL-2.1 LGPL-3.0
@@ -42,15 +42,15 @@ license components for the breeze-icons package.
 
 
 %prep
-%setup -q -n breeze-icons-5.95.0
-cd %{_builddir}/breeze-icons-5.95.0
+%setup -q -n breeze-icons-5.96.0
+cd %{_builddir}/breeze-icons-5.96.0
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1655134436
+export SOURCE_DATE_EPOCH=1657575273
 mkdir -p clr-build
 pushd clr-build
 export GCC_IGNORE_WERROR=1
@@ -66,13 +66,13 @@ make  %{?_smp_mflags}
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1655134436
+export SOURCE_DATE_EPOCH=1657575273
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/breeze-icons
-cp %{_builddir}/breeze-icons-5.95.0/COPYING-ICONS %{buildroot}/usr/share/package-licenses/breeze-icons/64474638fded94568edef3950d35b464488065b5
-cp %{_builddir}/breeze-icons-5.95.0/COPYING.LIB %{buildroot}/usr/share/package-licenses/breeze-icons/9a1929f4700d2407c70b507b3b2aaf6226a9543c
-cp %{_builddir}/breeze-icons-5.95.0/icons-dark/LICENSE %{buildroot}/usr/share/package-licenses/breeze-icons/f45ee1c765646813b442ca58de72e20a64a7ddba
-cp %{_builddir}/breeze-icons-5.95.0/icons/LICENSE %{buildroot}/usr/share/package-licenses/breeze-icons/f45ee1c765646813b442ca58de72e20a64a7ddba
+cp %{_builddir}/breeze-icons-5.96.0/COPYING-ICONS %{buildroot}/usr/share/package-licenses/breeze-icons/64474638fded94568edef3950d35b464488065b5
+cp %{_builddir}/breeze-icons-5.96.0/COPYING.LIB %{buildroot}/usr/share/package-licenses/breeze-icons/9a1929f4700d2407c70b507b3b2aaf6226a9543c
+cp %{_builddir}/breeze-icons-5.96.0/icons-dark/LICENSE %{buildroot}/usr/share/package-licenses/breeze-icons/f45ee1c765646813b442ca58de72e20a64a7ddba
+cp %{_builddir}/breeze-icons-5.96.0/icons/LICENSE %{buildroot}/usr/share/package-licenses/breeze-icons/f45ee1c765646813b442ca58de72e20a64a7ddba
 pushd clr-build
 %make_install
 popd
@@ -465,6 +465,7 @@ popd
 /usr/share/icons/breeze-dark/actions/16/edit-image-face-detect.svg
 /usr/share/icons/breeze-dark/actions/16/edit-image-face-recognize.svg
 /usr/share/icons/breeze-dark/actions/16/edit-image-face-show.svg
+/usr/share/icons/breeze-dark/actions/16/edit-image.svg
 /usr/share/icons/breeze-dark/actions/16/edit-line-width.svg
 /usr/share/icons/breeze-dark/actions/16/edit-link.svg
 /usr/share/icons/breeze-dark/actions/16/edit-map.svg
@@ -1381,6 +1382,7 @@ popd
 /usr/share/icons/breeze-dark/actions/16/sidebar-expand-left.svg
 /usr/share/icons/breeze-dark/actions/16/sidebar-expand-right.svg
 /usr/share/icons/breeze-dark/actions/16/sidebar-expand.svg
+/usr/share/icons/breeze-dark/actions/16/sidebar-show-symbolic.svg
 /usr/share/icons/breeze-dark/actions/16/similarartists-amarok.svg
 /usr/share/icons/breeze-dark/actions/16/slanted.svg
 /usr/share/icons/breeze-dark/actions/16/smallclock.svg
@@ -2237,6 +2239,7 @@ popd
 /usr/share/icons/breeze-dark/actions/22/edit-image-face-detect.svg
 /usr/share/icons/breeze-dark/actions/22/edit-image-face-recognize.svg
 /usr/share/icons/breeze-dark/actions/22/edit-image-face-show.svg
+/usr/share/icons/breeze-dark/actions/22/edit-image.svg
 /usr/share/icons/breeze-dark/actions/22/edit-line-width.svg
 /usr/share/icons/breeze-dark/actions/22/edit-link.svg
 /usr/share/icons/breeze-dark/actions/22/edit-map.svg
@@ -3264,6 +3267,7 @@ popd
 /usr/share/icons/breeze-dark/actions/22/sidebar-expand-left.svg
 /usr/share/icons/breeze-dark/actions/22/sidebar-expand-right.svg
 /usr/share/icons/breeze-dark/actions/22/sidebar-expand.svg
+/usr/share/icons/breeze-dark/actions/22/sidebar-show-symbolic.svg
 /usr/share/icons/breeze-dark/actions/22/similarartists-amarok.svg
 /usr/share/icons/breeze-dark/actions/22/skg-chart-bubble.svg
 /usr/share/icons/breeze-dark/actions/22/skrooge_credit_card.svg
@@ -4157,6 +4161,7 @@ popd
 /usr/share/icons/breeze-dark/actions/24/edit-image-face-detect.svg
 /usr/share/icons/breeze-dark/actions/24/edit-image-face-recognize.svg
 /usr/share/icons/breeze-dark/actions/24/edit-image-face-show.svg
+/usr/share/icons/breeze-dark/actions/24/edit-image.svg
 /usr/share/icons/breeze-dark/actions/24/edit-line-width.svg
 /usr/share/icons/breeze-dark/actions/24/edit-link.svg
 /usr/share/icons/breeze-dark/actions/24/edit-map.svg
@@ -5154,6 +5159,7 @@ popd
 /usr/share/icons/breeze-dark/actions/24/sidebar-expand-left.svg
 /usr/share/icons/breeze-dark/actions/24/sidebar-expand-right.svg
 /usr/share/icons/breeze-dark/actions/24/sidebar-expand.svg
+/usr/share/icons/breeze-dark/actions/24/sidebar-show-symbolic.svg
 /usr/share/icons/breeze-dark/actions/24/similarartists-amarok.svg
 /usr/share/icons/breeze-dark/actions/24/skg-chart-bubble.svg
 /usr/share/icons/breeze-dark/actions/24/skrooge_credit_card.svg
@@ -11430,6 +11436,7 @@ popd
 /usr/share/icons/breeze/actions/16/edit-image-face-detect.svg
 /usr/share/icons/breeze/actions/16/edit-image-face-recognize.svg
 /usr/share/icons/breeze/actions/16/edit-image-face-show.svg
+/usr/share/icons/breeze/actions/16/edit-image.svg
 /usr/share/icons/breeze/actions/16/edit-line-width.svg
 /usr/share/icons/breeze/actions/16/edit-link.svg
 /usr/share/icons/breeze/actions/16/edit-map.svg
@@ -12344,6 +12351,7 @@ popd
 /usr/share/icons/breeze/actions/16/sidebar-expand-left.svg
 /usr/share/icons/breeze/actions/16/sidebar-expand-right.svg
 /usr/share/icons/breeze/actions/16/sidebar-expand.svg
+/usr/share/icons/breeze/actions/16/sidebar-show-symbolic.svg
 /usr/share/icons/breeze/actions/16/similarartists-amarok.svg
 /usr/share/icons/breeze/actions/16/slanted.svg
 /usr/share/icons/breeze/actions/16/smallclock.svg
@@ -13195,6 +13203,7 @@ popd
 /usr/share/icons/breeze/actions/22/edit-image-face-detect.svg
 /usr/share/icons/breeze/actions/22/edit-image-face-recognize.svg
 /usr/share/icons/breeze/actions/22/edit-image-face-show.svg
+/usr/share/icons/breeze/actions/22/edit-image.svg
 /usr/share/icons/breeze/actions/22/edit-line-width.svg
 /usr/share/icons/breeze/actions/22/edit-link.svg
 /usr/share/icons/breeze/actions/22/edit-map.svg
@@ -14220,6 +14229,7 @@ popd
 /usr/share/icons/breeze/actions/22/sidebar-expand-left.svg
 /usr/share/icons/breeze/actions/22/sidebar-expand-right.svg
 /usr/share/icons/breeze/actions/22/sidebar-expand.svg
+/usr/share/icons/breeze/actions/22/sidebar-show-symbolic.svg
 /usr/share/icons/breeze/actions/22/similarartists-amarok.svg
 /usr/share/icons/breeze/actions/22/skg-chart-bubble.svg
 /usr/share/icons/breeze/actions/22/skrooge_credit_card.svg
@@ -15133,6 +15143,7 @@ popd
 /usr/share/icons/breeze/actions/24/edit-image-face-detect.svg
 /usr/share/icons/breeze/actions/24/edit-image-face-recognize.svg
 /usr/share/icons/breeze/actions/24/edit-image-face-show.svg
+/usr/share/icons/breeze/actions/24/edit-image.svg
 /usr/share/icons/breeze/actions/24/edit-line-width.svg
 /usr/share/icons/breeze/actions/24/edit-link.svg
 /usr/share/icons/breeze/actions/24/edit-map.svg
@@ -16157,6 +16168,7 @@ popd
 /usr/share/icons/breeze/actions/24/sidebar-expand-left.svg
 /usr/share/icons/breeze/actions/24/sidebar-expand-right.svg
 /usr/share/icons/breeze/actions/24/sidebar-expand.svg
+/usr/share/icons/breeze/actions/24/sidebar-show-symbolic.svg
 /usr/share/icons/breeze/actions/24/similarartists-amarok.svg
 /usr/share/icons/breeze/actions/24/skg-chart-bubble.svg
 /usr/share/icons/breeze/actions/24/skrooge_credit_card.svg
@@ -21986,6 +21998,7 @@ popd
 /usr/share/icons/breeze/preferences/32/yast-vm-migrate.svg
 /usr/share/icons/breeze/preferences/32/yast-vpn.svg
 /usr/share/icons/breeze/preferences/32/yast-wol.svg
+/usr/share/icons/breeze/status/
 /usr/share/icons/breeze/status/16/appointment-recurring.svg
 /usr/share/icons/breeze/status/16/appointment-reminder.svg
 /usr/share/icons/breeze/status/16/audio-off.svg
@@ -22436,386 +22449,6 @@ popd
 /usr/share/icons/breeze/status/24/battery-full-charging.svg
 /usr/share/icons/breeze/status/24/battery-full.svg
 /usr/share/icons/breeze/status/24/battery-good-charging.svg
-/usr/share/icons/breeze/status/24/battery-good.svg
-/usr/share/icons/breeze/status/24/battery-low-charging.svg
-/usr/share/icons/breeze/status/24/battery-low.svg
-/usr/share/icons/breeze/status/24/battery-missing.svg
-/usr/share/icons/breeze/status/24/call-incoming.svg
-/usr/share/icons/breeze/status/24/call-missed.svg
-/usr/share/icons/breeze/status/24/call-outgoing.svg
-/usr/share/icons/breeze/status/24/camera-off.svg
-/usr/share/icons/breeze/status/24/camera-on.svg
-/usr/share/icons/breeze/status/24/camera-ready.svg
-/usr/share/icons/breeze/status/24/cloudstatus.svg
-/usr/share/icons/breeze/status/24/com.github.ztefn.haguichi-connected.svg
-/usr/share/icons/breeze/status/24/com.github.ztefn.haguichi-connecting-1.svg
-/usr/share/icons/breeze/status/24/com.github.ztefn.haguichi-connecting-2.svg
-/usr/share/icons/breeze/status/24/com.github.ztefn.haguichi-connecting-3.svg
-/usr/share/icons/breeze/status/24/com.github.ztefn.haguichi-disconnected.svg
-/usr/share/icons/breeze/status/24/data-error.svg
-/usr/share/icons/breeze/status/24/data-information.svg
-/usr/share/icons/breeze/status/24/data-warning.svg
-/usr/share/icons/breeze/status/24/dialog-error.svg
-/usr/share/icons/breeze/status/24/dialog-information.svg
-/usr/share/icons/breeze/status/24/dialog-password.svg
-/usr/share/icons/breeze/status/24/dialog-positive.svg
-/usr/share/icons/breeze/status/24/dialog-question.svg
-/usr/share/icons/breeze/status/24/dialog-warning.svg
-/usr/share/icons/breeze/status/24/disk-quota-critical.svg
-/usr/share/icons/breeze/status/24/disk-quota-high.svg
-/usr/share/icons/breeze/status/24/disk-quota-low.svg
-/usr/share/icons/breeze/status/24/disk-quota.svg
-/usr/share/icons/breeze/status/24/dropboxstatus-busy.svg
-/usr/share/icons/breeze/status/24/dropboxstatus-busy2.svg
-/usr/share/icons/breeze/status/24/dropboxstatus-idle.svg
-/usr/share/icons/breeze/status/24/dropboxstatus-logo.svg
-/usr/share/icons/breeze/status/24/dropboxstatus-x.svg
-/usr/share/icons/breeze/status/24/fcitx-googlepinyin.svg
-/usr/share/icons/breeze/status/24/fcitx-pinyin-libpinyin.svg
-/usr/share/icons/breeze/status/24/fcitx-pinyin.svg
-/usr/share/icons/breeze/status/24/fcitx-shuangpin-libpinyin.svg
-/usr/share/icons/breeze/status/24/fcitx-shuangpin.svg
-/usr/share/icons/breeze/status/24/fcitx-sunpinyin.svg
-/usr/share/icons/breeze/status/24/fcitx-wubi.svg
-/usr/share/icons/breeze/status/24/firewall-applet-error.svg
-/usr/share/icons/breeze/status/24/firewall-applet-panic.svg
-/usr/share/icons/breeze/status/24/firewall-applet-shields_up.svg
-/usr/share/icons/breeze/status/24/firewall-applet.svg
-/usr/share/icons/breeze/status/24/flameshot-tray.svg
-/usr/share/icons/breeze/status/24/haguichi-connected.svg
-/usr/share/icons/breeze/status/24/haguichi-connecting-1.svg
-/usr/share/icons/breeze/status/24/haguichi-connecting-2.svg
-/usr/share/icons/breeze/status/24/haguichi-connecting-3.svg
-/usr/share/icons/breeze/status/24/haguichi-disconnected.svg
-/usr/share/icons/breeze/status/24/image-missing.svg
-/usr/share/icons/breeze/status/24/input-caps-on.svg
-/usr/share/icons/breeze/status/24/input-keyboard-virtual-off.svg
-/usr/share/icons/breeze/status/24/input-keyboard-virtual-on.svg
-/usr/share/icons/breeze/status/24/input-touchpad-off.svg
-/usr/share/icons/breeze/status/24/input-touchpad-on.svg
-/usr/share/icons/breeze/status/24/install.svg
-/usr/share/icons/breeze/status/24/irc-channel-joined.svg
-/usr/share/icons/breeze/status/24/irc-channel-parted.svg
-/usr/share/icons/breeze/status/24/kdeconnect-tray.svg
-/usr/share/icons/breeze/status/24/media-playback-paused.svg
-/usr/share/icons/breeze/status/24/media-playback-playing.svg
-/usr/share/icons/breeze/status/24/media-playback-stopped.svg
-/usr/share/icons/breeze/status/24/meeting-organizer.svg
-/usr/share/icons/breeze/status/24/mic-off.svg
-/usr/share/icons/breeze/status/24/mic-on.svg
-/usr/share/icons/breeze/status/24/mic-ready.svg
-/usr/share/icons/breeze/status/24/microphone-sensitivity-high.svg
-/usr/share/icons/breeze/status/24/microphone-sensitivity-low.svg
-/usr/share/icons/breeze/status/24/microphone-sensitivity-medium.svg
-/usr/share/icons/breeze/status/24/microphone-sensitivity-muted.svg
-/usr/share/icons/breeze/status/24/network-bluetooth-activated-locked.svg
-/usr/share/icons/breeze/status/24/network-bluetooth-activated.svg
-/usr/share/icons/breeze/status/24/network-bluetooth.svg
-/usr/share/icons/breeze/status/24/network-flightmode-off.svg
-/usr/share/icons/breeze/status/24/network-flightmode-on.svg
-/usr/share/icons/breeze/status/24/network-limited.svg
-/usr/share/icons/breeze/status/24/network-mobile-0-edge-locked.svg
-/usr/share/icons/breeze/status/24/network-mobile-0-edge.svg
-/usr/share/icons/breeze/status/24/network-mobile-0-gprs-locked.svg
-/usr/share/icons/breeze/status/24/network-mobile-0-gprs.svg
-/usr/share/icons/breeze/status/24/network-mobile-0-hsdpa-locked.svg
-/usr/share/icons/breeze/status/24/network-mobile-0-hsdpa.svg
-/usr/share/icons/breeze/status/24/network-mobile-0-hspa-locked.svg
-/usr/share/icons/breeze/status/24/network-mobile-0-hspa.svg
-/usr/share/icons/breeze/status/24/network-mobile-0-hsupa-locked.svg
-/usr/share/icons/breeze/status/24/network-mobile-0-hsupa.svg
-/usr/share/icons/breeze/status/24/network-mobile-0-locked.svg
-/usr/share/icons/breeze/status/24/network-mobile-0-lte-locked.svg
-/usr/share/icons/breeze/status/24/network-mobile-0-lte.svg
-/usr/share/icons/breeze/status/24/network-mobile-0-umts-locked.svg
-/usr/share/icons/breeze/status/24/network-mobile-0-umts.svg
-/usr/share/icons/breeze/status/24/network-mobile-0.svg
-/usr/share/icons/breeze/status/24/network-mobile-100-edge-locked.svg
-/usr/share/icons/breeze/status/24/network-mobile-100-edge.svg
-/usr/share/icons/breeze/status/24/network-mobile-100-gprs-locked.svg
-/usr/share/icons/breeze/status/24/network-mobile-100-gprs.svg
-/usr/share/icons/breeze/status/24/network-mobile-100-hsdpa-locked.svg
-/usr/share/icons/breeze/status/24/network-mobile-100-hsdpa.svg
-/usr/share/icons/breeze/status/24/network-mobile-100-hspa-locked.svg
-/usr/share/icons/breeze/status/24/network-mobile-100-hspa.svg
-/usr/share/icons/breeze/status/24/network-mobile-100-hsupa-locked.svg
-/usr/share/icons/breeze/status/24/network-mobile-100-hsupa.svg
-/usr/share/icons/breeze/status/24/network-mobile-100-locked.svg
-/usr/share/icons/breeze/status/24/network-mobile-100-lte-locked.svg
-/usr/share/icons/breeze/status/24/network-mobile-100-lte.svg
-/usr/share/icons/breeze/status/24/network-mobile-100-umts-locked.svg
-/usr/share/icons/breeze/status/24/network-mobile-100-umts.svg
-/usr/share/icons/breeze/status/24/network-mobile-100.svg
-/usr/share/icons/breeze/status/24/network-mobile-20-edge-locked.svg
-/usr/share/icons/breeze/status/24/network-mobile-20-edge.svg
-/usr/share/icons/breeze/status/24/network-mobile-20-gprs-locked.svg
-/usr/share/icons/breeze/status/24/network-mobile-20-gprs.svg
-/usr/share/icons/breeze/status/24/network-mobile-20-hsdpa-locked.svg
-/usr/share/icons/breeze/status/24/network-mobile-20-hsdpa.svg
-/usr/share/icons/breeze/status/24/network-mobile-20-hspa-locked.svg
-/usr/share/icons/breeze/status/24/network-mobile-20-hspa.svg
-/usr/share/icons/breeze/status/24/network-mobile-20-hsupa-locked.svg
-/usr/share/icons/breeze/status/24/network-mobile-20-hsupa.svg
-/usr/share/icons/breeze/status/24/network-mobile-20-locked.svg
-/usr/share/icons/breeze/status/24/network-mobile-20-lte-locked.svg
-/usr/share/icons/breeze/status/24/network-mobile-20-lte.svg
-/usr/share/icons/breeze/status/24/network-mobile-20-umts-locked.svg
-/usr/share/icons/breeze/status/24/network-mobile-20-umts.svg
-/usr/share/icons/breeze/status/24/network-mobile-20.svg
-/usr/share/icons/breeze/status/24/network-mobile-40-edge-locked.svg
-/usr/share/icons/breeze/status/24/network-mobile-40-edge.svg
-/usr/share/icons/breeze/status/24/network-mobile-40-gprs-locked.svg
-/usr/share/icons/breeze/status/24/network-mobile-40-gprs.svg
-/usr/share/icons/breeze/status/24/network-mobile-40-hsdpa-locked.svg
-/usr/share/icons/breeze/status/24/network-mobile-40-hsdpa.svg
-/usr/share/icons/breeze/status/24/network-mobile-40-hspa-locked.svg
-/usr/share/icons/breeze/status/24/network-mobile-40-hspa.svg
-/usr/share/icons/breeze/status/24/network-mobile-40-hsupa-locked.svg
-/usr/share/icons/breeze/status/24/network-mobile-40-hsupa.svg
-/usr/share/icons/breeze/status/24/network-mobile-40-locked.svg
-/usr/share/icons/breeze/status/24/network-mobile-40-lte-locked.svg
-/usr/share/icons/breeze/status/24/network-mobile-40-lte.svg
-/usr/share/icons/breeze/status/24/network-mobile-40-umts-locked.svg
-/usr/share/icons/breeze/status/24/network-mobile-40-umts.svg
-/usr/share/icons/breeze/status/24/network-mobile-40.svg
-/usr/share/icons/breeze/status/24/network-mobile-60-edge-locked.svg
-/usr/share/icons/breeze/status/24/network-mobile-60-edge.svg
-/usr/share/icons/breeze/status/24/network-mobile-60-gprs-locked.svg
-/usr/share/icons/breeze/status/24/network-mobile-60-gprs.svg
-/usr/share/icons/breeze/status/24/network-mobile-60-hsdpa-locked.svg
-/usr/share/icons/breeze/status/24/network-mobile-60-hsdpa.svg
-/usr/share/icons/breeze/status/24/network-mobile-60-hspa-locked.svg
-/usr/share/icons/breeze/status/24/network-mobile-60-hspa.svg
-/usr/share/icons/breeze/status/24/network-mobile-60-hsupa-locked.svg
-/usr/share/icons/breeze/status/24/network-mobile-60-hsupa.svg
-/usr/share/icons/breeze/status/24/network-mobile-60-locked.svg
-/usr/share/icons/breeze/status/24/network-mobile-60-lte-locked.svg
-/usr/share/icons/breeze/status/24/network-mobile-60-lte.svg
-/usr/share/icons/breeze/status/24/network-mobile-60-umts-locked.svg
-/usr/share/icons/breeze/status/24/network-mobile-60-umts.svg
-/usr/share/icons/breeze/status/24/network-mobile-60.svg
-/usr/share/icons/breeze/status/24/network-mobile-80-edge-locked.svg
-/usr/share/icons/breeze/status/24/network-mobile-80-edge.svg
-/usr/share/icons/breeze/status/24/network-mobile-80-gprs-locked.svg
-/usr/share/icons/breeze/status/24/network-mobile-80-gprs.svg
-/usr/share/icons/breeze/status/24/network-mobile-80-hsdpa-locked.svg
-/usr/share/icons/breeze/status/24/network-mobile-80-hsdpa.svg
-/usr/share/icons/breeze/status/24/network-mobile-80-hspa-locked.svg
-/usr/share/icons/breeze/status/24/network-mobile-80-hspa.svg
-/usr/share/icons/breeze/status/24/network-mobile-80-hsupa-locked.svg
-/usr/share/icons/breeze/status/24/network-mobile-80-hsupa.svg
-/usr/share/icons/breeze/status/24/network-mobile-80-locked.svg
-/usr/share/icons/breeze/status/24/network-mobile-80-lte-locked.svg
-/usr/share/icons/breeze/status/24/network-mobile-80-lte.svg
-/usr/share/icons/breeze/status/24/network-mobile-80-umts-locked.svg
-/usr/share/icons/breeze/status/24/network-mobile-80-umts.svg
-/usr/share/icons/breeze/status/24/network-mobile-80.svg
-/usr/share/icons/breeze/status/24/network-mobile-available.svg
-/usr/share/icons/breeze/status/24/network-mobile-off.svg
-/usr/share/icons/breeze/status/24/network-mobile-on.svg
-/usr/share/icons/breeze/status/24/network-offline.svg
-/usr/share/icons/breeze/status/24/network-wired-activated.svg
-/usr/share/icons/breeze/status/24/network-wired-disconnected.svg
-/usr/share/icons/breeze/status/24/network-wired-unavailable.svg
-/usr/share/icons/breeze/status/24/network-wireless-acquiring.svg
-/usr/share/icons/breeze/status/24/network-wireless-connected-00.svg
-/usr/share/icons/breeze/status/24/network-wireless-connected-100.svg
-/usr/share/icons/breeze/status/24/network-wireless-connected-25.svg
-/usr/share/icons/breeze/status/24/network-wireless-connected-50.svg
-/usr/share/icons/breeze/status/24/network-wireless-connected-75.svg
-/usr/share/icons/breeze/status/24/network-wireless-disconnected.svg
-/usr/share/icons/breeze/status/24/network-wireless-signal-excellent.svg
-/usr/share/icons/breeze/status/24/network-wireless-signal-good.svg
-/usr/share/icons/breeze/status/24/network-wireless-signal-none.svg
-/usr/share/icons/breeze/status/24/network-wireless-signal-ok.svg
-/usr/share/icons/breeze/status/24/network-wireless-signal-weak.svg
-/usr/share/icons/breeze/status/24/nm-device-wired.svg
-/usr/share/icons/breeze/status/24/nm-nm-signal-00.svg
-/usr/share/icons/breeze/status/24/nm-nm-signal-100.svg
-/usr/share/icons/breeze/status/24/nm-nm-signal-25.svg
-/usr/share/icons/breeze/status/24/nm-nm-signal-50.svg
-/usr/share/icons/breeze/status/24/nm-nm-signal-75.svg
-/usr/share/icons/breeze/status/24/nm-no-connection.svg
-/usr/share/icons/breeze/status/24/redshift-status-off.svg
-/usr/share/icons/breeze/status/24/redshift-status-on.svg
-/usr/share/icons/breeze/status/24/rotation-allowed.svg
-/usr/share/icons/breeze/status/24/rotation-locked-landscape.svg
-/usr/share/icons/breeze/status/24/rotation-locked-portrait.svg
-/usr/share/icons/breeze/status/24/script-error.svg
-/usr/share/icons/breeze/status/24/security-high.svg
-/usr/share/icons/breeze/status/24/security-low.svg
-/usr/share/icons/breeze/status/24/security-medium.svg
-/usr/share/icons/breeze/status/24/state-download.svg
-/usr/share/icons/breeze/status/24/state-error.svg
-/usr/share/icons/breeze/status/24/state-information.svg
-/usr/share/icons/breeze/status/24/state-offline.svg
-/usr/share/icons/breeze/status/24/state-ok.svg
-/usr/share/icons/breeze/status/24/state-pause.svg
-/usr/share/icons/breeze/status/24/state-sync.svg
-/usr/share/icons/breeze/status/24/state-warning.svg
-/usr/share/icons/breeze/status/24/task-complete.svg
-/usr/share/icons/breeze/status/24/task-process-0.svg
-/usr/share/icons/breeze/status/24/task-process-1.svg
-/usr/share/icons/breeze/status/24/task-process-2.svg
-/usr/share/icons/breeze/status/24/task-process-3.svg
-/usr/share/icons/breeze/status/24/task-process-4.svg
-/usr/share/icons/breeze/status/24/task-recurring.svg
-/usr/share/icons/breeze/status/24/task-reminder.svg
-/usr/share/icons/breeze/status/24/telegram-attention-panel.svg
-/usr/share/icons/breeze/status/24/telegram-mute-panel.svg
-/usr/share/icons/breeze/status/24/telegram-panel.svg
-/usr/share/icons/breeze/status/24/temperature-cold.svg
-/usr/share/icons/breeze/status/24/temperature-normal.svg
-/usr/share/icons/breeze/status/24/temperature-warm.svg
-/usr/share/icons/breeze/status/24/transmission-tray-icon.svg
-/usr/share/icons/breeze/status/24/uninstall.svg
-/usr/share/icons/breeze/status/24/update-high.svg
-/usr/share/icons/breeze/status/24/update-low.svg
-/usr/share/icons/breeze/status/24/update-medium.svg
-/usr/share/icons/breeze/status/24/update-none.svg
-/usr/share/icons/breeze/status/24/user-available.svg
-/usr/share/icons/breeze/status/24/user-away-extended.svg
-/usr/share/icons/breeze/status/24/user-away.svg
-/usr/share/icons/breeze/status/24/user-busy.svg
-/usr/share/icons/breeze/status/24/user-idle.svg
-/usr/share/icons/breeze/status/24/user-invisible.svg
-/usr/share/icons/breeze/status/24/user-offline.svg
-/usr/share/icons/breeze/status/24/user-online.svg
-/usr/share/icons/breeze/status/24/video-card-inactive.svg
-/usr/share/icons/breeze/status/24@2x
-/usr/share/icons/breeze/status/24@3x
-/usr/share/icons/breeze/status/32/appointment-recurring.svg
-/usr/share/icons/breeze/status/32/battery-000-charging.svg
-/usr/share/icons/breeze/status/32/battery-000.svg
-/usr/share/icons/breeze/status/32/battery-010-charging.svg
-/usr/share/icons/breeze/status/32/battery-010.svg
-/usr/share/icons/breeze/status/32/battery-020-charging.svg
-/usr/share/icons/breeze/status/32/battery-020.svg
-/usr/share/icons/breeze/status/32/battery-030-charging.svg
-/usr/share/icons/breeze/status/32/battery-030.svg
-/usr/share/icons/breeze/status/32/battery-040-charging.svg
-/usr/share/icons/breeze/status/32/battery-040.svg
-/usr/share/icons/breeze/status/32/battery-050-charging.svg
-/usr/share/icons/breeze/status/32/battery-050.svg
-/usr/share/icons/breeze/status/32/battery-060-charging.svg
-/usr/share/icons/breeze/status/32/battery-060.svg
-/usr/share/icons/breeze/status/32/battery-070-charging.svg
-/usr/share/icons/breeze/status/32/battery-070.svg
-/usr/share/icons/breeze/status/32/battery-080-charging.svg
-/usr/share/icons/breeze/status/32/battery-080.svg
-/usr/share/icons/breeze/status/32/battery-090-charging.svg
-/usr/share/icons/breeze/status/32/battery-090.svg
-/usr/share/icons/breeze/status/32/battery-100-charging.svg
-/usr/share/icons/breeze/status/32/battery-100.svg
-/usr/share/icons/breeze/status/32/battery-caution-charging.svg
-/usr/share/icons/breeze/status/32/battery-caution.svg
-/usr/share/icons/breeze/status/32/battery-empty-charging.svg
-/usr/share/icons/breeze/status/32/battery-empty.svg
-/usr/share/icons/breeze/status/32/battery-full-charging.svg
-/usr/share/icons/breeze/status/32/battery-full.svg
-/usr/share/icons/breeze/status/32/battery-good-charging.svg
-/usr/share/icons/breeze/status/32/battery-good.svg
-/usr/share/icons/breeze/status/32/battery-low-charging.svg
-/usr/share/icons/breeze/status/32/battery-low.svg
-/usr/share/icons/breeze/status/32/battery-missing.svg
-/usr/share/icons/breeze/status/32/call-incoming.svg
-/usr/share/icons/breeze/status/32/call-missed.svg
-/usr/share/icons/breeze/status/32/call-outgoing.svg
-/usr/share/icons/breeze/status/32/dialog-warning.svg
-/usr/share/icons/breeze/status/32/rotation-allowed.svg
-/usr/share/icons/breeze/status/32/rotation-locked-landscape.svg
-/usr/share/icons/breeze/status/32/rotation-locked-portrait.svg
-/usr/share/icons/breeze/status/32/task-recurring.svg
-/usr/share/icons/breeze/status/48/dialog-warning.svg
-/usr/share/icons/breeze/status/64/dialog-error.svg
-/usr/share/icons/breeze/status/64/dialog-information.svg
-/usr/share/icons/breeze/status/64/dialog-password.svg
-/usr/share/icons/breeze/status/64/dialog-positive.svg
-/usr/share/icons/breeze/status/64/dialog-question.svg
-/usr/share/icons/breeze/status/64/dialog-warning.svg
-/usr/share/icons/breeze/status/64/image-missing.svg
-/usr/share/icons/breeze/status/64/security-high.svg
-/usr/share/icons/breeze/status/64/security-low.svg
-/usr/share/icons/breeze/status/64/security-medium.svg
-/usr/share/icons/breeze/status/symbolic/alarm-symbolic.svg
-/usr/share/icons/breeze/status/symbolic/appointment-missed-symbolic.svg
-/usr/share/icons/breeze/status/symbolic/appointment-soon-symbolic.svg
-/usr/share/icons/breeze/status/symbolic/audio-volume-high-symbolic.svg
-/usr/share/icons/breeze/status/symbolic/audio-volume-low-symbolic.svg
-/usr/share/icons/breeze/status/symbolic/audio-volume-medium-symbolic.svg
-/usr/share/icons/breeze/status/symbolic/audio-volume-muted-symbolic.svg
-/usr/share/icons/breeze/status/symbolic/auth-sim-locked-symbolic.svg
-/usr/share/icons/breeze/status/symbolic/auth-sim-missing-symbolic.svg
-/usr/share/icons/breeze/status/symbolic/avatar-default-symbolic.svg
-/usr/share/icons/breeze/status/symbolic/battery-caution-charging-symbolic.svg
-/usr/share/icons/breeze/status/symbolic/battery-caution-symbolic.svg
-/usr/share/icons/breeze/status/symbolic/battery-empty-charging-symbolic.svg
-/usr/share/icons/breeze/status/symbolic/battery-empty-symbolic.svg
-/usr/share/icons/breeze/status/symbolic/battery-full-charged-symbolic.svg
-/usr/share/icons/breeze/status/symbolic/battery-full-charging-symbolic.svg
-/usr/share/icons/breeze/status/symbolic/battery-full-symbolic.svg
-/usr/share/icons/breeze/status/symbolic/battery-good-charging-symbolic.svg
-/usr/share/icons/breeze/status/symbolic/battery-good-symbolic.svg
-/usr/share/icons/breeze/status/symbolic/battery-low-charging-symbolic.svg
-/usr/share/icons/breeze/status/symbolic/battery-low-symbolic.svg
-/usr/share/icons/breeze/status/symbolic/battery-missing-symbolic.svg
-/usr/share/icons/breeze/status/symbolic/call-incoming-symbolic.svg
-/usr/share/icons/breeze/status/symbolic/call-missed-symbolic.svg
-/usr/share/icons/breeze/status/symbolic/call-outgoing-symbolic.svg
-/usr/share/icons/breeze/status/symbolic/changes-allow-symbolic.svg
-/usr/share/icons/breeze/status/symbolic/changes-prevent-symbolic.svg
-/usr/share/icons/breeze/status/symbolic/channel-insecure-symbolic.svg
-/usr/share/icons/breeze/status/symbolic/channel-secure-symbolic.svg
-/usr/share/icons/breeze/status/symbolic/computer-fail-symbolic.svg
-/usr/share/icons/breeze/status/symbolic/content-loading-symbolic.svg
-/usr/share/icons/breeze/status/symbolic/dialog-error-symbolic.svg
-/usr/share/icons/breeze/status/symbolic/dialog-warning-symbolic.svg
-/usr/share/icons/breeze/status/symbolic/folder-open-symbolic.svg
-/usr/share/icons/breeze/status/symbolic/image-loading-symbolic.svg
-/usr/share/icons/breeze/status/symbolic/mail-attachment-symbolic.svg
-/usr/share/icons/breeze/status/symbolic/mail-read-symbolic.svg
-/usr/share/icons/breeze/status/symbolic/mail-replied-symbolic.svg
-/usr/share/icons/breeze/status/symbolic/mail-unread-symbolic.svg
-/usr/share/icons/breeze/status/symbolic/media-playlist-consecutive-symbolic-rtl.svg
-/usr/share/icons/breeze/status/symbolic/media-playlist-consecutive-symbolic.svg
-/usr/share/icons/breeze/status/symbolic/media-playlist-repeat-song-symbolic-rtl.svg
-/usr/share/icons/breeze/status/symbolic/media-playlist-repeat-song-symbolic.svg
-/usr/share/icons/breeze/status/symbolic/media-playlist-repeat-symbolic-rtl.svg
-/usr/share/icons/breeze/status/symbolic/media-playlist-repeat-symbolic.svg
-/usr/share/icons/breeze/status/symbolic/media-playlist-shuffle-symbolic-rtl.svg
-/usr/share/icons/breeze/status/symbolic/media-playlist-shuffle-symbolic.svg
-/usr/share/icons/breeze/status/symbolic/microphone-sensitivity-high-symbolic.svg
-/usr/share/icons/breeze/status/symbolic/microphone-sensitivity-low-symbolic.svg
-/usr/share/icons/breeze/status/symbolic/microphone-sensitivity-medium-symbolic.svg
-/usr/share/icons/breeze/status/symbolic/microphone-sensitivity-muted-symbolic.svg
-/usr/share/icons/breeze/status/symbolic/non-starred-symbolic.svg
-/usr/share/icons/breeze/status/symbolic/printer-error-symbolic.svg
-/usr/share/icons/breeze/status/symbolic/printer-printing-symbolic.svg
-/usr/share/icons/breeze/status/symbolic/printer-warning-symbolic.svg
-/usr/share/icons/breeze/status/symbolic/process-working-symbolic.svg
-/usr/share/icons/breeze/status/symbolic/rating-unrated.svg
-/usr/share/icons/breeze/status/symbolic/rotation-allowed-symbolic.svg
-/usr/share/icons/breeze/status/symbolic/rotation-locked-landscape-symbolic.svg
-/usr/share/icons/breeze/status/symbolic/rotation-locked-portrait-symbolic.svg
-/usr/share/icons/breeze/status/symbolic/rotation-locked-symbolic.svg
-/usr/share/icons/breeze/status/symbolic/security-high-symbolic.svg
-/usr/share/icons/breeze/status/symbolic/security-low-symbolic.svg
-/usr/share/icons/breeze/status/symbolic/security-medium-symbolic.svg
-/usr/share/icons/breeze/status/symbolic/semi-starred-symbolic-rtl.svg
-/usr/share/icons/breeze/status/symbolic/semi-starred-symbolic.svg
-/usr/share/icons/breeze/status/symbolic/starred-symbolic.svg
-/usr/share/icons/breeze/status/symbolic/system-lock-screen-symbolic.svg
-/usr/share/icons/breeze/status/symbolic/user-available-symbolic.svg
-/usr/share/icons/breeze/status/symbolic/user-away-symbolic.svg
-/usr/share/icons/breeze/status/symbolic/user-busy-symbolic.svg
-/usr/share/icons/breeze/status/symbolic/user-idle-symbolic.svg
-/usr/share/icons/breeze/status/symbolic/user-invisible-symbolic.svg
-/usr/share/icons/breeze/status/symbolic/user-not-tracked-symbolic.svg
-/usr/share/icons/breeze/status/symbolic/user-offline-symbolic.svg
-/usr/share/icons/breeze/status/symbolic/user-status-pending-symbolic.svg
-/usr/share/icons/breeze/status/symbolic/user-trash-full-symbolic.svg
-/usr/share/icons/breeze/status/symbolic/view-wrapped-symbolic-rtl.svg
-/usr/share/icons/breeze/status/symbolic/view-wrapped-symbolic.svg
 
 %files license
 %defattr(0644,root,root,0755)
