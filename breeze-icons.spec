@@ -5,11 +5,11 @@
 # Source0 file verified with key 0x58D0EE648A48B3BB (faure@kde.org)
 #
 Name     : breeze-icons
-Version  : 5.100.0
-Release  : 60
-URL      : https://download.kde.org/stable/frameworks/5.100/breeze-icons-5.100.0.tar.xz
-Source0  : https://download.kde.org/stable/frameworks/5.100/breeze-icons-5.100.0.tar.xz
-Source1  : https://download.kde.org/stable/frameworks/5.100/breeze-icons-5.100.0.tar.xz.sig
+Version  : 5.101.0
+Release  : 61
+URL      : https://download.kde.org/stable/frameworks/5.101/breeze-icons-5.101.0.tar.xz
+Source0  : https://download.kde.org/stable/frameworks/5.101/breeze-icons-5.101.0.tar.xz
+Source1  : https://download.kde.org/stable/frameworks/5.101/breeze-icons-5.101.0.tar.xz.sig
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : LGPL-2.1 LGPL-3.0
@@ -42,15 +42,15 @@ license components for the breeze-icons package.
 
 
 %prep
-%setup -q -n breeze-icons-5.100.0
-cd %{_builddir}/breeze-icons-5.100.0
+%setup -q -n breeze-icons-5.101.0
+cd %{_builddir}/breeze-icons-5.101.0
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1668441740
+export SOURCE_DATE_EPOCH=1671040037
 mkdir -p clr-build
 pushd clr-build
 export GCC_IGNORE_WERROR=1
@@ -66,7 +66,7 @@ make  %{?_smp_mflags}
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1668441740
+export SOURCE_DATE_EPOCH=1671040037
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/breeze-icons
 cp %{_builddir}/breeze-icons-%{version}/COPYING-ICONS %{buildroot}/usr/share/package-licenses/breeze-icons/64474638fded94568edef3950d35b464488065b5 || :
@@ -6372,6 +6372,7 @@ popd
 /usr/share/icons/breeze-dark/apps/16/anydesk.svg
 /usr/share/icons/breeze-dark/apps/16/hotspot.svg
 /usr/share/icons/breeze-dark/apps/16/kdeconnect.svg
+/usr/share/icons/breeze-dark/apps/16/kdesrc-build.svg
 /usr/share/icons/breeze-dark/apps/16/kmymoney.svg
 /usr/share/icons/breeze-dark/apps/16/konversation.svg
 /usr/share/icons/breeze-dark/apps/16/kwrite.svg
@@ -6597,6 +6598,7 @@ popd
 /usr/share/icons/breeze-dark/apps/48/kde.svg
 /usr/share/icons/breeze-dark/apps/48/kdeapp.svg
 /usr/share/icons/breeze-dark/apps/48/kdenlive.svg
+/usr/share/icons/breeze-dark/apps/48/kdesrc-build.svg
 /usr/share/icons/breeze-dark/apps/48/kdesvn.svg
 /usr/share/icons/breeze-dark/apps/48/kdevelop.svg
 /usr/share/icons/breeze-dark/apps/48/kdiamond.svg
@@ -6782,6 +6784,7 @@ popd
 /usr/share/icons/breeze-dark/apps/48/scribus.svg
 /usr/share/icons/breeze-dark/apps/48/sheets.svg
 /usr/share/icons/breeze-dark/apps/48/showfoto.svg
+/usr/share/icons/breeze-dark/apps/48/simplescreenrecorder.svg
 /usr/share/icons/breeze-dark/apps/48/skanlite.svg
 /usr/share/icons/breeze-dark/apps/48/skanpage.svg
 /usr/share/icons/breeze-dark/apps/48/skrooge-black.svg
@@ -6903,6 +6906,7 @@ popd
 /usr/share/icons/breeze-dark/devices/16/input-mouse.svg
 /usr/share/icons/breeze-dark/devices/16/input-tablet.svg
 /usr/share/icons/breeze-dark/devices/16/input-touchpad.svg
+/usr/share/icons/breeze-dark/devices/16/input-touchscreen.svg
 /usr/share/icons/breeze-dark/devices/16/input-tvremote.svg
 /usr/share/icons/breeze-dark/devices/16/keyboard-caps-disabled.svg
 /usr/share/icons/breeze-dark/devices/16/keyboard-caps-enabled.svg
@@ -6979,6 +6983,7 @@ popd
 /usr/share/icons/breeze-dark/devices/22/input-mouse.svg
 /usr/share/icons/breeze-dark/devices/22/input-tablet.svg
 /usr/share/icons/breeze-dark/devices/22/input-touchpad.svg
+/usr/share/icons/breeze-dark/devices/22/input-touchscreen.svg
 /usr/share/icons/breeze-dark/devices/22/input-tvremote.svg
 /usr/share/icons/breeze-dark/devices/22/keyboard-caps-disabled.svg
 /usr/share/icons/breeze-dark/devices/22/keyboard-caps-enabled.svg
@@ -7047,6 +7052,7 @@ popd
 /usr/share/icons/breeze-dark/devices/24/input-mouse.svg
 /usr/share/icons/breeze-dark/devices/24/input-tablet.svg
 /usr/share/icons/breeze-dark/devices/24/input-touchpad.svg
+/usr/share/icons/breeze-dark/devices/24/input-touchscreen.svg
 /usr/share/icons/breeze-dark/devices/24/input-tvremote.svg
 /usr/share/icons/breeze-dark/devices/24/keyboard-caps-disabled.svg
 /usr/share/icons/breeze-dark/devices/24/keyboard-caps-enabled.svg
@@ -7112,6 +7118,7 @@ popd
 /usr/share/icons/breeze-dark/devices/64/input-mouse.svg
 /usr/share/icons/breeze-dark/devices/64/input-tablet.svg
 /usr/share/icons/breeze-dark/devices/64/input-touchpad.svg
+/usr/share/icons/breeze-dark/devices/64/input-touchscreen.svg
 /usr/share/icons/breeze-dark/devices/64/input-tvremote.svg
 /usr/share/icons/breeze-dark/devices/64/media-flash-memory-stick.svg
 /usr/share/icons/breeze-dark/devices/64/media-flash-sd-mmc.svg
@@ -10089,6 +10096,7 @@ popd
 /usr/share/icons/breeze-dark/preferences/22/preferences-desktop-theme-windowdecorations.svg
 /usr/share/icons/breeze-dark/preferences/22/preferences-desktop-thunderbolt.svg
 /usr/share/icons/breeze-dark/preferences/22/preferences-desktop-touchpad.svg
+/usr/share/icons/breeze-dark/preferences/22/preferences-desktop-touchscreen.svg
 /usr/share/icons/breeze-dark/preferences/22/preferences-desktop-user-password.svg
 /usr/share/icons/breeze-dark/preferences/22/preferences-desktop-user.svg
 /usr/share/icons/breeze-dark/preferences/22/preferences-desktop-virtual.svg
@@ -10200,6 +10208,7 @@ popd
 /usr/share/icons/breeze-dark/preferences/32/preferences-desktop-theme.svg
 /usr/share/icons/breeze-dark/preferences/32/preferences-desktop-thunderbolt.svg
 /usr/share/icons/breeze-dark/preferences/32/preferences-desktop-touchpad.svg
+/usr/share/icons/breeze-dark/preferences/32/preferences-desktop-touchscreen.svg
 /usr/share/icons/breeze-dark/preferences/32/preferences-desktop-user-password.svg
 /usr/share/icons/breeze-dark/preferences/32/preferences-desktop-user.svg
 /usr/share/icons/breeze-dark/preferences/32/preferences-desktop-virtual.svg
@@ -17402,6 +17411,7 @@ popd
 /usr/share/icons/breeze/apps/16/anydesk.svg
 /usr/share/icons/breeze/apps/16/hotspot.svg
 /usr/share/icons/breeze/apps/16/kdeconnect.svg
+/usr/share/icons/breeze/apps/16/kdesrc-build.svg
 /usr/share/icons/breeze/apps/16/kmymoney.svg
 /usr/share/icons/breeze/apps/16/konversation.svg
 /usr/share/icons/breeze/apps/16/kwrite.svg
@@ -17634,6 +17644,7 @@ popd
 /usr/share/icons/breeze/apps/48/kde.svg
 /usr/share/icons/breeze/apps/48/kdeapp.svg
 /usr/share/icons/breeze/apps/48/kdenlive.svg
+/usr/share/icons/breeze/apps/48/kdesrc-build.svg
 /usr/share/icons/breeze/apps/48/kdesvn.svg
 /usr/share/icons/breeze/apps/48/kdevelop.svg
 /usr/share/icons/breeze/apps/48/kdiamond.svg
@@ -17819,6 +17830,7 @@ popd
 /usr/share/icons/breeze/apps/48/scribus.svg
 /usr/share/icons/breeze/apps/48/sheets.svg
 /usr/share/icons/breeze/apps/48/showfoto.svg
+/usr/share/icons/breeze/apps/48/simplescreenrecorder.svg
 /usr/share/icons/breeze/apps/48/skanlite.svg
 /usr/share/icons/breeze/apps/48/skanpage.svg
 /usr/share/icons/breeze/apps/48/skrooge-black.svg
@@ -17940,6 +17952,7 @@ popd
 /usr/share/icons/breeze/devices/16/input-mouse.svg
 /usr/share/icons/breeze/devices/16/input-tablet.svg
 /usr/share/icons/breeze/devices/16/input-touchpad.svg
+/usr/share/icons/breeze/devices/16/input-touchscreen.svg
 /usr/share/icons/breeze/devices/16/input-tvremote.svg
 /usr/share/icons/breeze/devices/16/keyboard-caps-disabled.svg
 /usr/share/icons/breeze/devices/16/keyboard-caps-enabled.svg
@@ -18016,6 +18029,7 @@ popd
 /usr/share/icons/breeze/devices/22/input-mouse.svg
 /usr/share/icons/breeze/devices/22/input-tablet.svg
 /usr/share/icons/breeze/devices/22/input-touchpad.svg
+/usr/share/icons/breeze/devices/22/input-touchscreen.svg
 /usr/share/icons/breeze/devices/22/input-tvremote.svg
 /usr/share/icons/breeze/devices/22/keyboard-caps-disabled.svg
 /usr/share/icons/breeze/devices/22/keyboard-caps-enabled.svg
@@ -18084,6 +18098,7 @@ popd
 /usr/share/icons/breeze/devices/24/input-mouse.svg
 /usr/share/icons/breeze/devices/24/input-tablet.svg
 /usr/share/icons/breeze/devices/24/input-touchpad.svg
+/usr/share/icons/breeze/devices/24/input-touchscreen.svg
 /usr/share/icons/breeze/devices/24/input-tvremote.svg
 /usr/share/icons/breeze/devices/24/keyboard-caps-disabled.svg
 /usr/share/icons/breeze/devices/24/keyboard-caps-enabled.svg
@@ -18150,6 +18165,7 @@ popd
 /usr/share/icons/breeze/devices/64/input-mouse.svg
 /usr/share/icons/breeze/devices/64/input-tablet.svg
 /usr/share/icons/breeze/devices/64/input-touchpad.svg
+/usr/share/icons/breeze/devices/64/input-touchscreen.svg
 /usr/share/icons/breeze/devices/64/input-tvremote.svg
 /usr/share/icons/breeze/devices/64/media-flash-memory-stick.svg
 /usr/share/icons/breeze/devices/64/media-flash-sd-mmc.svg
@@ -21669,6 +21685,7 @@ popd
 /usr/share/icons/breeze/preferences/22/preferences-desktop-theme-windowdecorations.svg
 /usr/share/icons/breeze/preferences/22/preferences-desktop-thunderbolt.svg
 /usr/share/icons/breeze/preferences/22/preferences-desktop-touchpad.svg
+/usr/share/icons/breeze/preferences/22/preferences-desktop-touchscreen.svg
 /usr/share/icons/breeze/preferences/22/preferences-desktop-user-password.svg
 /usr/share/icons/breeze/preferences/22/preferences-desktop-user.svg
 /usr/share/icons/breeze/preferences/22/preferences-desktop-virtual.svg
@@ -21759,6 +21776,7 @@ popd
 /usr/share/icons/breeze/preferences/24/preferences-desktop-theme-windowdecorations.svg
 /usr/share/icons/breeze/preferences/24/preferences-desktop-thunderbolt.svg
 /usr/share/icons/breeze/preferences/24/preferences-desktop-touchpad.svg
+/usr/share/icons/breeze/preferences/24/preferences-desktop-touchscreen.svg
 /usr/share/icons/breeze/preferences/24/preferences-desktop-user-password.svg
 /usr/share/icons/breeze/preferences/24/preferences-desktop-user.svg
 /usr/share/icons/breeze/preferences/24/preferences-desktop-virtual.svg
@@ -21871,6 +21889,7 @@ popd
 /usr/share/icons/breeze/preferences/32/preferences-desktop-theme.svg
 /usr/share/icons/breeze/preferences/32/preferences-desktop-thunderbolt.svg
 /usr/share/icons/breeze/preferences/32/preferences-desktop-touchpad.svg
+/usr/share/icons/breeze/preferences/32/preferences-desktop-touchscreen.svg
 /usr/share/icons/breeze/preferences/32/preferences-desktop-user-password.svg
 /usr/share/icons/breeze/preferences/32/preferences-desktop-user.svg
 /usr/share/icons/breeze/preferences/32/preferences-desktop-virtual.svg
