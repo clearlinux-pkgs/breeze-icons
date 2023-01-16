@@ -5,11 +5,11 @@
 # Source0 file verified with key 0x58D0EE648A48B3BB (faure@kde.org)
 #
 Name     : breeze-icons
-Version  : 5.101.0
-Release  : 61
-URL      : https://download.kde.org/stable/frameworks/5.101/breeze-icons-5.101.0.tar.xz
-Source0  : https://download.kde.org/stable/frameworks/5.101/breeze-icons-5.101.0.tar.xz
-Source1  : https://download.kde.org/stable/frameworks/5.101/breeze-icons-5.101.0.tar.xz.sig
+Version  : 5.102.0
+Release  : 62
+URL      : https://download.kde.org/stable/frameworks/5.102/breeze-icons-5.102.0.tar.xz
+Source0  : https://download.kde.org/stable/frameworks/5.102/breeze-icons-5.102.0.tar.xz
+Source1  : https://download.kde.org/stable/frameworks/5.102/breeze-icons-5.102.0.tar.xz.sig
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : LGPL-2.1 LGPL-3.0
@@ -19,6 +19,9 @@ BuildRequires : buildreq-cmake
 BuildRequires : buildreq-kde
 BuildRequires : extra-cmake-modules-data
 BuildRequires : pypi-lxml
+# Suppress stripping binaries
+%define __strip /bin/true
+%define debug_package %{nil}
 
 %description
 To create a webfront from all breeze action icons run
@@ -42,31 +45,31 @@ license components for the breeze-icons package.
 
 
 %prep
-%setup -q -n breeze-icons-5.101.0
-cd %{_builddir}/breeze-icons-5.101.0
+%setup -q -n breeze-icons-5.102.0
+cd %{_builddir}/breeze-icons-5.102.0
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1671040037
+export SOURCE_DATE_EPOCH=1673889447
 mkdir -p clr-build
 pushd clr-build
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
 export NM=gcc-nm
-export CFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=auto "
-export FCFLAGS="$FFLAGS -O3 -ffat-lto-objects -flto=auto "
-export FFLAGS="$FFLAGS -O3 -ffat-lto-objects -flto=auto "
-export CXXFLAGS="$CXXFLAGS -O3 -ffat-lto-objects -flto=auto "
+export CFLAGS="$CFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz "
+export FCFLAGS="$FFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz "
+export FFLAGS="$FFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz "
+export CXXFLAGS="$CXXFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz "
 %cmake ..
 make  %{?_smp_mflags}
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1671040037
+export SOURCE_DATE_EPOCH=1673889447
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/breeze-icons
 cp %{_builddir}/breeze-icons-%{version}/COPYING-ICONS %{buildroot}/usr/share/package-licenses/breeze-icons/64474638fded94568edef3950d35b464488065b5 || :
@@ -5995,6 +5998,7 @@ popd
 /usr/share/icons/breeze-dark/actions/symbolic/call-stop-symbolic.svg
 /usr/share/icons/breeze-dark/actions/symbolic/call-voicemail-symbolic.svg
 /usr/share/icons/breeze-dark/actions/symbolic/change-date-symbolic.svg
+/usr/share/icons/breeze-dark/actions/symbolic/checkbox-checked-symbolic.svg
 /usr/share/icons/breeze-dark/actions/symbolic/collapse-all-symbolic.svg
 /usr/share/icons/breeze-dark/actions/symbolic/color-profile.svg
 /usr/share/icons/breeze-dark/actions/symbolic/color-select-symbolic.svg
@@ -6100,10 +6104,15 @@ popd
 /usr/share/icons/breeze-dark/actions/symbolic/list-add-symbolic.svg
 /usr/share/icons/breeze-dark/actions/symbolic/list-remove-all-symbolic.svg
 /usr/share/icons/breeze-dark/actions/symbolic/list-remove-symbolic.svg
+/usr/share/icons/breeze-dark/actions/symbolic/mail-forward-symbolic.svg
 /usr/share/icons/breeze-dark/actions/symbolic/mail-inbox-symbolic.svg
 /usr/share/icons/breeze-dark/actions/symbolic/mail-mark-important-symbolic.svg
+/usr/share/icons/breeze-dark/actions/symbolic/mail-message-new-symbolic.svg
+/usr/share/icons/breeze-dark/actions/symbolic/mail-reply-all-symbolic.svg
+/usr/share/icons/breeze-dark/actions/symbolic/mail-reply-sender-symbolic.svg
 /usr/share/icons/breeze-dark/actions/symbolic/mail-send-receive-symbolic.svg
 /usr/share/icons/breeze-dark/actions/symbolic/mail-send-symbolic.svg
+/usr/share/icons/breeze-dark/actions/symbolic/mail-sent-symbolic.svg
 /usr/share/icons/breeze-dark/actions/symbolic/map-symbolic.svg
 /usr/share/icons/breeze-dark/actions/symbolic/mark-location-symbolic.svg
 /usr/share/icons/breeze-dark/actions/symbolic/media-eject-symbolic.svg
@@ -6139,6 +6148,8 @@ popd
 /usr/share/icons/breeze-dark/actions/symbolic/pan-start-symbolic-rtl.svg
 /usr/share/icons/breeze-dark/actions/symbolic/pan-start-symbolic.svg
 /usr/share/icons/breeze-dark/actions/symbolic/pan-up-symbolic.svg
+/usr/share/icons/breeze-dark/actions/symbolic/preferences-other-symbolic.svg
+/usr/share/icons/breeze-dark/actions/symbolic/preferences-system-search-symbolic.svg
 /usr/share/icons/breeze-dark/actions/symbolic/process-stop-symbolic.svg
 /usr/share/icons/breeze-dark/actions/symbolic/screen-rotate-auto-off-symbolic.svg
 /usr/share/icons/breeze-dark/actions/symbolic/screen-rotate-auto-on-symbolic.svg
@@ -6784,7 +6795,6 @@ popd
 /usr/share/icons/breeze-dark/apps/48/scribus.svg
 /usr/share/icons/breeze-dark/apps/48/sheets.svg
 /usr/share/icons/breeze-dark/apps/48/showfoto.svg
-/usr/share/icons/breeze-dark/apps/48/simplescreenrecorder.svg
 /usr/share/icons/breeze-dark/apps/48/skanlite.svg
 /usr/share/icons/breeze-dark/apps/48/skanpage.svg
 /usr/share/icons/breeze-dark/apps/48/skrooge-black.svg
@@ -10050,6 +10060,7 @@ popd
 /usr/share/icons/breeze-dark/places/symbolic/folder-symbolic.svg
 /usr/share/icons/breeze-dark/places/symbolic/folder-templates-symbolic.svg
 /usr/share/icons/breeze-dark/places/symbolic/folder-videos-symbolic.svg
+/usr/share/icons/breeze-dark/places/symbolic/mail-outbox-symbolic.svg
 /usr/share/icons/breeze-dark/places/symbolic/network-server-symbolic.svg
 /usr/share/icons/breeze-dark/places/symbolic/network-workgroup-symbolic.svg
 /usr/share/icons/breeze-dark/places/symbolic/start-here-symbolic.svg
@@ -11050,6 +11061,7 @@ popd
 /usr/share/icons/breeze-dark/status/symbolic/microphone-sensitivity-low-symbolic.svg
 /usr/share/icons/breeze-dark/status/symbolic/microphone-sensitivity-medium-symbolic.svg
 /usr/share/icons/breeze-dark/status/symbolic/microphone-sensitivity-muted-symbolic.svg
+/usr/share/icons/breeze-dark/status/symbolic/network-offline-symbolic.svg
 /usr/share/icons/breeze-dark/status/symbolic/non-starred-symbolic.svg
 /usr/share/icons/breeze-dark/status/symbolic/printer-error-symbolic.svg
 /usr/share/icons/breeze-dark/status/symbolic/printer-printing-symbolic.svg
@@ -17036,6 +17048,7 @@ popd
 /usr/share/icons/breeze/actions/symbolic/call-stop-symbolic.svg
 /usr/share/icons/breeze/actions/symbolic/call-voicemail-symbolic.svg
 /usr/share/icons/breeze/actions/symbolic/change-date-symbolic.svg
+/usr/share/icons/breeze/actions/symbolic/checkbox-checked-symbolic.svg
 /usr/share/icons/breeze/actions/symbolic/collapse-all-symbolic.svg
 /usr/share/icons/breeze/actions/symbolic/color-profile.svg
 /usr/share/icons/breeze/actions/symbolic/color-select-symbolic.svg
@@ -17141,10 +17154,15 @@ popd
 /usr/share/icons/breeze/actions/symbolic/list-add-symbolic.svg
 /usr/share/icons/breeze/actions/symbolic/list-remove-all-symbolic.svg
 /usr/share/icons/breeze/actions/symbolic/list-remove-symbolic.svg
+/usr/share/icons/breeze/actions/symbolic/mail-forward-symbolic.svg
 /usr/share/icons/breeze/actions/symbolic/mail-inbox-symbolic.svg
 /usr/share/icons/breeze/actions/symbolic/mail-mark-important-symbolic.svg
+/usr/share/icons/breeze/actions/symbolic/mail-message-new-symbolic.svg
+/usr/share/icons/breeze/actions/symbolic/mail-reply-all-symbolic.svg
+/usr/share/icons/breeze/actions/symbolic/mail-reply-sender-symbolic.svg
 /usr/share/icons/breeze/actions/symbolic/mail-send-receive-symbolic.svg
 /usr/share/icons/breeze/actions/symbolic/mail-send-symbolic.svg
+/usr/share/icons/breeze/actions/symbolic/mail-sent-symbolic.svg
 /usr/share/icons/breeze/actions/symbolic/map-symbolic.svg
 /usr/share/icons/breeze/actions/symbolic/mark-location-symbolic.svg
 /usr/share/icons/breeze/actions/symbolic/media-eject-symbolic.svg
@@ -17180,6 +17198,8 @@ popd
 /usr/share/icons/breeze/actions/symbolic/pan-start-symbolic-rtl.svg
 /usr/share/icons/breeze/actions/symbolic/pan-start-symbolic.svg
 /usr/share/icons/breeze/actions/symbolic/pan-up-symbolic.svg
+/usr/share/icons/breeze/actions/symbolic/preferences-other-symbolic.svg
+/usr/share/icons/breeze/actions/symbolic/preferences-system-search-symbolic.svg
 /usr/share/icons/breeze/actions/symbolic/process-stop-symbolic.svg
 /usr/share/icons/breeze/actions/symbolic/selection-end-symbolic-rtl.svg
 /usr/share/icons/breeze/actions/symbolic/selection-end-symbolic.svg
@@ -17830,7 +17850,6 @@ popd
 /usr/share/icons/breeze/apps/48/scribus.svg
 /usr/share/icons/breeze/apps/48/sheets.svg
 /usr/share/icons/breeze/apps/48/showfoto.svg
-/usr/share/icons/breeze/apps/48/simplescreenrecorder.svg
 /usr/share/icons/breeze/apps/48/skanlite.svg
 /usr/share/icons/breeze/apps/48/skanpage.svg
 /usr/share/icons/breeze/apps/48/skrooge-black.svg
@@ -21639,6 +21658,7 @@ popd
 /usr/share/icons/breeze/places/symbolic/folder-symbolic.svg
 /usr/share/icons/breeze/places/symbolic/folder-templates-symbolic.svg
 /usr/share/icons/breeze/places/symbolic/folder-videos-symbolic.svg
+/usr/share/icons/breeze/places/symbolic/mail-outbox-symbolic.svg
 /usr/share/icons/breeze/places/symbolic/network-server-symbolic.svg
 /usr/share/icons/breeze/places/symbolic/network-workgroup-symbolic.svg
 /usr/share/icons/breeze/places/symbolic/start-here-symbolic.svg
@@ -22856,6 +22876,7 @@ popd
 /usr/share/icons/breeze/status/symbolic/microphone-sensitivity-low-symbolic.svg
 /usr/share/icons/breeze/status/symbolic/microphone-sensitivity-medium-symbolic.svg
 /usr/share/icons/breeze/status/symbolic/microphone-sensitivity-muted-symbolic.svg
+/usr/share/icons/breeze/status/symbolic/network-offline-symbolic.svg
 /usr/share/icons/breeze/status/symbolic/non-starred-symbolic.svg
 /usr/share/icons/breeze/status/symbolic/printer-error-symbolic.svg
 /usr/share/icons/breeze/status/symbolic/printer-printing-symbolic.svg
