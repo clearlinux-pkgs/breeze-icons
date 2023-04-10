@@ -6,11 +6,11 @@
 # Source0 file verified with key 0x58D0EE648A48B3BB (faure@kde.org)
 #
 Name     : breeze-icons
-Version  : 5.104.0
-Release  : 65
-URL      : https://download.kde.org/stable/frameworks/5.104/breeze-icons-5.104.0.tar.xz
-Source0  : https://download.kde.org/stable/frameworks/5.104/breeze-icons-5.104.0.tar.xz
-Source1  : https://download.kde.org/stable/frameworks/5.104/breeze-icons-5.104.0.tar.xz.sig
+Version  : 5.105.0
+Release  : 66
+URL      : https://download.kde.org/stable/frameworks/5.105/breeze-icons-5.105.0.tar.xz
+Source0  : https://download.kde.org/stable/frameworks/5.105/breeze-icons-5.105.0.tar.xz
+Source1  : https://download.kde.org/stable/frameworks/5.105/breeze-icons-5.105.0.tar.xz.sig
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : LGPL-2.1 LGPL-3.0
@@ -46,15 +46,15 @@ license components for the breeze-icons package.
 
 
 %prep
-%setup -q -n breeze-icons-5.104.0
-cd %{_builddir}/breeze-icons-5.104.0
+%setup -q -n breeze-icons-5.105.0
+cd %{_builddir}/breeze-icons-5.105.0
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1679515311
+export SOURCE_DATE_EPOCH=1681140625
 mkdir -p clr-build
 pushd clr-build
 export GCC_IGNORE_WERROR=1
@@ -70,7 +70,7 @@ make  %{?_smp_mflags}
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1679515311
+export SOURCE_DATE_EPOCH=1681140625
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/breeze-icons
 cp %{_builddir}/breeze-icons-%{version}/COPYING-ICONS %{buildroot}/usr/share/package-licenses/breeze-icons/64474638fded94568edef3950d35b464488065b5 || :
@@ -2658,6 +2658,8 @@ popd
 /usr/share/icons/breeze-dark/actions/22/imagecomment.svg
 /usr/share/icons/breeze-dark/actions/22/initial_state.svg
 /usr/share/icons/breeze-dark/actions/22/inpainting.svg
+/usr/share/icons/breeze-dark/actions/22/input-keyboard-virtual-hide.svg
+/usr/share/icons/breeze-dark/actions/22/input-keyboard-virtual-show.svg
 /usr/share/icons/breeze-dark/actions/22/input-mouse-click-left.svg
 /usr/share/icons/breeze-dark/actions/22/input-mouse-click-middle.svg
 /usr/share/icons/breeze-dark/actions/22/input-mouse-click-right.svg
@@ -4568,6 +4570,8 @@ popd
 /usr/share/icons/breeze-dark/actions/24/imagecomment.svg
 /usr/share/icons/breeze-dark/actions/24/initial_state.svg
 /usr/share/icons/breeze-dark/actions/24/inpainting.svg
+/usr/share/icons/breeze-dark/actions/24/input-keyboard-virtual-hide.svg
+/usr/share/icons/breeze-dark/actions/24/input-keyboard-virtual-show.svg
 /usr/share/icons/breeze-dark/actions/24/input-mouse-click-left.svg
 /usr/share/icons/breeze-dark/actions/24/input-mouse-click-middle.svg
 /usr/share/icons/breeze-dark/actions/24/input-mouse-click-right.svg
@@ -6555,7 +6559,6 @@ popd
 /usr/share/icons/breeze-dark/apps/48/git-cola.svg
 /usr/share/icons/breeze-dark/apps/48/git-gui.svg
 /usr/share/icons/breeze-dark/apps/48/goodvibes.svg
-/usr/share/icons/breeze-dark/apps/48/gparted.svg
 /usr/share/icons/breeze-dark/apps/48/gpick.svg
 /usr/share/icons/breeze-dark/apps/48/gpodder.svg
 /usr/share/icons/breeze-dark/apps/48/granatier.svg
@@ -6699,7 +6702,6 @@ popd
 /usr/share/icons/breeze-dark/apps/48/kwalletmanager.svg
 /usr/share/icons/breeze-dark/apps/48/kwalletmanager2.svg
 /usr/share/icons/breeze-dark/apps/48/kwave.svg
-/usr/share/icons/breeze-dark/apps/48/kwikdisk.svg
 /usr/share/icons/breeze-dark/apps/48/kwin.svg
 /usr/share/icons/breeze-dark/apps/48/kword.svg
 /usr/share/icons/breeze-dark/apps/48/kwrite.svg
@@ -10747,6 +10749,7 @@ popd
 /usr/share/icons/breeze-dark/status/22/nm-nm-signal-50.svg
 /usr/share/icons/breeze-dark/status/22/nm-nm-signal-75.svg
 /usr/share/icons/breeze-dark/status/22/nm-no-connection.svg
+/usr/share/icons/breeze-dark/status/22/redshift-status-day.svg
 /usr/share/icons/breeze-dark/status/22/redshift-status-off.svg
 /usr/share/icons/breeze-dark/status/22/redshift-status-on.svg
 /usr/share/icons/breeze-dark/status/22/rotation-allowed.svg
@@ -10921,6 +10924,7 @@ popd
 /usr/share/icons/breeze-dark/status/24/nm-nm-signal-50.svg
 /usr/share/icons/breeze-dark/status/24/nm-nm-signal-75.svg
 /usr/share/icons/breeze-dark/status/24/nm-no-connection.svg
+/usr/share/icons/breeze-dark/status/24/redshift-status-day.svg
 /usr/share/icons/breeze-dark/status/24/redshift-status-off.svg
 /usr/share/icons/breeze-dark/status/24/redshift-status-on.svg
 /usr/share/icons/breeze-dark/status/24/rotation-allowed.svg
@@ -13658,6 +13662,8 @@ popd
 /usr/share/icons/breeze/actions/22/imagecomment.svg
 /usr/share/icons/breeze/actions/22/initial_state.svg
 /usr/share/icons/breeze/actions/22/inpainting.svg
+/usr/share/icons/breeze/actions/22/input-keyboard-virtual-hide.svg
+/usr/share/icons/breeze/actions/22/input-keyboard-virtual-show.svg
 /usr/share/icons/breeze/actions/22/input-mouse-click-left.svg
 /usr/share/icons/breeze/actions/22/input-mouse-click-middle.svg
 /usr/share/icons/breeze/actions/22/input-mouse-click-right.svg
@@ -15598,6 +15604,8 @@ popd
 /usr/share/icons/breeze/actions/24/imagecomment.svg
 /usr/share/icons/breeze/actions/24/initial_state.svg
 /usr/share/icons/breeze/actions/24/inpainting.svg
+/usr/share/icons/breeze/actions/24/input-keyboard-virtual-hide.svg
+/usr/share/icons/breeze/actions/24/input-keyboard-virtual-show.svg
 /usr/share/icons/breeze/actions/24/input-mouse-click-left.svg
 /usr/share/icons/breeze/actions/24/input-mouse-click-middle.svg
 /usr/share/icons/breeze/actions/24/input-mouse-click-right.svg
@@ -17612,7 +17620,6 @@ popd
 /usr/share/icons/breeze/apps/48/git-cola.svg
 /usr/share/icons/breeze/apps/48/git-gui.svg
 /usr/share/icons/breeze/apps/48/goodvibes.svg
-/usr/share/icons/breeze/apps/48/gparted.svg
 /usr/share/icons/breeze/apps/48/gpick.svg
 /usr/share/icons/breeze/apps/48/gpodder.svg
 /usr/share/icons/breeze/apps/48/granatier.svg
@@ -17756,7 +17763,6 @@ popd
 /usr/share/icons/breeze/apps/48/kwalletmanager.svg
 /usr/share/icons/breeze/apps/48/kwalletmanager2.svg
 /usr/share/icons/breeze/apps/48/kwave.svg
-/usr/share/icons/breeze/apps/48/kwikdisk.svg
 /usr/share/icons/breeze/apps/48/kwin.svg
 /usr/share/icons/breeze/apps/48/kword.svg
 /usr/share/icons/breeze/apps/48/kwrite.svg
@@ -22439,6 +22445,7 @@ popd
 /usr/share/icons/breeze/status/22/nm-nm-signal-50.svg
 /usr/share/icons/breeze/status/22/nm-nm-signal-75.svg
 /usr/share/icons/breeze/status/22/nm-no-connection.svg
+/usr/share/icons/breeze/status/22/redshift-status-day.svg
 /usr/share/icons/breeze/status/22/redshift-status-off.svg
 /usr/share/icons/breeze/status/22/redshift-status-on.svg
 /usr/share/icons/breeze/status/22/rotation-allowed.svg
@@ -22729,6 +22736,7 @@ popd
 /usr/share/icons/breeze/status/24/nm-nm-signal-50.svg
 /usr/share/icons/breeze/status/24/nm-nm-signal-75.svg
 /usr/share/icons/breeze/status/24/nm-no-connection.svg
+/usr/share/icons/breeze/status/24/redshift-status-day.svg
 /usr/share/icons/breeze/status/24/redshift-status-off.svg
 /usr/share/icons/breeze/status/24/redshift-status-on.svg
 /usr/share/icons/breeze/status/24/rotation-allowed.svg
