@@ -6,11 +6,11 @@
 # Source0 file verified with key 0x58D0EE648A48B3BB (faure@kde.org)
 #
 Name     : breeze-icons
-Version  : 5.105.0
-Release  : 66
-URL      : https://download.kde.org/stable/frameworks/5.105/breeze-icons-5.105.0.tar.xz
-Source0  : https://download.kde.org/stable/frameworks/5.105/breeze-icons-5.105.0.tar.xz
-Source1  : https://download.kde.org/stable/frameworks/5.105/breeze-icons-5.105.0.tar.xz.sig
+Version  : 5.106.0
+Release  : 67
+URL      : https://download.kde.org/stable/frameworks/5.106/breeze-icons-5.106.0.tar.xz
+Source0  : https://download.kde.org/stable/frameworks/5.106/breeze-icons-5.106.0.tar.xz
+Source1  : https://download.kde.org/stable/frameworks/5.106/breeze-icons-5.106.0.tar.xz.sig
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : LGPL-2.1 LGPL-3.0
@@ -46,40 +46,61 @@ license components for the breeze-icons package.
 
 
 %prep
-%setup -q -n breeze-icons-5.105.0
-cd %{_builddir}/breeze-icons-5.105.0
+%setup -q -n breeze-icons-5.106.0
+cd %{_builddir}/breeze-icons-5.106.0
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1681140625
+export SOURCE_DATE_EPOCH=1684805912
 mkdir -p clr-build
 pushd clr-build
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
 export NM=gcc-nm
-export CFLAGS="$CFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz "
-export FCFLAGS="$FFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz "
-export FFLAGS="$FFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz "
-export CXXFLAGS="$CXXFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz "
+export CFLAGS="$CFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
+export FCFLAGS="$FFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
+export FFLAGS="$FFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
+export CXXFLAGS="$CXXFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
+%cmake ..
+make  %{?_smp_mflags}
+popd
+mkdir -p clr-build-avx2
+pushd clr-build-avx2
+export GCC_IGNORE_WERROR=1
+export AR=gcc-ar
+export RANLIB=gcc-ranlib
+export NM=gcc-nm
+export CFLAGS="$CFLAGS -O3 -Wl,-z,x86-64-v3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz=zstd -march=x86-64-v3 "
+export FCFLAGS="$FFLAGS -O3 -Wl,-z,x86-64-v3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz=zstd -march=x86-64-v3 "
+export FFLAGS="$FFLAGS -O3 -Wl,-z,x86-64-v3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz=zstd -march=x86-64-v3 "
+export CXXFLAGS="$CXXFLAGS -O3 -Wl,-z,x86-64-v3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz=zstd -march=x86-64-v3 "
+export CFLAGS="$CFLAGS -march=x86-64-v3 -m64 -Wl,-z,x86-64-v3"
+export CXXFLAGS="$CXXFLAGS -march=x86-64-v3 -m64 -Wl,-z,x86-64-v3"
+export FFLAGS="$FFLAGS -march=x86-64-v3 -m64 -Wl,-z,x86-64-v3"
+export FCFLAGS="$FCFLAGS -march=x86-64-v3 -m64 -Wl,-z,x86-64-v3"
 %cmake ..
 make  %{?_smp_mflags}
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1681140625
+export SOURCE_DATE_EPOCH=1684805912
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/breeze-icons
 cp %{_builddir}/breeze-icons-%{version}/COPYING-ICONS %{buildroot}/usr/share/package-licenses/breeze-icons/64474638fded94568edef3950d35b464488065b5 || :
 cp %{_builddir}/breeze-icons-%{version}/COPYING.LIB %{buildroot}/usr/share/package-licenses/breeze-icons/9a1929f4700d2407c70b507b3b2aaf6226a9543c || :
 cp %{_builddir}/breeze-icons-%{version}/icons-dark/LICENSE %{buildroot}/usr/share/package-licenses/breeze-icons/f45ee1c765646813b442ca58de72e20a64a7ddba || :
 cp %{_builddir}/breeze-icons-%{version}/icons/LICENSE %{buildroot}/usr/share/package-licenses/breeze-icons/f45ee1c765646813b442ca58de72e20a64a7ddba || :
+pushd clr-build-avx2
+%make_install_v3  || :
+popd
 pushd clr-build
 %make_install
 popd
+/usr/bin/elf-move.py avx2 %{buildroot}-v3 %{buildroot} %{buildroot}/usr/share/clear/filemap/filemap-%{name}
 
 %files
 %defattr(-,root,root,-)
@@ -185,6 +206,7 @@ popd
 /usr/share/icons/breeze-dark/actions/16/bigskip.svg
 /usr/share/icons/breeze-dark/actions/16/bitmap-trace.svg
 /usr/share/icons/breeze-dark/actions/16/black_sum.svg
+/usr/share/icons/breeze-dark/actions/16/blur.svg
 /usr/share/icons/breeze-dark/actions/16/bookmark-add-folder.svg
 /usr/share/icons/breeze-dark/actions/16/bookmark-edit.svg
 /usr/share/icons/breeze-dark/actions/16/bookmark-new-list.svg
@@ -1262,6 +1284,7 @@ popd
 /usr/share/icons/breeze-dark/actions/16/photos-amarok.svg
 /usr/share/icons/breeze-dark/actions/16/pin.svg
 /usr/share/icons/breeze-dark/actions/16/pixelart-trace.svg
+/usr/share/icons/breeze-dark/actions/16/pixelate.svg
 /usr/share/icons/breeze-dark/actions/16/player-time.svg
 /usr/share/icons/breeze-dark/actions/16/player-volume-muted.svg
 /usr/share/icons/breeze-dark/actions/16/player-volume.svg
@@ -1953,6 +1976,7 @@ popd
 /usr/share/icons/breeze-dark/actions/22/bibtex.svg
 /usr/share/icons/breeze-dark/actions/22/bigskip.svg
 /usr/share/icons/breeze-dark/actions/22/black_sum.svg
+/usr/share/icons/breeze-dark/actions/22/blur.svg
 /usr/share/icons/breeze-dark/actions/22/blurfx.svg
 /usr/share/icons/breeze-dark/actions/22/blurimage.svg
 /usr/share/icons/breeze-dark/actions/22/bookmark-add-folder.svg
@@ -3147,6 +3171,7 @@ popd
 /usr/share/icons/breeze-dark/actions/22/photo.svg
 /usr/share/icons/breeze-dark/actions/22/photos-amarok.svg
 /usr/share/icons/breeze-dark/actions/22/pin.svg
+/usr/share/icons/breeze-dark/actions/22/pixelate.svg
 /usr/share/icons/breeze-dark/actions/22/player-time.svg
 /usr/share/icons/breeze-dark/actions/22/player-volume-muted.svg
 /usr/share/icons/breeze-dark/actions/22/player-volume.svg
@@ -3895,6 +3920,7 @@ popd
 /usr/share/icons/breeze-dark/actions/24/bibtex.svg
 /usr/share/icons/breeze-dark/actions/24/bigskip.svg
 /usr/share/icons/breeze-dark/actions/24/black_sum.svg
+/usr/share/icons/breeze-dark/actions/24/blur.svg
 /usr/share/icons/breeze-dark/actions/24/blurfx.svg
 /usr/share/icons/breeze-dark/actions/24/blurimage.svg
 /usr/share/icons/breeze-dark/actions/24/bookmark-add-folder.svg
@@ -5048,6 +5074,7 @@ popd
 /usr/share/icons/breeze-dark/actions/24/photo.svg
 /usr/share/icons/breeze-dark/actions/24/photos-amarok.svg
 /usr/share/icons/breeze-dark/actions/24/pin.svg
+/usr/share/icons/breeze-dark/actions/24/pixelate.svg
 /usr/share/icons/breeze-dark/actions/24/player-time.svg
 /usr/share/icons/breeze-dark/actions/24/player-volume-muted.svg
 /usr/share/icons/breeze-dark/actions/24/player-volume.svg
@@ -7148,6 +7175,7 @@ popd
 /usr/share/icons/breeze-dark/devices/64/media-optical.svg
 /usr/share/icons/breeze-dark/devices/64/media-write-cd.svg
 /usr/share/icons/breeze-dark/devices/64/media-write-dvd.svg
+/usr/share/icons/breeze-dark/devices/64/memory.svg
 /usr/share/icons/breeze-dark/devices/64/monitor.svg
 /usr/share/icons/breeze-dark/devices/64/multimedia-player.svg
 /usr/share/icons/breeze-dark/devices/64/network-card.svg
@@ -8407,6 +8435,7 @@ popd
 /usr/share/icons/breeze-dark/mimetypes/22@2x
 /usr/share/icons/breeze-dark/mimetypes/22@3x
 /usr/share/icons/breeze-dark/mimetypes/24/application-x-fictionbook+xml.svg
+/usr/share/icons/breeze-dark/mimetypes/24/application-x-ms-dos-executable.svg
 /usr/share/icons/breeze-dark/mimetypes/24/application-x-ms-shortcut.svg
 /usr/share/icons/breeze-dark/mimetypes/24/application-x-zip-compressed-fb2.svg
 /usr/share/icons/breeze-dark/mimetypes/24/inode-directory.svg
@@ -11196,6 +11225,7 @@ popd
 /usr/share/icons/breeze/actions/16/bigskip.svg
 /usr/share/icons/breeze/actions/16/bitmap-trace.svg
 /usr/share/icons/breeze/actions/16/black_sum.svg
+/usr/share/icons/breeze/actions/16/blur.svg
 /usr/share/icons/breeze/actions/16/bookmark-add-folder.svg
 /usr/share/icons/breeze/actions/16/bookmark-edit.svg
 /usr/share/icons/breeze/actions/16/bookmark-new-list.svg
@@ -12273,6 +12303,7 @@ popd
 /usr/share/icons/breeze/actions/16/photos-amarok.svg
 /usr/share/icons/breeze/actions/16/pin.svg
 /usr/share/icons/breeze/actions/16/pixelart-trace.svg
+/usr/share/icons/breeze/actions/16/pixelate.svg
 /usr/share/icons/breeze/actions/16/player-time.svg
 /usr/share/icons/breeze/actions/16/player-volume-muted.svg
 /usr/share/icons/breeze/actions/16/player-volume.svg
@@ -12957,6 +12988,7 @@ popd
 /usr/share/icons/breeze/actions/22/bibtex.svg
 /usr/share/icons/breeze/actions/22/bigskip.svg
 /usr/share/icons/breeze/actions/22/black_sum.svg
+/usr/share/icons/breeze/actions/22/blur.svg
 /usr/share/icons/breeze/actions/22/blurfx.svg
 /usr/share/icons/breeze/actions/22/blurimage.svg
 /usr/share/icons/breeze/actions/22/bookmark-add-folder.svg
@@ -14151,6 +14183,7 @@ popd
 /usr/share/icons/breeze/actions/22/photo.svg
 /usr/share/icons/breeze/actions/22/photos-amarok.svg
 /usr/share/icons/breeze/actions/22/pin.svg
+/usr/share/icons/breeze/actions/22/pixelate.svg
 /usr/share/icons/breeze/actions/22/player-time.svg
 /usr/share/icons/breeze/actions/22/player-volume-muted.svg
 /usr/share/icons/breeze/actions/22/player-volume.svg
@@ -14900,6 +14933,7 @@ popd
 /usr/share/icons/breeze/actions/24/bibtex.svg
 /usr/share/icons/breeze/actions/24/bigskip.svg
 /usr/share/icons/breeze/actions/24/black_sum.svg
+/usr/share/icons/breeze/actions/24/blur.svg
 /usr/share/icons/breeze/actions/24/blurfx.svg
 /usr/share/icons/breeze/actions/24/blurimage.svg
 /usr/share/icons/breeze/actions/24/bookmark-add-folder.svg
@@ -16093,6 +16127,7 @@ popd
 /usr/share/icons/breeze/actions/24/photo.svg
 /usr/share/icons/breeze/actions/24/photos-amarok.svg
 /usr/share/icons/breeze/actions/24/pin.svg
+/usr/share/icons/breeze/actions/24/pixelate.svg
 /usr/share/icons/breeze/actions/24/player-time.svg
 /usr/share/icons/breeze/actions/24/player-volume-muted.svg
 /usr/share/icons/breeze/actions/24/player-volume.svg
@@ -18210,6 +18245,7 @@ popd
 /usr/share/icons/breeze/devices/64/media-optical.svg
 /usr/share/icons/breeze/devices/64/media-write-cd.svg
 /usr/share/icons/breeze/devices/64/media-write-dvd.svg
+/usr/share/icons/breeze/devices/64/memory.svg
 /usr/share/icons/breeze/devices/64/monitor.svg
 /usr/share/icons/breeze/devices/64/multimedia-player.svg
 /usr/share/icons/breeze/devices/64/network-card.svg
