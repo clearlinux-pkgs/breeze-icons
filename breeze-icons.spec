@@ -6,11 +6,11 @@
 # Source0 file verified with key 0x58D0EE648A48B3BB (faure@kde.org)
 #
 Name     : breeze-icons
-Version  : 5.107.0
-Release  : 68
-URL      : https://download.kde.org/stable/frameworks/5.107/breeze-icons-5.107.0.tar.xz
-Source0  : https://download.kde.org/stable/frameworks/5.107/breeze-icons-5.107.0.tar.xz
-Source1  : https://download.kde.org/stable/frameworks/5.107/breeze-icons-5.107.0.tar.xz.sig
+Version  : 5.108.0
+Release  : 69
+URL      : https://download.kde.org/stable/frameworks/5.108/breeze-icons-5.108.0.tar.xz
+Source0  : https://download.kde.org/stable/frameworks/5.108/breeze-icons-5.108.0.tar.xz
+Source1  : https://download.kde.org/stable/frameworks/5.108/breeze-icons-5.108.0.tar.xz.sig
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : LGPL-2.1 LGPL-3.0
@@ -37,6 +37,17 @@ Group: Data
 data components for the breeze-icons package.
 
 
+%package dev
+Summary: dev components for the breeze-icons package.
+Group: Development
+Requires: breeze-icons-data = %{version}-%{release}
+Provides: breeze-icons-devel = %{version}-%{release}
+Requires: breeze-icons = %{version}-%{release}
+
+%description dev
+dev components for the breeze-icons package.
+
+
 %package license
 Summary: license components for the breeze-icons package.
 Group: Default
@@ -46,15 +57,15 @@ license components for the breeze-icons package.
 
 
 %prep
-%setup -q -n breeze-icons-5.107.0
-cd %{_builddir}/breeze-icons-5.107.0
+%setup -q -n breeze-icons-5.108.0
+cd %{_builddir}/breeze-icons-5.108.0
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1686529578
+export SOURCE_DATE_EPOCH=1688864405
 mkdir -p clr-build
 pushd clr-build
 export GCC_IGNORE_WERROR=1
@@ -87,7 +98,7 @@ make  %{?_smp_mflags}
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1686529578
+export SOURCE_DATE_EPOCH=1688864405
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/breeze-icons
 cp %{_builddir}/breeze-icons-%{version}/COPYING-ICONS %{buildroot}/usr/share/package-licenses/breeze-icons/64474638fded94568edef3950d35b464488065b5 || :
@@ -22954,6 +22965,11 @@ popd
 /usr/share/icons/breeze/status/symbolic/user-trash-full-symbolic.svg
 /usr/share/icons/breeze/status/symbolic/view-wrapped-symbolic-rtl.svg
 /usr/share/icons/breeze/status/symbolic/view-wrapped-symbolic.svg
+
+%files dev
+%defattr(-,root,root,-)
+/usr/lib64/cmake/KF5BreezeIcons/KF5BreezeIconsConfig.cmake
+/usr/lib64/cmake/KF5BreezeIcons/KF5BreezeIconsConfigVersion.cmake
 
 %files license
 %defattr(0644,root,root,0755)
