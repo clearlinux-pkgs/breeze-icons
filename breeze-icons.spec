@@ -6,11 +6,11 @@
 # Source0 file verified with key 0x58D0EE648A48B3BB (faure@kde.org)
 #
 Name     : breeze-icons
-Version  : 5.109.0
-Release  : 70
-URL      : https://download.kde.org/stable/frameworks/5.109/breeze-icons-5.109.0.tar.xz
-Source0  : https://download.kde.org/stable/frameworks/5.109/breeze-icons-5.109.0.tar.xz
-Source1  : https://download.kde.org/stable/frameworks/5.109/breeze-icons-5.109.0.tar.xz.sig
+Version  : 5.110.0
+Release  : 71
+URL      : https://download.kde.org/stable/frameworks/5.110/breeze-icons-5.110.0.tar.xz
+Source0  : https://download.kde.org/stable/frameworks/5.110/breeze-icons-5.110.0.tar.xz
+Source1  : https://download.kde.org/stable/frameworks/5.110/breeze-icons-5.110.0.tar.xz.sig
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : LGPL-2.1 LGPL-3.0
@@ -57,15 +57,15 @@ license components for the breeze-icons package.
 
 
 %prep
-%setup -q -n breeze-icons-5.109.0
-cd %{_builddir}/breeze-icons-5.109.0
+%setup -q -n breeze-icons-5.110.0
+cd %{_builddir}/breeze-icons-5.110.0
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1693027384
+export SOURCE_DATE_EPOCH=1694451784
 mkdir -p clr-build
 pushd clr-build
 export GCC_IGNORE_WERROR=1
@@ -98,7 +98,7 @@ make  %{?_smp_mflags}
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1693027384
+export SOURCE_DATE_EPOCH=1694451784
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/breeze-icons
 cp %{_builddir}/breeze-icons-%{version}/COPYING-ICONS %{buildroot}/usr/share/package-licenses/breeze-icons/64474638fded94568edef3950d35b464488065b5 || :
@@ -224,6 +224,8 @@ popd
 /usr/share/icons/breeze-dark/actions/16/bookmark-new.svg
 /usr/share/icons/breeze-dark/actions/16/bookmark-remove.svg
 /usr/share/icons/breeze-dark/actions/16/bookmark-toolbar.svg
+/usr/share/icons/breeze-dark/actions/16/bookmarks-bookmarked-symbolic.svg
+/usr/share/icons/breeze-dark/actions/16/bookmarks-bookmarked.svg
 /usr/share/icons/breeze-dark/actions/16/bookmarks-organize.svg
 /usr/share/icons/breeze-dark/actions/16/bookmarks.svg
 /usr/share/icons/breeze-dark/actions/16/borderpainter.svg
@@ -1996,6 +1998,8 @@ popd
 /usr/share/icons/breeze-dark/actions/22/bookmark-new.svg
 /usr/share/icons/breeze-dark/actions/22/bookmark-remove.svg
 /usr/share/icons/breeze-dark/actions/22/bookmark-toolbar.svg
+/usr/share/icons/breeze-dark/actions/22/bookmarks-bookmarked-symbolic.svg
+/usr/share/icons/breeze-dark/actions/22/bookmarks-bookmarked.svg
 /usr/share/icons/breeze-dark/actions/22/bookmarks-organize.svg
 /usr/share/icons/breeze-dark/actions/22/bookmarks.svg
 /usr/share/icons/breeze-dark/actions/22/borderpainter.svg
@@ -5760,6 +5764,8 @@ popd
 /usr/share/icons/breeze-dark/actions/32/blurimage.svg
 /usr/share/icons/breeze-dark/actions/32/bookmark-new.svg
 /usr/share/icons/breeze-dark/actions/32/bookmark-remove.svg
+/usr/share/icons/breeze-dark/actions/32/bookmarks-bookmarked-symbolic.svg
+/usr/share/icons/breeze-dark/actions/32/bookmarks-bookmarked.svg
 /usr/share/icons/breeze-dark/actions/32/bookmarks.svg
 /usr/share/icons/breeze-dark/actions/32/bordertool.svg
 /usr/share/icons/breeze-dark/actions/32/call-start.svg
@@ -11243,6 +11249,8 @@ popd
 /usr/share/icons/breeze/actions/16/bookmark-new.svg
 /usr/share/icons/breeze/actions/16/bookmark-remove.svg
 /usr/share/icons/breeze/actions/16/bookmark-toolbar.svg
+/usr/share/icons/breeze/actions/16/bookmarks-bookmarked-symbolic.svg
+/usr/share/icons/breeze/actions/16/bookmarks-bookmarked.svg
 /usr/share/icons/breeze/actions/16/bookmarks-organize.svg
 /usr/share/icons/breeze/actions/16/bookmarks.svg
 /usr/share/icons/breeze/actions/16/borderpainter.svg
@@ -13008,6 +13016,8 @@ popd
 /usr/share/icons/breeze/actions/22/bookmark-new.svg
 /usr/share/icons/breeze/actions/22/bookmark-remove.svg
 /usr/share/icons/breeze/actions/22/bookmark-toolbar.svg
+/usr/share/icons/breeze/actions/22/bookmarks-bookmarked-symbolic.svg
+/usr/share/icons/breeze/actions/22/bookmarks-bookmarked.svg
 /usr/share/icons/breeze/actions/22/bookmarks-organize.svg
 /usr/share/icons/breeze/actions/22/bookmarks.svg
 /usr/share/icons/breeze/actions/22/borderpainter.svg
@@ -14953,6 +14963,8 @@ popd
 /usr/share/icons/breeze/actions/24/bookmark-new.svg
 /usr/share/icons/breeze/actions/24/bookmark-remove.svg
 /usr/share/icons/breeze/actions/24/bookmark-toolbar.svg
+/usr/share/icons/breeze/actions/24/bookmarks-bookmarked-symbolic.svg
+/usr/share/icons/breeze/actions/24/bookmarks-bookmarked.svg
 /usr/share/icons/breeze/actions/24/bookmarks-organize.svg
 /usr/share/icons/breeze/actions/24/bookmarks.svg
 /usr/share/icons/breeze/actions/24/borderpainter.svg
@@ -16826,6 +16838,8 @@ popd
 /usr/share/icons/breeze/actions/32/blurimage.svg
 /usr/share/icons/breeze/actions/32/bookmark-new.svg
 /usr/share/icons/breeze/actions/32/bookmark-remove.svg
+/usr/share/icons/breeze/actions/32/bookmarks-bookmarked-symbolic.svg
+/usr/share/icons/breeze/actions/32/bookmarks-bookmarked.svg
 /usr/share/icons/breeze/actions/32/bookmarks.svg
 /usr/share/icons/breeze/actions/32/bordertool.svg
 /usr/share/icons/breeze/actions/32/call-start.svg
